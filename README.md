@@ -16,12 +16,16 @@ devtools::install_github("hafen/geofacet")
 Barchart of state rankings in various categories:
 
 ```r
+library(ggplot2)
+
 ggplot(state_ranks, aes(variable, rank, fill = variable)) +
   geom_col() +
   coord_flip() +
   facet_geo(~ state) +
   theme_bw()
 ```
+
+![us_categories](https://cloud.githubusercontent.com/assets/1275592/26282369/611ab89e-3dc5-11e7-86eb-65685cc2948b.png)
 
 Unemployment rate time series for each state:
 
@@ -32,3 +36,5 @@ ggplot(state_unemp, aes(year, rate)) +
   scale_x_continuous(labels = function(x) paste0("'", substr(x, 3, 4))) +
   ylab("Unemployment Rate (%)")
 ```
+
+![us_unemp](https://cloud.githubusercontent.com/assets/1275592/26282368/6118d06a-3dc5-11e7-96b4-6a511800b6d3.png)
