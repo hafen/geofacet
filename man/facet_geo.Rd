@@ -35,6 +35,15 @@ ggplot(state_ranks, aes(variable, rank, fill = variable)) +
   facet_geo(~ state, grid = "us_state_grid2") +
   theme(panel.spacing = unit(0.1, "lines"))
 
+# custom grid (move Wisconsin above Michigan)
+my_grid <- us_state_grid1
+my_grid$col[my_grid$label == "WI"] <- 7
+
+ggplot(state_ranks, aes(variable, rank, fill = variable)) +
+  geom_col() +
+  coord_flip() +
+  facet_geo(~ state, grid = my_grid)
+
 # use a free x-axis (not a good idea but just to show it works)
 ggplot(state_ranks, aes(variable, rank, fill = variable)) +
   geom_col() +
