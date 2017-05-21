@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/hafen/geofacet.svg?branch=master)](https://travis-ci.org/hafen/geofacet)
-[![codecov.io](https://codecov.io/github/hafen/geofacet/coverage.svg?branch=master)](https://codecov.io/github/hafen/geofacet?branch=master)
+[![Coverage Status](https://img.shields.io/codecov/c/github/hafen/geofacet/master.svg)](https://codecov.io/github/hafen/geofacet?branch=master)
 
 # geofacet
 
