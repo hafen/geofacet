@@ -5,3 +5,4 @@
 ^\.lintr
 ^_ignore
 ^man-roxygen
+^data-raw

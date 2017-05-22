@@ -22,7 +22,7 @@ test_that("examples work", {
 
   # custom grid (move Wisconsin above Michigan)
   my_grid <- us_state_grid1
-  my_grid$col[my_grid$label == "WI"] <- 7
+  my_grid$col[my_grid$code == "WI"] <- 7
 
   ggplot(state_ranks, aes(variable, rank, fill = variable)) +
     geom_col() +
@@ -55,4 +55,54 @@ test_that("examples work", {
       axis.ticks.x = element_blank()) +
     ylab("Unemployment Rate (%)")
   print(p)
+
+  # plot European Union GDP
+  p <- ggplot(eu_gdp, aes(year, gdp_pc)) +
+    geom_line(color = "steelblue") +
+    geom_hline(yintercept = 100, linetype = 2) +
+    facet_geo(~ name, grid = "eu_grid1") +
+    scale_x_continuous(labels = function(x) paste0("'", substr(x, 3, 4))) +
+    ylab("GDP Per Capita") +
+    theme_bw()
+  print(p)
+
+  # use a free x-axis to look at just change
+  p <- ggplot(eu_gdp, aes(year, gdp_pc)) +
+    geom_line(color = "steelblue") +
+    facet_geo(~ name, grid = "eu_grid1", scales = "free_y") +
+    scale_x_continuous(labels = function(x) paste0("'", substr(x, 3, 4))) +
+    ylab("GDP Per Capita In Relation to EU Index (100)") +
+    theme_bw()
+  print(p)
+
+  # plot European Union annual # of resettled persons
+  p <- ggplot(eu_imm, aes(year, persons)) +
+    geom_line() +
+    facet_geo(~ name, grid = "eu_grid1") +
+    scale_x_continuous(labels = function(x) paste0("'", substr(x, 3, 4))) +
+    scale_y_sqrt(minor_breaks = NULL) +
+    ylab("# Resettled Persons") +
+    theme_bw()
+  print(p)
+
+  # plot just for 2016
+  p <- ggplot(subset(eu_imm, year == 2016), aes(factor(year), persons)) +
+    geom_col(fill = "steelblue") +
+    geom_text(aes(factor(year), 3000, label = persons), color = "gray") +
+    facet_geo(~ name, grid = "eu_grid1") +
+    theme(
+      axis.title.x = element_blank(),
+      axis.text.x = element_blank(),
+      axis.ticks.x = element_blank()) +
+    ylab("# Resettled Persons in 2016") +
+    xlab("Year") +
+    theme_bw()
+  print(p)
+
+  Sys.setenv(GEOFACET_PKG_TESTING = "TRUE")
+  my_grid <- us_state_grid1
+  my_grid$col[my_grid$code == "WI"] <- 7
+  submit_grid(my_grid, name = "us_grid_tweak_wi",
+    desc = "Modified us_state_grid1 to move WI over")
+  Sys.setenv(GEOFACET_PKG_TESTING = "")
 })

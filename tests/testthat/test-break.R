@@ -53,7 +53,7 @@ test_that("things break in an expected way", {
   my_grid <- us_state_grid1
 
   # make it overlap another state
-  my_grid$col[my_grid$label == "WA"] <- 2
+  my_grid$col[my_grid$code == "WA"] <- 2
   expect_error({
     ggplot(state_ranks, aes(variable, rank, fill = variable)) +
       geom_col() +
@@ -62,7 +62,7 @@ test_that("things break in an expected way", {
   },
   "must have unique")
 
-  my_grid$col[my_grid$label == "WA"] <- 0
+  my_grid$col[my_grid$code == "WA"] <- 0
   expect_error({
     ggplot(state_ranks, aes(variable, rank, fill = variable)) +
       geom_col() +
@@ -71,8 +71,8 @@ test_that("things break in an expected way", {
   },
   "must have positive")
 
-  my_grid$col[my_grid$label == "WA"] <- 1
-  my_grid$row[my_grid$label == "WA"] <- 0
+  my_grid$col[my_grid$code == "WA"] <- 1
+  my_grid$row[my_grid$code == "WA"] <- 0
   expect_error({
     ggplot(state_ranks, aes(variable, rank, fill = variable)) +
       geom_col() +

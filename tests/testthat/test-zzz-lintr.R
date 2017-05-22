@@ -1,4 +1,3 @@
-
 # https://github.com/jimhester/lintr
 if (requireNamespace("lintr", quietly = TRUE)) {
   context("lints")

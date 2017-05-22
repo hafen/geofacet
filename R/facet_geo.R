@@ -45,7 +45,9 @@ facet_geo <- function(facets, ..., grid = "us_state_grid1", move_axes = TRUE) {
     e2$drop <- FALSE
     e2$facets <- facet_col
 
-    e1$data <- get_full_geo_data(e1$data, grd, facet_col)
+    tmp <- get_full_geo_data(e1$data, grd, facet_col)
+    e1$data <- tmp$dat
+    grd <- tmp$grd
 
     e1 <- e1 %+% do.call(ggplot2::facet_wrap, e2)
     attr(e1, "geofacet") <- list(grid = grd, move_axes = move_axes, scales = e2$scales)
@@ -105,9 +107,54 @@ print.facet_geo <- function(x, ...) {
   graphics::plot(gtable::gtable_filter(g, rgx, trim = FALSE))
 }
 
+#' Print geofaceted ggplot
+#'
+#' @param x a data frame containing a grid
+#' @param name proposed name of the grid (if not supplied, will be asked for interactively)
+#' @param desc a description of the grid (if not supplied, will be asked for interactively)
+#' @details This opens up a github issue for this package in the web browser with pre-populated content for adding a grid to the package.
+#' @importFrom utils write.csv browseURL URLencode
+#' @examples
+#' \dontrun{
+#' my_grid <- us_state_grid1
+#' my_grid$col[my_grid$label == "WI"] <- 7
+#' submit_grid(my_grid, name = "us_grid_tweak_wi",
+#'   desc = "Modified us_state_grid1 to move WI over")
+#' }
+#'
+#'
+#' @export
+submit_grid <- function(x, name = NULL, desc = NULL) {
+  x <- check_grid(x)
+  message("The data for your proposed grid will be added ",
+    "as an issue in this package's github reposotory.")
+  message("After you answer a few questions below, the issue will open in your web browser ",
+    "and after you make any desired edits, you need to click 'Submit new issue'.")
+  message("If you do not have a github account, you will first be prompted to create one.")
+  message("Your github username will be credited with the submission in the grid's docs.")
+
+  if (is.null(name)) name <- readline("Proposed name of grid: ")
+  if (is.null(desc)) desc <- readline("Description of grid: ")
+
+  tc <- textConnection("foo", "w")
+  utils::write.csv(x, tc, row.names = FALSE)
+  dat_txt <- paste(textConnectionValue(tc), collapse = "\n")
+  close(tc)
+
+  body <- paste0(desc, "\n\n```\n", dat_txt, "\n```\n")
+
+  url <- sprintf(
+    "https://github.com/hafen/geofacet/issues/new?title=new grid: '%s'&body=%s",
+    name,
+    body
+  )
+
+  if (Sys.getenv("GEOFACET_PKG_TESTING") == "") browseURL(URLencode(url))
+}
+
 check_grid <- function(d) {
-  if (! all(c("label", "row", "col") %in% names(d)))
-    stop("A custom grid must contain variables 'label', 'row', and 'col'", call. = FALSE)
+  if (! all(c("code", "row", "col", "name") %in% names(d)))
+    stop("A custom grid must contain variables 'code', 'name', 'row', and 'col'", call. = FALSE)
 
   d$row <- as.integer(d$row)
   d$col <- as.integer(d$col)
@@ -130,8 +177,14 @@ get_full_geo_grid <- function(grid) {
     grd <- geofacet::us_state_grid1
   } else if (is.character(grid) && grid == "us_state_grid2") {
     grd <- geofacet::us_state_grid2
+  } else if (is.character(grid) && grid == "eu_grid1") {
+    grd <- geofacet::eu_grid1
   } else if (inherits(grid, "data.frame")) {
     grd <- check_grid(grid)
+    message("You provided a user-specified grid. ",
+      "If this is a generally-useful grid, please consider submitting it ",
+      "to become a part of the geofacet package. You can do this easily by ",
+      "calling:\nsubmit_grid(__grid_df_name__)")
   } else {
     stop("grid '", grid, "' not recognized...")
   }
@@ -155,13 +208,24 @@ get_full_geo_grid <- function(grid) {
 get_full_geo_data <- function(d, grd, facet_col) {
   # check to make sure facet_col data matches that of grd
   ul <- unique(d[[facet_col]])
-  uldif <- setdiff(ul, grd$label)
+  uldif1 <- setdiff(ul, grd$code)
+  uldif2 <- setdiff(ul, grd$name)
+  if (length(uldif1) < length(uldif2)) {
+    uldif <- uldif1
+    names(grd)[names(grd) == "code"] <- "label"
+    grd$name <- NULL
+  } else {
+    uldif <- uldif2
+    names(grd)[names(grd) == "name"] <- "label"
+    grd$code <- NULL
+  }
+
   if (length(uldif) == length(ul)) {
     stop("The values of the specified facet_geo column '", facet_col,
-      "' do not match the label column of the specified grid.", call. = FALSE)
+      "' do not match the 'code' column of the specified grid.", call. = FALSE)
   } else if (length(uldif) > 0) {
     message("Some values in the specified facet_geo column '", facet_col,
-      "' do not match the label column of the specified grid and will be removed: ",
+      "' do not match the 'code' column of the specified grid and will be removed: ",
       paste(uldif, collapse = ", "))
     d <- d[!d[[facet_col]] %in% uldif, ]
   }
@@ -172,5 +236,7 @@ get_full_geo_data <- function(d, grd, facet_col) {
   tmp[idx] <- sapply(seq_along(idx), function(a) paste0(rep(" ", a), collapse = ""))
 
   d[[facet_col]] <- factor(d[[facet_col]], levels = tmp)
-  d
+
+  # need to update grd to have the right column
+  list(dat = d, grd = grd)
 }
