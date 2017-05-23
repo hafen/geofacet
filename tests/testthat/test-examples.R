@@ -99,6 +99,18 @@ test_that("examples work", {
     theme_bw()
   print(p)
 
+  # plot Australian population
+  p <- ggplot(aus_pop, aes(`Age Group`, Population / 1e6, fill = `Age Group`)) +
+    geom_col() +
+    facet_geo(~ code, grid = "aus_grid1") +
+    coord_flip() +
+    labs(
+      title = "Australian Population Breakdown",
+      caption = "Data Source: ABS Labour Force Survey, 12 month average",
+      y = "Population [Millions]") +
+    theme_bw()
+  print(p)
+
   Sys.setenv(GEOFACET_PKG_TESTING = "TRUE")
   my_grid <- us_state_grid1
   my_grid$col[my_grid$code == "WI"] <- 7

@@ -154,3 +154,21 @@ UK,2,1,United Kingdom
 ggplot2::ggplot(eu_grid1, ggplot2::aes(col, 7 - row, label = code)) + ggplot2::geom_text()
 
 use_data(eu_grid1, overwrite = TRUE)
+
+## Australian States / Territories
+##---------------------------------------------------------
+
+aus_grid1  <- readr::read_csv("code,row,col,name
+WA,2,1,Western Australia
+NT,1,2,Northern Territory
+SA,2,2,South Australia
+QLD,1,3,Queensland
+NSW,2,3,New South Wales
+ACT,3,4,Australian Capital Territory
+VIC,3,3,Victoria
+TAS,5,3,Tasmania
+")
+
+ggplot2::ggplot(aus_grid1, ggplot2::aes(col, 5 - row, label = code)) + ggplot2::geom_text()
+
+use_data(aus_grid1, overwrite = TRUE)

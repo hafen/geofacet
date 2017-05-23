@@ -35,6 +35,16 @@ NULL
 #' @keywords data
 NULL
 
+#' aus_grid1
+#'
+#' @name aus_grid1
+#' @docType data
+#' @description
+#' A data frame containing a grid layout for the Australian States and Territories, thanks to \url{https://github.com/jonocarroll}.
+#' @usage aus_grid1
+#' @keywords data
+NULL
+
 #' state_ranks
 #'
 #' @name state_ranks
@@ -72,5 +82,15 @@ NULL
 #' @description
 #' GDP per capita in PPS - Index (EU28 = 100). "Gross domestic product (GDP) is a measure for the economic activity. It is defined as the value of all goods and services produced less the value of any goods or services used in their creation. The volume index of GDP per capita in Purchasing Power Standards (PPS) is expressed in relation to the European Union (EU28) average set to equal 100. If the index of a country is higher than 100, this country's level of GDP per head is higher than the EU average and vice versa. Basic figures are expressed in PPS, i.e. a common currency that eliminates the differences in price levels between countries allowing meaningful volume comparisons of GDP between countries. Please note that the index, calculated from PPS figures and expressed with respect to EU28 = 100, is intended for cross-country comparisons rather than for temporal comparisons." Source: \url{http://ec.europa.eu/eurostat/web/national-accounts/data/main-tables}. Dataset ID: tec00114.
 #' @usage eu_gdp
+#' @keywords data
+NULL
+
+#' aus_pop
+#'
+#' @name aus_pop
+#' @docType data
+#' @description
+#' March 2017 population data for Australian states and territories by age group. Source: \url{http://lmip.gov.au/default.aspx?LMIP/Downloads/ABSLabourForceRegion}.
+#' @usage aus_pop
 #' @keywords data
 NULL
