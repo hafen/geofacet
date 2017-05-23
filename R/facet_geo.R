@@ -72,9 +72,7 @@ print.facet_geo <- function(x, ...) {
 
   g <- ggplot2::ggplotGrob(x)
 
-  idx <- which(is.na(grd$label))
-  tmp <- setdiff(g$layout$name, c(grd$strip[idx], grd$panel[idx]))
-  rgx <- paste0("(^", paste(tmp, collapse = "$|^"), "$)")
+  extra_rgx <- NULL
 
   if (attrs$move_axes) {
     scls <- attrs$scales
@@ -85,24 +83,38 @@ print.facet_geo <- function(x, ...) {
       nc <- max(grd$col)
       nr <- max(grd$row)
       for (ii in seq_len(nc)) {
-        last <- max(which(!is.na(grd$label[grd$col == ii])))
+        idx <- which(!is.na(grd$label[grd$col == ii]))
         l1 <- paste0("axis-b-", ii, "-", nr)
-        l2 <- paste0("axis-b-", ii, "-", last)
-        g$layout[g$layout$name == l1, c("t", "b")] <-
-          g$layout[g$layout$name == l2, c("t", "b")]
+        if (length(idx) > 0) {
+          last <- max(idx)
+          l2 <- paste0("axis-b-", ii, "-", last)
+          g$layout[g$layout$name == l1, c("t", "b")] <-
+            g$layout[g$layout$name == l2, c("t", "b")]
+        } else {
+          extra_rgx <- c(extra_rgx, l1)
+        }
       }
     }
     if (!scls %in% c("free", "free_y")) {
       # do y-axis stuff
       for (ii in seq_len(max(grd$row))) {
-        first <- min(which(!is.na(grd$label[grd$row == ii])))
+        idx <- which(!is.na(grd$label[grd$row == ii]))
         l1 <- paste0("axis-l-", ii, "-1")
-        l2 <- paste0("axis-l-", ii, "-", first)
-        g$layout[g$layout$name == l1, c("l", "r")] <-
-          g$layout[g$layout$name == l2, c("l", "r")]
+        if (length(idx) > 0) {
+          first <- min(idx)
+          l2 <- paste0("axis-l-", ii, "-", first)
+          g$layout[g$layout$name == l1, c("l", "r")] <-
+            g$layout[g$layout$name == l2, c("l", "r")]
+        } else {
+          extra_rgx <- c(extra_rgx, l1)
+        }
       }
     }
   }
+
+  idx <- which(is.na(grd$label))
+  tmp <- setdiff(g$layout$name, c(grd$strip[idx], grd$panel[idx], extra_rgx))
+  rgx <- paste0("(^", paste(tmp, collapse = "$|^"), "$)")
 
   graphics::plot(gtable::gtable_filter(g, rgx, trim = FALSE))
 }
