@@ -54,6 +54,7 @@ DC,5,9,District of Columbia
 
 grid_preview(us_state_grid1)
 
+us_state_grid1 <- data.frame(us_state_grid1)
 use_data(us_state_grid1, overwrite = TRUE)
 
 ##
@@ -115,6 +116,7 @@ DC,4,10,District of Columbia
 
 grid_preview(us_state_grid2)
 
+us_state_grid2 <- data.frame(us_state_grid2)
 use_data(us_state_grid2, overwrite = TRUE)
 
 ## eu
@@ -153,6 +155,7 @@ UK,2,1,United Kingdom
 
 grid_preview(eu_grid1, use_code = FALSE)
 
+eu_grid1 <- data.frame(eu_grid1)
 use_data(eu_grid1, overwrite = TRUE)
 
 ## Australian States / Territories
@@ -171,4 +174,5 @@ TAS,5,3,Tasmania
 
 grid_preview(aus_grid1)
 
+aus_grid1 <- data.frame(aus_grid1)
 use_data(aus_grid1, overwrite = TRUE)
