@@ -77,7 +77,7 @@ test_that("examples work", {
     geom_line(color = "steelblue") +
     facet_geo(~ name, grid = "eu_grid1", scales = "free_y") +
     scale_x_continuous(labels = function(x) paste0("'", substr(x, 3, 4))) +
-    ylab("GDP Per Capita In Relation to EU Index (100)") +
+    ylab("GDP Per Capita in Relation to EU Index (100)") +
     theme_bw()
   print(p)
 

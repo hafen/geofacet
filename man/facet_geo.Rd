@@ -76,7 +76,7 @@ ggplot(eu_gdp, aes(year, gdp_pc)) +
   geom_line(color = "steelblue") +
   facet_geo(~ name, grid = "eu_grid1", scales = "free_y") +
   scale_x_continuous(labels = function(x) paste0("'", substr(x, 3, 4))) +
-  ylab("GDP Per Capita In Relation to EU Index (100)") +
+  ylab("GDP Per Capita in Relation to EU Index (100)") +
   theme_bw()
 # would be nice if ggplot2 had a "sliced" option...
 # (for example, there's not much going on with Denmark but it looks like there is)

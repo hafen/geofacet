@@ -38,3 +38,16 @@ ggplot(state_unemp, aes(year, rate)) +
 ```
 
 ![us_unemp](https://cloud.githubusercontent.com/assets/1275592/26282368/6118d06a-3dc5-11e7-96b4-6a511800b6d3.png)
+
+GDP per capita in relation to EU index (100) for each country in the European Union:
+
+```r
+ggplot(eu_gdp, aes(year, gdp_pc)) +
+  geom_line(color = "steelblue") +
+  facet_geo(~ name, grid = "eu_grid1", scales = "free_y") +
+  scale_x_continuous(labels = function(x) paste0("'", substr(x, 3, 4))) +
+  ylab("GDP Per Capita in Relation to EU Index (100)") +
+  theme_bw()
+```
+
+![eu_gdp](https://cloud.githubusercontent.com/assets/1275592/26342901/ba4e83a2-3f4e-11e7-9a1f-9cec09e31682.png)
