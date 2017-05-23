@@ -20,10 +20,16 @@ test_that("examples work", {
     theme(panel.spacing = unit(0.1, "lines"))
   print(p)
 
-  # custom grid (move Wisconsin above Michigan)
-  my_grid <- us_state_grid1
-  my_grid$col[my_grid$code == "WI"] <- 7
+  grid_preview(us_state_grid2)
+  grid_preview(eu_grid1, use_code = FALSE)
 
+  # custom grid (move Hawaii over more)
+  my_grid <- us_state_grid2
+  my_grid$col <- my_grid$col + 2
+  my_grid$col[my_grid$code == "HI"] <- 1
+  grid_preview(my_grid)
+
+  # test to make sure we can have empty columns (since Hawaii is moved over)
   ggplot(state_ranks, aes(variable, rank, fill = variable)) +
     geom_col() +
     coord_flip() +

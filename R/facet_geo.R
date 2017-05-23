@@ -119,6 +119,31 @@ print.facet_geo <- function(x, ...) {
   graphics::plot(gtable::gtable_filter(g, rgx, trim = FALSE))
 }
 
+#' Plot a preview of a grid
+#'
+#' @param x a data frame containing a grid
+#' @param use_code use the code variable to determine text labels? If FALSE, the geographical entity name is used instead.
+#' @export
+#' @importFrom ggplot2 ggplot geom_rect geom_text aes xlim ylim
+#' @examples
+#' grid_preview(us_state_grid2)
+#' grid_preview(eu_grid1, use_code = FALSE)
+grid_preview <- function(x, use_code = TRUE) {
+  x <- check_grid(x)
+  x$col <- factor(x$col, levels = seq_len(max(x$col)))
+  x$row <- factor(x$row, levels = rev(seq_len(max(x$row))))
+  if (!use_code)
+    x$code <- x$name
+  ggplot2::ggplot(x, ggplot2::aes(col, row, label = code)) +
+    ggplot2::geom_rect(
+      xmin = as.numeric(x$col) - 0.5, xmax = as.numeric(x$col) + 0.5,
+      ymin = as.numeric(x$row) - 0.5, ymax = as.numeric(x$row) + 0.5,
+      fill = "gray", color = "#e1e1e1", alpha = 0.7) +
+    ggplot2::ylim(levels(x$row)) +
+    ggplot2::xlim(levels(x$col)) +
+    ggplot2::geom_text()
+}
+
 #' Print geofaceted ggplot
 #'
 #' @param x a data frame containing a grid

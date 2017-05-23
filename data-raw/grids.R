@@ -52,7 +52,7 @@ WY,3,3,Wyoming
 DC,5,9,District of Columbia
 ")
 
-# ggplot2::ggplot(us_state_grid1, ggplot2::aes(col, 9 - row, label = code)) + ggplot2::geom_text()
+grid_preview(us_state_grid1)
 
 use_data(us_state_grid1, overwrite = TRUE)
 
@@ -113,7 +113,7 @@ WY,4,3,Wyoming
 DC,4,10,District of Columbia
 ")
 
-# ggplot2::ggplot(us_state_grid2, ggplot2::aes(col, 9 - row, label = code)) + ggplot2::geom_text()
+grid_preview(us_state_grid2)
 
 use_data(us_state_grid2, overwrite = TRUE)
 
@@ -151,7 +151,7 @@ SE,1,4,Sweden
 UK,2,1,United Kingdom
 ")
 
-ggplot2::ggplot(eu_grid1, ggplot2::aes(col, 7 - row, label = code)) + ggplot2::geom_text()
+grid_preview(eu_grid1, use_code = FALSE)
 
 use_data(eu_grid1, overwrite = TRUE)
 
@@ -169,6 +169,6 @@ VIC,3,3,Victoria
 TAS,5,3,Tasmania
 ")
 
-ggplot2::ggplot(aus_grid1, ggplot2::aes(col, 5 - row, label = code)) + ggplot2::geom_text()
+grid_preview(aus_grid1)
 
 use_data(aus_grid1, overwrite = TRUE)
