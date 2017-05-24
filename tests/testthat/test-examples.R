@@ -30,10 +30,11 @@ test_that("examples work", {
   grid_preview(my_grid)
 
   # test to make sure we can have empty columns (since Hawaii is moved over)
-  ggplot(state_ranks, aes(variable, rank, fill = variable)) +
+  p <- ggplot(state_ranks, aes(variable, rank, fill = variable)) +
     geom_col() +
     coord_flip() +
     facet_geo(~ state, grid = my_grid)
+  print(p)
 
   # use a free x-axis (not a good idea but just to show it works)
   p <- ggplot(state_ranks, aes(variable, rank, fill = variable)) +
