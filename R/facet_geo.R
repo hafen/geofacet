@@ -22,7 +22,7 @@ facet_geo <- function(facets, ..., grid = "us_state_grid1", move_axes = TRUE) {
   if (inherits(e2, "facet_geo_spec")) {
     facet_col <- setdiff(unlist(lapply(e2$facets, as.character)), c("~", "+"))
     if (length(facet_col) > 1) {
-      message("Multiple facet columns specified... only using '", facet_col[1], "'")
+      message_nice("Multiple facet columns specified... only using '", facet_col[1], "'")
       facet_col <- facet_col[1]
     }
 
@@ -33,11 +33,11 @@ facet_geo <- function(facets, ..., grid = "us_state_grid1", move_axes = TRUE) {
     e2$grid <- NULL
 
     if (!is.null(e2$ncol))
-      message("replacing user-specified 'ncol'")
+      message_nice("replacing user-specified 'ncol'")
     if (!is.null(e2$nrow))
-      message("replacing user-specified 'nrow'")
+      message_nice("replacing user-specified 'nrow'")
     if (!is.null(e2$drop))
-      message("replacing user-specified 'drop'")
+      message_nice("replacing user-specified 'drop'")
 
     e2$nrow <- max(grd$row)
     e2$ncol <- max(grd$col)
@@ -162,12 +162,18 @@ grid_preview <- function(x, use_code = TRUE) {
 #' @export
 submit_grid <- function(x, name = NULL, desc = NULL) {
   x <- check_grid(x)
-  message("The data for your proposed grid will be added ",
-    "as an issue in this package's github reposotory.")
-  message("After you answer a few questions below, the issue will open in your web browser ",
+
+  prompt_txt <- "The"
+  if (is.null(name) || is.null(desc)) prompt_txt <- "After you answer a few questions below, the"
+
+  message_nice(
+    "The data for your proposed grid will be added ",
+    "as an issue in this package's github reposotory. ",
+    prompt_txt, " issue will open in your web browser ",
     "and after you make any desired edits, you need to click 'Submit new issue'.")
-  message("If you do not have a github account, you will first be prompted to create one.")
-  message("Your github username will be credited with the submission in the grid's docs.")
+  message_nice(
+    "If you do not have a github account, you will first be prompted to create one. ",
+    "Your github username will be credited with the submission in the grid's docs.")
 
   if (is.null(name)) name <- readline("Proposed name of grid: ")
   if (is.null(desc)) desc <- readline("Description of grid: ")
@@ -177,7 +183,14 @@ submit_grid <- function(x, name = NULL, desc = NULL) {
   dat_txt <- paste(textConnectionValue(tc), collapse = "\n")
   close(tc)
 
-  body <- paste0(desc, "\n\n```\n", dat_txt, "\n```\n")
+  body <- paste0(desc, "\n\n",
+    "[[Note: To help streamline the process of adding this grid, ",
+    "please replace this text with an image of a map for the region for reference. ",
+    "Also, please check the ISO_3166-2 (https://en.wikipedia.org/wiki/ISO_3166-2) ",
+    "codes if your grid uses countries or states/provinces. Finally, if you can ",
+    "provide an example of your grid in action with a data set and sample code, ",
+    "that would be great but is not required.]]",
+    "\n\nGrid data:\n\n```\n", dat_txt, "\n```\n\n")
 
   url <- sprintf(
     "https://github.com/hafen/geofacet/issues/new?title=new grid: '%s'&body=%s",
@@ -215,14 +228,13 @@ get_full_geo_grid <- function(grid) {
     grd <- get(grid)
   } else if (inherits(grid, "data.frame")) {
     grd <- check_grid(grid)
-    message("You provided a user-specified grid. ",
+    message_nice("You provided a user-specified grid. ",
       "If this is a generally-useful grid, please consider submitting it ",
       "to become a part of the geofacet package. You can do this easily by ",
       "calling:\nsubmit_grid(__grid_df_name__)")
   } else {
     stop("grid '", grid, "' not recognized...")
   }
-  ## TODO: allow support of 'grid' being a data frame and add other defaults
 
   nr <- max(grd$row)
   nc <- max(grd$col)
@@ -258,7 +270,7 @@ get_full_geo_data <- function(d, grd, facet_col) {
     stop("The values of the specified facet_geo column '", facet_col,
       "' do not match the 'code' column of the specified grid.", call. = FALSE)
   } else if (length(uldif) > 0) {
-    message("Some values in the specified facet_geo column '", facet_col,
+    message_nice("Some values in the specified facet_geo column '", facet_col,
       "' do not match the 'code' column of the specified grid and will be removed: ",
       paste(uldif, collapse = ", "))
     d <- d[!d[[facet_col]] %in% uldif, ]
