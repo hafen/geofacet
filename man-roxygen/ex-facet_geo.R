@@ -101,3 +101,12 @@ ggplot(sa_pop_dens, aes(factor(year), density, fill = factor(year))) +
     caption = "Data Source: Statistics SA Census",
     y = "Population density per square km") +
   theme_bw()
+
+# Use the Afrikaans name stored in the grid, "name_af", as facet labels
+ggplot(sa_pop_dens, aes(factor(year), density, fill = factor(year))) +
+  geom_col() +
+  facet_geo(~ code, grid = "sa_prov_grid1", label = "name_af") +
+  labs(title = "South Africa population density by province",
+    caption = "Data Source: Statistics SA Census",
+    y = "Population density per square km") +
+  theme_bw()

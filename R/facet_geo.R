@@ -3,11 +3,12 @@
 #' @param facets passed to \code{\link[ggplot2]{facet_wrap}}
 #' @param \ldots additional parameters passed to \code{\link[ggplot2]{facet_wrap}}
 #' @param grid character vector of the grid layout to use (currently only "us_state_grid1" and "us_state_grid2" are available)
+#' @param label an optional string denoting the name of a column in \code{grid} to use for facet labels. If NULL, the variable that best matches that in the data specified with \code{facets} will be used for the facet labels.
 #' @param move_axes should axis labels and ticks be moved to the closest panel along the margins?
 #' @example man-roxygen/ex-facet_geo.R
 #' @export
-facet_geo <- function(facets, ..., grid = "us_state_grid1", move_axes = TRUE) {
-  ret <- c(list(facets = facets, grid = grid, move_axes = move_axes), list(...))
+facet_geo <- function(facets, ..., grid = "us_state_grid1", label = NULL, move_axes = TRUE) {
+  ret <- c(list(facets = facets, grid = grid, label = label, move_axes = move_axes), list(...))
   class(ret) <- "facet_geo_spec"
   ret
 }
@@ -32,6 +33,17 @@ facet_geo <- function(facets, ..., grid = "us_state_grid1", move_axes = TRUE) {
     grd <- get_full_geo_grid(e2$grid)
     e2$grid <- NULL
 
+    label_col <- NULL
+    if (!is.null(e2$label)) {
+      if (e2$label %in% names(grd)) {
+        label_col <- e2$label
+      } else {
+        message_nice("Note: the specified label = '", e2$label,
+          "' does not exist in the supplied grid and it will be ignored.")
+      }
+    }
+    e2$label <- NULL
+
     if (!is.null(e2$ncol))
       message_nice("replacing user-specified 'ncol'")
     if (!is.null(e2$nrow))
@@ -42,9 +54,10 @@ facet_geo <- function(facets, ..., grid = "us_state_grid1", move_axes = TRUE) {
     e2$nrow <- max(grd$row)
     e2$ncol <- max(grd$col)
     e2$drop <- FALSE
-    e2$facets <- facet_col
+    e2$facets <- "facet_col" # we will create a new column "facet_col"
+    # this is done below in get_full_geo_data()
 
-    tmp <- get_full_geo_data(e1$data, grd, facet_col)
+    tmp <- get_full_geo_data(e1$data, grd, facet_col, label_col)
     e1$data <- tmp$dat
     grd <- tmp$grd
 
@@ -121,19 +134,25 @@ print.facet_geo <- function(x, ...) {
 #' Plot a preview of a grid
 #'
 #' @param x a data frame containing a grid
-#' @param use_code use the code variable to determine text labels? If FALSE, the geographical entity name is used instead.
+#' @param label the column should be used for text labels
 #' @export
 #' @importFrom ggplot2 ggplot geom_rect geom_text aes xlim ylim
 #' @examples
 #' grid_preview(us_state_grid2)
-#' grid_preview(eu_grid1, use_code = FALSE)
-grid_preview <- function(x, use_code = TRUE) {
+#' grid_preview(eu_grid1, label = "name")
+grid_preview <- function(x, label = NULL) {
   x <- check_grid(x)
   x$col <- factor(x$col, levels = seq_len(max(x$col)))
   x$row <- factor(x$row, levels = rev(seq_len(max(x$row))))
-  if (!use_code)
-    x$code <- x$name
-  ggplot2::ggplot(x, ggplot2::aes(col, row, label = code)) +
+  if (is.null(label)) {
+    nms <- names(x)
+    nm <- nms[grepl("^code", nms)][1]
+    x$txt <- x[[nm]]
+  } else {
+    x$txt <- x[[label]]
+  }
+
+  ggplot2::ggplot(x, ggplot2::aes_string("col", "row", label = "txt")) +
     ggplot2::geom_rect(
       xmin = as.numeric(x$col) - 0.5, xmax = as.numeric(x$col) + 0.5,
       ymin = as.numeric(x$row) - 0.5, ymax = as.numeric(x$row) + 0.5,
@@ -202,11 +221,25 @@ submit_grid <- function(x, name = NULL, desc = NULL) {
 }
 
 check_grid <- function(d) {
-  if (! all(c("code", "row", "col", "name") %in% names(d)))
-    stop("A custom grid must contain variables 'code', 'name', 'row', and 'col'", call. = FALSE)
+  nms <- names(d)
+  if (! all(c("row", "col") %in% nms))
+    stop("A custom grid must contain variables 'row' and 'col'", call. = FALSE)
+
+  nms2 <- setdiff(nms, c("row", "col"))
+  if (any(!grepl("^code|^name", nms2)))
+    stop("Other than 'row' and 'col', variable names of a custom grid ",
+      "must begin with 'code' or 'name'", call. = FALSE)
+
+  if (length(which(grepl("^code", nms2))) == 0)
+    stop("A custom grid must have at least one column beginning with 'code'", call. = FALSE)
+  if (length(which(grepl("^name", nms2))) == 0)
+    stop("A custom grid must have at least one column beginning with 'name'", call. = FALSE)
 
   d$row <- as.integer(d$row)
   d$col <- as.integer(d$col)
+
+  if (anyNA(d, recursive = TRUE))
+    stop("A custom grid cannot have any missing values", call. = FALSE)
 
   if (min(d$row) < 1)
     stop("A custom grid must have positive integer-valued 'row' values", call. = FALSE)
@@ -251,37 +284,39 @@ get_full_geo_grid <- function(grid) {
   grd
 }
 
-get_full_geo_data <- function(d, grd, facet_col) {
+get_full_geo_data <- function(d, grd, facet_col, label_col = NULL) {
   # check to make sure facet_col data matches that of grd
   ul <- unique(d[[facet_col]])
-  uldif1 <- setdiff(ul, grd$code)
-  uldif2 <- setdiff(ul, grd$name)
-  if (length(uldif1) < length(uldif2)) {
-    uldif <- uldif1
-    names(grd)[names(grd) == "code"] <- "label"
-    grd$name <- NULL
-  } else {
-    uldif <- uldif2
-    names(grd)[names(grd) == "name"] <- "label"
-    grd$code <- NULL
-  }
+  set_nms <- c("row", "col", "row2", "col2", "panel", "strip")
+  nms <- setdiff(names(grd), set_nms)
+  uldifs <- lapply(nms, function(x) setdiff(ul, grd[[x]]))
+  nn <- unlist(lapply(uldifs, length))
+  match_idx <- which.min(nn)
+  uldif <- uldifs[[match_idx]]
+  grd$label <- grd[[nms[match_idx]]]
+  if (is.null(label_col))
+    label_col <- nms[match_idx]
 
   if (length(uldif) == length(ul)) {
     stop("The values of the specified facet_geo column '", facet_col,
-      "' do not match the 'code' column of the specified grid.", call. = FALSE)
+      "' do not match any column of the specified grid.", call. = FALSE)
   } else if (length(uldif) > 0) {
     message_nice("Some values in the specified facet_geo column '", facet_col,
-      "' do not match the 'code' column of the specified grid and will be removed: ",
+      "' do not match the '", nms[match_idx],
+      "' column of the specified grid and will be removed: ",
       paste(uldif, collapse = ", "))
     d <- d[!d[[facet_col]] %in% uldif, ]
   }
 
-  # create unique dummy levels (incrementing whitespace) for empty panels
-  tmp <- grd$label
-  idx <- which(is.na(tmp))
-  tmp[idx] <- sapply(seq_along(idx), function(a) paste0(rep(" ", a), collapse = ""))
+  conv_idx <- match(d[[facet_col]], grd$label)
+  d$facet_col <- grd[[label_col]][conv_idx]
 
-  d[[facet_col]] <- factor(d[[facet_col]], levels = tmp)
+  # create unique dummy levels (incrementing whitespace) for empty panels
+  tmp <- grd[[label_col]]
+  na_idx <- which(is.na(tmp))
+  tmp[na_idx] <- sapply(seq_along(na_idx), function(a) paste0(rep(" ", a), collapse = ""))
+
+  d$facet_col <- factor(d$facet_col, levels = tmp)
 
   # need to update grd to have the right column
   list(dat = d, grd = grd)

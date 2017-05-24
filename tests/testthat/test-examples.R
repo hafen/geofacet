@@ -21,7 +21,7 @@ test_that("examples work", {
   print(p)
 
   grid_preview(us_state_grid2)
-  grid_preview(eu_grid1, use_code = FALSE)
+  grid_preview(eu_grid1, label = "name")
 
   # custom grid (move Hawaii over more)
   my_grid <- us_state_grid2
@@ -122,6 +122,16 @@ test_that("examples work", {
   p <- ggplot(sa_pop_dens, aes(factor(year), density, fill = factor(year))) +
     geom_col() +
     facet_geo(~ code, grid = "sa_prov_grid1") +
+    labs(title = "South Africa population density by province",
+      caption = "Data Source: Statistics SA Census",
+      y = "Population density per square km") +
+    theme_bw()
+  print(p)
+
+  # Use the Afrikaans name stored in the grid, "name_af", as facet labels
+  p <- ggplot(sa_pop_dens, aes(factor(year), density, fill = factor(year))) +
+    geom_col() +
+    facet_geo(~ code, grid = "sa_prov_grid1", label = "name_af") +
     labs(title = "South Africa population density by province",
       caption = "Data Source: Statistics SA Census",
       y = "Population density per square km") +

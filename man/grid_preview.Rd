@@ -4,17 +4,17 @@
 \alias{grid_preview}
 \title{Plot a preview of a grid}
 \usage{
-grid_preview(x, use_code = TRUE)
+grid_preview(x, label = NULL)
 }
 \arguments{
 \item{x}{a data frame containing a grid}
 
-\item{use_code}{use the code variable to determine text labels? If FALSE, the geographical entity name is used instead.}
+\item{label}{the column should be used for text labels}
 }
 \description{
 Plot a preview of a grid
 }
 \examples{
 grid_preview(us_state_grid2)
-grid_preview(eu_grid1, use_code = FALSE)
+grid_preview(eu_grid1, label = "name")
 }

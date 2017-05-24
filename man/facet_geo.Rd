@@ -4,12 +4,15 @@
 \alias{facet_geo}
 \title{Arrange a sequence of geographical panels into a grid that preserves some geographical orientation}
 \usage{
-facet_geo(facets, ..., grid = "us_state_grid1", move_axes = TRUE)
+facet_geo(facets, ..., grid = "us_state_grid1", label = NULL,
+  move_axes = TRUE)
 }
 \arguments{
 \item{facets}{passed to \code{\link[ggplot2]{facet_wrap}}}
 
 \item{grid}{character vector of the grid layout to use (currently only "us_state_grid1" and "us_state_grid2" are available)}
+
+\item{label}{an optional string denoting the name of a column in \code{grid} to use for facet labels. If NULL, the variable that best matches that in the data specified with \code{facets} will be used for the facet labels.}
 
 \item{move_axes}{should axis labels and ticks be moved to the closest panel along the margins?}
 
@@ -117,7 +120,16 @@ ggplot(aus_pop, aes(age_group, pop / 1e6, fill = age_group)) +
 # South Africa population density by province
 ggplot(sa_pop_dens, aes(factor(year), density, fill = factor(year))) +
   geom_col() +
-  facet_geo(~ code, grid = "sa_prov_grid1") +
+  facet_geo(~ province, grid = "sa_prov_grid1") +
+  labs(title = "South Africa population density by province",
+    caption = "Data Source: Statistics SA Census",
+    y = "Population density per square km") +
+  theme_bw()
+
+# Use the Afrikaans name stored in the grid, "name_af", as facet labels
+ggplot(sa_pop_dens, aes(factor(year), density, fill = factor(year))) +
+  geom_col() +
+  facet_geo(~ code, grid = "sa_prov_grid1", label = "name_af") +
   labs(title = "South Africa population density by province",
     caption = "Data Source: Statistics SA Census",
     y = "Population density per square km") +

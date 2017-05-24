@@ -1,5 +1,3 @@
-utils::globalVariables(c("code"))
-
 #' geofacet
 #'
 #' @name geofacet

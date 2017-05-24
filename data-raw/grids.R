@@ -1,55 +1,55 @@
-us_state_grid1 <- readr::read_csv("code,row,col,name
-AL,6,7,Alabama
-AK,7,2,Alaska
-AZ,5,2,Arizona
-AR,5,5,Arkansas
-CA,4,1,California
-CO,4,3,Colorado
-CT,3,10,Connecticut
-DE,4,10,Delaware
-FL,7,9,Florida
-GA,6,8,Georgia
-HI,7,1,Hawaii
-ID,2,2,Idaho
-IL,2,6,Illinois
-IN,3,6,Indiana
-IA,3,5,Iowa
-KS,5,4,Kansas
-KY,4,6,Kentucky
-LA,6,5,Louisiana
-ME,1,11,Maine
-MD,4,9,Maryland
-MA,2,10,Massachusetts
-MI,2,7,Michigan
-MN,2,5,Minnesota
-MS,6,6,Mississippi
-MO,4,5,Missouri
-MT,2,3,Montana
-NE,4,4,Nebraska
-NV,3,2,Nevada
-NH,1,10,New Hampshire
-NJ,3,9,New Jersey
-NM,5,3,New Mexico
-NY,2,9,New York
-NC,5,7,North Carolina
-ND,2,4,North Dakota
-OH,3,7,Ohio
-OK,6,4,Oklahoma
-OR,3,1,Oregon
-PA,3,8,Pennsylvania
-RI,3,11,Rhode Island
-SC,5,8,South Carolina
-SD,3,4,South Dakota
-TN,5,6,Tennessee
-TX,7,4,Texas
-UT,4,2,Utah
-VT,1,9,Vermont
-VA,4,8,Virginia
-WA,2,1,Washington
-WV,4,7,West Virginia
-WI,1,6,Wisconsin
-WY,3,3,Wyoming
-DC,5,9,District of Columbia
+us_state_grid1 <- readr::read_csv("row,col,code,name
+6,7,AL,Alabama
+7,2,AK,Alaska
+5,2,AZ,Arizona
+5,5,AR,Arkansas
+4,1,CA,California
+4,3,CO,Colorado
+3,10,CT,Connecticut
+4,10,DE,Delaware
+7,9,FL,Florida
+6,8,GA,Georgia
+7,1,HI,Hawaii
+2,2,ID,Idaho
+2,6,IL,Illinois
+3,6,IN,Indiana
+3,5,IA,Iowa
+5,4,KS,Kansas
+4,6,KY,Kentucky
+6,5,LA,Louisiana
+1,11,ME,Maine
+4,9,MD,Maryland
+2,10,MA,Massachusetts
+2,7,MI,Michigan
+2,5,MN,Minnesota
+6,6,MS,Mississippi
+4,5,MO,Missouri
+2,3,MT,Montana
+4,4,NE,Nebraska
+3,2,NV,Nevada
+1,10,NH,New Hampshire
+3,9,NJ,New Jersey
+5,3,NM,New Mexico
+2,9,NY,New York
+5,7,NC,North Carolina
+2,4,ND,North Dakota
+3,7,OH,Ohio
+6,4,OK,Oklahoma
+3,1,OR,Oregon
+3,8,PA,Pennsylvania
+3,11,RI,Rhode Island
+5,8,SC,South Carolina
+3,4,SD,South Dakota
+5,6,TN,Tennessee
+7,4,TX,Texas
+4,2,UT,Utah
+1,9,VT,Vermont
+4,8,VA,Virginia
+2,1,WA,Washington
+4,7,WV,West Virginia
+1,6,WI,Wisconsin
+3,3,WY,Wyoming
+5,9,DC,District of Columbia
 ")
 
 grid_preview(us_state_grid1)
@@ -60,58 +60,58 @@ devtools::use_data(us_state_grid1, overwrite = TRUE)
 ##
 ##---------------------------------------------------------
 
-us_state_grid2 <- readr::read_csv("code,row,col,name
-AL,6,7,Alabama
-AK,1,1,Alaska
-AZ,6,2,Arizona
-AR,6,5,Arkansas
-CA,6,1,California
-CO,5,3,Colorado
-CT,2,10,Connecticut
-DE,4,11,Delaware
-FL,7,9,Florida
-GA,6,8,Georgia
-HI,8,1,Hawaii
-ID,4,2,Idaho
-IL,4,6,Illinois
-IN,4,7,Indiana
-IA,4,5,Iowa
-KS,5,4,Kansas
-KY,5,7,Kentucky
-LA,7,5,Louisiana
-ME,1,12,Maine
-MD,5,10,Maryland
-MA,2,11,Massachusetts
-MI,3,7,Michigan
-MN,3,5,Minnesota
-MS,6,6,Mississippi
-MO,5,5,Missouri
-MT,3,2,Montana
-NE,4,4,Nebraska
-NV,5,1,Nevada
-NH,1,11,New Hampshire
-NJ,3,10,New Jersey
-NM,6,3,New Mexico
-NY,2,9,New York
-NC,5,9,North Carolina
-ND,3,3,North Dakota
-OH,4,8,Ohio
-OK,6,4,Oklahoma
-OR,4,1,Oregon
-PA,3,9,Pennsylvania
-RI,3,11,Rhode Island
-SC,6,9,South Carolina
-SD,3,4,South Dakota
-TN,5,6,Tennessee
-TX,7,4,Texas
-UT,5,2,Utah
-VT,1,10,Vermont
-VA,4,9,Virginia
-WA,3,1,Washington
-WV,5,8,West Virginia
-WI,3,6,Wisconsin
-WY,4,3,Wyoming
-DC,4,10,District of Columbia
+us_state_grid2 <- readr::read_csv("row,col,code,name
+6,7,AL,Alabama
+1,1,AK,Alaska
+6,2,AZ,Arizona
+6,5,AR,Arkansas
+6,1,CA,California
+5,3,CO,Colorado
+2,10,CT,Connecticut
+4,11,DE,Delaware
+7,9,FL,Florida
+6,8,GA,Georgia
+8,1,HI,Hawaii
+4,2,ID,Idaho
+4,6,IL,Illinois
+4,7,IN,Indiana
+4,5,IA,Iowa
+5,4,KS,Kansas
+5,7,KY,Kentucky
+7,5,LA,Louisiana
+1,12,ME,Maine
+5,10,MD,Maryland
+2,11,MA,Massachusetts
+3,7,MI,Michigan
+3,5,MN,Minnesota
+6,6,MS,Mississippi
+5,5,MO,Missouri
+3,2,MT,Montana
+4,4,NE,Nebraska
+5,1,NV,Nevada
+1,11,NH,New Hampshire
+3,10,NJ,New Jersey
+6,3,NM,New Mexico
+2,9,NY,New York
+5,9,NC,North Carolina
+3,3,ND,North Dakota
+4,8,OH,Ohio
+6,4,OK,Oklahoma
+4,1,OR,Oregon
+3,9,PA,Pennsylvania
+3,11,RI,Rhode Island
+6,9,SC,South Carolina
+3,4,SD,South Dakota
+5,6,TN,Tennessee
+7,4,TX,Texas
+5,2,UT,Utah
+1,10,VT,Vermont
+4,9,VA,Virginia
+3,1,WA,Washington
+5,8,WV,West Virginia
+3,6,WI,Wisconsin
+4,3,WY,Wyoming
+4,10,DC,District of Columbia
 ")
 
 grid_preview(us_state_grid2)
@@ -122,38 +122,38 @@ devtools::use_data(us_state_grid2, overwrite = TRUE)
 ## eu
 ##---------------------------------------------------------
 
-eu_grid1 <- readr::read_csv("code,row,col,name
-BE,4,3,Belgium
-BG,6,6,Bulgaria
-CZ,4,4,Czech Republic
-DK,2,3,Denmark
-DE,3,4,Germany
-EE,2,7,Estonia
-IE,1,1,Ireland
-EL,7,6,Greece
-ES,5,2,Spain
-FR,4,2,France
-HR,6,5,Croatia
-IT,6,3,Italy
-CY,7,7,Cyprus
-LV,2,6,Latvia
-LT,3,6,Lithuania
-LU,5,3,Luxembourg
-HU,5,5,Hungary
-MT,7,3,Malta
-NL,3,3,Netherlands
-AT,5,4,Austria
-PL,3,5,Poland
-PT,5,1,Portugal
-RO,5,6,Romania
-SI,6,4,Slovenia
-SK,4,5,Slovakia
-FI,1,5,Finland
-SE,1,4,Sweden
-UK,2,1,United Kingdom
+eu_grid1 <- readr::read_csv("row,col,code,name
+4,3,BE,Belgium
+6,6,BG,Bulgaria
+4,4,CZ,Czech Republic
+2,3,DK,Denmark
+3,4,DE,Germany
+2,7,EE,Estonia
+1,1,IE,Ireland
+7,6,EL,Greece
+5,2,ES,Spain
+4,2,FR,France
+6,5,HR,Croatia
+6,3,IT,Italy
+7,7,CY,Cyprus
+2,6,LV,Latvia
+3,6,LT,Lithuania
+5,3,LU,Luxembourg
+5,5,HU,Hungary
+7,3,MT,Malta
+3,3,NL,Netherlands
+5,4,AT,Austria
+3,5,PL,Poland
+5,1,PT,Portugal
+5,6,RO,Romania
+6,4,SI,Slovenia
+4,5,SK,Slovakia
+1,5,FI,Finland
+1,4,SE,Sweden
+2,1,UK,United Kingdom
 ")
 
-grid_preview(eu_grid1, use_code = FALSE)
+grid_preview(eu_grid1, label = "name")
 
 eu_grid1 <- data.frame(eu_grid1)
 devtools::use_data(eu_grid1, overwrite = TRUE)
@@ -161,15 +161,15 @@ devtools::use_data(eu_grid1, overwrite = TRUE)
 ## Australian States / Territories
 ##---------------------------------------------------------
 
-aus_grid1  <- readr::read_csv("code,row,col,name
-WA,2,1,Western Australia
-NT,1,2,Northern Territory
-SA,2,2,South Australia
-QLD,1,3,Queensland
-NSW,2,3,New South Wales
-ACT,3,4,Australian Capital Territory
-VIC,3,3,Victoria
-TAS,5,3,Tasmania
+aus_grid1  <- readr::read_csv("row,col,code,name
+2,1,WA,Western Australia
+1,2,NT,Northern Territory
+2,2,SA,South Australia
+1,3,QLD,Queensland
+2,3,NSW,New South Wales
+3,4,ACT,Australian Capital Territory
+3,3,VIC,Victoria
+5,3,TAS,Tasmania
 ")
 
 grid_preview(aus_grid1)
@@ -180,19 +180,21 @@ devtools::use_data(aus_grid1, overwrite = TRUE)
 ##
 ##---------------------------------------------------------
 
-sa_prov_grid1  <- readr::read_csv("code,row,col,name
-WC,4,1,Western Cape
-EC,4,2,Eastern Cape
-NC,3,1,Northern Cape
-GT,2,2,Gauteng
-NL,3,3,KwaZulu-Natal
-MP,2,3,Mpumalanga
-LP,1,3,Limpopo
-NW,2,1,North West
-FS,3,2,Free State
+sa_prov_grid1  <- readr::read_csv("row,col,code_iso,code_abb,name,name_af
+4,1,WC,WC,Western Cape,Wes-Kaap
+4,2,EC,EC,Eastern Cape,Oos-Kaap
+3,1,NC,NC,Northern Cape,Noord-Kaap
+2,2,GT,GP,Gauteng,Gauteng
+3,3,NL,KZN,KwaZulu-Natal,KwaZulu-Natal
+2,3,MP,MP,Mpumalanga,Mpumalanga
+1,3,LP,LP,Limpopo,Limpopo
+2,1,NW,NW,North West,Noordwes
+3,2,FS,FS,Free State,Vrystaat
 ")
 
-grid_preview(sa_prov_grid1, use_code = FALSE)
+check_grid(sa_prov_grid1)
+
+grid_preview(sa_prov_grid1, label = "name")
 
 sa_prov_grid1 <- data.frame(sa_prov_grid1)
 devtools::use_data(sa_prov_grid1, overwrite = TRUE)
