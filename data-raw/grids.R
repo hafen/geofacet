@@ -177,7 +177,7 @@ grid_preview(aus_grid1)
 aus_grid1 <- data.frame(aus_grid1)
 devtools::use_data(aus_grid1, overwrite = TRUE)
 
-##
+## South African Provinces
 ##---------------------------------------------------------
 
 sa_prov_grid1  <- readr::read_csv("row,col,code_iso,code_abb,name,name_af
@@ -198,3 +198,47 @@ grid_preview(sa_prov_grid1, label = "name")
 
 sa_prov_grid1 <- data.frame(sa_prov_grid1)
 devtools::use_data(sa_prov_grid1, overwrite = TRUE)
+
+## London Boroughs
+##---------------------------------------------------------
+
+london_boroughs_grid  <- readr::read_csv("row,col,code_ons,name
+4,5,E09000001,City of London
+4,8,E09000002,Barking and Dagenham
+2,4,E09000003,Barnet
+5,8,E09000004,Bexley
+3,3,E09000005,Brent
+6,6,E09000006,Bromley
+3,4,E09000007,Camden
+6,5,E09000008,Croydon
+3,2,E09000009,Ealing
+1,5,E09000010,Enfield
+5,7,E09000011,Greenwich
+3,6,E09000012,Hackney
+4,2,E09000013,Hammersmith and Fulham
+2,5,E09000014,Haringey
+2,3,E09000015,Harrow
+3,8,E09000016,Havering
+3,1,E09000017,Hillingdon
+4,1,E09000018,Hounslow
+3,5,E09000019,Islington
+4,3,E09000020,Kensington and Chelsea
+5,2,E09000021,Kingston upon Thames
+5,4,E09000022,Lambeth
+5,6,E09000023,Lewisham
+6,4,E09000024,Merton
+4,7,E09000025,Newham
+3,7,E09000026,Redbridge
+6,3,E09000027,Richmond upon Thames
+5,5,E09000028,Southwark
+7,4,E09000029,Sutton
+4,6,E09000030,Tower Hamlets
+2,6,E09000031,Waltham Forest
+5,3,E09000032,Wandsworth
+4,4,E09000033,Westminster
+")
+
+grid_preview(london_boroughs_grid, label = "name")
+
+london_boroughs_grid <- data.frame(london_boroughs_grid)
+devtools::use_data(london_boroughs_grid, overwrite = TRUE)

@@ -255,7 +255,8 @@ check_grid <- function(d) {
 
 get_full_geo_grid <- function(grid) {
 
-  valid_grids <- c("us_state_grid1", "us_state_grid2", "eu_grid1", "aus_grid1", "sa_prov_grid1")
+  valid_grids <- c("us_state_grid1", "us_state_grid2", "eu_grid1", "aus_grid1",
+    "sa_prov_grid1", "london_boroughs_grid")
 
   if (is.character(grid) && grid %in% valid_grids) {
     grd <- get(grid)

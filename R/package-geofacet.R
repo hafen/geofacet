@@ -55,6 +55,16 @@ NULL
 #' @keywords data
 NULL
 
+#' london_boroughs_grid
+#'
+#' @name london_boroughs_grid
+#' @docType data
+#' @description
+#' A data frame containing a grid layout for the boroughs of London, thanks to \url{https://github.com/eldenvo}. Note that the column \code{code_ons} contains the \href{http://geoportal.statistics.gov.uk/datasets/464be6191a434a91a5fa2f52c7433333_0?uiTab=table}{codes} used by UK Office for National Statistics.
+#' @usage london_boroughs_grid
+#' @keywords data
+NULL
+
 #' state_ranks
 #'
 #' @name state_ranks
@@ -112,5 +122,15 @@ NULL
 #' @description
 #' Population density for each province in South Africa for 1996, 2001, and 2011. Source: \url{https://en.wikipedia.org/wiki/List_of_South_African_provinces_by_population_density}
 #' @usage sa_pop_dens
+#' @keywords data
+NULL
+
+#' london_afford
+#'
+#' @name london_afford
+#' @docType data
+#' @description
+#' Total affordable housing completions by financial year in each London borough since 2015/16. Source: \url{https://data.london.gov.uk/dataset/dclg-affordable-housing-supply-borough}
+#' @usage london_afford
 #' @keywords data
 NULL

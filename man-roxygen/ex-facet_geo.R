@@ -110,3 +110,11 @@ ggplot(sa_pop_dens, aes(factor(year), density, fill = factor(year))) +
     caption = "Data Source: Statistics SA Census",
     y = "Population density per square km") +
   theme_bw()
+
+# Affordable housing starts by year for boroughs in London
+ggplot(london_afford, aes(x = year, y = starts, fill = year)) +
+  geom_col(position = position_dodge()) +
+  facet_geo(~ code, grid = "london_boroughs_grid", label = "name") +
+  labs(title = "Affordable Housing Starts in London",
+    subtitle = "Each Borough, 2015-16 to 2016-17",
+    caption = "Source: London Datastore", x = "", y = "")
