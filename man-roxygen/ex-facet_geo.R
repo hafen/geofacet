@@ -96,7 +96,7 @@ ggplot(aus_pop, aes(age_group, pop / 1e6, fill = age_group)) +
 # South Africa population density by province
 ggplot(sa_pop_dens, aes(factor(year), density, fill = factor(year))) +
   geom_col() +
-  facet_geo(~ code, grid = "sa_prov_grid1") +
+  facet_geo(~ province, grid = "sa_prov_grid1") +
   labs(title = "South Africa population density by province",
     caption = "Data Source: Statistics SA Census",
     y = "Population density per square km") +
