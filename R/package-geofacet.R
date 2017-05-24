@@ -47,6 +47,16 @@ NULL
 #' @keywords data
 NULL
 
+#' sa_prov_grid1
+#'
+#' @name sa_prov_grid1
+#' @docType data
+#' @description
+#' A data frame containing a grid layout for the provinces of South Africa, thanks to \url{https://github.com/jonmcalder}.
+#' @usage sa_prov_grid1
+#' @keywords data
+NULL
+
 #' state_ranks
 #'
 #' @name state_ranks
@@ -94,5 +104,15 @@ NULL
 #' @description
 #' March 2017 population data for Australian states and territories by age group. Source: \url{http://lmip.gov.au/default.aspx?LMIP/Downloads/ABSLabourForceRegion}.
 #' @usage aus_pop
+#' @keywords data
+NULL
+
+#' sa_pop_dens
+#'
+#' @name sa_pop_dens
+#' @docType data
+#' @description
+#' Population density for each province in South Africa for 1996, 2001, and 2011. Source: \url{https://en.wikipedia.org/wiki/List_of_South_African_provinces_by_population_density}
+#' @usage sa_pop_dens
 #' @keywords data
 NULL

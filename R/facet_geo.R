@@ -1,4 +1,3 @@
-
 #' Arrange a sequence of geographical panels into a grid that preserves some geographical orientation
 #'
 #' @param facets passed to \code{\link[ggplot2]{facet_wrap}}
@@ -209,14 +208,11 @@ check_grid <- function(d) {
 }
 
 get_full_geo_grid <- function(grid) {
-  if (is.character(grid) && grid == "us_state_grid1") {
-    grd <- geofacet::us_state_grid1
-  } else if (is.character(grid) && grid == "us_state_grid2") {
-    grd <- geofacet::us_state_grid2
-  } else if (is.character(grid) && grid == "eu_grid1") {
-    grd <- geofacet::eu_grid1
-  } else if (is.character(grid) && grid == "aus_grid1") {
-    grd <- geofacet::aus_grid1
+
+  valid_grids <- c("us_state_grid1", "us_state_grid2", "eu_grid1", "aus_grid1", "sa_prov_grid1")
+
+  if (is.character(grid) && grid %in% valid_grids) {
+    grd <- get(grid)
   } else if (inherits(grid, "data.frame")) {
     grd <- check_grid(grid)
     message("You provided a user-specified grid. ",

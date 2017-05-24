@@ -16,4 +16,6 @@ state_ranks$variable <- recode(state_ranks$variable,
   uninsured = "insured", poverty = "wealth", jobless = "employment",
   bachelor = "education", obesity = "health")
 
+state_ranks <- data.frame(state_ranks)
+
 use_data(state_ranks, overwrite = TRUE)

@@ -106,7 +106,7 @@ test_that("examples work", {
   print(p)
 
   # plot Australian population
-  p <- ggplot(aus_pop, aes(`Age Group`, Population / 1e6, fill = `Age Group`)) +
+  p <- ggplot(aus_pop, aes(age_group, pop / 1e6, fill = age_group)) +
     geom_col() +
     facet_geo(~ code, grid = "aus_grid1") +
     coord_flip() +
@@ -114,6 +114,16 @@ test_that("examples work", {
       title = "Australian Population Breakdown",
       caption = "Data Source: ABS Labour Force Survey, 12 month average",
       y = "Population [Millions]") +
+    theme_bw()
+  print(p)
+
+  # South Africa population density by province
+  p <- ggplot(sa_pop_dens, aes(factor(year), density, fill = factor(year))) +
+    geom_col() +
+    facet_geo(~ code, grid = "sa_prov_grid1") +
+    labs(title = "South Africa population density by province",
+      caption = "Data Source: Statistics SA Census",
+      y = "Population density per square km") +
     theme_bw()
   print(p)
 

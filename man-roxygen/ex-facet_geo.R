@@ -83,7 +83,7 @@ ggplot(subset(eu_imm, year == 2016), aes(factor(year), persons)) +
   theme_bw()
 
 # plot Australian population
-ggplot(aus_pop, aes(`Age Group`, Population / 1e6, fill = `Age Group`)) +
+ggplot(aus_pop, aes(age_group, pop / 1e6, fill = age_group)) +
   geom_col() +
   facet_geo(~ code, grid = "aus_grid1") +
   coord_flip() +
@@ -91,4 +91,13 @@ ggplot(aus_pop, aes(`Age Group`, Population / 1e6, fill = `Age Group`)) +
     title = "Australian Population Breakdown",
     caption = "Data Source: ABS Labour Force Survey, 12 month average",
     y = "Population [Millions]") +
+  theme_bw()
+
+# South Africa population density by province
+ggplot(sa_pop_dens, aes(factor(year), density, fill = factor(year))) +
+  geom_col() +
+  facet_geo(~ code, grid = "sa_prov_grid1") +
+  labs(title = "South Africa population density by province",
+    caption = "Data Source: Statistics SA Census",
+    y = "Population density per square km") +
   theme_bw()

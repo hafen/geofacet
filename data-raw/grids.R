@@ -55,7 +55,7 @@ DC,5,9,District of Columbia
 grid_preview(us_state_grid1)
 
 us_state_grid1 <- data.frame(us_state_grid1)
-use_data(us_state_grid1, overwrite = TRUE)
+devtools::use_data(us_state_grid1, overwrite = TRUE)
 
 ##
 ##---------------------------------------------------------
@@ -117,7 +117,7 @@ DC,4,10,District of Columbia
 grid_preview(us_state_grid2)
 
 us_state_grid2 <- data.frame(us_state_grid2)
-use_data(us_state_grid2, overwrite = TRUE)
+devtools::use_data(us_state_grid2, overwrite = TRUE)
 
 ## eu
 ##---------------------------------------------------------
@@ -156,7 +156,7 @@ UK,2,1,United Kingdom
 grid_preview(eu_grid1, use_code = FALSE)
 
 eu_grid1 <- data.frame(eu_grid1)
-use_data(eu_grid1, overwrite = TRUE)
+devtools::use_data(eu_grid1, overwrite = TRUE)
 
 ## Australian States / Territories
 ##---------------------------------------------------------
@@ -175,4 +175,24 @@ TAS,5,3,Tasmania
 grid_preview(aus_grid1)
 
 aus_grid1 <- data.frame(aus_grid1)
-use_data(aus_grid1, overwrite = TRUE)
+devtools::use_data(aus_grid1, overwrite = TRUE)
+
+##
+##---------------------------------------------------------
+
+sa_prov_grid1  <- readr::read_csv("code,row,col,name
+WC,4,1,Western Cape
+EC,4,2,Eastern Cape
+NC,3,1,Northern Cape
+GT,2,2,Gauteng
+NL,3,3,KwaZulu-Natal
+MP,2,3,Mpumalanga
+LP,1,3,Limpopo
+NW,2,1,North West
+FS,3,2,Free State
+")
+
+grid_preview(sa_prov_grid1, use_code = FALSE)
+
+sa_prov_grid1 <- data.frame(sa_prov_grid1)
+devtools::use_data(sa_prov_grid1, overwrite = TRUE)

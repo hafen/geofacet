@@ -32,6 +32,6 @@ a2 <- filter(a, period == 12)
 a2 <- select(a2, -period)
 a2 <- rename(a2, rate = value)
 
-state_unemp <- a2
+state_unemp <- data.frame(a2)
 
 use_data(state_unemp, overwrite = TRUE)
