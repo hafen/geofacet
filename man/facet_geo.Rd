@@ -126,7 +126,7 @@ ggplot(sa_pop_dens, aes(factor(year), density, fill = factor(year))) +
     y = "Population density per square km") +
   theme_bw()
 
-# Use the Afrikaans name stored in the grid, "name_af", as facet labels
+# use the Afrikaans name stored in the grid, "name_af", as facet labels
 ggplot(sa_pop_dens, aes(factor(year), density, fill = factor(year))) +
   geom_col() +
   facet_geo(~ code, grid = "sa_prov_grid1", label = "name_af") +
@@ -135,11 +135,21 @@ ggplot(sa_pop_dens, aes(factor(year), density, fill = factor(year))) +
     y = "Population density per square km") +
   theme_bw()
 
-# Affordable housing starts by year for boroughs in London
+# affordable housing starts by year for boroughs in London
 ggplot(london_afford, aes(x = year, y = starts, fill = year)) +
   geom_col(position = position_dodge()) +
   facet_geo(~ code, grid = "london_boroughs_grid", label = "name") +
   labs(title = "Affordable Housing Starts in London",
     subtitle = "Each Borough, 2015-16 to 2016-17",
     caption = "Source: London Datastore", x = "", y = "")
+
+# dental health in Scotland
+ggplot(nhs_scot_dental, aes(x = year, y = percent)) +
+  geom_line() +
+  facet_geo(~ name, grid = "nhs_scot_grid") +
+  scale_x_continuous(breaks = c(2004, 2007, 2010, 2013)) +
+  scale_y_continuous(breaks = c(40, 60, 80)) +
+  labs(title = "Child Dental Health in Scotland",
+    subtitle = "Percentage of P1 children in Scotland with no obvious decay experience.",
+    caption = "Source: statistics.gov.scot", x = "", y = "")
 }
