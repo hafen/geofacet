@@ -65,6 +65,16 @@ NULL
 #' @keywords data
 NULL
 
+#' nhs_scot_grid
+#'
+#' @name nhs_scot_grid
+#' @docType data
+#' @description
+#' A data frame containing a grid layout for a grid of NHS Scotland Health Boards, thanks to \url{https://gist.github.com/josephjosephadams}. Note that the column \code{code} contains the \href{http://geoportal.statistics.gov.uk/datasets/61dca36aa33e4aee99bbfa784fa9eb25_0?uiTab=table}{codes} used by UK Office for National Statistics.
+#' @usage nhs_scot_grid
+#' @keywords data
+NULL
+
 #' state_ranks
 #'
 #' @name state_ranks
@@ -132,5 +142,15 @@ NULL
 #' @description
 #' Total affordable housing completions by financial year in each London borough since 2015/16. Source: \url{https://data.london.gov.uk/dataset/dclg-affordable-housing-supply-borough}
 #' @usage london_afford
+#' @keywords data
+NULL
+
+#' nhs_scot_dental
+#'
+#' @name nhs_scot_dental
+#' @docType data
+#' @description
+#' Child dental health data in Scotland. Source: \url{http://statistics.gov.scot/data/child-dental-health}
+#' @usage nhs_scot_dental
 #' @keywords data
 NULL

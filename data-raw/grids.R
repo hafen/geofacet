@@ -242,3 +242,28 @@ grid_preview(london_boroughs_grid, label = "name")
 
 london_boroughs_grid <- data.frame(london_boroughs_grid)
 devtools::use_data(london_boroughs_grid, overwrite = TRUE)
+
+## 14 health boards of NHS Scotland
+##---------------------------------------------------------
+
+nhs_scot_grid  <- readr::read_csv("code,row,col,name
+S08000015,6,1,Ayrshire and Arran
+S08000016,6,3,Borders
+S08000017,6,2,Dumfries and Galloway
+S08000018,4,3,Fife
+S08000019,4,2,Forth Valley
+S08000020,2,2,Grampian
+S08000021,5,1,Greater Glasgow and Clyde
+S08000022,3,1,Highland
+S08000023,5,2,Lanarkshire
+S08000024,5,3,Lothian
+S08000025,1,2,Orkney
+S08000026,1,3,Shetland
+S08000027,3,2,Tayside
+S08000028,2,1,Western Isle
+")
+
+grid_preview(nhs_scot_grid, label = "name")
+
+nhs_scot_grid <- data.frame(nhs_scot_grid)
+devtools::use_data(nhs_scot_grid, overwrite = TRUE)
