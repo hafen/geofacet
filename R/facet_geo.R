@@ -128,6 +128,10 @@ print.facet_geo <- function(x, ...) {
   tmp <- setdiff(g$layout$name, c(grd$strip[idx], grd$panel[idx], extra_rgx))
   rgx <- paste0("(^", paste(tmp, collapse = "$|^"), "$)")
 
+  # TODO: look into using extra grid space to draw cartographic map
+  # https://github.com/baptiste/gridextra/wiki/gtable
+  # https://stackoverflow.com/questions/30532889/ggplot-overlay-two-plots
+
   graphics::plot(gtable::gtable_filter(g, rgx, trim = FALSE))
 }
 
@@ -256,7 +260,7 @@ check_grid <- function(d) {
 get_full_geo_grid <- function(grid) {
 
   valid_grids <- c("us_state_grid1", "us_state_grid2", "eu_grid1", "aus_grid1",
-    "sa_prov_grid1", "london_boroughs_grid", "nhs_scot_grid", "india_grid1")
+    "sa_prov_grid1", "london_boroughs_grid", "nhs_scot_grid", "india_grid1", "india_grid2")
 
   if (is.character(grid) && grid %in% valid_grids) {
     grd <- get(grid)

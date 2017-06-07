@@ -306,3 +306,43 @@ grid_preview(india_grid1, label = "name")
 
 india_grid1 <- data.frame(india_grid1)
 devtools::use_data(india_grid1, overwrite = TRUE)
+
+##
+##---------------------------------------------------------
+
+india_grid2 <- readr::read_csv("code,row,col,name
+JK,1,3,Jammu and Kashmir
+PB,2,2,Punjab
+HP,2,3,Himachal Pradesh
+HR,3,3,Haryana
+UK,2,4,Uttarakhand
+RJ,3,2,Rajasthan
+UP,3,4,Uttar Pradesh
+BR,3,5,Bihar
+GJ,4,1,Gujarat
+MP,4,2,Madhya Pradesh
+JH,4,3,Jharkhand
+WB,4,5,West Bengal
+MH,5,2,Maharashtra
+CG,4,4,Chhattisgarh
+OD,5,4,Odisha
+TS,5,3,Telangana
+GA,6,2,Goa
+KA,6,3,Karnataka
+AP,6,4,Andhra Pradesh
+KL,7,3,Kerala
+TN,7,4,Tamil Nadu
+AR,2,8,Arunachal Pradesh
+SK,3,6,Sikkim
+AS,3,7,Assam
+NL,3,8,Nagaland
+ML,4,7,Meghalaya
+MN,4,8,Manipur
+TR,5,7,Tripura
+MZ,5,8,Mizoram
+")
+
+grid_preview(india_grid2, label = "name")
+
+india_grid2 <- data.frame(india_grid2)
+devtools::use_data(india_grid2, overwrite = TRUE)

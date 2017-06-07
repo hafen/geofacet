@@ -85,6 +85,16 @@ NULL
 #' @keywords data
 NULL
 
+#' india_grid2
+#'
+#' @name india_grid2
+#' @docType data
+#' @description
+#' A data frame containing a grid layout for India states.
+#' @usage india_grid2
+#' @keywords data
+NULL
+
 #' state_ranks
 #'
 #' @name state_ranks
@@ -102,6 +112,16 @@ NULL
 #' @description
 #' Seasonally-adjusted december unemployment rate for each state (including DC) from 2000 to 2017. Obtained from bls.gov.
 #' @usage state_unemp
+#' @keywords data
+NULL
+
+#' election
+#'
+#' @name election
+#' @docType data
+#' @description
+#' 2016 US presidential election results, obtained from \url{http://bit.ly/2016votecount}.
+#' @usage election
 #' @keywords data
 NULL
 

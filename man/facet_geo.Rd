@@ -164,4 +164,54 @@ ggplot(subset(india_pop, type == "state"),
        y = "Population [Millions]") +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 40, hjust = 1))
+
+ggplot(subset(india_pop, type == "state"),
+  aes(pop_type, value / 1e6, fill = pop_type)) +
+  geom_col() +
+  facet_geo(~ name, grid = "india_grid2", label = "name") +
+  labs(title = "Indian Population Breakdown",
+       caption = "Data Source: Wikipedia",
+       x = "",
+       y = "Population [Millions]") +
+  theme_bw() +
+  theme(axis.text.x = element_text(angle = 40, hjust = 1),
+    strip.text.x = element_text(size = 6))
+
+# A few ways to look at the 2016 election results
+ggplot(election, aes("", pct, fill = candidate)) +
+  geom_col(alpha = 0.8, width = 1) +
+  scale_fill_manual(values = c("#4e79a7", "#e15759", "#59a14f")) +
+  facet_geo(~ state, grid = "us_state_grid2") +
+  scale_y_continuous(expand = c(0, 0)) +
+  labs(title = "2016 Election Results",
+    caption = "Data Source: http://bit.ly/2016votecount",
+    x = NULL,
+    y = "Percentage of Voters") +
+  theme(axis.title.x = element_blank(),
+    axis.text.x = element_blank(),
+    axis.ticks.x = element_blank(),
+    strip.text.x = element_text(size = 6))
+
+ggplot(election, aes(candidate, pct, fill = candidate)) +
+  geom_col() +
+  scale_fill_manual(values = c("#4e79a7", "#e15759", "#59a14f")) +
+  facet_geo(~ state, grid = "us_state_grid2") +
+  theme_bw() +
+  coord_flip() +
+  labs(title = "2016 Election Results",
+    caption = "Data Source: http://bit.ly/2016votecount",
+    x = NULL,
+    y = "Percentage of Voters") +
+  theme(strip.text.x = element_text(size = 6))
+
+ggplot(election, aes(candidate, votes / 1000000, fill = candidate)) +
+  geom_col() +
+  scale_fill_manual(values = c("#4e79a7", "#e15759", "#59a14f")) +
+  facet_geo(~ state, grid = "us_state_grid2") +
+  coord_flip() +
+  labs(title = "2016 Election Results",
+    caption = "Data Source: http://bit.ly/2016votecount",
+    x = NULL,
+    y = "Votes (millions)") +
+  theme(strip.text.x = element_text(size = 6))
 }
