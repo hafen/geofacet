@@ -267,3 +267,42 @@ grid_preview(nhs_scot_grid, label = "name")
 
 nhs_scot_grid <- data.frame(nhs_scot_grid)
 devtools::use_data(nhs_scot_grid, overwrite = TRUE)
+
+## India states (not including union territories)
+##---------------------------------------------------------
+india_grid1 <- readr::read_csv("code,row,col,name
+JK,1,3,Jammu and Kashmir
+PB,2,3,Punjab
+HP,2,4,Himachal Pradesh
+HR,3,3,Haryana
+UK,3,4,Uttarakhand
+AR,3,9,Arunachal Pradesh
+RJ,4,2,Rajasthan
+UP,4,3,Uttar Pradesh
+BR,4,5,Bihar
+SK,4,7,Sikkim
+AS,4,8,Assam
+NL,4,9,Nagaland
+GJ,5,1,Gujarat
+MP,5,3,Madhya Pradesh
+JH,5,5,Jharkhand
+WB,5,6,West Bengal
+ML,5,8,Meghalaya
+MN,5,9,Manipur
+MH,6,2,Maharashtra
+CG,6,4,Chhattisgarh
+OD,6,5,Odisha
+TR,6,8,Tripura
+MZ,6,9,Mizoram
+TS,6,3,Telangana
+GA,7,2,Goa
+KA,7,3,Karnataka
+AP,7,4,Andhra Pradesh
+KL,8,3,Kerala
+TN,8,4,Tamil Nadu
+")
+
+grid_preview(india_grid1, label = "name")
+
+india_grid1 <- data.frame(india_grid1)
+devtools::use_data(india_grid1, overwrite = TRUE)

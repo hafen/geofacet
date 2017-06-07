@@ -128,3 +128,15 @@ ggplot(nhs_scot_dental, aes(x = year, y = percent)) +
   labs(title = "Child Dental Health in Scotland",
     subtitle = "Percentage of P1 children in Scotland with no obvious decay experience.",
     caption = "Source: statistics.gov.scot", x = "", y = "")
+
+# India population breakdown
+ggplot(subset(india_pop, type == "state"),
+  aes(pop_type, value / 1e6, fill = pop_type)) +
+  geom_col() +
+  facet_geo(~ name, grid = "india_grid1", label = "code") +
+  labs(title = "Indian Population Breakdown",
+       caption = "Data Source: Wikipedia",
+       x = "",
+       y = "Population [Millions]") +
+  theme_bw() +
+  theme(axis.text.x = element_text(angle = 40, hjust = 1))

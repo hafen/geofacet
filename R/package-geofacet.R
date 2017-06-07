@@ -75,6 +75,16 @@ NULL
 #' @keywords data
 NULL
 
+#' india_grid1
+#'
+#' @name india_grid1
+#' @docType data
+#' @description
+#' A data frame containing a grid layout for India states, thanks to \url{https://github.com/meysubb}.
+#' @usage india_grid1
+#' @keywords data
+NULL
+
 #' state_ranks
 #'
 #' @name state_ranks
@@ -152,5 +162,15 @@ NULL
 #' @description
 #' Child dental health data in Scotland. Source: \url{http://statistics.gov.scot/data/child-dental-health}
 #' @usage nhs_scot_dental
+#' @keywords data
+NULL
+
+#' india_pop
+#'
+#' @name india_pop
+#' @docType data
+#' @description
+#' 2011 population data for India, broken down by urban and rural. Source: \url{https://en.wikipedia.org/wiki/List_of_states_and_union_territories_of_India_by_population}.
+#' @usage india_pop
 #' @keywords data
 NULL
