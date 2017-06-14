@@ -141,7 +141,15 @@ test_that("examples work", {
   Sys.setenv(GEOFACET_PKG_TESTING = "TRUE")
   my_grid <- us_state_grid1
   my_grid$col[my_grid$code == "WI"] <- 7
-  submit_grid(my_grid, name = "us_grid_tweak_wi",
+  grid_submit(my_grid, name = "us_grid_tweak_wi",
     desc = "Modified us_state_grid1 to move WI over")
+
+  # edit aus_grid1
+  grid_design(data = aus_grid1, img = "http://www.john.chapman.name/Austral4.gif")
+  # start with a clean slate
+  grid_design()
+  # arrange the alphabet
+  grid_design(data.frame(code = letters))
+
   Sys.setenv(GEOFACET_PKG_TESTING = "")
 })

@@ -40,7 +40,7 @@ ggplot(state_ranks, aes(variable, rank, fill = variable)) +
 
 # custom grid (move Wisconsin above Michigan)
 my_grid <- us_state_grid1
-my_grid$col[my_grid$label == "WI"] <- 7
+my_grid$col[my_grid$code == "WI"] <- 7
 
 ggplot(state_ranks, aes(variable, rank, fill = variable)) +
   geom_col() +

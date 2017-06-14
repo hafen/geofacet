@@ -166,6 +166,36 @@ grid_preview <- function(x, label = NULL) {
     ggplot2::geom_text()
 }
 
+#' Interactively design a grid
+#'
+#' @param data a data frame containing a grid to start from or NULL if starting from scratch
+#' @param img optional URL pointing to a reference image containing a geographic map of the entities in the grid
+#' @export
+#' @examples
+#' # edit aus_grid1
+#' grid_design(data = aus_grid1, img = "http://www.john.chapman.name/Austral4.gif")
+#' # start with a clean slate
+#' grid_design()
+#' # arrange the alphabet
+#' grid_design(data.frame(code = letters))
+grid_design <- function(data = NULL, img = NULL) {
+
+  if (!is.null(data)) {
+    rows <- c(paste(names(data), collapse = ","),
+      apply(data, 1, function(x) paste(x, collapse = ",")))
+    data <- paste(rows, collapse = "\n")
+  } else {
+    data <- ""
+  }
+
+  if (is.null(img))
+    img <- ""
+
+  url <- sprintf("https://hafen.github.io/grid-designer/#img=%s&data=%s", img, data)
+
+  if (Sys.getenv("GEOFACET_PKG_TESTING") == "") browseURL(URLencode(url))
+}
+
 #' Print geofaceted ggplot
 #'
 #' @param x a data frame containing a grid
@@ -177,13 +207,13 @@ grid_preview <- function(x, label = NULL) {
 #' \dontrun{
 #' my_grid <- us_state_grid1
 #' my_grid$col[my_grid$label == "WI"] <- 7
-#' submit_grid(my_grid, name = "us_grid_tweak_wi",
+#' grid_submit(my_grid, name = "us_grid_tweak_wi",
 #'   desc = "Modified us_state_grid1 to move WI over")
 #' }
 #'
 #'
 #' @export
-submit_grid <- function(x, name = NULL, desc = NULL) {
+grid_submit <- function(x, name = NULL, desc = NULL) {
   x <- check_grid(x)
 
   prompt_txt <- "The"
@@ -257,19 +287,24 @@ check_grid <- function(d) {
   d
 }
 
+.valid_grids <- c("us_state_grid1", "us_state_grid2", "eu_grid1", "aus_grid1",
+  "sa_prov_grid1", "london_boroughs_grid", "nhs_scot_grid", "india_grid1", "india_grid2")
+
+#' Get a list of valid grid names
+#' @export
+get_grid_names <- function()
+  .valid_grids
+
 get_full_geo_grid <- function(grid) {
 
-  valid_grids <- c("us_state_grid1", "us_state_grid2", "eu_grid1", "aus_grid1",
-    "sa_prov_grid1", "london_boroughs_grid", "nhs_scot_grid", "india_grid1", "india_grid2")
-
-  if (is.character(grid) && grid %in% valid_grids) {
+  if (is.character(grid) && grid %in% .valid_grids) {
     grd <- get(grid)
   } else if (inherits(grid, "data.frame")) {
     grd <- check_grid(grid)
     message_nice("You provided a user-specified grid. ",
       "If this is a generally-useful grid, please consider submitting it ",
       "to become a part of the geofacet package. You can do this easily by ",
-      "calling:\nsubmit_grid(__grid_df_name__)")
+      "calling:\ngrid_submit(__grid_df_name__)")
   } else {
     stop("grid '", grid, "' not recognized...")
   }
