@@ -145,7 +145,8 @@ test_that("examples work", {
     desc = "Modified us_state_grid1 to move WI over")
 
   # edit aus_grid1
-  grid_design(data = aus_grid1, img = "http://www.john.chapman.name/Austral4.gif")
+  grid_design(data = aus_grid1,
+    img = "http://www.john.chapman.name/Austral4.gif")
   # start with a clean slate
   grid_design()
   # arrange the alphabet
