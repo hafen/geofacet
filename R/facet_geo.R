@@ -198,7 +198,7 @@ grid_design <- function(data = NULL, img = NULL) {
   if (Sys.getenv("GEOFACET_PKG_TESTING") == "") browseURL(URLencode(url))
 }
 
-#' Print geofaceted ggplot
+#' Submit a grid to be included in the package
 #'
 #' @param x a data frame containing a grid
 #' @param name proposed name of the grid (if not supplied, will be asked for interactively)

@@ -2,7 +2,7 @@
 % Please edit documentation in R/facet_geo.R
 \name{grid_submit}
 \alias{grid_submit}
-\title{Print geofaceted ggplot}
+\title{Submit a grid to be included in the package}
 \usage{
 grid_submit(x, name = NULL, desc = NULL)
 }
@@ -14,7 +14,7 @@ grid_submit(x, name = NULL, desc = NULL)
 \item{desc}{a description of the grid (if not supplied, will be asked for interactively)}
 }
 \description{
-Print geofaceted ggplot
+Submit a grid to be included in the package
 }
 \details{
 This opens up a github issue for this package in the web browser with pre-populated content for adding a grid to the package.
