@@ -71,7 +71,7 @@ facet_geo <- function(facets, ..., grid = "us_state_grid1", label = NULL, move_a
   e1 %+% e2
 }
 
-#' Print geofaceted ggplot
+#' Print geofaceted ggplot2 object
 #'
 #' @param x plot object
 #' @param ... ignored

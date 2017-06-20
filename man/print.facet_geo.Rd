@@ -2,7 +2,7 @@
 % Please edit documentation in R/facet_geo.R
 \name{print.facet_geo}
 \alias{print.facet_geo}
-\title{Print geofaceted ggplot}
+\title{Print geofaceted ggplot2 object}
 \usage{
 \method{print}{facet_geo}(x, ...)
 }
@@ -12,5 +12,5 @@
 \item{...}{ignored}
 }
 \description{
-Print geofaceted ggplot
+Print geofaceted ggplot2 object
 }
