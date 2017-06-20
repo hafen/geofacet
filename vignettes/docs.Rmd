@@ -23,11 +23,19 @@ knitr::opts_chunk$set(comment = NA)
 rdl <- function(x) packagedocs::rd_link(deparse(substitute(x)))
 ```
 
+<div style="height: 20px;"></div>
+
+<img src="index_files/figure-html/state_unemp-1.png" style="max-width: 600px; width: 100%; display: block; margin: 0 auto;"></img>
+
 The geofacet R package provides a way to flexibly visualize data for different geographical regions by providing a ggplot2 faceting function `facet_geo()` which works just like ggplot2's built-in faceting, except that the resulting arrangement of panels follows a grid that mimics the original geographic topology as closely as possible.
 
-The idea is similar to that of the [statebin](), except that each cell in the grid can present any amount of data and be composed of any kind of plot conceivable with ggplot2, and grids representing any geographic topology (via a set of built-in grids or user-defined) can be used.
+The idea is similar to that of the [statebin](https://github.com/hrbrmstr/statebins), providing the additional benefits:
 
-The merits of this visualization approach are not discussed at length here but are addressed in a [blog post]().
+- Each cell in the grid can present any amount of data instead of a single value
+- Each cell in the grid can be composed of any kind of plot conceivable with ggplot2
+- Grids representing any geographic topology (via a set of built-in or user-defined grids) can be used
+
+The merits of this visualization approach are not discussed at length here but will be addressed in a blog post soon (link will be provided when posted) along with a history this approach being used in the past.
 
 ## Installation and Setup
 
@@ -46,7 +54,7 @@ library(ggplot2)
 
 The main function in this package is `facet_geo()` and its use can be thought of as equivalent to ggplot2's `facet_wrap()` except for the output it creates. If you know how to use ggplot2, then you essentially know how to use this package.
 
-Let's consider an example based on [this article](https://www.axios.com/an-emoji-built-from-data-for-every-state-2408885674.html), which uses a Chernoff faces visualization to show various quality-of-life metrics for US states.
+Let's consider an example based on [this article](https://www.axios.com/an-emoji-built-from-data-for-every-state-2408885674.html), which uses emoji / Chernoff faces to show various quality-of-life metrics for US states.
 
 This data is available in the geofacet package under the name `state_ranks`.
 
@@ -58,7 +66,7 @@ A state with a rank of 1 is doing the best in the category and a rank of 51 is t
 
 Let's use geofacet to create a bar chart of the state rankings. To do so, we create a ggplot2 plot using `geom_col()` to make a bar chart of the variable vs. rank. Then, instead of using `facet_wrap()` to facet the plot by state, we instead use `facet_geo()`:
 
-```{r fig.width=12, fig.height=7}
+```{r state_rank, fig.width=12, fig.height=7}
 ggplot(state_ranks, aes(variable, rank, fill = variable)) +
   geom_col() +
   coord_flip() +
@@ -71,13 +79,16 @@ While this plot may not be as fun as the Chernoff faces, geofacet allows us to u
 This plot helps illustrate a couple of advantages this approach has over a traditional geographical visualization approaches such as choropleth plots:
 
 - We can plot multiple values per geographical entity
-- We can use more effective visual encoding schemes (color, which is used in choropleth-type maps, is one of the [least effective]())
+- We can use more effective visual encoding schemes (color, which is used in choropleth-type maps, is one of the [least effective](http://flowingdata.com/2010/03/20/graphical-perception-learn-the-fundamentals-first/) ways to visually encode information)
 
 Note that other than the arrangement of the facets, every other aspect of this plot behaves in the way you would expect a ggplot2 plot to behave (such as themes, flipping coordinates, etc.).
 
 ### Geofacet Options
 
-There are a few options in `facet_geo()` worth discussing. With the `grid` argument, we can provide either a string specifying a built-in named grid to use, or we can provide our own grid as a data frame. With the `label` argument, we can specify which grid variable we want to use to label the facets.
+There are a few options in `facet_geo()` worth discussing:
+
+- With the `grid` argument, we can provide either a string specifying a built-in named grid to use, or we can provide our own grid as a data frame.
+- With the `label` argument, we can specify which grid variable we want to use to label the facets.
 
 For example, another built-in grid in the package is called "us_state_grid2".
 
@@ -87,7 +98,7 @@ head(us_state_grid2)
 
 Let's use this grid to plot the seasonally adjusted US unemployment rate over time, using the state names as the facet labels:
 
-```{r fig.width=12, fig.height=8}
+```{r state_unemp, fig.width=12, fig.height=8}
 ggplot(state_unemp, aes(year, rate)) +
   geom_line() +
   facet_geo(~ state, grid = "us_state_grid2", label = "name") +
@@ -101,13 +112,13 @@ ggplot(state_unemp, aes(year, rate)) +
 
 With this we can see how the unemployment rate varies per state and how some of the patterns are spatially similar.
 
-I actually prefer this grid layout over the first one.
-
 ## Other Grids
 
-Several users have submitted grids. For example, here is the South Africa population density by province
+Specifying a grid is as easy as creating a data frame with columns containing the names and commonly-used codes for the geographical entities, as well as a `row` and `col` variable specifying where the entity belongs on the grid.
 
-```{r fig.width=10, fig.height=8}
+For example, another grid in the package is a grid for the 28 European Union countries, `eu_grid1`. Here we plot the GDP per capita over time for each country in the EU:
+
+```{r eu_gdp, fig.width=10, fig.height=8}
 ggplot(eu_gdp, aes(year, gdp_pc)) +
   geom_line(color = "steelblue") +
   facet_geo(~ name, grid = "eu_grid1", scales = "free_y") +
@@ -116,7 +127,11 @@ ggplot(eu_gdp, aes(year, gdp_pc)) +
   theme_bw()
 ```
 
-This illustrates one potential downside of a geofaceted plot, which is that if the viewer is not already familiar with the underlying geography, the layout may not be very meaningful. There are some ideas to help with this that are being investigated.
+In this plot we are using a "free" y-axis, allowing the range of the y-axis to fill the available plotting space for each country. We do this because there is a large range of mean GDP across countries. Ideally ggplot2 would have a "sliced" axis range option that allows the y-axis range to vary but with each panel's axis having the same length of range, making for a more meaningful comparison across countries.
+
+This plot illustrates one potential downside of a geofaceted plot, which is that if the viewer is not already familiar with the underlying geography, the layout may not be very meaningful. There are some ideas to help with this that are being investigated.
+
+### List available grids
 
 To get the list of names of available grids:
 
@@ -124,12 +139,13 @@ To get the list of names of available grids:
 get_grid_names()
 ```
 
-You can learn how to submit your own below. Also at the end of this vignette you can find several examples of these grids in action.
+At the end of this vignette you can find several examples of these grids in action. You can learn how to submit your own below.
 
+### Creating your own grid
 
-## Creating and Submitting Your Own Grid
+Creating your own grid is as easy as specifying a data frame with columns `row` and `col` containing unique pairs of positive integers indicating grid locations and columns beginning with `name` and `code`. You may want to provide different options for names, such as names in different languages, or different kinds of country codes, etc. (see `sa_prov_grid1` for example).
 
-Suppose we don't like where Wisconsin is located...
+One way to create a grid is to take an existing one and modify it. For example, suppose we don't like where Wisconsin is located. We can simply change its location and preview the resulting grid with `grid_preview()`.
 
 ```{r message=FALSE}
 my_grid <- us_state_grid1
@@ -137,11 +153,152 @@ my_grid$col[my_grid$code == "WI"] <- 7
 grid_preview(my_grid)
 ```
 
-This will open up a GitHub issue with a template for you to fill out. You can look at closed issues for examples of other grid submissions.
+A much more fun way to design a grid is with a JavaScript app, ["Grid Designer"](https://hafen.github.io/grid-designer/). You can launch this application starting from scratch by visiting [this link](https://hafen.github.io/grid-designer/) or from R by calling:
 
+```r
+grid_design()
+```
+
+This will open up a web application with an empty grid and instructions on how to fill it out. Basically you just need to paste in csv content about the geographic entities (the `row` and `col` columns are not required at this point). For example, you might go to wikipedia to get a list of the names of counties in the state of Washington and enter in that list into the app. Then a grid of squares with these column attributes will be populated and you can interactively drag the squares around to get the grid you want. You can also add a link to a reference map to help you as you arrange the tiles.
+
+Another way to use the designer is to populate it with an existing grid you want to modify. For example, if I want to modify `us_state_grid1`, I can call:
+
+```r
+grid_design(data = us_state_grid2, img = "http://bit.ly/us-grid")
+```
+
+The app will look like this:
 
 <div style="width: 848px; height: 488px; overflow: hidden">
 <iframe style="transform: scale(0.75, 0.75); transform-origin: top left; border: 1px solid #d1d1d1;" src="https://hafen.github.io/grid-designer/#img=http%3A%2F%2Fbit.ly%2Fus-grid&data=row%2Ccol%2Ccode%2Cname%0A1%2C11%2CME%2CMaine%0A1%2C10%2CNH%2CNew%20Hampshire%0A1%2C9%2CVT%2CVermont%0A1%2C6%2CWI%2CWisconsin%0A2%2C2%2CID%2CIdaho%0A2%2C6%2CIL%2CIllinois%0A2%2C10%2CMA%2CMassachusetts%0A2%2C7%2CMI%2CMichigan%0A2%2C5%2CMN%2CMinnesota%0A2%2C3%2CMT%2CMontana%0A2%2C9%2CNY%2CNew%20York%0A2%2C4%2CND%2CNorth%20Dakota%0A2%2C1%2CWA%2CWashington%0A3%2C10%2CCT%2CConnecticut%0A3%2C6%2CIN%2CIndiana%0A3%2C5%2CIA%2CIowa%0A3%2C2%2CNV%2CNevada%0A3%2C9%2CNJ%2CNew%20Jersey%0A3%2C7%2COH%2COhio%0A3%2C1%2COR%2COregon%0A3%2C8%2CPA%2CPennsylvania%0A3%2C11%2CRI%2CRhode%20Island%0A3%2C4%2CSD%2CSouth%20Dakota%0A3%2C3%2CWY%2CWyoming%0A4%2C1%2CCA%2CCalifornia%0A4%2C3%2CCO%2CColorado%0A4%2C10%2CDE%2CDelaware%0A4%2C6%2CKY%2CKentucky%0A4%2C9%2CMD%2CMaryland%0A4%2C5%2CMO%2CMissouri%0A4%2C4%2CNE%2CNebraska%0A4%2C2%2CUT%2CUtah%0A4%2C8%2CVA%2CVirginia%0A4%2C7%2CWV%2CWest%20Virginia%0A5%2C2%2CAZ%2CArizona%0A5%2C5%2CAR%2CArkansas%0A5%2C4%2CKS%2CKansas%0A5%2C3%2CNM%2CNew%20Mexico%0A5%2C7%2CNC%2CNorth%20Carolina%0A5%2C8%2CSC%2CSouth%20Carolina%0A5%2C6%2CTN%2CTennessee%0A5%2C9%2CDC%2CDistrict%20of%20Columbia%0A6%2C7%2CAL%2CAlabama%0A6%2C8%2CGA%2CGeorgia%0A6%2C5%2CLA%2CLouisiana%0A6%2C6%2CMS%2CMississippi%0A6%2C4%2COK%2COklahoma%0A7%2C2%2CAK%2CAlaska%0A7%2C9%2CFL%2CFlorida%0A7%2C1%2CHI%2CHawaii%0A7%2C4%2CTX%2CTexas" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="650px" width="1130px" allowfullscreen></iframe>
 </div>
 
-## Many More Examples
+Note this app is live and you can edit it right here in your window. If you want to visit the app in a dedicated window, click [here](https://hafen.github.io/grid-designer/#img=http%3A%2F%2Fbit.ly%2Fus-grid&data=row%2Ccol%2Ccode%2Cname%0A1%2C11%2CME%2CMaine%0A1%2C10%2CNH%2CNew%20Hampshire%0A1%2C9%2CVT%2CVermont%0A1%2C6%2CWI%2CWisconsin%0A2%2C2%2CID%2CIdaho%0A2%2C6%2CIL%2CIllinois%0A2%2C10%2CMA%2CMassachusetts%0A2%2C7%2CMI%2CMichigan%0A2%2C5%2CMN%2CMinnesota%0A2%2C3%2CMT%2CMontana%0A2%2C9%2CNY%2CNew%20York%0A2%2C4%2CND%2CNorth%20Dakota%0A2%2C1%2CWA%2CWashington%0A3%2C10%2CCT%2CConnecticut%0A3%2C6%2CIN%2CIndiana%0A3%2C5%2CIA%2CIowa%0A3%2C2%2CNV%2CNevada%0A3%2C9%2CNJ%2CNew%20Jersey%0A3%2C7%2COH%2COhio%0A3%2C1%2COR%2COregon%0A3%2C8%2CPA%2CPennsylvania%0A3%2C11%2CRI%2CRhode%20Island%0A3%2C4%2CSD%2CSouth%20Dakota%0A3%2C3%2CWY%2CWyoming%0A4%2C1%2CCA%2CCalifornia%0A4%2C3%2CCO%2CColorado%0A4%2C10%2CDE%2CDelaware%0A4%2C6%2CKY%2CKentucky%0A4%2C9%2CMD%2CMaryland%0A4%2C5%2CMO%2CMissouri%0A4%2C4%2CNE%2CNebraska%0A4%2C2%2CUT%2CUtah%0A4%2C8%2CVA%2CVirginia%0A4%2C7%2CWV%2CWest%20Virginia%0A5%2C2%2CAZ%2CArizona%0A5%2C5%2CAR%2CArkansas%0A5%2C4%2CKS%2CKansas%0A5%2C3%2CNM%2CNew%20Mexico%0A5%2C7%2CNC%2CNorth%20Carolina%0A5%2C8%2CSC%2CSouth%20Carolina%0A5%2C6%2CTN%2CTennessee%0A5%2C9%2CDC%2CDistrict%20of%20Columbia%0A6%2C7%2CAL%2CAlabama%0A6%2C8%2CGA%2CGeorgia%0A6%2C5%2CLA%2CLouisiana%0A6%2C6%2CMS%2CMississippi%0A6%2C4%2COK%2COklahoma%0A7%2C2%2CAK%2CAlaska%0A7%2C9%2CFL%2CFlorida%0A7%2C1%2CHI%2CHawaii%0A7%2C4%2CTX%2CTexas).
+
+### Submitting a grid
+
+One of the most important features of this package is its facilities for encouraging and making it easy for users to create and *share* their grids. Creating a grid is usually very subjective and it is difficult to automate. Therefore we want this package to be a resource for making it easy to crowdsource the creation of useful grids.
+
+There are two ways to share a grid. If you created a grid `my_grid` in R, you can run:
+
+```r
+grid_submit(my_grid, name = "my_grid1", desc = "An awesome grid...")
+```
+
+This will open up a GitHub issue with a template for you to fill out. You can look at closed issues for examples of other grid submissions.
+
+The other way to submit a grid is to use the grid designer app and when you are done, click the "Submit Grid to GitHub" button, where in a similar fashion a GitHub issue will be opened.
+
+Note that both of these approaches require you to have a GitHub account.
+
+## More Examples
+
+### Australian population by age group
+
+```{r aus_pop, fig.width=8, fig.height=6.5}
+ggplot(aus_pop, aes(age_group, pop / 1e6, fill = age_group)) +
+  geom_col() +
+  facet_geo(~ code, grid = "aus_grid1") +
+  coord_flip() +
+  labs(
+    title = "Australian Population Breakdown",
+    caption = "Data Source: ABS Labour Force Survey, 12 month average",
+    y = "Population [Millions]") +
+  theme_bw()
+```
+
+### South Africa population density by province
+
+```{r sa_pop, fig.width=8, fig.height=6.5}
+ggplot(sa_pop_dens, aes(factor(year), density, fill = factor(year))) +
+  geom_col() +
+  facet_geo(~ province, grid = "sa_prov_grid1") +
+  labs(title = "South Africa population density by province",
+    caption = "Data Source: Statistics SA Census",
+    y = "Population density per square km") +
+  theme_bw()
+```
+
+### Affordable housing starts by year for boroughs in London
+
+```{r london_afford, fig.width=11.4, fig.height=7.7}
+ggplot(london_afford, aes(x = year, y = starts, fill = year)) +
+  geom_col(position = position_dodge()) +
+  facet_geo(~ code, grid = "london_boroughs_grid", label = "name") +
+  labs(title = "Affordable Housing Starts in London",
+    subtitle = "Each Borough, 2015-16 to 2016-17",
+    caption = "Source: London Datastore", x = "", y = "")
+```
+
+### Dental health in Scotland
+
+```{r nhs_scot, fig.width=6.2, fig.height=7.7}
+ggplot(nhs_scot_dental, aes(x = year, y = percent)) +
+  geom_line() +
+  facet_geo(~ name, grid = "nhs_scot_grid") +
+  scale_x_continuous(breaks = c(2004, 2007, 2010, 2013)) +
+  scale_y_continuous(breaks = c(40, 60, 80)) +
+  labs(title = "Child Dental Health in Scotland",
+    subtitle = "Percentage of P1 children in Scotland with no obvious decay experience.",
+    caption = "Source: statistics.gov.scot", x = "", y = "")
+```
+
+### India population breakdown
+
+```{r india_pop, fig.width=8.6, fig.height=7.7}
+ggplot(subset(india_pop, type == "state"),
+  aes(pop_type, value / 1e6, fill = pop_type)) +
+  geom_col() +
+  facet_geo(~ name, grid = "india_grid2", label = "code") +
+  labs(title = "Indian Population Breakdown",
+       caption = "Data Source: Wikipedia",
+       x = "",
+       y = "Population [Millions]") +
+  theme_bw() +
+  theme(axis.text.x = element_text(angle = 40, hjust = 1))
+```
+
+### A few ways to look at the 2016 election results
+
+```{r election1, fig.width=12, fig.height=8}
+ggplot(election, aes("", pct, fill = candidate)) +
+  geom_col(alpha = 0.8, width = 1) +
+  scale_fill_manual(values = c("#4e79a7", "#e15759", "#59a14f")) +
+  facet_geo(~ state, grid = "us_state_grid2") +
+  scale_y_continuous(expand = c(0, 0)) +
+  labs(title = "2016 Election Results",
+    caption = "Data Source: http://bit.ly/2016votecount",
+    x = NULL,
+    y = "Percentage of Voters") +
+  theme(axis.title.x = element_blank(),
+    axis.text.x = element_blank(),
+    axis.ticks.x = element_blank(),
+    strip.text.x = element_text(size = 6))
+```
+
+```{r election2, fig.width=12, fig.height=8}
+ggplot(election, aes(candidate, pct, fill = candidate)) +
+  geom_col() +
+  scale_fill_manual(values = c("#4e79a7", "#e15759", "#59a14f")) +
+  facet_geo(~ state, grid = "us_state_grid2") +
+  theme_bw() +
+  coord_flip() +
+  labs(title = "2016 Election Results",
+    caption = "Data Source: http://bit.ly/2016votecount",
+    x = NULL,
+    y = "Percentage of Voters") +
+  theme(strip.text.x = element_text(size = 6))
+```
+
+```{r election3, fig.width=12, fig.height=8}
+ggplot(election, aes(candidate, votes / 1000000, fill = candidate)) +
+  geom_col() +
+  scale_fill_manual(values = c("#4e79a7", "#e15759", "#59a14f")) +
+  facet_geo(~ state, grid = "us_state_grid2") +
+  coord_flip() +
+  labs(title = "2016 Election Results",
+    caption = "Data Source: http://bit.ly/2016votecount",
+    x = NULL,
+    y = "Votes (millions)") +
+  theme(strip.text.x = element_text(size = 6))
+```
