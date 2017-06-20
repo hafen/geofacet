@@ -10,7 +10,7 @@ NULL
 #' @name state_ranks
 #' @docType data
 #' @description
-#' State rankings in the following categories with the variable upon which ranking is based in parantheses: education (adults over 25 with a bachelor's degree in 2015), employment (March 2017 unemployment rate - BLS), health (obesity rate from 2015 - CDC), insured (uninsured rate in 2015 - US Census), sleep (share of adults that report at least 7 hours of sleep each night from 2016 - CDC), wealth (poverty rate 2014/15 - US Census). In each category, the lower the ranking, the more favorable. This data is based on data presented here: \url{https://www.axios.com/an-emoji-built-from-data-for-every-state-2408885674.html}
+#' State rankings in the following categories with the variable upon which ranking is based in parentheses: education (adults over 25 with a bachelor's degree in 2015), employment (March 2017 unemployment rate - BLS), health (obesity rate from 2015 - CDC), insured (uninsured rate in 2015 - US Census), sleep (share of adults that report at least 7 hours of sleep each night from 2016 - CDC), wealth (poverty rate 2014/15 - US Census). In each category, the lower the ranking, the more favorable. This data is based on data presented here: \url{https://www.axios.com/an-emoji-built-from-data-for-every-state-2408885674.html}
 #' @usage state_ranks
 #' @keywords data
 NULL
@@ -20,7 +20,7 @@ NULL
 #' @name state_unemp
 #' @docType data
 #' @description
-#' Seasonally-adjusted december unemployment rate for each state (including DC) from 2000 to 2017. Obtained from bls.gov.
+#' Seasonally-adjusted December unemployment rate for each state (including DC) from 2000 to 2017. Obtained from bls.gov.
 #' @usage state_unemp
 #' @keywords data
 NULL
@@ -40,7 +40,7 @@ NULL
 #' @name eu_imm
 #' @docType data
 #' @description
-#' Annual number of resettled persons for each EU country. "Resettled refugees means persons who have been granted an authorisation to reside in a Member State within the framework of a national or Community resettlement scheme.". Source: \url{http://ec.europa.eu/eurostat/cache/metadata/en/migr_asydec_esms.htm}. Dataset ID: tps00195.
+#' Annual number of resettled persons for each EU country. "Resettled refugees means persons who have been granted an authorization to reside in a Member State within the framework of a national or Community resettlement scheme.". Source: \url{http://ec.europa.eu/eurostat/cache/metadata/en/migr_asydec_esms.htm}. Dataset ID: tps00195.
 #' @usage eu_imm
 #' @keywords data
 NULL

@@ -8,6 +8,6 @@
 state_unemp
 }
 \description{
-Seasonally-adjusted december unemployment rate for each state (including DC) from 2000 to 2017. Obtained from bls.gov.
+Seasonally-adjusted December unemployment rate for each state (including DC) from 2000 to 2017. Obtained from bls.gov.
 }
 \keyword{data}
