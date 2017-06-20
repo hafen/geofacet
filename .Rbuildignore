@@ -7,3 +7,4 @@
 ^man-roxygen
 ^data-raw
 ^_gh-pages$
+^cran-comments\.md$
