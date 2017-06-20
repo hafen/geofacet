@@ -212,8 +212,6 @@ grid_design <- function(data = NULL, img = NULL) {
 #' grid_submit(my_grid, name = "us_grid_tweak_wi",
 #'   desc = "Modified us_state_grid1 to move WI over")
 #' }
-#'
-#'
 #' @export
 grid_submit <- function(x, name = NULL, desc = NULL) {
   x <- check_grid(x)

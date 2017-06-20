@@ -26,6 +26,4 @@ my_grid$col[my_grid$label == "WI"] <- 7
 grid_submit(my_grid, name = "us_grid_tweak_wi",
   desc = "Modified us_state_grid1 to move WI over")
 }
-
-
 }
