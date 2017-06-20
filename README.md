@@ -10,7 +10,9 @@ This R package provides geofaceting functionality for ggplot2. Geofaceting arran
 ## Install
 
 ```r
-devtools::install_github("hafen/geofacet")
+install.packages("geofacet")
+# or from github:
+# devtools::install_github("hafen/geofacet")
 ```
 
 ## Example
