@@ -145,6 +145,8 @@ print.facet_geo <- function(x, ...) {
 #' grid_preview(us_state_grid2)
 #' grid_preview(eu_grid1, label = "name")
 grid_preview <- function(x, label = NULL) {
+  x <- get_grid(x)
+
   x <- check_grid(x)
   x$col <- factor(x$col, levels = seq_len(max(x$col)))
   x$row <- factor(x$row, levels = rev(seq_len(max(x$row))))
@@ -287,18 +289,24 @@ check_grid <- function(d) {
   d
 }
 
-.valid_grids <- c("us_state_grid1", "us_state_grid2", "eu_grid1", "aus_grid1",
-  "sa_prov_grid1", "london_boroughs_grid", "nhs_scot_grid", "india_grid1", "india_grid2")
-
 #' Get a list of valid grid names
 #' @export
 get_grid_names <- function()
   .valid_grids
 
-get_full_geo_grid <- function(grid) {
-
-  if (is.character(grid) && grid %in% .valid_grids) {
-    grd <- get(grid)
+get_grid <- function(grid) {
+  if (is.character(grid)) {
+    if (grid %in% .valid_grids) {
+      grd <- get(grid)
+    } else {
+      message("grid '", grid, "' not found in package, checking online...")
+      url <- sprintf("https://raw.githubusercontent.com/hafen/grid-designer/master/grids/%s.csv",
+        grid)
+      grd <- suppressWarnings(try(utils::read.csv(url, stringsAsFactors = FALSE), silent = TRUE))
+      if (inherits(grd, "try-error")) {
+        stop("grid '", grid, "' not recognized...")
+      }
+    }
   } else if (inherits(grid, "data.frame")) {
     grd <- check_grid(grid)
     message_nice("You provided a user-specified grid. ",
@@ -308,6 +316,13 @@ get_full_geo_grid <- function(grid) {
   } else {
     stop("grid '", grid, "' not recognized...")
   }
+  grd
+}
+
+#' @importFrom utils read.csv
+get_full_geo_grid <- function(grid) {
+
+  grd <- get_grid(grid)
 
   nr <- max(grd$row)
   nc <- max(grd$col)

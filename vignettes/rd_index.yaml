@@ -1,0 +1,43 @@
+## layout the order in which topics are presented in the rd docs
+# 1. get a list of topics with the following:
+#    db <- tools::Rd_db("geofacet")
+#    topics <- gsub("\\.Rd", "", names(db))
+#    cat(paste(topics, collapse = "\n"))
+# 2. arrange the topic names into sections as desired in the format below:
+## If you need to see which topics are missing, do the following in addition:
+# cur <- yaml::yaml.load_file("rd_index.yaml")
+# cur <- unlist(lapply(cur, function(x) x$topics))
+# cat(paste(setdiff(topics, cur), collapse = "\n"))
+knitr:
+  eval: false
+
+sections:
+-
+  section_name: Package Functions
+  topics:
+    - facet_geo
+    - get_grid_names
+    - grid_design
+    - grid_preview
+    - grid_submit
+
+-
+  section_name: Grids
+  topics:
+    -
+      file: grids.Rd
+      title: "grids"
+
+-
+  section_name: Datasets
+  topics:
+    - aus_pop
+    - election
+    - eu_gdp
+    - eu_imm
+    - india_pop
+    - london_afford
+    - nhs_scot_dental
+    - sa_pop_dens
+    - state_ranks
+    - state_unemp

@@ -16,6 +16,8 @@ Suggests:
     covr,
     lintr,
     knitr,
-    rmarkdown
+    rmarkdown,
+    packagedocs
 RoxygenNote: 6.0.1
-VignetteBuilder: knitr
+VignetteBuilder: knitr,
+    packagedocs

@@ -1,0 +1,20 @@
+---
+title: "geofacet"
+author: "Ryan Hafen"
+copyright: "Ryan Hafen"
+output:
+  packagedocs::package_docs_rd:
+    toc: true
+    toc_collapse: false
+redirect: hafen/geofacet/rd.html
+vignette: |
+  %\VignetteIndexEntry{geofacet Package Reference}
+  %\VignetteEngine{packagedocs::redirect}
+  %\VignetteEncoding{UTF-8}
+navpills: |
+  <li><a href='docs.html'>Docs</a></li>
+  <li class="active"><a href='rd.html'>Package Ref</a></li>
+---
+
+```{r auto-gen-child, child="auto-generated-rd.Rmd"}
+```

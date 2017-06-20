@@ -6,3 +6,4 @@
 ^_ignore
 ^man-roxygen
 ^data-raw
+^_gh-pages$

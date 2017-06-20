@@ -1,0 +1,147 @@
+---
+title: "geofacet"
+author: "Ryan Hafen"
+copyright: "Ryan Hafen"
+output:
+  packagedocs::package_docs:
+    toc: false
+redirect: hafen/geofacet
+vignette: |
+  %\VignetteIndexEntry{geofacet Documentation}
+  %\VignetteEngine{packagedocs::redirect}
+  %\VignetteEncoding{UTF-8}
+navpills: |
+  <li class="active"><a href='docs.html'>Docs</a></li>
+  <li><a href='rd.html'>Package Ref</a></li>
+---
+
+```{r global_options, include=FALSE}
+# R output pre blocks are styled by default to indicate output
+knitr::opts_chunk$set(comment = NA)
+
+# shorthand for rd_link() - see ?packagedocs::rd_link for more information
+rdl <- function(x) packagedocs::rd_link(deparse(substitute(x)))
+```
+
+The geofacet R package provides a way to flexibly visualize data for different geographical regions by providing a ggplot2 faceting function `facet_geo()` which works just like ggplot2's built-in faceting, except that the resulting arrangement of panels follows a grid that mimics the original geographic topology as closely as possible.
+
+The idea is similar to that of the [statebin](), except that each cell in the grid can present any amount of data and be composed of any kind of plot conceivable with ggplot2, and grids representing any geographic topology (via a set of built-in grids or user-defined) can be used.
+
+The merits of this visualization approach are not discussed at length here but are addressed in a [blog post]().
+
+## Installation and Setup
+
+```{r eval=FALSE}
+install.packages("geofacet")
+# or from github:
+# devtools::install_github("hafen/geofacet")
+```
+
+```{r}
+library(geofacet)
+library(ggplot2)
+```
+
+## Usage
+
+The main function in this package is `facet_geo()` and its use can be thought of as equivalent to ggplot2's `facet_wrap()` except for the output it creates. If you know how to use ggplot2, then you essentially know how to use this package.
+
+Let's consider an example based on [this article](https://www.axios.com/an-emoji-built-from-data-for-every-state-2408885674.html), which uses a Chernoff faces visualization to show various quality-of-life metrics for US states.
+
+This data is available in the geofacet package under the name `state_ranks`.
+
+```{r}
+head(state_ranks)
+```
+
+A state with a rank of 1 is doing the best in the category and a rank of 51 is the worst (Washington DC is included).
+
+Let's use geofacet to create a bar chart of the state rankings. To do so, we create a ggplot2 plot using `geom_col()` to make a bar chart of the variable vs. rank. Then, instead of using `facet_wrap()` to facet the plot by state, we instead use `facet_geo()`:
+
+```{r fig.width=12, fig.height=7}
+ggplot(state_ranks, aes(variable, rank, fill = variable)) +
+  geom_col() +
+  coord_flip() +
+  theme_bw() +
+  facet_geo(~ state)
+```
+
+While this plot may not be as fun as the Chernoff faces, geofacet allows us to use a much more powerful visual encoding system (length of bars) to help the viewer much more effectively grasp what is going on in the data. For example, states with very low rankings across most variables (HI, VT, CO, MN) stand out, and geographical trends such as the southern states consistently showing up in the bottom of the rankings stands out as well. Why don't people sleep in Hawaii?
+
+This plot helps illustrate a couple of advantages this approach has over a traditional geographical visualization approaches such as choropleth plots:
+
+- We can plot multiple values per geographical entity
+- We can use more effective visual encoding schemes (color, which is used in choropleth-type maps, is one of the [least effective]())
+
+Note that other than the arrangement of the facets, every other aspect of this plot behaves in the way you would expect a ggplot2 plot to behave (such as themes, flipping coordinates, etc.).
+
+### Geofacet Options
+
+There are a few options in `facet_geo()` worth discussing. With the `grid` argument, we can provide either a string specifying a built-in named grid to use, or we can provide our own grid as a data frame. With the `label` argument, we can specify which grid variable we want to use to label the facets.
+
+For example, another built-in grid in the package is called "us_state_grid2".
+
+```{r}
+head(us_state_grid2)
+```
+
+Let's use this grid to plot the seasonally adjusted US unemployment rate over time, using the state names as the facet labels:
+
+```{r fig.width=12, fig.height=8}
+ggplot(state_unemp, aes(year, rate)) +
+  geom_line() +
+  facet_geo(~ state, grid = "us_state_grid2", label = "name") +
+  scale_x_continuous(labels = function(x) paste0("'", substr(x, 3, 4))) +
+  labs(title = "Seasonally Adjusted US Unemployment Rate 2000-2016",
+    caption = "Data Source: bls.gov",
+    x = "Year",
+    y = "Unemployment Rate (%)") +
+  theme(strip.text.x = element_text(size = 6))
+```
+
+With this we can see how the unemployment rate varies per state and how some of the patterns are spatially similar.
+
+I actually prefer this grid layout over the first one.
+
+## Other Grids
+
+Several users have submitted grids. For example, here is the South Africa population density by province
+
+```{r fig.width=10, fig.height=8}
+ggplot(eu_gdp, aes(year, gdp_pc)) +
+  geom_line(color = "steelblue") +
+  facet_geo(~ name, grid = "eu_grid1", scales = "free_y") +
+  scale_x_continuous(labels = function(x) paste0("'", substr(x, 3, 4))) +
+  ylab("GDP Per Capita in Relation to EU Index (100)") +
+  theme_bw()
+```
+
+This illustrates one potential downside of a geofaceted plot, which is that if the viewer is not already familiar with the underlying geography, the layout may not be very meaningful. There are some ideas to help with this that are being investigated.
+
+To get the list of names of available grids:
+
+```{r}
+get_grid_names()
+```
+
+You can learn how to submit your own below. Also at the end of this vignette you can find several examples of these grids in action.
+
+
+## Creating and Submitting Your Own Grid
+
+Suppose we don't like where Wisconsin is located...
+
+```{r message=FALSE}
+my_grid <- us_state_grid1
+my_grid$col[my_grid$code == "WI"] <- 7
+grid_preview(my_grid)
+```
+
+This will open up a GitHub issue with a template for you to fill out. You can look at closed issues for examples of other grid submissions.
+
+
+<div style="width: 848px; height: 488px; overflow: hidden">
+<iframe style="transform: scale(0.75, 0.75); transform-origin: top left; border: 1px solid #d1d1d1;" src="https://hafen.github.io/grid-designer/#img=http%3A%2F%2Fbit.ly%2Fus-grid&data=row%2Ccol%2Ccode%2Cname%0A1%2C11%2CME%2CMaine%0A1%2C10%2CNH%2CNew%20Hampshire%0A1%2C9%2CVT%2CVermont%0A1%2C6%2CWI%2CWisconsin%0A2%2C2%2CID%2CIdaho%0A2%2C6%2CIL%2CIllinois%0A2%2C10%2CMA%2CMassachusetts%0A2%2C7%2CMI%2CMichigan%0A2%2C5%2CMN%2CMinnesota%0A2%2C3%2CMT%2CMontana%0A2%2C9%2CNY%2CNew%20York%0A2%2C4%2CND%2CNorth%20Dakota%0A2%2C1%2CWA%2CWashington%0A3%2C10%2CCT%2CConnecticut%0A3%2C6%2CIN%2CIndiana%0A3%2C5%2CIA%2CIowa%0A3%2C2%2CNV%2CNevada%0A3%2C9%2CNJ%2CNew%20Jersey%0A3%2C7%2COH%2COhio%0A3%2C1%2COR%2COregon%0A3%2C8%2CPA%2CPennsylvania%0A3%2C11%2CRI%2CRhode%20Island%0A3%2C4%2CSD%2CSouth%20Dakota%0A3%2C3%2CWY%2CWyoming%0A4%2C1%2CCA%2CCalifornia%0A4%2C3%2CCO%2CColorado%0A4%2C10%2CDE%2CDelaware%0A4%2C6%2CKY%2CKentucky%0A4%2C9%2CMD%2CMaryland%0A4%2C5%2CMO%2CMissouri%0A4%2C4%2CNE%2CNebraska%0A4%2C2%2CUT%2CUtah%0A4%2C8%2CVA%2CVirginia%0A4%2C7%2CWV%2CWest%20Virginia%0A5%2C2%2CAZ%2CArizona%0A5%2C5%2CAR%2CArkansas%0A5%2C4%2CKS%2CKansas%0A5%2C3%2CNM%2CNew%20Mexico%0A5%2C7%2CNC%2CNorth%20Carolina%0A5%2C8%2CSC%2CSouth%20Carolina%0A5%2C6%2CTN%2CTennessee%0A5%2C9%2CDC%2CDistrict%20of%20Columbia%0A6%2C7%2CAL%2CAlabama%0A6%2C8%2CGA%2CGeorgia%0A6%2C5%2CLA%2CLouisiana%0A6%2C6%2CMS%2CMississippi%0A6%2C4%2COK%2COklahoma%0A7%2C2%2CAK%2CAlaska%0A7%2C9%2CFL%2CFlorida%0A7%2C1%2CHI%2CHawaii%0A7%2C4%2CTX%2CTexas" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="650px" width="1130px" allowfullscreen></iframe>
+</div>
+
+## Many More Examples
