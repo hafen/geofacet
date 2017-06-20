@@ -14,6 +14,7 @@ vignette: |
 navpills: |
   <li><a href='docs.html'>Docs</a></li>
   <li class="active"><a href='rd.html'>Package Ref</a></li>
+  <li><a href='https://twitter.com/hafenstats' target='_blank'><i class="fa fa-twitter"></i></span></a></li>
 ---
 
 ```{r auto-gen-child, child="auto-generated-rd.Rmd"}

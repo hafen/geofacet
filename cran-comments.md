@@ -1,3 +1,5 @@
+This is a resubmission: changed ggplot2 to 'ggplot2' in DESCRIPTION as requested.
+
 ## Test environments
 * local OS X install, R 3.4.0
 * ubuntu 12.04 (on travis-ci), R 3.4.0

@@ -13,6 +13,7 @@ vignette: |
 navpills: |
   <li class="active"><a href='docs.html'>Docs</a></li>
   <li><a href='rd.html'>Package Ref</a></li>
+  <li><a href='https://twitter.com/hafenstats' target='_blank'><i class="fa fa-twitter"></i></span></a></li>
 ---
 
 ```{r global_options, include=FALSE}
