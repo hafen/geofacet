@@ -53,7 +53,7 @@ See \code{\link{facet_geo}} for several examples.
 
 \strong{london_boroughs_grid:} Grid layout for the boroughs of London. Note that the column \code{code_ons} contains the \href{http://geoportal.statistics.gov.uk/datasets/464be6191a434a91a5fa2f52c7433333_0?uiTab=table}{codes} used by UK Office for National Statistics. Image reference \href{https://cloud.githubusercontent.com/assets/13021448/26399784/3133d684-4076-11e7-8eac-1e74d023bf18.jpg}{here}. Thanks to \url{https://github.com/eldenvo}.
 
-\strong{nhs_scot_grid:} Grid layout for a grid of NHS Scotland Health Boards. Note that the column \code{code} contains the \href{http://geoportal.statistics.gov.uk/datasets/61dca36aa33e4aee99bbfa784fa9eb25_0?uiTab=table}{codes} used by UK Office for National Statistics. Image reference \href{https://cloud.githubusercontent.com/assets/24879214/26426113/253658d0-40cf-11e7-88b5-fe5ee7fda44f.png}{here}. Thanks to \url{https://github.com/josephjosephadams.}.
+\strong{nhs_scot_grid:} Grid layout for a grid of National Health Service (NHS) Scotland Health Boards. Note that the column \code{code} contains the \href{http://geoportal.statistics.gov.uk/datasets/61dca36aa33e4aee99bbfa784fa9eb25_0?uiTab=table}{codes} used by UK Office for National Statistics. Image reference \href{https://cloud.githubusercontent.com/assets/24879214/26426113/253658d0-40cf-11e7-88b5-fe5ee7fda44f.png}{here}. Thanks to \url{https://github.com/josephjosephadams.}.
 
 \strong{india_grid1:} Grid layout for India states (not including union territories). Image reference \href{https://cloud.githubusercontent.com/assets/11698124/26569168/dd2ca86c-44bd-11e7-9d74-af919522f7b1.jpg}{here}. Thanks to \url{https://github.com/meysubb}.
 
