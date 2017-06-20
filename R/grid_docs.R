@@ -51,7 +51,7 @@ NULL
 
 #' @name nhs_scot_grid
 #' @description
-#' \strong{nhs_scot_grid:} Grid layout for a grid of National Health Service (NHS) Scotland Health Boards. Note that the column \code{code} contains the \href{http://geoportal.statistics.gov.uk/datasets/61dca36aa33e4aee99bbfa784fa9eb25_0?uiTab=table}{codes} used by UK Office for National Statistics. Image reference \href{https://cloud.githubusercontent.com/assets/24879214/26426113/253658d0-40cf-11e7-88b5-fe5ee7fda44f.png}{here}. Thanks to \url{https://github.com/josephjosephadams.}.
+#' \strong{nhs_scot_grid:} Grid layout for a grid of National Health Service (NHS) Scotland Health Boards. Note that the column \code{code} contains the \href{http://geoportal.statistics.gov.uk/datasets/61dca36aa33e4aee99bbfa784fa9eb25_0?uiTab=table}{codes} used by UK Office for National Statistics. Image reference \href{https://cloud.githubusercontent.com/assets/24879214/26426113/253658d0-40cf-11e7-88b5-fe5ee7fda44f.png}{here}. Thanks to \url{https://github.com/josephjosephadams}.
 #' @usage nhs_scot_grid
 #' @rdname grids
 NULL

@@ -312,7 +312,7 @@ get_grid <- function(grid) {
       "to become a part of the geofacet package. You can do this easily by ",
       "calling:\ngrid_submit(__grid_df_name__)")
   } else {
-    stop("grid '", grid, "' not recognized...")
+    stop("grid not recognized...")
   }
   grd
 }

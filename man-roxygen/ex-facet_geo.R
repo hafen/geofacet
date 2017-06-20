@@ -1,3 +1,4 @@
+\dontrun{
 library(ggplot2)
 
 # barchart of state rankings in various categories
@@ -190,3 +191,4 @@ ggplot(election, aes(candidate, votes / 1000000, fill = candidate)) +
     x = NULL,
     y = "Votes (millions)") +
   theme(strip.text.x = element_text(size = 6))
+}

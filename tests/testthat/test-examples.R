@@ -153,4 +153,6 @@ test_that("examples work", {
   grid_design(data.frame(code = letters))
 
   Sys.setenv(GEOFACET_PKG_TESTING = "")
+
+  nms <- get_grid_names()
 })

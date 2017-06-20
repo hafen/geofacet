@@ -113,4 +113,9 @@ test_that("things break in an expected way", {
     check_grid(my_grid)
   },
   "cannot have any missing values")
+
+  expect_error({
+    get_grid(list(1))
+  },
+  "grid not recognized...")
 })
