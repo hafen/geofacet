@@ -17,6 +17,8 @@ install.packages("geofacet")
 
 ## Example
 
+See [here](https://hafen.github.io/geofacet/) for the package vignette.
+
 Barchart of state rankings in various categories:
 
 ```r
