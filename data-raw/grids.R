@@ -18,15 +18,21 @@ lapply(nms, function(x) {
 ## update documentation - generate R/grid_docs.R
 ##---------------------------------------------------------
 
-doc_string <- "#' Geo Grids
+doc_string <- paste0("#' Geo Grids
 #'
 #' @name grids
 #' @docType data
 #' @keywords data
-#' @description See \\code{\\link{facet_geo}} for several examples.
+#' @description ",
+  "There are now ", nrow(grid_list), " grids available in this package and more online. ",
+  "To view a full list of available grids, see ",
+  "\\href{https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json}{here}. ",
+  "To create and submit your own grid, see ",
+  "\\href{https://hafen.github.io/grid-designer/}{here}. ",
+  "To see several examples of grids being used to visualize data, see \\code{\\link{facet_geo}}.
 #' @rdname grids
 NULL
-"
+")
 
 for (ii in seq_len(nrow(grid_list))) {
   x <- grid_list[ii, ]

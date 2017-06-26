@@ -289,8 +289,11 @@ check_grid <- function(d) {
 
 #' Get a list of valid grid names
 #' @export
-get_grid_names <- function()
+get_grid_names <- function() {
+  message("Note: More grids are available by name as listed here: ",
+    "https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json")
   .valid_grids
+}
 
 get_grid <- function(grid) {
   if (is.character(grid)) {
