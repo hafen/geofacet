@@ -6,7 +6,7 @@ output:
   packagedocs::package_docs_rd:
     toc: true
     toc_collapse: false
-redirect: hafen/geofacet/rd.html
+redirect: https://hafen.github.io/geofacet/rd.html
 vignette: |
   %\VignetteIndexEntry{geofacet Package Reference}
   %\VignetteEngine{packagedocs::redirect}

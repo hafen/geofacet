@@ -5,7 +5,7 @@ copyright: "Ryan Hafen"
 output:
   packagedocs::package_docs:
     toc: false
-redirect: hafen/geofacet
+redirect: https://hafen.github.io/geofacet/
 vignette: |
   %\VignetteIndexEntry{geofacet Documentation}
   %\VignetteEngine{packagedocs::redirect}
