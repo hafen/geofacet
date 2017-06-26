@@ -34,7 +34,8 @@ for (ii in seq_len(nrow(grid_list))) {
 #' @name ", x$name, "
 #' @description
 #' \\strong{", x$name, ":} ", x$desc, " Image reference \\href{", x$ref_img, "}{here}.",
-  ifelse(is.na(x$contrib), "", paste0(" Thanks to \\url{", x$contrib, "}.")), "
+  ifelse(is.na(x$contrib), "",
+    paste0(" Thanks to \\href{", x$contrib, "}{", basename(x$contrib), "}.")), "
 #' @usage ", x$name, "
 #' @rdname grids
 NULL
