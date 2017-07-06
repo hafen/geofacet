@@ -264,6 +264,10 @@ check_grid <- function(d) {
     stop("Other than 'row' and 'col', variable names of a custom grid ",
       "must begin with 'code' or 'name'", call. = FALSE)
 
+  idx <- which(sapply(d, is.factor))
+  for (ii in idx)
+    d[[ii]] <- as.character(d[[ii]])
+
   if (length(which(grepl("^code", nms2))) == 0)
     stop("A custom grid must have at least one column beginning with 'code'", call. = FALSE)
   if (length(which(grepl("^name", nms2))) == 0)
