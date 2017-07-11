@@ -10,6 +10,11 @@ nms <- setdiff(grid_list$name, gsub("\\.rda", "", list.files("data")))
 
 lapply(nms, function(x) {
   url <- sprintf("https://raw.githubusercontent.com/hafen/grid-designer/master/grids/%s.csv", x)
+  # tmp <- utils::read.csv(url, stringsAsFactors = FALSE, nrows = 1)
+  # # all columns other than "row" and "col" will be strings (names and codes)
+  # cls <- ifelse(names(tmp) %in% c("row", "col"), "integer", "character")
+  # # use read.csv simply because it means one less dependency...
+  # res <- utils::read.csv(url, colClasses = cls, stringsAsFactors = FALSE, na.strings = NULL)
   res <- data.frame(readr::read_csv(url))
   assign(x, res)
   eval(parse(text = sprintf("devtools::use_data(%s, overwrite = TRUE)", x)))

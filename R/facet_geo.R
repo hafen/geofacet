@@ -307,9 +307,18 @@ get_grid <- function(grid) {
       message("grid '", grid, "' not found in package, checking online...")
       url <- sprintf("https://raw.githubusercontent.com/hafen/grid-designer/master/grids/%s.csv",
         grid)
-      grd <- suppressWarnings(try(utils::read.csv(url, stringsAsFactors = FALSE), silent = TRUE))
-      if (inherits(grd, "try-error")) {
+
+      tmp <- suppressWarnings(try(
+        utils::read.csv(url, stringsAsFactors = FALSE, nrows = 1),
+        silent = TRUE))
+      if (inherits(tmp, "try-error")) {
         stop("grid '", grid, "' not recognized...")
+      # all columns other than "row" and "col" will be strings (names and codes)
+      cls <- ifelse(names(tmp) %in% c("row", "col"), "integer", "character")
+      # use read.csv simply because it means one less dependency...
+      grd <- utils::read.csv(url, colClasses = cls,
+          stringsAsFactors = FALSE,
+          na.strings = NULL) # grid cannot have NAs
       }
     }
   } else if (inherits(grid, "data.frame")) {
