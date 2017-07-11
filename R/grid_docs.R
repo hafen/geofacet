@@ -3,7 +3,7 @@
 #' @name grids
 #' @docType data
 #' @keywords data
-#' @description There are now 25 grids available in this package and more online. To view a full list of available grids, see \href{https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json}{here}. To create and submit your own grid, see \href{https://hafen.github.io/grid-designer/}{here}. To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
+#' @description There are now 26 grids available in this package and more online. To view a full list of available grids, see \href{https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json}{here}. To create and submit your own grid, see \href{https://hafen.github.io/grid-designer/}{here}. To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
 #' @rdname grids
 NULL
 
@@ -179,5 +179,12 @@ NULL
 #' @description
 #' \strong{scotland_local_authority_grid1:} Grid layout for the local authorities of Scotland. Image reference \href{https://user-images.githubusercontent.com/1275592/28044967-3b508570-658f-11e7-99b5-b1d73c765c2e.png}{here}. Thanks to \href{https://github.com/davidhen}{davidhen}.
 #' @usage scotland_local_authority_grid1
+#' @rdname grids
+NULL
+
+#' @name us_state_grid3
+#' @description
+#' \strong{us_state_grid3:} Grid layout for US states (excluding DC) Image reference \href{https://images7.alphacoders.com/687/687665.jpg}{here}. Thanks to \href{https://github.com/ejr248}{ejr248}.
+#' @usage us_state_grid3
 #' @rdname grids
 NULL

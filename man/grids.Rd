@@ -28,6 +28,7 @@
 \alias{mx_state_grid1}
 \alias{mx_state_grid2}
 \alias{scotland_local_authority_grid1}
+\alias{us_state_grid3}
 \title{Geo Grids}
 \usage{
 us_state_grid1
@@ -79,9 +80,11 @@ mx_state_grid1
 mx_state_grid2
 
 scotland_local_authority_grid1
+
+us_state_grid3
 }
 \description{
-There are now 25 grids available in this package and more online. To view a full list of available grids, see \href{https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json}{here}. To create and submit your own grid, see \href{https://hafen.github.io/grid-designer/}{here}. To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
+There are now 26 grids available in this package and more online. To view a full list of available grids, see \href{https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json}{here}. To create and submit your own grid, see \href{https://hafen.github.io/grid-designer/}{here}. To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
 
 \strong{us_state_grid1:} Grid layout for US states (including DC) Image reference \href{https://images7.alphacoders.com/687/687665.jpg}{here}.
 
@@ -132,5 +135,7 @@ There are now 25 grids available in this package and more online. To view a full
 \strong{mx_state_grid2:} Grid layout for the states of Mexico. Image reference \href{https://user-images.githubusercontent.com/1275592/28044555-ee236b2a-658c-11e7-96e5-3af124ca9619.png}{here}. Thanks to \href{https://github.com/diegovalle}{diegovalle}.
 
 \strong{scotland_local_authority_grid1:} Grid layout for the local authorities of Scotland. Image reference \href{https://user-images.githubusercontent.com/1275592/28044967-3b508570-658f-11e7-99b5-b1d73c765c2e.png}{here}. Thanks to \href{https://github.com/davidhen}{davidhen}.
+
+\strong{us_state_grid3:} Grid layout for US states (excluding DC) Image reference \href{https://images7.alphacoders.com/687/687665.jpg}{here}. Thanks to \href{https://github.com/ejr248}{ejr248}.
 }
 \keyword{data}
