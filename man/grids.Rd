@@ -23,6 +23,11 @@
 \alias{in_counties_grid1}
 \alias{in_central_counties_grid1}
 \alias{se_counties_grid1}
+\alias{sf_bay_area_counties_grid1}
+\alias{ua_region_grid1}
+\alias{mx_state_grid1}
+\alias{mx_state_grid2}
+\alias{scotland_local_authority_grid1}
 \title{Geo Grids}
 \usage{
 us_state_grid1
@@ -64,9 +69,19 @@ in_counties_grid1
 in_central_counties_grid1
 
 se_counties_grid1
+
+sf_bay_area_counties_grid1
+
+ua_region_grid1
+
+mx_state_grid1
+
+mx_state_grid2
+
+scotland_local_authority_grid1
 }
 \description{
-There are now 20 grids available in this package and more online. To view a full list of available grids, see \href{https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json}{here}. To create and submit your own grid, see \href{https://hafen.github.io/grid-designer/}{here}. To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
+There are now 25 grids available in this package and more online. To view a full list of available grids, see \href{https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json}{here}. To create and submit your own grid, see \href{https://hafen.github.io/grid-designer/}{here}. To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
 
 \strong{us_state_grid1:} Grid layout for US states (including DC) Image reference \href{https://images7.alphacoders.com/687/687665.jpg}{here}.
 
@@ -107,5 +122,15 @@ There are now 20 grids available in this package and more online. To view a full
 \strong{in_central_counties_grid1:} Grid for central Indiana counties. Image reference \href{https://camo.githubusercontent.com/eb31e821890a0c600f59234fb184335c2bf84423/687474703a2f2f7777772e736176692e6f72672f77702d636f6e74656e742f75706c6f6164732f323031352f30322f6d61702d312e6a7067}{here}. Thanks to \href{https://github.com/nateapathy}{nateapathy}.
 
 \strong{se_counties_grid1:} Grid for counties of Sweden. Image reference \href{http://www.worldatlas.com/webimage/countrys/europe/lgcolor/secounties.gif}{here}. Thanks to \href{https://github.com/duleise}{duleise}.
+
+\strong{sf_bay_area_counties_grid1:} Grid of the 9 San Francisco Bay Area counties. Image reference \href{https://user-images.githubusercontent.com/1275592/28043128-53be650a-6585-11e7-920e-4ad9a13bf1a5.png}{here}. Thanks to \href{https://github.com/Eunoia}{Eunoia}.
+
+\strong{ua_region_grid1:} Grid of administrative divisions of Ukraine (24 oblasts, one autonomous region, and two cities). Image reference \href{https://camo.githubusercontent.com/0615706478de63da2c7c3c3b21fe92c6db6a2fee/687474703a2f2f696d61676573312e66616e706f702e636f6d2f696d616765732f696d6167655f75706c6f6164732f556b7261696e69616e2d6d61702d756b7261696e652d313135333138375f3733305f3530352e676966}{here}. Thanks to \href{https://github.com/woldemarg}{woldemarg}.
+
+\strong{mx_state_grid1:} Grid layout for the states of Mexico. Image reference \href{https://user-images.githubusercontent.com/1275592/28044555-ee236b2a-658c-11e7-96e5-3af124ca9619.png}{here}. Thanks to \href{https://github.com/ikashnitsky}{ikashnitsky}.
+
+\strong{mx_state_grid2:} Grid layout for the states of Mexico. Image reference \href{https://user-images.githubusercontent.com/1275592/28044555-ee236b2a-658c-11e7-96e5-3af124ca9619.png}{here}. Thanks to \href{https://github.com/diegovalle}{diegovalle}.
+
+\strong{scotland_local_authority_grid1:} Grid layout for the local authorities of Scotland. Image reference \href{https://user-images.githubusercontent.com/1275592/28044967-3b508570-658f-11e7-99b5-b1d73c765c2e.png}{here}. Thanks to \href{https://github.com/davidhen}{davidhen}.
 }
 \keyword{data}
