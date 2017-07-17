@@ -31,11 +31,12 @@ doc_string <- paste0("#' Geo Grids
 #' @description ",
   "There are now ", nrow(grid_list), " grids available in this package and more online. ",
   "To view a full list of available grids, see ",
-  "\\href{https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json}{here}. ",
+  "[here](https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json). ",
   "To create and submit your own grid, see ",
-  "\\href{https://hafen.github.io/grid-designer/}{here}. ",
+  "[here](https://hafen.github.io/grid-designer/). ",
   "To see several examples of grids being used to visualize data, see \\code{\\link{facet_geo}}.
 #' @rdname grids
+#' @md
 NULL
 ")
 
@@ -44,11 +45,12 @@ for (ii in seq_len(nrow(grid_list))) {
   doc_string <- paste0(doc_string, "
 #' @name ", x$name, "
 #' @description
-#' \\strong{", x$name, ":} ", x$desc, " Image reference \\href{", x$ref_img, "}{here}.",
+#' * **", x$name, ":** ", x$desc, " Image reference [here](", x$ref_img, ").",
   ifelse(is.na(x$contrib), "",
-    paste0(" Thanks to \\href{", x$contrib, "}{", basename(x$contrib), "}.")), "
+    paste0(" Thanks to [", basename(x$contrib), "](", x$contrib, ").")), "
 #' @usage ", x$name, "
 #' @rdname grids
+#' @md
 NULL
 "
 )
