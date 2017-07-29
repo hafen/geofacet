@@ -311,7 +311,7 @@ get_grid <- function(grid) {
       tmp <- suppressWarnings(try(
         utils::read.csv(url, stringsAsFactors = FALSE, nrows = 1),
         silent = TRUE))
-      if (inherits(tmp, "try-error")) {
+      if (inherits(tmp, "try-error"))
         stop("grid '", grid, "' not recognized...")
       # all columns other than "row" and "col" will be strings (names and codes)
       cls <- ifelse(names(tmp) %in% c("row", "col"), "integer", "character")
@@ -319,7 +319,6 @@ get_grid <- function(grid) {
       grd <- utils::read.csv(url, colClasses = cls,
           stringsAsFactors = FALSE,
           na.strings = NULL) # grid cannot have NAs
-      }
     }
   } else if (inherits(grid, "data.frame")) {
     grd <- check_grid(grid)
