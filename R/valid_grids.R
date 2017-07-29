@@ -5,4 +5,5 @@
   "wa_counties_grid1", "in_counties_grid1", "in_central_counties_grid1",
   "se_counties_grid1", "sf_bay_area_counties_grid1", "ua_region_grid1",
   "mx_state_grid1", "mx_state_grid2", "scotland_local_authority_grid1",
-  "us_state_grid3", "italy_grid1", "italy_grid2")
+  "us_state_grid3", "italy_grid1", "italy_grid2", "be_province_grid1",
+  "us_state_grid4", "jp_prefs_grid1", "ng_state_grid1", "bd_upazila_grid1")

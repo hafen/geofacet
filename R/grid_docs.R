@@ -3,7 +3,7 @@
 #' @name grids
 #' @docType data
 #' @keywords data
-#' @description There are now 28 grids available in this package and more online. To view a full list of available grids, see [here](https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json). To create and submit your own grid, see [here](https://hafen.github.io/grid-designer/). To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
+#' @description There are now 33 grids available in this package and more online. To view a full list of available grids, see [here](https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json). To create and submit your own grid, see [here](https://hafen.github.io/grid-designer/). To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
 #' @rdname grids
 #' @md
 NULL
@@ -58,7 +58,7 @@ NULL
 
 #' @name nhs_scot_grid
 #' @description
-#' * **nhs_scot_grid:** Grid layout for a grid of NHS Scotland Health Boards. Note that the column \code{code} contains the \href{http://geoportal.statistics.gov.uk/datasets/61dca36aa33e4aee99bbfa784fa9eb25_0?uiTab=table}{codes} used by UK Office for National Statistics. Image reference [here](https://cloud.githubusercontent.com/assets/24879214/26426113/253658d0-40cf-11e7-88b5-fe5ee7fda44f.png). Thanks to [jsphdms](https://github.com/jsphdms).
+#' * **nhs_scot_grid:** Grid layout for a grid of NHS Scotland Health Boards. Note that the column \code{code} contains the \href{http://geoportal.statistics.gov.uk/datasets/61dca36aa33e4aee99bbfa784fa9eb25_0?uiTab=table}{codes} used by UK Office for National Statistics. Image reference [here](https://cloud.githubusercontent.com/assets/24879214/26426113/253658d0-40cf-11e7-88b5-fe5ee7fda44f.png). Thanks to [josephjosephadams](https://github.com/josephjosephadams).
 #' @usage nhs_scot_grid
 #' @rdname grids
 #' @md
@@ -228,6 +228,46 @@ NULL
 #' @description
 #' * **italy_grid2:** Grid layout for regions of Italy (in collaboration with Stella Cangelosi and Luciana Dalla Valle). Image reference [here](https://user-images.githubusercontent.com/1275592/28291015-8f0abd66-6afd-11e7-9e2a-b4c1d4021c13.png). Thanks to [JulianStander](https://github.com/JulianStander).
 #' @usage italy_grid2
+#' @rdname grids
+#' @md
+NULL
+
+#' @name be_province_grid1
+#' @description
+#' * **be_province_grid1:** Grid layout for provinces of Belgium plus Brussels, including names in three languages (French, Dutch, English) and Belgium internal codes (NIS). Image reference [here](https://camo.githubusercontent.com/efa2c894793585141da8f7b9789b184eacc8d781/687474703a2f2f7777772e657570656469612e636f6d2f696d616765732f636f6e74656e742f42656c6769756d5f526567696f6e732e676966). Thanks to [ericlecoutre](https://github.com/ericlecoutre).
+#' @usage be_province_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name us_state_grid4
+#' @description
+#' * **us_state_grid4:** Grid layout for US states (including DC). Image reference [here](https://images7.alphacoders.com/687/687665.jpg). Thanks to [kanishkamisra](https://github.com/kanishkamisra).
+#' @usage us_state_grid4
+#' @rdname grids
+#' @md
+NULL
+
+#' @name jp_prefs_grid1
+#' @description
+#' * **jp_prefs_grid1:** Grid layout for the prefectures of Japan. Image reference [here](https://camo.githubusercontent.com/bffec5ac4ae6507c1ca1b83570544f405b86b048/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f382f38372f49534f2d333136362d322d4a502e706e672f35313270782d49534f2d333136362d322d4a502e706e67). Thanks to [uribo](https://github.com/uribo).
+#' @usage jp_prefs_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name ng_state_grid1
+#' @description
+#' * **ng_state_grid1:** Grid layout for the 37 Federal States of Nigeria. Image reference [here](https://camo.githubusercontent.com/fa12bca8fe3f3de3d7af707400adbc7fc4656cc3/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f382f38332f4e6967657269615f7374617465732e706e67). Thanks to [ghosthedirewolf](https://github.com/ghosthedirewolf).
+#' @usage ng_state_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name bd_upazila_grid1
+#' @description
+#' * **bd_upazila_grid1:** Grid layout for Bangladesh 64 Upazilas. Image reference [here](https://camo.githubusercontent.com/df1e4aff5a3e0238afef97586d324d9b23acf27b/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f322f32382f42445f4d61705f61646d696e2e7376672f38303070782d42445f4d61705f61646d696e2e7376672e706e67). Thanks to [ghosthedirewolf](https://github.com/ghosthedirewolf).
+#' @usage bd_upazila_grid1
 #' @rdname grids
 #' @md
 NULL
