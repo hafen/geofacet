@@ -36,6 +36,10 @@
 \alias{jp_prefs_grid1}
 \alias{ng_state_grid1}
 \alias{bd_upazila_grid1}
+\alias{spain_prov_grid1}
+\alias{ch_cantons_grid1}
+\alias{ch_cantons_grid2}
+\alias{china_prov_grid1}
 \title{Geo Grids}
 \usage{
 us_state_grid1
@@ -103,9 +107,17 @@ jp_prefs_grid1
 ng_state_grid1
 
 bd_upazila_grid1
+
+spain_prov_grid1
+
+ch_cantons_grid1
+
+ch_cantons_grid2
+
+china_prov_grid1
 }
 \description{
-There are now 33 grids available in this package and more online. To view a full list of available grids, see \href{https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json}{here}. To create and submit your own grid, see \href{https://hafen.github.io/grid-designer/}{here}. To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
+There are now 37 grids available in this package and more online. To view a full list of available grids, see \href{https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json}{here}. To create and submit your own grid, see \href{https://hafen.github.io/grid-designer/}{here}. To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
 
 \itemize{
 \item \strong{us_state_grid1:} Grid layout for US states (including DC) Image reference \href{https://images7.alphacoders.com/687/687665.jpg}{here}.
@@ -237,6 +249,22 @@ There are now 33 grids available in this package and more online. To view a full
 
 \itemize{
 \item \strong{bd_upazila_grid1:} Grid layout for Bangladesh 64 Upazilas. Image reference \href{https://camo.githubusercontent.com/df1e4aff5a3e0238afef97586d324d9b23acf27b/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f322f32382f42445f4d61705f61646d696e2e7376672f38303070782d42445f4d61705f61646d696e2e7376672e706e67}{here}. Thanks to \href{https://github.com/ghosthedirewolf}{ghosthedirewolf}.
+}
+
+\itemize{
+\item \strong{spain_prov_grid1:} Grid layout for Provinces of Spain. Image reference \href{https://user-images.githubusercontent.com/1275592/30039555-930879ca-9187-11e7-83ec-c1bebc985cac.png}{here}. Thanks to \href{https://github.com/kintero}{kintero}.
+}
+
+\itemize{
+\item \strong{ch_cantons_grid1:} Grid layout for Cantons of Switzerland. Image reference \href{https://camo.githubusercontent.com/b3c99e5725cdb60fd60a66731c8492fdb0e09ab6/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f342f34612f537769747a65726c616e642532435f61646d696e6973747261746976655f6469766973696f6e735f2d5f64655f2d5f636f6c6f7265642e737667}{here}. Thanks to \href{https://github.com/tinu-schneider}{tinu-schneider}.
+}
+
+\itemize{
+\item \strong{ch_cantons_grid2:} Grid layout for Cantons of Switzerland. Image reference \href{https://user-images.githubusercontent.com/4510815/29034578-0485df5c-7b99-11e7-9ff8-67a7b687de12.png}{here}. Thanks to \href{https://github.com/rastrau}{rastrau}.
+}
+
+\itemize{
+\item \strong{china_prov_grid1:} Grid layout for Provinces of China. Image reference \href{https://user-images.githubusercontent.com/1275592/30039720-cf9c8532-9189-11e7-856b-a6ecf449ee0c.png}{here}. Thanks to \href{https://github.com/weiyunna}{weiyunna}.
 }
 }
 \keyword{data}

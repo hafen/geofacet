@@ -3,7 +3,7 @@
 #' @name grids
 #' @docType data
 #' @keywords data
-#' @description There are now 33 grids available in this package and more online. To view a full list of available grids, see [here](https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json). To create and submit your own grid, see [here](https://hafen.github.io/grid-designer/). To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
+#' @description There are now 37 grids available in this package and more online. To view a full list of available grids, see [here](https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json). To create and submit your own grid, see [here](https://hafen.github.io/grid-designer/). To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
 #' @rdname grids
 #' @md
 NULL
@@ -268,6 +268,38 @@ NULL
 #' @description
 #' * **bd_upazila_grid1:** Grid layout for Bangladesh 64 Upazilas. Image reference [here](https://camo.githubusercontent.com/df1e4aff5a3e0238afef97586d324d9b23acf27b/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f322f32382f42445f4d61705f61646d696e2e7376672f38303070782d42445f4d61705f61646d696e2e7376672e706e67). Thanks to [ghosthedirewolf](https://github.com/ghosthedirewolf).
 #' @usage bd_upazila_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name spain_prov_grid1
+#' @description
+#' * **spain_prov_grid1:** Grid layout for Provinces of Spain. Image reference [here](https://user-images.githubusercontent.com/1275592/30039555-930879ca-9187-11e7-83ec-c1bebc985cac.png). Thanks to [kintero](https://github.com/kintero).
+#' @usage spain_prov_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name ch_cantons_grid1
+#' @description
+#' * **ch_cantons_grid1:** Grid layout for Cantons of Switzerland. Image reference [here](https://camo.githubusercontent.com/b3c99e5725cdb60fd60a66731c8492fdb0e09ab6/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f342f34612f537769747a65726c616e642532435f61646d696e6973747261746976655f6469766973696f6e735f2d5f64655f2d5f636f6c6f7265642e737667). Thanks to [tinu-schneider](https://github.com/tinu-schneider).
+#' @usage ch_cantons_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name ch_cantons_grid2
+#' @description
+#' * **ch_cantons_grid2:** Grid layout for Cantons of Switzerland. Image reference [here](https://user-images.githubusercontent.com/4510815/29034578-0485df5c-7b99-11e7-9ff8-67a7b687de12.png). Thanks to [rastrau](https://github.com/rastrau).
+#' @usage ch_cantons_grid2
+#' @rdname grids
+#' @md
+NULL
+
+#' @name china_prov_grid1
+#' @description
+#' * **china_prov_grid1:** Grid layout for Provinces of China. Image reference [here](https://user-images.githubusercontent.com/1275592/30039720-cf9c8532-9189-11e7-856b-a6ecf449ee0c.png). Thanks to [weiyunna](https://github.com/weiyunna).
+#' @usage china_prov_grid1
 #' @rdname grids
 #' @md
 NULL

@@ -1,7 +1,9 @@
 Package: geofacet
 Title: 'ggplot2' Faceting Utilities for Geographical Data
 Version: 0.1.5
-Authors@R: person("Ryan", "Hafen", email = "rhafen@gmail.com", role = c("aut", "cre"))
+Authors@R: c(
+    person("Ryan", "Hafen", email = "rhafen@gmail.com", role = c("aut", "cre")),
+    person("Barret", "Schloerke", email = "schloerke@gmail.com", role = "ctb"))
 Description: Provides geofaceting functionality for 'ggplot2'. Geofaceting arranges a sequence of plots of data for different geographical entities into a grid that preserves some of the geographical orientation.
 Depends: R (>= 3.3.2)
 License: MIT + file LICENSE
