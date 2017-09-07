@@ -3,7 +3,7 @@
 #' @name grids
 #' @docType data
 #' @keywords data
-#' @description There are now 37 grids available in this package and more online. To view a full list of available grids, see [here](https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json). To create and submit your own grid, see [here](https://hafen.github.io/grid-designer/). To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
+#' @description There are now 38 grids available in this package and more online. To view a full list of available grids, see [here](https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json). To create and submit your own grid, see [here](https://hafen.github.io/grid-designer/). To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
 #' @rdname grids
 #' @md
 NULL
@@ -274,7 +274,7 @@ NULL
 
 #' @name spain_prov_grid1
 #' @description
-#' * **spain_prov_grid1:** Grid layout for Provinces of Spain. Image reference [here](https://user-images.githubusercontent.com/1275592/30039555-930879ca-9187-11e7-83ec-c1bebc985cac.png). Thanks to [kintero](https://github.com/kintero).
+#' * **spain_prov_grid1:** Grid layout for Provinces of Spain. Image reference [here](https://user-images.githubusercontent.com/1275592/30189589-cbfbf2de-93e9-11e7-9598-bb4c4e09e0c1.png). Thanks to [kintero](https://github.com/kintero).
 #' @usage spain_prov_grid1
 #' @rdname grids
 #' @md
@@ -300,6 +300,14 @@ NULL
 #' @description
 #' * **china_prov_grid1:** Grid layout for Provinces of China. Image reference [here](https://user-images.githubusercontent.com/1275592/30039720-cf9c8532-9189-11e7-856b-a6ecf449ee0c.png). Thanks to [weiyunna](https://github.com/weiyunna).
 #' @usage china_prov_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name world_86countries_grid
+#' @description
+#' * **world_86countries_grid:** Grid layout for 86 countries in the world. Image reference [here](https://user-images.githubusercontent.com/1275592/30190118-0678aeb8-93ed-11e7-91b2-49738beb6f04.png). Thanks to [akangsha](https://github.com/akangsha).
+#' @usage world_86countries_grid
 #' @rdname grids
 #' @md
 NULL

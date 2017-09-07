@@ -40,6 +40,7 @@
 \alias{ch_cantons_grid1}
 \alias{ch_cantons_grid2}
 \alias{china_prov_grid1}
+\alias{world_86countries_grid}
 \title{Geo Grids}
 \usage{
 us_state_grid1
@@ -115,9 +116,11 @@ ch_cantons_grid1
 ch_cantons_grid2
 
 china_prov_grid1
+
+world_86countries_grid
 }
 \description{
-There are now 37 grids available in this package and more online. To view a full list of available grids, see \href{https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json}{here}. To create and submit your own grid, see \href{https://hafen.github.io/grid-designer/}{here}. To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
+There are now 38 grids available in this package and more online. To view a full list of available grids, see \href{https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json}{here}. To create and submit your own grid, see \href{https://hafen.github.io/grid-designer/}{here}. To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
 
 \itemize{
 \item \strong{us_state_grid1:} Grid layout for US states (including DC) Image reference \href{https://images7.alphacoders.com/687/687665.jpg}{here}.
@@ -252,7 +255,7 @@ There are now 37 grids available in this package and more online. To view a full
 }
 
 \itemize{
-\item \strong{spain_prov_grid1:} Grid layout for Provinces of Spain. Image reference \href{https://user-images.githubusercontent.com/1275592/30039555-930879ca-9187-11e7-83ec-c1bebc985cac.png}{here}. Thanks to \href{https://github.com/kintero}{kintero}.
+\item \strong{spain_prov_grid1:} Grid layout for Provinces of Spain. Image reference \href{https://user-images.githubusercontent.com/1275592/30189589-cbfbf2de-93e9-11e7-9598-bb4c4e09e0c1.png}{here}. Thanks to \href{https://github.com/kintero}{kintero}.
 }
 
 \itemize{
@@ -265,6 +268,10 @@ There are now 37 grids available in this package and more online. To view a full
 
 \itemize{
 \item \strong{china_prov_grid1:} Grid layout for Provinces of China. Image reference \href{https://user-images.githubusercontent.com/1275592/30039720-cf9c8532-9189-11e7-856b-a6ecf449ee0c.png}{here}. Thanks to \href{https://github.com/weiyunna}{weiyunna}.
+}
+
+\itemize{
+\item \strong{world_86countries_grid:} Grid layout for 86 countries in the world. Image reference \href{https://user-images.githubusercontent.com/1275592/30190118-0678aeb8-93ed-11e7-91b2-49738beb6f04.png}{here}. Thanks to \href{https://github.com/akangsha}{akangsha}.
 }
 }
 \keyword{data}

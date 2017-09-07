@@ -8,4 +8,4 @@
   "us_state_grid3", "italy_grid1", "italy_grid2", "be_province_grid1",
   "us_state_grid4", "jp_prefs_grid1", "ng_state_grid1", "bd_upazila_grid1",
   "spain_prov_grid1", "ch_cantons_grid1", "ch_cantons_grid2",
-  "china_prov_grid1")
+  "china_prov_grid1", "world_86countries_grid")
