@@ -135,6 +135,17 @@ print.facet_geo <- function(x, ...) {
   graphics::plot(gtable::gtable_filter(g, rgx, trim = FALSE))
 }
 
+#' Plot geofaceted ggplot2 object
+#'
+#' @param x plot object
+#' @param ... ignored
+#' @importFrom gtable gtable_filter
+#' @importFrom graphics plot
+#' @export
+plot.facet_geo <- function(x, ...) {
+  print.facet_geo(x, ...)
+}
+
 #' Plot a preview of a grid
 #'
 #' @param x a data frame containing a grid
