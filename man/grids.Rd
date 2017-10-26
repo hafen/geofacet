@@ -41,6 +41,8 @@
 \alias{ch_cantons_grid2}
 \alias{china_prov_grid1}
 \alias{world_86countries_grid}
+\alias{se_counties_grid2}
+\alias{uk_regions1}
 \title{Geo Grids}
 \usage{
 us_state_grid1
@@ -118,9 +120,13 @@ ch_cantons_grid2
 china_prov_grid1
 
 world_86countries_grid
+
+se_counties_grid2
+
+uk_regions1
 }
 \description{
-There are now 38 grids available in this package and more online. To view a full list of available grids, see \href{https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json}{here}. To create and submit your own grid, see \href{https://hafen.github.io/grid-designer/}{here}. To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
+There are now 40 grids available in this package and more online. To view a full list of available grids, see \href{https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json}{here}. To create and submit your own grid, see \href{https://hafen.github.io/grid-designer/}{here}. To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
 
 \itemize{
 \item \strong{us_state_grid1:} Grid layout for US states (including DC) Image reference \href{https://images7.alphacoders.com/687/687665.jpg}{here}.
@@ -272,6 +278,14 @@ There are now 38 grids available in this package and more online. To view a full
 
 \itemize{
 \item \strong{world_86countries_grid:} Grid layout for 86 countries in the world. Image reference \href{https://user-images.githubusercontent.com/1275592/30190118-0678aeb8-93ed-11e7-91b2-49738beb6f04.png}{here}. Thanks to \href{https://github.com/akangsha}{akangsha}.
+}
+
+\itemize{
+\item \strong{se_counties_grid2:} Grid for counties of Sweden. Image reference \href{https://user-images.githubusercontent.com/6022947/31674182-71150350-b361-11e7-9873-ffe319344c90.jpg}{here}. Thanks to \href{https://github.com/richardohrvall}{richardohrvall}.
+}
+
+\itemize{
+\item \strong{uk_regions1:} Grid for regions of the UK (aka EU standard NUTS 1 areas). Image reference \href{https://user-images.githubusercontent.com/1275592/32032394-d394b24a-b9bb-11e7-91e8-fe4da69ba005.jpg}{here}. Thanks to \href{https://github.com/paulb20}{paulb20}.
 }
 }
 \keyword{data}

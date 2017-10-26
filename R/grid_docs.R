@@ -3,7 +3,7 @@
 #' @name grids
 #' @docType data
 #' @keywords data
-#' @description There are now 38 grids available in this package and more online. To view a full list of available grids, see [here](https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json). To create and submit your own grid, see [here](https://hafen.github.io/grid-designer/). To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
+#' @description There are now 40 grids available in this package and more online. To view a full list of available grids, see [here](https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json). To create and submit your own grid, see [here](https://hafen.github.io/grid-designer/). To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
 #' @rdname grids
 #' @md
 NULL
@@ -308,6 +308,22 @@ NULL
 #' @description
 #' * **world_86countries_grid:** Grid layout for 86 countries in the world. Image reference [here](https://user-images.githubusercontent.com/1275592/30190118-0678aeb8-93ed-11e7-91b2-49738beb6f04.png). Thanks to [akangsha](https://github.com/akangsha).
 #' @usage world_86countries_grid
+#' @rdname grids
+#' @md
+NULL
+
+#' @name se_counties_grid2
+#' @description
+#' * **se_counties_grid2:** Grid for counties of Sweden. Image reference [here](https://user-images.githubusercontent.com/6022947/31674182-71150350-b361-11e7-9873-ffe319344c90.jpg). Thanks to [richardohrvall](https://github.com/richardohrvall).
+#' @usage se_counties_grid2
+#' @rdname grids
+#' @md
+NULL
+
+#' @name uk_regions1
+#' @description
+#' * **uk_regions1:** Grid for regions of the UK (aka EU standard NUTS 1 areas). Image reference [here](https://user-images.githubusercontent.com/1275592/32032394-d394b24a-b9bb-11e7-91e8-fe4da69ba005.jpg). Thanks to [paulb20](https://github.com/paulb20).
+#' @usage uk_regions1
 #' @rdname grids
 #' @md
 NULL
