@@ -3,7 +3,7 @@
 #' @name grids
 #' @docType data
 #' @keywords data
-#' @description There are now 40 grids available in this package and more online. To view a full list of available grids, see [here](https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json). To create and submit your own grid, see [here](https://hafen.github.io/grid-designer/). To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
+#' @description There are now 42 grids available in this package and more online. To view a full list of available grids, see [here](https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json). To create and submit your own grid, see [here](https://hafen.github.io/grid-designer/). To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
 #' @rdname grids
 #' @md
 NULL
@@ -324,6 +324,22 @@ NULL
 #' @description
 #' * **uk_regions1:** Grid for regions of the UK (aka EU standard NUTS 1 areas). Image reference [here](https://user-images.githubusercontent.com/1275592/32032394-d394b24a-b9bb-11e7-91e8-fe4da69ba005.jpg). Thanks to [paulb20](https://github.com/paulb20).
 #' @usage uk_regions1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name us_state_contiguous_grid1
+#' @description
+#' * **us_state_contiguous_grid1:** Grid layout for the contiguous US states (including DC). Image reference [here](https://images7.alphacoders.com/687/687665.jpg). Thanks to [andrewsr](https://github.com/andrewsr).
+#' @usage us_state_contiguous_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name sk_province_grid1
+#' @description
+#' * **sk_province_grid1:** Grid layout for South Korean sis and dos (metropolitan/special/autonomous cities and provinces). Image reference [here](http://tong.visitkorea.or.kr/enu/images/koreastay/korea_map.jpg). Thanks to [heon131](https://github.com/heon131).
+#' @usage sk_province_grid1
 #' @rdname grids
 #' @md
 NULL
