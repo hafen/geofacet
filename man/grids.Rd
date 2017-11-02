@@ -45,6 +45,7 @@
 \alias{uk_regions1}
 \alias{us_state_contiguous_grid1}
 \alias{sk_province_grid1}
+\alias{ch_aargau_districts_grid1}
 \title{Geo Grids}
 \usage{
 us_state_grid1
@@ -130,9 +131,11 @@ uk_regions1
 us_state_contiguous_grid1
 
 sk_province_grid1
+
+ch_aargau_districts_grid1
 }
 \description{
-There are now 42 grids available in this package and more online. To view a full list of available grids, see \href{https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json}{here}. To create and submit your own grid, see \href{https://hafen.github.io/grid-designer/}{here}. To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
+There are now 43 grids available in this package and more online. To view a full list of available grids, see \href{https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json}{here}. To create and submit your own grid, see \href{https://hafen.github.io/grid-designer/}{here}. To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
 
 \itemize{
 \item \strong{us_state_grid1:} Grid layout for US states (including DC) Image reference \href{https://images7.alphacoders.com/687/687665.jpg}{here}.
@@ -300,6 +303,10 @@ There are now 42 grids available in this package and more online. To view a full
 
 \itemize{
 \item \strong{sk_province_grid1:} Grid layout for South Korean sis and dos (metropolitan/special/autonomous cities and provinces). Image reference \href{http://tong.visitkorea.or.kr/enu/images/koreastay/korea_map.jpg}{here}. Thanks to \href{https://github.com/heon131}{heon131}.
+}
+
+\itemize{
+\item \strong{ch_aargau_districts_grid1:} Grid layout for Districts of the Canton of Aargau, Switzerland. Image reference \href{https://user-images.githubusercontent.com/31518032/32281394-fcd761d0-bf1e-11e7-9dcc-ae52307eeafd.png}{here}. Thanks to \href{https://github.com/zumbov2}{zumbov2}.
 }
 }
 \keyword{data}

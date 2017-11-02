@@ -3,7 +3,7 @@
 #' @name grids
 #' @docType data
 #' @keywords data
-#' @description There are now 42 grids available in this package and more online. To view a full list of available grids, see [here](https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json). To create and submit your own grid, see [here](https://hafen.github.io/grid-designer/). To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
+#' @description There are now 43 grids available in this package and more online. To view a full list of available grids, see [here](https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json). To create and submit your own grid, see [here](https://hafen.github.io/grid-designer/). To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
 #' @rdname grids
 #' @md
 NULL
@@ -340,6 +340,14 @@ NULL
 #' @description
 #' * **sk_province_grid1:** Grid layout for South Korean sis and dos (metropolitan/special/autonomous cities and provinces). Image reference [here](http://tong.visitkorea.or.kr/enu/images/koreastay/korea_map.jpg). Thanks to [heon131](https://github.com/heon131).
 #' @usage sk_province_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name ch_aargau_districts_grid1
+#' @description
+#' * **ch_aargau_districts_grid1:** Grid layout for Districts of the Canton of Aargau, Switzerland. Image reference [here](https://user-images.githubusercontent.com/31518032/32281394-fcd761d0-bf1e-11e7-9dcc-ae52307eeafd.png). Thanks to [zumbov2](https://github.com/zumbov2).
+#' @usage ch_aargau_districts_grid1
 #' @rdname grids
 #' @md
 NULL
