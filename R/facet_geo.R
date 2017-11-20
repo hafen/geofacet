@@ -126,7 +126,7 @@ print.facet_geo <- function(x, ...) {
 
   idx <- which(is.na(grd$label))
   tmp <- setdiff(g$layout$name, c(grd$strip[idx], grd$panel[idx], extra_rgx))
-  rgx <- paste0("(^", paste(tmp, collapse = "$|^"), "$)")
+  # rgx <- paste0("(^", paste(tmp, collapse = "$|^"), "$)")
 
   # TODO: look into using extra grid space to draw cartographic map
   # https://github.com/baptiste/gridextra/wiki/gtable
