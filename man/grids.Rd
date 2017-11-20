@@ -46,6 +46,9 @@
 \alias{us_state_contiguous_grid1}
 \alias{sk_province_grid1}
 \alias{ch_aargau_districts_grid1}
+\alias{jo_gov_grid1}
+\alias{spain_ccaa_grid1}
+\alias{spain_prov_grid2}
 \title{Geo Grids}
 \usage{
 us_state_grid1
@@ -133,9 +136,15 @@ us_state_contiguous_grid1
 sk_province_grid1
 
 ch_aargau_districts_grid1
+
+jo_gov_grid1
+
+spain_ccaa_grid1
+
+spain_prov_grid2
 }
 \description{
-There are now 43 grids available in this package and more online. To view a full list of available grids, see \href{https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json}{here}. To create and submit your own grid, see \href{https://hafen.github.io/grid-designer/}{here}. To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
+There are now 46 grids available in this package and more online. To view a full list of available grids, see \href{https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json}{here}. To create and submit your own grid, see \href{https://hafen.github.io/grid-designer/}{here}. To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
 
 \itemize{
 \item \strong{us_state_grid1:} Grid layout for US states (including DC) Image reference \href{https://images7.alphacoders.com/687/687665.jpg}{here}.
@@ -307,6 +316,18 @@ There are now 43 grids available in this package and more online. To view a full
 
 \itemize{
 \item \strong{ch_aargau_districts_grid1:} Grid layout for Districts of the Canton of Aargau, Switzerland. Image reference \href{https://user-images.githubusercontent.com/31518032/32281394-fcd761d0-bf1e-11e7-9dcc-ae52307eeafd.png}{here}. Thanks to \href{https://github.com/zumbov2}{zumbov2}.
+}
+
+\itemize{
+\item \strong{jo_gov_grid1:} Grid layout for Governorates of Jordan. Image reference \href{https://camo.githubusercontent.com/a229e8b82407259265378f39e4b5f09dceace668/687474703a2f2f7777772e3234706f696e74302e636f6d2f7070742d73686f702f6d656469612f636174616c6f672f70726f647563742f63616368652f312f696d6167652f61313437653035336533386461386432366462626233626232346232313238302f6a2f6f2f6a6f7264616e2d676f7665726e6f726174652d6361706974616c732d6d61702d706f776572706f696e742d70726573656e746174696f6e2e6a7067}{here}. Thanks to \href{https://github.com/ghosthedirewolf}{ghosthedirewolf}.
+}
+
+\itemize{
+\item \strong{spain_ccaa_grid1:} Grid layout for Spanish 'Comunidades Autónomas'. Image reference \href{https://camo.githubusercontent.com/5be0fc76e8dab5269761384ce2b77e7e79bba0db/68747470733a2f2f7777772e6d737373692e676f622e65732f6f7267616e697a6163696f6e2f636361612f696d672f737061696e2e6a7067}{here}. Thanks to \href{https://github.com/JoseAntonioOrtega}{JoseAntonioOrtega}.
+}
+
+\itemize{
+\item \strong{spain_prov_grid2:} Grid layout for Provinces of Spain. Image reference \href{https://user-images.githubusercontent.com/1275592/30189589-cbfbf2de-93e9-11e7-9598-bb4c4e09e0c1.png}{here}. Thanks to \href{https://github.com/JoseAntonioOrtega}{JoseAntonioOrtega}.
 }
 }
 \keyword{data}

@@ -3,7 +3,7 @@
 #' @name grids
 #' @docType data
 #' @keywords data
-#' @description There are now 43 grids available in this package and more online. To view a full list of available grids, see [here](https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json). To create and submit your own grid, see [here](https://hafen.github.io/grid-designer/). To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
+#' @description There are now 46 grids available in this package and more online. To view a full list of available grids, see [here](https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json). To create and submit your own grid, see [here](https://hafen.github.io/grid-designer/). To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
 #' @rdname grids
 #' @md
 NULL
@@ -348,6 +348,30 @@ NULL
 #' @description
 #' * **ch_aargau_districts_grid1:** Grid layout for Districts of the Canton of Aargau, Switzerland. Image reference [here](https://user-images.githubusercontent.com/31518032/32281394-fcd761d0-bf1e-11e7-9dcc-ae52307eeafd.png). Thanks to [zumbov2](https://github.com/zumbov2).
 #' @usage ch_aargau_districts_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name jo_gov_grid1
+#' @description
+#' * **jo_gov_grid1:** Grid layout for Governorates of Jordan. Image reference [here](https://camo.githubusercontent.com/a229e8b82407259265378f39e4b5f09dceace668/687474703a2f2f7777772e3234706f696e74302e636f6d2f7070742d73686f702f6d656469612f636174616c6f672f70726f647563742f63616368652f312f696d6167652f61313437653035336533386461386432366462626233626232346232313238302f6a2f6f2f6a6f7264616e2d676f7665726e6f726174652d6361706974616c732d6d61702d706f776572706f696e742d70726573656e746174696f6e2e6a7067). Thanks to [ghosthedirewolf](https://github.com/ghosthedirewolf).
+#' @usage jo_gov_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name spain_ccaa_grid1
+#' @description
+#' * **spain_ccaa_grid1:** Grid layout for Spanish 'Comunidades Autónomas'. Image reference [here](https://camo.githubusercontent.com/5be0fc76e8dab5269761384ce2b77e7e79bba0db/68747470733a2f2f7777772e6d737373692e676f622e65732f6f7267616e697a6163696f6e2f636361612f696d672f737061696e2e6a7067). Thanks to [JoseAntonioOrtega](https://github.com/JoseAntonioOrtega).
+#' @usage spain_ccaa_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name spain_prov_grid2
+#' @description
+#' * **spain_prov_grid2:** Grid layout for Provinces of Spain. Image reference [here](https://user-images.githubusercontent.com/1275592/30189589-cbfbf2de-93e9-11e7-9598-bb4c4e09e0c1.png). Thanks to [JoseAntonioOrtega](https://github.com/JoseAntonioOrtega).
+#' @usage spain_prov_grid2
 #' @rdname grids
 #' @md
 NULL
