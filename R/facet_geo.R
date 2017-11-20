@@ -132,7 +132,9 @@ print.facet_geo <- function(x, ...) {
   # https://github.com/baptiste/gridextra/wiki/gtable
   # https://stackoverflow.com/questions/30532889/ggplot-overlay-two-plots
 
-  graphics::plot(gtable::gtable_filter(g, rgx, trim = FALSE))
+  g <- gf_gtable_filter(g, tmp, trim = FALSE)
+  # g <- gtable::gtable_filter(g, rgx, trim = FALSE)
+  graphics::plot(g)
 }
 
 #' Plot geofaceted ggplot2 object
@@ -333,7 +335,7 @@ get_grid <- function(grid) {
     }
   } else if (inherits(grid, "data.frame")) {
     grd <- check_grid(grid)
-    message_nice("You provided a user-specified grid. ",
+    message_nice("Note: You provided a user-specified grid. ",
       "If this is a generally-useful grid, please consider submitting it ",
       "to become a part of the geofacet package. You can do this easily by ",
       "calling:\ngrid_submit(__grid_df_name__)")
