@@ -12,7 +12,10 @@ LazyData: true
 Imports:
     ggplot2,
     gtable,
-    graphics
+    graphics,
+    rnaturalearth,
+    sp,
+    ggrepel
 Suggests:
     testthat,
     covr,

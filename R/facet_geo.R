@@ -154,11 +154,13 @@ plot.facet_geo <- function(x, ...) {
 #' @param label the column should be used for text labels
 #' @export
 #' @importFrom ggplot2 ggplot geom_rect geom_text aes xlim ylim
+#' @importFrom gridExtra grid.arrange
 #' @examples
 #' grid_preview(us_state_grid2)
 #' grid_preview(eu_grid1, label = "name")
 grid_preview <- function(x, label = NULL) {
-  x <- get_grid(x)
+  if (!inherits(x, "geofacet_grid"))
+    x <- get_grid(x)
 
   x <- check_grid(x)
   x$col <- factor(x$col, levels = seq_len(max(x$col)))
@@ -171,7 +173,7 @@ grid_preview <- function(x, label = NULL) {
     x$txt <- x[[label]]
   }
 
-  ggplot2::ggplot(x, ggplot2::aes_string("col", "row", label = "txt")) +
+  p <- ggplot2::ggplot(x, ggplot2::aes_string("col", "row", label = "txt")) +
     ggplot2::geom_rect(
       xmin = as.numeric(x$col) - 0.5, xmax = as.numeric(x$col) + 0.5,
       ymin = as.numeric(x$row) - 0.5, ymax = as.numeric(x$row) + 0.5,
@@ -179,6 +181,15 @@ grid_preview <- function(x, label = NULL) {
     ggplot2::ylim(levels(x$row)) +
     ggplot2::xlim(levels(x$col)) +
     ggplot2::geom_text()
+
+  spdf <- attr(x, "spdf")
+  if (!is.null(spdf) && inherits(spdf, "SpatialPolygonsDataFrame")) {
+    p2 <- plot_geo_raw(spdf, label = label)
+    p <- gridExtra::grid.arrange(p2, p, nrow = 1)
+  } else {
+    plot(p)
+  }
+  invisible(p)
 }
 
 #' Interactively design a grid
@@ -193,20 +204,35 @@ grid_preview <- function(x, label = NULL) {
 #' grid_design()
 #' # arrange the alphabet
 #' grid_design(data.frame(code = letters))
-grid_design <- function(data = NULL, img = NULL) {
+grid_design <- function(data = NULL, img = NULL, label = "code") {
 
   if (!is.null(data)) {
     rows <- c(paste(names(data), collapse = ","),
       apply(data, 1, function(x) paste(x, collapse = ",")))
-    data <- paste(rows, collapse = "\n")
+    data_csv <- paste(rows, collapse = "\n")
   } else {
     data <- ""
+  }
+
+  spdf <- attr(data, "spdf")
+  if (is.null(img) && !is.null(spdf) &&
+    inherits(spdf, "SpatialPolygonsDataFrame")) {
+
+    message("Attempting to create and upload image of original geography...")
+
+    p <- plot_geo_raw(spdf, label = label)
+    png(tmpfile <- tempfile(), res = 150, width = 600, height = 600)
+    print(p)
+    dev.off()
+    # system2("open", tmpfile)
+    res <- imguR::upload_image(tmpfile)
+    img <- res$link
   }
 
   if (is.null(img))
     img <- ""
 
-  url <- sprintf("https://hafen.github.io/grid-designer/#img=%s&data=%s", img, data)
+  url <- sprintf("https://hafen.github.io/grid-designer/#img=%s&data=%s", img, data_csv)
 
   if (Sys.getenv("GEOFACET_PKG_TESTING") == "") browseURL(URLencode(url))
 }
