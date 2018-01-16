@@ -6,5 +6,5 @@
 \alias{geofacet-package}
 \title{geofacet}
 \description{
-For examples, see \code{\link{facet_geo}}
+For examples, see \code{\link{facet_geo}}.
 }

@@ -1,51 +1,41 @@
-# devtools::install_github("ropenscilabs/rnaturalearth")
-# # devtools::install_github("ropenscilabs/rnaturalearthdata")
-# # install.packages("rnaturalearthhires",
-# #   repos = "http://packages.ropensci.org",
-# #   type = "source")
-# devtools::install_github("sassalley/hexmapr")
-# install.packages("ggrepel")
-# install.packages("imguR")
-
-# library(rnaturalearth)
-# library(rnaturalearthhires)
-# library(sf)
-# library(hexmapr)
-# library(ggplot2)
-# library(ggrepel)
-# library(ggpolypath)
-
-
-#' @importFrom rnaturalearth ne_countries
-#' @importFrom rnaturalearth ne_states
-get_ne_data <- function(code) {
-  code <- tolower(code)
-  if (code %in% auto_countries) {
-    res <- rnaturalearth::ne_countries(continent = code)
-  } else {
-    pars <- list()
-    if (code %in% auto_states$country) {
-      pars$country <- code
-    } else if (code %in% auto_states$geounit) {
-      pars$geounit <- code
-    } else if (code %in% auto_states$iso_a2) {
-      pars$iso_a2 <- code
-    } else {
-      message("code: ", code, " not recognized in Natural Earth data. ",
-        "See auto_countries or auto_states for a list of acceptable codes.")
-    }
-    res <- do.call(rnaturalearth::ne_states, pars)
-  }
-  res
-}
-
+#' Generate a grid automatically from a country/continent name or a SpatialPolygonsDataFrame
+#'
+#' @param x A country/continent name or a SpatialPolygonsDataFrame to build a grid for.
+#' @param names An optional vector of variable names in \code{x@data} to use as "name_" columns in the resulting grid.
+#' @param codes An optional vector of variable names in \code{x@data} to use as "code_" columns in the resulting grid.
+#' @param seed An optional random seed sent to \code{\link[hexmapr]{calculate_cell_size}}.
+#' @details If a country or continent name is specified for \code{x}, it can be any of the strings found in \code{\link{auto_countries}} or \code{\link{auto_states}}. In this case, the rnaturalearth package will be searched for the corresponding shapefiles. You can use \code{\link{get_ne_data}} to see what these shapefiles look like.
+#'
+#' The columns of the \code{@data} component of resulting shapefile (either user-specified or fetched from rnaturalearth) are those that will be available to \code{names} and \code{codes}.
+#' @importFrom utils tail
+#' @importFrom hexmapr calculate_cell_size assign_polygons
 #' @export
+#' @examples
+#' \dontrun{
+#' # auto grid using a name to identify the country
+#' grd <- grid_auto("brazil", seed = 1234)
+#' grid_preview(grd, label = "name")
+#' # open the result up in the grid designer for further refinement
+#' grid_design(grd, label = "name")
+#'
+#' # using a custom file (can be GeoJSON or shapefile)
+#' ff <- system.file("extdata", "bay_counties.geojson", package = "hexmapr")
+#' bay_shp <- hexmapr::read_polygons(ff)
+#' grd <- grid_auto(bay_shp, seed = 1) # names are inferred
+#' grid_preview(grd, label = "name_county")
+#' grid_design(grd, label = "code_fipsstco")
+#'
+#' # explicitly specify the names and codes variables to use
+#' grd <- grid_auto(bay_shp, seed = 1, names = "county", codes = "fipsstco")
+#' grid_preview(grd, label = "name_county")
+#' grid_preview(grd, label = "code_fipsstco")
+#' }
 grid_auto <- function(x, names = NULL, codes = NULL, seed = NULL) {
-  if(!requireNamespace("hexmapr", quietly = TRUE)) {
-    stop("Package 'hexmapr' is needed for this function to work. Please install it.\n",
-      "devtools::install_github(\"sassalley/hexmapr\")",
-    call. = FALSE)
-  }
+  # if(!requireNamespace("hexmapr", quietly = TRUE)) {
+  #   stop("Package 'hexmapr' is needed for this function to work. Please install it.\n",
+  #     "devtools::install_github(\"sassalley/hexmapr\")",
+  #   call. = FALSE)
+  # }
 
   is_ne_data <- FALSE
 
@@ -106,7 +96,7 @@ grid_auto <- function(x, names = NULL, codes = NULL, seed = NULL) {
       # for names, look at top 3 prop_char having at least 50% char
       # and of those, choose the one with longest char_len
       if (is.null(names)) {
-        top3n <- tail(sort(prop_char[prop_char > 0.5]), 3)
+        top3n <- utils::tail(sort(prop_char[prop_char > 0.5]), 3)
         if (length(top3n) > 0) {
           names <- names(top3n[which.max(char_len[names(top3n)])])
           message("Inferred that 'name' is in the column '", names, "'")
@@ -143,14 +133,52 @@ grid_auto <- function(x, names = NULL, codes = NULL, seed = NULL) {
     }
   }
 
-  # # merge in additional columns from x
-  # if (length(keep_names) > 0 && is.character(keep_names)) {
-  # }
-
   attr(grd2, "spdf") <- x
   class(grd2) <- c("geofacet_grid", "data.frame")
 
   grd2
+}
+
+#' Get rnaturalearth data
+#'
+#' @param code A country/continent name to get rnaturalearth data from (see \code{\link{auto_countries}} or \code{\link{auto_states}}).
+#' @importFrom rnaturalearth ne_countries
+#' @importFrom rnaturalearth ne_states
+#' @export
+#' @examples
+#' dat <- get_ne_data("brazil")
+get_ne_data <- function(code) {
+  code <- tolower(code)
+  if (code %in% geofacet::auto_countries) {
+    res <- rnaturalearth::ne_countries(continent = code)
+  } else {
+    pars <- list()
+    if (code %in% geofacet::auto_states$country) {
+      pars$country <- code
+    } else if (code %in% geofacet::auto_states$geounit) {
+      pars$geounit <- code
+    } else if (code %in% geofacet::auto_states$iso_a2) {
+      pars$iso_a2 <- code
+    } else {
+      message("code: ", code, " not recognized in Natural Earth data. ",
+        "See auto_countries or auto_states for a list of acceptable codes.")
+    }
+    res <- do.call(rnaturalearth::ne_states, pars)
+  }
+  res
+}
+
+#' Attach a SpatialPolygonsDataFrame object to a grid
+#'
+#' @param x object to attach SpatialPolygonsDataFrame object to
+#' @param spdf a SpatialPolygonsDataFrame object to attach
+#' @export
+attach_spdf <- function(x, spdf) {
+  if (!inherits(spdf, "SpatialPolygonsDataFrame"))
+    stop("spdf must be a SpatialPolygonsDataFrame.")
+  # TODO: try to link the data of x and spdf
+  attr(x, "spdf") <- spdf
+  x
 }
 
 #' @importFrom sp coordinates
@@ -182,23 +210,6 @@ plot_geo_raw <- function(x, label = "name") {
     ggplot2::guides(fill = FALSE) +
     ggplot2::theme_void()
 }
-
-# # using a name to identify the country
-# grd <- grid_auto("brazil", seed = 1234)
-# grid_preview(grd, label = "name")
-# grid_design(grd, label = "name")
-
-# # using a custom file (can be GeoJSON or shapefile)
-# ff <- system.file("extdata", "bay_counties.geojson", package = "hexmapr")
-# bay_shp <- hexmapr::read_polygons(ff)
-# grd <- grid_auto(bay_shp, seed = 1)
-# grid_preview(grd, label = "name_county")
-# grid_design(grd, label = "code_fipsstco")
-
-# grd <- grid_auto(bay_shp, seed = 1, names = "county", codes = "fipsstco")
-# grid_preview(grd, label = "name_county")
-# grid_preview(grd, label = "code_fipsstco")
-# grid_design(grd, label = "name_county")
 
 # a <- hexmapr::calculate_cell_size(shape = bay_shp, grid_type = "regular", seed = 12)
 # plot(a)

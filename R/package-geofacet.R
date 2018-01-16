@@ -1,8 +1,28 @@
+utils::globalVariables(c("long", "lat", "group", "xcentroid", "ycentroid", "label_col"))
+
+#' auto_states
+#'
+#' @name auto_states
+#' @docType data
+#' @keywords data
+#' @description List of valid values for countries for fetching rnaturalearth data when used with \code{\link{grid_auto}} to create a grid of states.
+#' @rdname auto_names
+NULL
+
+#' auto_countries
+#'
+#' @name auto_countries
+#' @docType data
+#' @keywords data
+#' @description List of valid values for continents for fetching rnaturalearth data when used with \code{\link{grid_auto}} to create a grid of countries.
+#' @rdname auto_names
+NULL
+
 #' geofacet
 #'
 #' @name geofacet
 #' @docType package
-#' @description For examples, see \code{\link{facet_geo}}
+#' @description For examples, see \code{\link{facet_geo}}.
 NULL
 
 #' state_ranks

@@ -194,9 +194,12 @@ grid_preview <- function(x, label = NULL) {
 
 #' Interactively design a grid
 #'
-#' @param data a data frame containing a grid to start from or NULL if starting from scratch
-#' @param img optional URL pointing to a reference image containing a geographic map of the entities in the grid
+#' @param data A data frame containing a grid to start from or NULL if starting from scratch.
+#' @param img An optional URL pointing to a reference image containing a geographic map of the entities in the grid.
+#' @param label An optional column name to use as the label for plotting the original geography, if attached to \code{data}.
 #' @export
+#' @importFrom grDevices png dev.off
+#' @importFrom imguR upload_image
 #' @examples
 #' # edit aus_grid1
 #' grid_design(data = aus_grid1, img = "http://www.john.chapman.name/Austral4.gif")
@@ -211,7 +214,7 @@ grid_design <- function(data = NULL, img = NULL, label = "code") {
       apply(data, 1, function(x) paste(x, collapse = ",")))
     data_csv <- paste(rows, collapse = "\n")
   } else {
-    data <- ""
+    data_csv <- ""
   }
 
   spdf <- attr(data, "spdf")
@@ -221,9 +224,9 @@ grid_design <- function(data = NULL, img = NULL, label = "code") {
     message("Attempting to create and upload image of original geography...")
 
     p <- plot_geo_raw(spdf, label = label)
-    png(tmpfile <- tempfile(), res = 150, width = 600, height = 600)
+    grDevices::png(tmpfile <- tempfile(), res = 150, width = 600, height = 600)
     print(p)
-    dev.off()
+    grDevices::dev.off()
     # system2("open", tmpfile)
     res <- imguR::upload_image(tmpfile)
     img <- res$link

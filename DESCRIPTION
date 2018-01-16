@@ -15,7 +15,10 @@ Imports:
     graphics,
     rnaturalearth,
     sp,
-    ggrepel
+    ggrepel,
+    imguR,
+    gridExtra,
+    hexmapr
 Suggests:
     testthat,
     covr,
@@ -26,3 +29,5 @@ Suggests:
 RoxygenNote: 6.0.1
 VignetteBuilder: knitr,
     packagedocs
+Remotes:
+    hafen/hexmapr
