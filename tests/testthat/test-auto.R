@@ -4,6 +4,8 @@ test_that("auto examples work", {
   # auto grid using a name to identify the country
   grd <- grid_auto("brazil", seed = 1234)
   grid_preview(grd, label = "name")
+  grd$name2 <- gsub(" ", "\n", grd$name)
+  grid_preview(grd, label = "name2", label_raw = "name")
   # open the result up in the grid designer for further refinement
   grid_design(grd, label = "name")
 

@@ -4,12 +4,14 @@
 \alias{grid_preview}
 \title{Plot a preview of a grid}
 \usage{
-grid_preview(x, label = NULL)
+grid_preview(x, label = NULL, label_raw = NULL)
 }
 \arguments{
 \item{x}{a data frame containing a grid}
 
-\item{label}{the column should be used for text labels}
+\item{label}{the column name in \code{x} that should be used for text labels in the grid plot}
+
+\item{label_raw}{the column name in the optional SpatialPolygonsDataFrame attached to \code{x} that should be used for text labels in the raw geography plot}
 }
 \description{
 Plot a preview of a grid

@@ -151,14 +151,16 @@ plot.facet_geo <- function(x, ...) {
 #' Plot a preview of a grid
 #'
 #' @param x a data frame containing a grid
-#' @param label the column should be used for text labels
+#' @param label the column name in \code{x} that should be used for text labels in the grid plot
+#' @param label_raw the column name in the optional SpatialPolygonsDataFrame attached to \code{x} that should be used for text labels in the raw geography plot
 #' @export
 #' @importFrom ggplot2 ggplot geom_rect geom_text aes xlim ylim
 #' @importFrom gridExtra grid.arrange
 #' @examples
 #' grid_preview(us_state_grid2)
 #' grid_preview(eu_grid1, label = "name")
-grid_preview <- function(x, label = NULL) {
+grid_preview <- function(x, label = NULL, label_raw = NULL) {
+
   if (!inherits(x, "geofacet_grid"))
     x <- get_grid(x)
 
@@ -184,7 +186,18 @@ grid_preview <- function(x, label = NULL) {
 
   spdf <- attr(x, "spdf")
   if (!is.null(spdf) && inherits(spdf, "SpatialPolygonsDataFrame")) {
-    p2 <- plot_geo_raw(spdf, label = label)
+    if (is.null(label_raw)) {
+      if (label %in% names(spdf@data)) {
+        label_raw <- label
+      } else {
+        stop("Couldn't find a variable with name '", label, "' ",
+          "in the SpatialPolygonsDataFrame attached to the grid object. ",
+          "Please explicity provide a variable name to use for plotting ",
+          "This data using the argument label_raw.")
+      }
+    }
+
+    p2 <- plot_geo_raw(spdf, label = label_raw)
     p <- gridExtra::grid.arrange(p2, p, nrow = 1)
   } else {
     plot(p)
@@ -197,6 +210,7 @@ grid_preview <- function(x, label = NULL) {
 #' @param data A data frame containing a grid to start from or NULL if starting from scratch.
 #' @param img An optional URL pointing to a reference image containing a geographic map of the entities in the grid.
 #' @param label An optional column name to use as the label for plotting the original geography, if attached to \code{data}.
+#' @param auto_img If the original geography is attached to \code{data}, should a plot of that be created and uploaded to the viewer?
 #' @export
 #' @importFrom grDevices png dev.off
 #' @importFrom imguR upload_image
@@ -207,7 +221,7 @@ grid_preview <- function(x, label = NULL) {
 #' grid_design()
 #' # arrange the alphabet
 #' grid_design(data.frame(code = letters))
-grid_design <- function(data = NULL, img = NULL, label = "code") {
+grid_design <- function(data = NULL, img = NULL, label = "code", auto_img = TRUE) {
 
   if (!is.null(data)) {
     rows <- c(paste(names(data), collapse = ","),
@@ -218,13 +232,13 @@ grid_design <- function(data = NULL, img = NULL, label = "code") {
   }
 
   spdf <- attr(data, "spdf")
-  if (is.null(img) && !is.null(spdf) &&
+  if (auto_img && is.null(img) && !is.null(spdf) &&
     inherits(spdf, "SpatialPolygonsDataFrame")) {
 
     message("Attempting to create and upload image of original geography...")
 
     p <- plot_geo_raw(spdf, label = label)
-    grDevices::png(tmpfile <- tempfile(), res = 150, width = 600, height = 600)
+    grDevices::png(tmpfile <- tempfile(), res = 150, width = 1000, height = 1000)
     print(p)
     grDevices::dev.off()
     # system2("open", tmpfile)

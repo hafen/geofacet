@@ -13,7 +13,7 @@ grid_auto(x, names = NULL, codes = NULL, seed = NULL)
 
 \item{codes}{An optional vector of variable names in \code{x@data} to use as "code_" columns in the resulting grid.}
 
-\item{seed}{An optional random seed sent to \code{\link[hexmapr]{calculate_cell_size}}.}
+\item{seed}{An optional random seed sent to \code{\link[hexmapr]{calculate_grid}}.}
 }
 \description{
 Generate a grid automatically from a country/continent name or a SpatialPolygonsDataFrame
