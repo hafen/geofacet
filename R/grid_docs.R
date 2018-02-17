@@ -3,7 +3,7 @@
 #' @name grids
 #' @docType data
 #' @keywords data
-#' @description There are now 46 grids available in this package and more online. To view a full list of available grids, see [here](https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json). To create and submit your own grid, see [here](https://hafen.github.io/grid-designer/). To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
+#' @description There are now 48 grids available in this package and more online. To view a full list of available grids, see [here](https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json). To create and submit your own grid, see [here](https://hafen.github.io/grid-designer/). To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
 #' @rdname grids
 #' @md
 NULL
@@ -88,10 +88,10 @@ NULL
 #' @md
 NULL
 
-#' @name br_grid1
+#' @name br_states_grid1
 #' @description
-#' * **br_grid1:** Grid for the 27 states of Brazil. Image reference [here](https://camo.githubusercontent.com/477627dce2610f18f1bf3850cd32fca01610656e/687474703a2f2f63656a656475696e66616e74696c2e7062776f726b732e636f6d2f662f313435383034313938342f4d61706142726173696c5369676c61732e676966). Thanks to [italocegatta](https://github.com/italocegatta).
-#' @usage br_grid1
+#' * **br_states_grid1:** Grid for the 27 states of Brazil. Image reference [here](https://camo.githubusercontent.com/477627dce2610f18f1bf3850cd32fca01610656e/687474703a2f2f63656a656475696e66616e74696c2e7062776f726b732e636f6d2f662f313435383034313938342f4d61706142726173696c5369676c61732e676966). Thanks to [italocegatta](https://github.com/italocegatta).
+#' @usage br_states_grid1
 #' @rdname grids
 #' @md
 NULL
@@ -372,6 +372,22 @@ NULL
 #' @description
 #' * **spain_prov_grid2:** Grid layout for Provinces of Spain. Image reference [here](https://user-images.githubusercontent.com/1275592/30189589-cbfbf2de-93e9-11e7-9598-bb4c4e09e0c1.png). Thanks to [JoseAntonioOrtega](https://github.com/JoseAntonioOrtega).
 #' @usage spain_prov_grid2
+#' @rdname grids
+#' @md
+NULL
+
+#' @name world_countries_grid1
+#' @description
+#' * **world_countries_grid1:** Grid layout for countries of the world, with a few exclusions. See . Image reference [here](https://user-images.githubusercontent.com/1275592/30189589-cbfbf2de-93e9-11e7-9598-bb4c4e09e0c1.png). Thanks to [JoseAntonioOrtega](https://github.com/JoseAntonioOrtega).
+#' @usage world_countries_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name br_states_grid2
+#' @description
+#' * **br_states_grid2:** Grid for the 27 states of Brazil. Image reference [here](http://www.brazil-help.com/mapa_do_brasil.gif). Thanks to [hafen](https://github.com/hafen).
+#' @usage br_states_grid2
 #' @rdname grids
 #' @md
 NULL

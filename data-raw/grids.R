@@ -15,7 +15,7 @@ lapply(nms, function(x) {
   # cls <- ifelse(names(tmp) %in% c("row", "col"), "integer", "character")
   # # use read.csv simply because it means one less dependency...
   # res <- utils::read.csv(url, colClasses = cls, stringsAsFactors = FALSE, na.strings = NULL)
-  res <- data.frame(readr::read_csv(url))
+  res <- data.frame(readr::read_csv(url, na = ""))
   assign(x, res)
   eval(parse(text = sprintf("devtools::use_data(%s, overwrite = TRUE)", x)))
 })

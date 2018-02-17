@@ -13,7 +13,7 @@
 \alias{india_grid1}
 \alias{india_grid2}
 \alias{argentina_grid1}
-\alias{br_grid1}
+\alias{br_states_grid1}
 \alias{sea_grid1}
 \alias{mys_grid1}
 \alias{fr_regions_grid1}
@@ -49,6 +49,8 @@
 \alias{jo_gov_grid1}
 \alias{spain_ccaa_grid1}
 \alias{spain_prov_grid2}
+\alias{world_countries_grid1}
+\alias{br_states_grid2}
 \title{Geo Grids}
 \usage{
 us_state_grid1
@@ -71,7 +73,7 @@ india_grid2
 
 argentina_grid1
 
-br_grid1
+br_states_grid1
 
 sea_grid1
 
@@ -142,9 +144,13 @@ jo_gov_grid1
 spain_ccaa_grid1
 
 spain_prov_grid2
+
+world_countries_grid1
+
+br_states_grid2
 }
 \description{
-There are now 46 grids available in this package and more online. To view a full list of available grids, see \href{https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json}{here}. To create and submit your own grid, see \href{https://hafen.github.io/grid-designer/}{here}. To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
+There are now 48 grids available in this package and more online. To view a full list of available grids, see \href{https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json}{here}. To create and submit your own grid, see \href{https://hafen.github.io/grid-designer/}{here}. To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
 
 \itemize{
 \item \strong{us_state_grid1:} Grid layout for US states (including DC) Image reference \href{https://images7.alphacoders.com/687/687665.jpg}{here}.
@@ -187,7 +193,7 @@ There are now 46 grids available in this package and more online. To view a full
 }
 
 \itemize{
-\item \strong{br_grid1:} Grid for the 27 states of Brazil. Image reference \href{https://camo.githubusercontent.com/477627dce2610f18f1bf3850cd32fca01610656e/687474703a2f2f63656a656475696e66616e74696c2e7062776f726b732e636f6d2f662f313435383034313938342f4d61706142726173696c5369676c61732e676966}{here}. Thanks to \href{https://github.com/italocegatta}{italocegatta}.
+\item \strong{br_states_grid1:} Grid for the 27 states of Brazil. Image reference \href{https://camo.githubusercontent.com/477627dce2610f18f1bf3850cd32fca01610656e/687474703a2f2f63656a656475696e66616e74696c2e7062776f726b732e636f6d2f662f313435383034313938342f4d61706142726173696c5369676c61732e676966}{here}. Thanks to \href{https://github.com/italocegatta}{italocegatta}.
 }
 
 \itemize{
@@ -328,6 +334,14 @@ There are now 46 grids available in this package and more online. To view a full
 
 \itemize{
 \item \strong{spain_prov_grid2:} Grid layout for Provinces of Spain. Image reference \href{https://user-images.githubusercontent.com/1275592/30189589-cbfbf2de-93e9-11e7-9598-bb4c4e09e0c1.png}{here}. Thanks to \href{https://github.com/JoseAntonioOrtega}{JoseAntonioOrtega}.
+}
+
+\itemize{
+\item \strong{world_countries_grid1:} Grid layout for countries of the world, with a few exclusions. See . Image reference \href{https://user-images.githubusercontent.com/1275592/30189589-cbfbf2de-93e9-11e7-9598-bb4c4e09e0c1.png}{here}. Thanks to \href{https://github.com/JoseAntonioOrtega}{JoseAntonioOrtega}.
+}
+
+\itemize{
+\item \strong{br_states_grid2:} Grid for the 27 states of Brazil. Image reference \href{http://www.brazil-help.com/mapa_do_brasil.gif}{here}. Thanks to \href{https://github.com/hafen}{hafen}.
 }
 }
 \keyword{data}
