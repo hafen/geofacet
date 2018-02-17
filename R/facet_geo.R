@@ -57,8 +57,13 @@ facet_geo <- function(facets, ..., grid = "us_state_grid1", label = NULL, move_a
     e2$facets <- "facet_col" # we will create a new column "facet_col"
     # this is done below in get_full_geo_data()
 
-    tmp <- get_full_geo_data(e1$data, grd, facet_col, label_col)
+    # update the data to layers if specified independent of global data
+    other_data <- lapply(e1$layers, function(x) x$data)
+
+    tmp <- get_full_geo_data(e1$data, grd, facet_col, label_col, other_data)
     e1$data <- tmp$dat
+    for (ii in seq_along(e1$layers))
+      e1$layers[[ii]]$data <- tmp$other_data[[ii]]
     grd <- tmp$grd
 
     e1 <- e1 %+% do.call(ggplot2::facet_wrap, e2)
@@ -408,7 +413,7 @@ get_full_geo_grid <- function(grid) {
   grd
 }
 
-get_full_geo_data <- function(d, grd, facet_col, label_col = NULL) {
+get_full_geo_data <- function(d, grd, facet_col, label_col = NULL, other_data) {
   # check to make sure facet_col data matches that of grd
   ul <- unique(d[[facet_col]])
   set_nms <- c("row", "col", "row2", "col2", "panel", "strip")
@@ -440,8 +445,16 @@ get_full_geo_data <- function(d, grd, facet_col, label_col = NULL) {
   na_idx <- which(is.na(tmp))
   tmp[na_idx] <- sapply(seq_along(na_idx), function(a) paste0(rep(" ", a), collapse = ""))
 
+  for (ii in seq_along(other_data)) {
+    if (!inherits(other_data[[ii]], "waiver") && facet_col %in% names(other_data[[ii]])) {
+      conv_idx <- match(other_data[[ii]][[facet_col]], grd$label)
+      other_data[[ii]]$facet_col <- grd[[label_col]][conv_idx]
+      other_data[[ii]]$facet_col <- factor(other_data[[ii]]$facet_col, levels = tmp)
+    }
+  }
+
   d$facet_col <- factor(d$facet_col, levels = tmp)
 
   # need to update grd to have the right column
-  list(dat = d, grd = grd)
+  list(dat = d, grd = grd, other_data = other_data)
 }
