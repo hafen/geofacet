@@ -11,4 +11,4 @@
   "china_prov_grid1", "world_86countries_grid", "se_counties_grid2",
   "uk_regions1", "us_state_contiguous_grid1", "sk_province_grid1",
   "ch_aargau_districts_grid1", "jo_gov_grid1", "spain_ccaa_grid1",
-  "spain_prov_grid2")
+  "spain_prov_grid2", "nz_regions")

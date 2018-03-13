@@ -375,3 +375,11 @@ NULL
 #' @rdname grids
 #' @md
 NULL
+
+#' @name nz_regions
+#' @description 
+#' * **nz_regions:** Grid layout for New Zealand regions. Image reference [here](https://user-images.githubusercontent.com/732008/36822875-3d3d8c2e-1d5f-11e8-98c5-01ac64aab5f7.png). Thanks to [peeyooshc](https://github.com/peeyooshc) and [pierreroudier](https://github.com/pierreroudier).
+#' @usage nz_regions
+#' @rdname grids
+#' @md
+NULL
