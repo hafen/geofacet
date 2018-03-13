@@ -49,6 +49,7 @@
 \alias{jo_gov_grid1}
 \alias{spain_ccaa_grid1}
 \alias{spain_prov_grid2}
+\alias{nz_regions}
 \title{Geo Grids}
 \usage{
 us_state_grid1
@@ -142,6 +143,8 @@ jo_gov_grid1
 spain_ccaa_grid1
 
 spain_prov_grid2
+
+nz_regions
 }
 \description{
 There are now 46 grids available in this package and more online. To view a full list of available grids, see \href{https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json}{here}. To create and submit your own grid, see \href{https://hafen.github.io/grid-designer/}{here}. To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
@@ -328,6 +331,10 @@ There are now 46 grids available in this package and more online. To view a full
 
 \itemize{
 \item \strong{spain_prov_grid2:} Grid layout for Provinces of Spain. Image reference \href{https://user-images.githubusercontent.com/1275592/30189589-cbfbf2de-93e9-11e7-9598-bb4c4e09e0c1.png}{here}. Thanks to \href{https://github.com/JoseAntonioOrtega}{JoseAntonioOrtega}.
+}
+
+\itemize{
+\item \strong{nz_regions:} Grid layout for New Zealand regions. Image reference \href{https://user-images.githubusercontent.com/732008/36822875-3d3d8c2e-1d5f-11e8-98c5-01ac64aab5f7.png}{here}. Thanks to \href{https://github.com/peeyooshc}{peeyooshc} and \href{https://github.com/pierreroudier}{pierreroudier}.
 }
 }
 \keyword{data}
