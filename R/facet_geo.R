@@ -83,7 +83,9 @@ facet_geo <- function(facets, ..., grid = "us_state_grid1", label = NULL, move_a
 #' @importFrom gtable gtable_filter
 #' @importFrom graphics plot
 #' @export
-print.facet_geo <- function(x, ...) {
+print.facet_geo <- function(x, newpage = is.null(vp), vp = NULL, ...) {
+  if (newpage) grid::grid.newpage()
+
   attrs <- attr(x, "geofacet")
   grd <- attrs$grid
 
@@ -139,7 +141,7 @@ print.facet_geo <- function(x, ...) {
 
   g <- gf_gtable_filter(g, tmp, trim = FALSE)
   # g <- gtable::gtable_filter(g, rgx, trim = FALSE)
-  graphics::plot(g)
+  grid::grid.draw(g)
 }
 
 #' Plot geofaceted ggplot2 object
