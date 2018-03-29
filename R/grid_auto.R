@@ -146,7 +146,9 @@ grid_auto <- function(x, names = NULL, codes = NULL, seed = NULL) {
 #' @importFrom rnaturalearth ne_states
 #' @export
 #' @examples
+#' \dontrun{
 #' dat <- get_ne_data("brazil")
+#' }
 get_ne_data <- function(code) {
   code <- tolower(code)
   if (code %in% geofacet::auto_countries) {

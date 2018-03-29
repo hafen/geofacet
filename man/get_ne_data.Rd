@@ -13,5 +13,7 @@ get_ne_data(code)
 Get rnaturalearth data
 }
 \examples{
+\dontrun{
 dat <- get_ne_data("brazil")
+}
 }
