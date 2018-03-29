@@ -3,7 +3,7 @@
 #' @name grids
 #' @docType data
 #' @keywords data
-#' @description There are now 62 grids available in this package and more online. To view a full list of available grids, see [here](https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json). To create and submit your own grid, see [here](https://hafen.github.io/grid-designer/). To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
+#' @description There are now 64 grids available in this package and more online. To view a full list of available grids, see [here](https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json). To create and submit your own grid, see [here](https://hafen.github.io/grid-designer/). To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
 #' @rdname grids
 #' @md
 NULL
@@ -410,7 +410,7 @@ NULL
 
 #' @name nz_regions_grid1
 #' @description
-#' * **nz_regions_grid1:** oecd_grid1 Image reference [here](https://camo.githubusercontent.com/9afd6ca4c97374e8d5b69c73325937e6de57ade3/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f342f34632f4f4543445f6d656d6265725f7374617465735f6d61702e7376672f3130303070782d4f4543445f6d656d6265725f7374617465735f6d61702e7376672e706e67). Thanks to [arcruz0](https://github.com/arcruz0).
+#' * **nz_regions_grid1:** Grid layout for regions of New Zealand. Image reference [here](https://camo.githubusercontent.com/3db8d49d196be1e70ed0ebd4dcedf6fefc8fcfed/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f322f32312f4e5a5f526567696f6e616c5f436f756e63696c735f616e645f5465727269746f7269616c5f417574686f7269746965735f323031372e7376672f3130303070782d4e5a5f526567696f6e616c5f436f756e63696c735f616e645f5465727269746f7269616c5f417574686f7269746965735f323031372e7376672e706e67). Thanks to [pierreroudier](https://github.com/pierreroudier).
 #' @usage nz_regions_grid1
 #' @rdname grids
 #' @md
@@ -500,6 +500,22 @@ NULL
 #' @description
 #' * **ar_buenosaires_communes_grid1:** Grid for communes of Buenos Aires, Argentina. Image reference [here](https://camo.githubusercontent.com/1397b556f643333f5c0afbf074e12b316ea8f063/687474703a2f2f7777772e6e6f746963696172696f7375722e636f6d2e61722f77702d636f6e74656e742f75706c6f6164732f323031322f30322f434f4d4e41532d4d4150412e676966). Thanks to [TuQmano](https://github.com/TuQmano).
 #' @usage ar_buenosaires_communes_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name nz_regions_grid2
+#' @description
+#' * **nz_regions_grid2:** Grid layout for regions of New Zealand. Image reference [here](https://camo.githubusercontent.com/3db8d49d196be1e70ed0ebd4dcedf6fefc8fcfed/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f322f32312f4e5a5f526567696f6e616c5f436f756e63696c735f616e645f5465727269746f7269616c5f417574686f7269746965735f323031372e7376672f3130303070782d4e5a5f526567696f6e616c5f436f756e63696c735f616e645f5465727269746f7269616c5f417574686f7269746965735f323031372e7376672e706e67). Thanks to [pierreroudier](https://github.com/pierreroudier).
+#' @usage nz_regions_grid2
+#' @rdname grids
+#' @md
+NULL
+
+#' @name oecd_grid1
+#' @description
+#' * **oecd_grid1:** Grid layout for OECD member countries. Image reference [here](https://camo.githubusercontent.com/9afd6ca4c97374e8d5b69c73325937e6de57ade3/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f342f34632f4f4543445f6d656d6265725f7374617465735f6d61702e7376672f3130303070782d4f4543445f6d656d6265725f7374617465735f6d61702e7376672e706e67). Thanks to [arcruz0](https://github.com/arcruz0).
+#' @usage oecd_grid1
 #' @rdname grids
 #' @md
 NULL

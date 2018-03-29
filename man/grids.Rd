@@ -65,6 +65,8 @@
 \alias{ar_cordoba_dep_grid1}
 \alias{us_fl_counties_grid1}
 \alias{ar_buenosaires_communes_grid1}
+\alias{nz_regions_grid2}
+\alias{oecd_grid1}
 \title{Geo Grids}
 \usage{
 us_state_grid1
@@ -190,9 +192,13 @@ ar_cordoba_dep_grid1
 us_fl_counties_grid1
 
 ar_buenosaires_communes_grid1
+
+nz_regions_grid2
+
+oecd_grid1
 }
 \description{
-There are now 62 grids available in this package and more online. To view a full list of available grids, see \href{https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json}{here}. To create and submit your own grid, see \href{https://hafen.github.io/grid-designer/}{here}. To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
+There are now 64 grids available in this package and more online. To view a full list of available grids, see \href{https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json}{here}. To create and submit your own grid, see \href{https://hafen.github.io/grid-designer/}{here}. To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
 
 \itemize{
 \item \strong{us_state_grid1:} Grid layout for US states (including DC) Image reference \href{https://images7.alphacoders.com/687/687665.jpg}{here}.
@@ -395,7 +401,7 @@ There are now 62 grids available in this package and more online. To view a full
 }
 
 \itemize{
-\item \strong{nz_regions_grid1:} oecd_grid1 Image reference \href{https://camo.githubusercontent.com/9afd6ca4c97374e8d5b69c73325937e6de57ade3/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f342f34632f4f4543445f6d656d6265725f7374617465735f6d61702e7376672f3130303070782d4f4543445f6d656d6265725f7374617465735f6d61702e7376672e706e67}{here}. Thanks to \href{https://github.com/arcruz0}{arcruz0}.
+\item \strong{nz_regions_grid1:} Grid layout for regions of New Zealand. Image reference \href{https://camo.githubusercontent.com/3db8d49d196be1e70ed0ebd4dcedf6fefc8fcfed/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f322f32312f4e5a5f526567696f6e616c5f436f756e63696c735f616e645f5465727269746f7269616c5f417574686f7269746965735f323031372e7376672f3130303070782d4e5a5f526567696f6e616c5f436f756e63696c735f616e645f5465727269746f7269616c5f417574686f7269746965735f323031372e7376672e706e67}{here}. Thanks to \href{https://github.com/pierreroudier}{pierreroudier}.
 }
 
 \itemize{
@@ -440,6 +446,14 @@ There are now 62 grids available in this package and more online. To view a full
 
 \itemize{
 \item \strong{ar_buenosaires_communes_grid1:} Grid for communes of Buenos Aires, Argentina. Image reference \href{https://camo.githubusercontent.com/1397b556f643333f5c0afbf074e12b316ea8f063/687474703a2f2f7777772e6e6f746963696172696f7375722e636f6d2e61722f77702d636f6e74656e742f75706c6f6164732f323031322f30322f434f4d4e41532d4d4150412e676966}{here}. Thanks to \href{https://github.com/TuQmano}{TuQmano}.
+}
+
+\itemize{
+\item \strong{nz_regions_grid2:} Grid layout for regions of New Zealand. Image reference \href{https://camo.githubusercontent.com/3db8d49d196be1e70ed0ebd4dcedf6fefc8fcfed/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f322f32312f4e5a5f526567696f6e616c5f436f756e63696c735f616e645f5465727269746f7269616c5f417574686f7269746965735f323031372e7376672f3130303070782d4e5a5f526567696f6e616c5f436f756e63696c735f616e645f5465727269746f7269616c5f417574686f7269746965735f323031372e7376672e706e67}{here}. Thanks to \href{https://github.com/pierreroudier}{pierreroudier}.
+}
+
+\itemize{
+\item \strong{oecd_grid1:} Grid layout for OECD member countries. Image reference \href{https://camo.githubusercontent.com/9afd6ca4c97374e8d5b69c73325937e6de57ade3/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f342f34632f4f4543445f6d656d6265725f7374617465735f6d61702e7376672f3130303070782d4f4543445f6d656d6265725f7374617465735f6d61702e7376672e706e67}{here}. Thanks to \href{https://github.com/arcruz0}{arcruz0}.
 }
 }
 \keyword{data}
