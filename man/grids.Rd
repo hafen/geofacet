@@ -18,10 +18,10 @@
 \alias{mys_grid1}
 \alias{fr_regions_grid1}
 \alias{de_states_grid1}
-\alias{or_counties_grid1}
-\alias{wa_counties_grid1}
-\alias{in_counties_grid1}
-\alias{in_central_counties_grid1}
+\alias{us_or_counties_grid1}
+\alias{us_wa_counties_grid1}
+\alias{us_in_counties_grid1}
+\alias{us_in_central_counties_grid1}
 \alias{se_counties_grid1}
 \alias{sf_bay_area_counties_grid1}
 \alias{ua_region_grid1}
@@ -51,6 +51,18 @@
 \alias{spain_prov_grid2}
 \alias{world_countries_grid1}
 \alias{br_states_grid2}
+\alias{china_city_grid1}
+\alias{kr_seoul_district_grid1}
+\alias{nz_regions_grid1}
+\alias{sl_regions_grid1}
+\alias{us_census_div_grid1}
+\alias{ar_tucuman_province_grid1}
+\alias{us_nh_counties_grid1}
+\alias{china_prov_grid2}
+\alias{pl_voivodeships_grid1}
+\alias{us_ia_counties_grid1}
+\alias{us_id_counties_grid1}
+\alias{ar_cordoba_dep_grid1}
 \title{Geo Grids}
 \usage{
 us_state_grid1
@@ -83,13 +95,13 @@ fr_regions_grid1
 
 de_states_grid1
 
-or_counties_grid1
+us_or_counties_grid1
 
-wa_counties_grid1
+us_wa_counties_grid1
 
-in_counties_grid1
+us_in_counties_grid1
 
-in_central_counties_grid1
+us_in_central_counties_grid1
 
 se_counties_grid1
 
@@ -148,9 +160,33 @@ spain_prov_grid2
 world_countries_grid1
 
 br_states_grid2
+
+china_city_grid1
+
+kr_seoul_district_grid1
+
+nz_regions_grid1
+
+sl_regions_grid1
+
+us_census_div_grid1
+
+ar_tucuman_province_grid1
+
+us_nh_counties_grid1
+
+china_prov_grid2
+
+pl_voivodeships_grid1
+
+us_ia_counties_grid1
+
+us_id_counties_grid1
+
+ar_cordoba_dep_grid1
 }
 \description{
-There are now 48 grids available in this package and more online. To view a full list of available grids, see \href{https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json}{here}. To create and submit your own grid, see \href{https://hafen.github.io/grid-designer/}{here}. To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
+There are now 60 grids available in this package and more online. To view a full list of available grids, see \href{https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json}{here}. To create and submit your own grid, see \href{https://hafen.github.io/grid-designer/}{here}. To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
 
 \itemize{
 \item \strong{us_state_grid1:} Grid layout for US states (including DC) Image reference \href{https://images7.alphacoders.com/687/687665.jpg}{here}.
@@ -213,19 +249,19 @@ There are now 48 grids available in this package and more online. To view a full
 }
 
 \itemize{
-\item \strong{or_counties_grid1:} Grid for Oregon counties. Image reference \href{https://user-images.githubusercontent.com/11638312/27445795-01b77804-5730-11e7-919b-36cde8027706.jpg}{here}. Thanks to \href{https://github.com/aosmith16}{aosmith16}.
+\item \strong{us_or_counties_grid1:} Grid for Oregon counties. Image reference \href{https://user-images.githubusercontent.com/11638312/27445795-01b77804-5730-11e7-919b-36cde8027706.jpg}{here}. Thanks to \href{https://github.com/aosmith16}{aosmith16}.
 }
 
 \itemize{
-\item \strong{wa_counties_grid1:} Grid for Washington counties. Image reference \href{http://www.countymapsofwashington.com/aapics/washingstate.gif}{here}.
+\item \strong{us_wa_counties_grid1:} Grid for Washington counties. Image reference \href{http://www.countymapsofwashington.com/aapics/washingstate.gif}{here}.
 }
 
 \itemize{
-\item \strong{in_counties_grid1:} Grid for Indiana counties. Image reference \href{https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Indiana_county_map.png/640px-Indiana_county_map.png}{here}. Thanks to \href{https://github.com/nateapathy}{nateapathy}.
+\item \strong{us_in_counties_grid1:} Grid for Indiana counties. Image reference \href{https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Indiana_county_map.png/640px-Indiana_county_map.png}{here}. Thanks to \href{https://github.com/nateapathy}{nateapathy}.
 }
 
 \itemize{
-\item \strong{in_central_counties_grid1:} Grid for central Indiana counties. Image reference \href{https://camo.githubusercontent.com/eb31e821890a0c600f59234fb184335c2bf84423/687474703a2f2f7777772e736176692e6f72672f77702d636f6e74656e742f75706c6f6164732f323031352f30322f6d61702d312e6a7067}{here}. Thanks to \href{https://github.com/nateapathy}{nateapathy}.
+\item \strong{us_in_central_counties_grid1:} Grid for central Indiana counties. Image reference \href{https://camo.githubusercontent.com/eb31e821890a0c600f59234fb184335c2bf84423/687474703a2f2f7777772e736176692e6f72672f77702d636f6e74656e742f75706c6f6164732f323031352f30322f6d61702d312e6a7067}{here}. Thanks to \href{https://github.com/nateapathy}{nateapathy}.
 }
 
 \itemize{
@@ -342,6 +378,54 @@ There are now 48 grids available in this package and more online. To view a full
 
 \itemize{
 \item \strong{br_states_grid2:} Grid for the 27 states of Brazil. Image reference \href{http://www.brazil-help.com/mapa_do_brasil.gif}{here}. Thanks to \href{https://github.com/hafen}{hafen}.
+}
+
+\itemize{
+\item \strong{china_city_grid1:} Grid layout of cities in China. Image reference \url{here}. Thanks to \href{https://github.com/CharleneDeng1}{CharleneDeng1}.
+}
+
+\itemize{
+\item \strong{kr_seoul_district_grid1:} Grid layout of Seoul's 25 districts. Image reference \href{https://user-images.githubusercontent.com/1275592/38068875-494e49a8-32c8-11e8-8ace-b91982fe486f.png}{here}. Thanks to \href{https://github.com/yonghah}{yonghah}.
+}
+
+\itemize{
+\item \strong{nz_regions_grid1:} oecd_grid1 Image reference \href{https://camo.githubusercontent.com/9afd6ca4c97374e8d5b69c73325937e6de57ade3/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f342f34632f4f4543445f6d656d6265725f7374617465735f6d61702e7376672f3130303070782d4f4543445f6d656d6265725f7374617465735f6d61702e7376672e706e67}{here}. Thanks to \href{https://github.com/arcruz0}{arcruz0}.
+}
+
+\itemize{
+\item \strong{sl_regions_grid1:} Grid layout of Slovenian regions. Image reference \href{https://user-images.githubusercontent.com/1275592/38069181-df2cbcb0-32c9-11e8-8a5b-0528f3e9e81c.png}{here}. Thanks to \href{https://github.com/SR1986}{SR1986}.
+}
+
+\itemize{
+\item \strong{us_census_div_grid1:} Grid layout of US Census divisions. Image reference \href{https://camo.githubusercontent.com/154dc45aaff776642ac7a5ce257106f70c97d441/68747470733a2f2f7777772e6569612e676f762f636f6e73756d7074696f6e2f636f6d6d65726369616c2f696d616765732f63656e646976636f2e676966}{here}. Thanks to \href{https://github.com/mkiang}{mkiang}.
+}
+
+\itemize{
+\item \strong{ar_tucuman_province_grid1:} Grid layout for Argentina Tucumán Province political divisions (departments) Image reference \href{https://camo.githubusercontent.com/03faf8f653fffe62e0beb2ad9d36cbcbce094c10/687474703a2f2f7777772e636f6d6f6c6c65676172612e636f6d2f696d616765732f617267656e74696e612f646570617274616d656e746f732d64652d6c612d70726f76696e6369612d64652d747563756d616e2e706e67}{here}. Thanks to \href{https://github.com/TuQmano}{TuQmano}.
+}
+
+\itemize{
+\item \strong{us_nh_counties_grid1:} Grid layout for the 10 counties in New Hampshire. Image reference \href{https://en.wikipedia.org/wiki/List_of_counties_in_New_Hampshire#/media/File:New_Hampshire_Locator_Map.PNG}{here}. Thanks to \href{https://github.com/soungl}{soungl}.
+}
+
+\itemize{
+\item \strong{china_prov_grid2:} Grid layout for Provinces of China. Image reference \href{https://user-images.githubusercontent.com/36669758/37746305-f5c138f4-2d4f-11e8-8a48-2a21513ea828.png}{here}. Thanks to \href{https://github.com/jw2531}{jw2531}.
+}
+
+\itemize{
+\item \strong{pl_voivodeships_grid1:} Grid layout for Polish voivodeships (provinces) Image reference \href{https://user-images.githubusercontent.com/5550348/37672220-69c03caa-2c65-11e8-857e-2955f25f55bf.png}{here}. Thanks to \href{https://github.com/erzk}{erzk}.
+}
+
+\itemize{
+\item \strong{us_ia_counties_grid1:} Grid layout for counties in Iowa Image reference \href{https://camo.githubusercontent.com/9a5e5d3c974c85a6d3ee87b1d2858940476e74c0/68747470733a2f2f7777772e6469676974616c2d746f706f2d6d6170732e636f6d2f636f756e74792d6d61702f696f77612d636f756e74792d6d61702e676966}{here}. Thanks to \href{https://github.com/jrennyb}{jrennyb}.
+}
+
+\itemize{
+\item \strong{us_id_counties_grid1:} Grid layout for counties in Idaho Image reference \href{https://camo.githubusercontent.com/dbe964d952ecd106d2a9f677950852f957be1281/68747470733a2f2f67656f6c6f67792e636f6d2f636f756e74792d6d61702f696461686f2d636f756e74792d6d61702e676966}{here}. Thanks to \href{https://github.com/hathawayj}{hathawayj}.
+}
+
+\itemize{
+\item \strong{ar_cordoba_dep_grid1:} Grid layout for departments of Cordoba province in Argentina. Image reference \href{https://user-images.githubusercontent.com/12114624/38060507-45d03c66-32a8-11e8-81c0-3ef7675dbf4e.png}{here}. Thanks to \href{https://github.com/TuQmano}{TuQmano}.
 }
 }
 \keyword{data}
