@@ -53,7 +53,8 @@ ggplot(state_unemp, aes(year, rate)) +
   geom_line() +
   facet_geo(~ state) +
   scale_x_continuous(labels = function(x) paste0("'", substr(x, 3, 4))) +
-  ylab("Unemployment Rate (\%)")
+  ylab("Unemployment Rate (\%)") +
+  theme_bw()
 
 # plot the 2016 unemployment rate
 ggplot(subset(state_unemp, year == 2016), aes(factor(year), rate)) +

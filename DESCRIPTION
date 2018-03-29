@@ -18,7 +18,8 @@ Imports:
     ggrepel,
     imguR,
     gridExtra,
-    hexmapr
+    hexmapr,
+    geogrid
 Suggests:
     testthat,
     covr,
@@ -29,5 +30,3 @@ Suggests:
 RoxygenNote: 6.0.1
 VignetteBuilder: knitr,
     packagedocs
-Remotes:
-    hafen/hexmapr

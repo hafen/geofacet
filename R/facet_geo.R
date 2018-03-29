@@ -79,7 +79,9 @@ facet_geo <- function(facets, ..., grid = "us_state_grid1", label = NULL, move_a
 #' Print geofaceted ggplot2 object
 #'
 #' @param x plot object
-#' @param ... ignored
+#' @param newpage draw new (empty) page first?
+#' @param vp viewport to draw plot in
+#' @param ... other arguments not used by this method
 #' @importFrom gtable gtable_filter
 #' @importFrom graphics plot
 #' @export
@@ -231,6 +233,16 @@ grid_preview <- function(x, label = NULL, label_raw = NULL) {
 grid_design <- function(data = NULL, img = NULL, label = "code", auto_img = TRUE) {
 
   if (!is.null(data)) {
+    # clean out data
+    for (vr in names(data)) {
+      if (is.factor(data[[vr]]))
+        data[[vr]] <- as.character(data[[vr]])
+      if (is.character(data[[vr]])) {
+        data[[vr]] <- gsub("\\\n", " ", data[[vr]])
+        # other things to get rid of?
+      }
+    }
+
     rows <- c(paste(names(data), collapse = ","),
       apply(data, 1, function(x) paste(x, collapse = ",")))
     data_csv <- paste(rows, collapse = "\n")

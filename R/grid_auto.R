@@ -3,12 +3,12 @@
 #' @param x A country/continent name or a SpatialPolygonsDataFrame to build a grid for.
 #' @param names An optional vector of variable names in \code{x@data} to use as "name_" columns in the resulting grid.
 #' @param codes An optional vector of variable names in \code{x@data} to use as "code_" columns in the resulting grid.
-#' @param seed An optional random seed sent to \code{\link[hexmapr]{calculate_grid}}.
+#' @param seed An optional random seed sent to \code{\link[geogrid]{calculate_grid}}.
 #' @details If a country or continent name is specified for \code{x}, it can be any of the strings found in \code{\link{auto_countries}} or \code{\link{auto_states}}. In this case, the rnaturalearth package will be searched for the corresponding shapefiles. You can use \code{\link{get_ne_data}} to see what these shapefiles look like.
 #'
 #' The columns of the \code{@data} component of resulting shapefile (either user-specified or fetched from rnaturalearth) are those that will be available to \code{names} and \code{codes}.
 #' @importFrom utils tail
-#' @importFrom hexmapr calculate_grid assign_polygons
+#' @importFrom geogrid calculate_grid assign_polygons
 #' @export
 #' @examples
 #' \dontrun{
@@ -19,8 +19,8 @@
 #' grid_design(grd, label = "name")
 #'
 #' # using a custom file (can be GeoJSON or shapefile)
-#' ff <- system.file("extdata", "bay_counties.geojson", package = "hexmapr")
-#' bay_shp <- hexmapr::read_polygons(ff)
+#' ff <- system.file("extdata", "bay_counties.geojson", package = "geogrid")
+#' bay_shp <- geogrid::read_polygons(ff)
 #' grd <- grid_auto(bay_shp, seed = 1) # names are inferred
 #' grid_preview(grd, label = "name_county")
 #' grid_design(grd, label = "code_fipsstco")
@@ -31,9 +31,9 @@
 #' grid_preview(grd, label = "code_fipsstco")
 #' }
 grid_auto <- function(x, names = NULL, codes = NULL, seed = NULL) {
-  # if(!requireNamespace("hexmapr", quietly = TRUE)) {
-  #   stop("Package 'hexmapr' is needed for this function to work. Please install it.\n",
-  #     "devtools::install_github(\"sassalley/hexmapr\")",
+  # if(!requireNamespace("geogrid", quietly = TRUE)) {
+  #   stop("Package 'geogrid' is needed for this function to work. Please install it.\n",
+  #     "devtools::install_github(\"sassalley/geogrid\")",
   #   call. = FALSE)
   # }
 
@@ -51,11 +51,11 @@ grid_auto <- function(x, names = NULL, codes = NULL, seed = NULL) {
 
   # x@data$ID__gfct <- seq_len(nrow(x@data))
 
-  new_cells <- hexmapr::calculate_grid(shape = x, grid_type = "regular", seed = seed)
+  new_cells <- geogrid::calculate_grid(shape = x, grid_type = "regular", seed = seed)
 
   # plot(new_cells[[2]])
 
-  res <- suppressWarnings(hexmapr::assign_polygons(x, new_cells))
+  res <- suppressWarnings(geogrid::assign_polygons(x, new_cells))
   # res@polygons[[1]]@Polygons[[1]]@coords
 
   # lapply(res@polygons, function(x) x@Polygons[[1]]@coords)
@@ -211,7 +211,7 @@ plot_geo_raw <- function(x, label = "name") {
     ggplot2::theme_void()
 }
 
-# a <- hexmapr::calculate_grid(shape = bay_shp, grid_type = "regular", seed = 12)
+# a <- geogrid::calculate_grid(shape = bay_shp, grid_type = "regular", seed = 12)
 # plot(a)
 
 # plot_geo_raw("afghanistan")

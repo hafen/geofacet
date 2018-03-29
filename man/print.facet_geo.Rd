@@ -4,12 +4,16 @@
 \alias{print.facet_geo}
 \title{Print geofaceted ggplot2 object}
 \usage{
-\method{print}{facet_geo}(x, ...)
+\method{print}{facet_geo}(x, newpage = is.null(vp), vp = NULL, ...)
 }
 \arguments{
 \item{x}{plot object}
 
-\item{...}{ignored}
+\item{newpage}{draw new (empty) page first?}
+
+\item{vp}{viewport to draw plot in}
+
+\item{...}{other arguments not used by this method}
 }
 \description{
 Print geofaceted ggplot2 object

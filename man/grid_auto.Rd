@@ -13,7 +13,7 @@ grid_auto(x, names = NULL, codes = NULL, seed = NULL)
 
 \item{codes}{An optional vector of variable names in \code{x@data} to use as "code_" columns in the resulting grid.}
 
-\item{seed}{An optional random seed sent to \code{\link[hexmapr]{calculate_grid}}.}
+\item{seed}{An optional random seed sent to \code{\link[geogrid]{calculate_grid}}.}
 }
 \description{
 Generate a grid automatically from a country/continent name or a SpatialPolygonsDataFrame
@@ -32,8 +32,8 @@ grid_preview(grd, label = "name")
 grid_design(grd, label = "name")
 
 # using a custom file (can be GeoJSON or shapefile)
-ff <- system.file("extdata", "bay_counties.geojson", package = "hexmapr")
-bay_shp <- hexmapr::read_polygons(ff)
+ff <- system.file("extdata", "bay_counties.geojson", package = "geogrid")
+bay_shp <- geogrid::read_polygons(ff)
 grd <- grid_auto(bay_shp, seed = 1) # names are inferred
 grid_preview(grd, label = "name_county")
 grid_design(grd, label = "code_fipsstco")
