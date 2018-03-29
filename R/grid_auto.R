@@ -61,14 +61,14 @@ grid_auto <- function(x, names = NULL, codes = NULL, seed = NULL) {
   # lapply(res@polygons, function(x) x@Polygons[[1]]@coords)
   grd <- do.call(rbind, lapply(res@polygons, function(x) {
     tmp <- x@Polygons[[1]]@coords
-    data.frame(x = min(tmp[,1]), y = min(tmp[,2]))
+    data.frame(x = min(tmp[, 1]), y = min(tmp[, 2]))
   }))
 
   dx <- min(diff(sort(unique(grd$x))))
   dy <- min(diff(sort(unique(grd$y))))
 
-  grd$xo <- as.integer((grd$x - min(grd$x)) / dx + 1)
-  grd$yo <- as.integer((grd$y - min(grd$y)) / dy + 1)
+  grd$xo <- as.integer( (grd$x - min(grd$x)) / dx + 1)
+  grd$yo <- as.integer( (grd$y - min(grd$y)) / dy + 1)
   grd$yo <- max(grd$yo) - grd$yo + 1
 
   grd2 <- data.frame(
@@ -193,17 +193,18 @@ plot_geo_raw <- function(x, label = "name") {
     x <- get_ne_data(x)
   }
 
-  x@data$xcentroid <- sp::coordinates(x)[,1]
-  x@data$ycentroid <- sp::coordinates(x)[,2]
+  x@data$xcentroid <- sp::coordinates(x)[, 1]
+  x@data$ycentroid <- sp::coordinates(x)[, 2]
 
   x@data$id <- rownames(x@data)
   tmp <- suppressMessages(ggplot2::fortify(x))
   tmp <- merge(tmp, x@data, by = "id")
-  tmpl <- tmp[!duplicated(tmp$id),]
+  tmpl <- tmp[!duplicated(tmp$id), ]
   tmpl$label_col <- tmpl[[label]]
 
   ggplot2::ggplot(tmp) +
-    ggplot2::geom_polygon(aes(x = long, y = lat, group = group), fill = "lightgray", color = "white", size = 0.3) +
+    ggplot2::geom_polygon(aes(x = long, y = lat, group = group),
+      fill = "lightgray", color = "white", size = 0.3) +
     ggrepel::geom_text_repel(aes(xcentroid, ycentroid, label = label_col),
       data = tmpl, min.segment.length = 0) +
     ggplot2::coord_equal() +
@@ -213,8 +214,4 @@ plot_geo_raw <- function(x, label = "name") {
 
 # a <- geogrid::calculate_grid(shape = bay_shp, grid_type = "regular", seed = 12)
 # plot(a)
-
 # plot_geo_raw("afghanistan")
-
-
-
