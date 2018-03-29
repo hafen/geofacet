@@ -63,6 +63,8 @@
 \alias{us_ia_counties_grid1}
 \alias{us_id_counties_grid1}
 \alias{ar_cordoba_dep_grid1}
+\alias{us_fl_counties_grid1}
+\alias{ar_buenosaires_communes_grid1}
 \title{Geo Grids}
 \usage{
 us_state_grid1
@@ -184,9 +186,13 @@ us_ia_counties_grid1
 us_id_counties_grid1
 
 ar_cordoba_dep_grid1
+
+us_fl_counties_grid1
+
+ar_buenosaires_communes_grid1
 }
 \description{
-There are now 60 grids available in this package and more online. To view a full list of available grids, see \href{https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json}{here}. To create and submit your own grid, see \href{https://hafen.github.io/grid-designer/}{here}. To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
+There are now 62 grids available in this package and more online. To view a full list of available grids, see \href{https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json}{here}. To create and submit your own grid, see \href{https://hafen.github.io/grid-designer/}{here}. To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
 
 \itemize{
 \item \strong{us_state_grid1:} Grid layout for US states (including DC) Image reference \href{https://images7.alphacoders.com/687/687665.jpg}{here}.
@@ -426,6 +432,14 @@ There are now 60 grids available in this package and more online. To view a full
 
 \itemize{
 \item \strong{ar_cordoba_dep_grid1:} Grid layout for departments of Cordoba province in Argentina. Image reference \href{https://user-images.githubusercontent.com/12114624/38060507-45d03c66-32a8-11e8-81c0-3ef7675dbf4e.png}{here}. Thanks to \href{https://github.com/TuQmano}{TuQmano}.
+}
+
+\itemize{
+\item \strong{us_fl_counties_grid1:} Grid for Florida counties. Image reference \href{https://user-images.githubusercontent.com/1275592/38098066-df3a7690-332b-11e8-9e4f-9123379e412e.jpg}{here}. Thanks to \href{https://github.com/ejr248}{ejr248}.
+}
+
+\itemize{
+\item \strong{ar_buenosaires_communes_grid1:} Grid for communes of Buenos Aires, Argentina. Image reference \href{https://camo.githubusercontent.com/1397b556f643333f5c0afbf074e12b316ea8f063/687474703a2f2f7777772e6e6f746963696172696f7375722e636f6d2e61722f77702d636f6e74656e742f75706c6f6164732f323031322f30322f434f4d4e41532d4d4150412e676966}{here}. Thanks to \href{https://github.com/TuQmano}{TuQmano}.
 }
 }
 \keyword{data}

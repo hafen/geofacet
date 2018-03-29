@@ -3,7 +3,7 @@
 #' @name grids
 #' @docType data
 #' @keywords data
-#' @description There are now 60 grids available in this package and more online. To view a full list of available grids, see [here](https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json). To create and submit your own grid, see [here](https://hafen.github.io/grid-designer/). To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
+#' @description There are now 62 grids available in this package and more online. To view a full list of available grids, see [here](https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json). To create and submit your own grid, see [here](https://hafen.github.io/grid-designer/). To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
 #' @rdname grids
 #' @md
 NULL
@@ -484,6 +484,22 @@ NULL
 #' @description
 #' * **ar_cordoba_dep_grid1:** Grid layout for departments of Cordoba province in Argentina. Image reference [here](https://user-images.githubusercontent.com/12114624/38060507-45d03c66-32a8-11e8-81c0-3ef7675dbf4e.png). Thanks to [TuQmano](https://github.com/TuQmano).
 #' @usage ar_cordoba_dep_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name us_fl_counties_grid1
+#' @description
+#' * **us_fl_counties_grid1:** Grid for Florida counties. Image reference [here](https://user-images.githubusercontent.com/1275592/38098066-df3a7690-332b-11e8-9e4f-9123379e412e.jpg). Thanks to [ejr248](https://github.com/ejr248).
+#' @usage us_fl_counties_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name ar_buenosaires_communes_grid1
+#' @description
+#' * **ar_buenosaires_communes_grid1:** Grid for communes of Buenos Aires, Argentina. Image reference [here](https://camo.githubusercontent.com/1397b556f643333f5c0afbf074e12b316ea8f063/687474703a2f2f7777772e6e6f746963696172696f7375722e636f6d2e61722f77702d636f6e74656e742f75706c6f6164732f323031322f30322f434f4d4e41532d4d4150412e676966). Thanks to [TuQmano](https://github.com/TuQmano).
+#' @usage ar_buenosaires_communes_grid1
 #' @rdname grids
 #' @md
 NULL

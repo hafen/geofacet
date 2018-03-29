@@ -16,4 +16,5 @@
   "china_city_grid1", "kr_seoul_district_grid1", "nz_regions_grid1",
   "sl_regions_grid1", "us_census_div_grid1", "ar_tucuman_province_grid1",
   "us_nh_counties_grid1", "china_prov_grid2", "pl_voivodeships_grid1",
-  "us_ia_counties_grid1", "us_id_counties_grid1", "ar_cordoba_dep_grid1")
+  "us_ia_counties_grid1", "us_id_counties_grid1", "ar_cordoba_dep_grid1",
+  "us_fl_counties_grid1", "ar_buenosaires_communes_grid1")
