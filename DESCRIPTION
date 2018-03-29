@@ -18,7 +18,6 @@ Imports:
     ggrepel,
     imguR,
     gridExtra,
-    hexmapr,
     geogrid
 Suggests:
     testthat,
