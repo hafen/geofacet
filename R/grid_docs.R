@@ -58,7 +58,7 @@ NULL
 
 #' @name nhs_scot_grid
 #' @description
-#' * **nhs_scot_grid:** Grid layout for a grid of NHS Scotland Health Boards. Note that the column \code{code} contains the \href{http://geoportal.statistics.gov.uk/datasets/61dca36aa33e4aee99bbfa784fa9eb25_0?uiTab=table}{codes} used by UK Office for National Statistics. Image reference [here](https://cloud.githubusercontent.com/assets/24879214/26426113/253658d0-40cf-11e7-88b5-fe5ee7fda44f.png). Thanks to [josephjosephadams](https://github.com/josephjosephadams).
+#' * **nhs_scot_grid:** Grid layout for a grid of NHS Scotland Health Boards. Note that the column \code{code} contains the \href{http://geoportal.statistics.gov.uk/datasets/61dca36aa33e4aee99bbfa784fa9eb25_0?uiTab=table}{codes} used by UK Office for National Statistics. Image reference [here](https://cloud.githubusercontent.com/assets/24879214/26426113/253658d0-40cf-11e7-88b5-fe5ee7fda44f.png). Thanks to [jsphdms](https://github.com/jsphdms).
 #' @usage nhs_scot_grid
 #' @rdname grids
 #' @md
