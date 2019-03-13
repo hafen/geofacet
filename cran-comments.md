@@ -1,11 +1,11 @@
 ## Release summary
 
-Integration with the geogrid package, fixes for better ggplot2 compatibility, and several new grids.
+Fixed an issue with rnaturalearth trying to add rnaturalearthhires to the user library before checking.
 
 ## Test environments
 
-* local OS X install, R 3.4.4
-* ubuntu 14.0.5 (on travis-ci), R 3.4.4
+* local OS X install, R 3.5.2
+* ubuntu 14.0.5 (on travis-ci), R 3.5.2
 * win-builder (devel)
 
 ## R CMD check results
