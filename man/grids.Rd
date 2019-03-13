@@ -377,7 +377,7 @@ There are now 64 grids available in this package and more online. To view a full
 }
 
 \itemize{
-\item \strong{spain_ccaa_grid1:} Grid layout for Spanish 'Comunidades Autónomas'. Image reference \href{https://camo.githubusercontent.com/5be0fc76e8dab5269761384ce2b77e7e79bba0db/68747470733a2f2f7777772e6d737373692e676f622e65732f6f7267616e697a6163696f6e2f636361612f696d672f737061696e2e6a7067}{here}. Thanks to \href{https://github.com/JoseAntonioOrtega}{JoseAntonioOrtega}.
+\item \strong{spain_ccaa_grid1:} Grid layout for Spanish 'Comunidades Autónomas'. Image reference \href{https://user-images.githubusercontent.com/1275592/54301007-558b5780-457b-11e9-8796-9f7a3859820d.jpg}{here}. Thanks to \href{https://github.com/JoseAntonioOrtega}{JoseAntonioOrtega}.
 }
 
 \itemize{
