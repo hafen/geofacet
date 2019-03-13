@@ -5,4 +5,5 @@ _ignore
 inst/doc
 _gh-pages
 geofacet.sublime*
+*.code-workspace
 

@@ -4,6 +4,8 @@ library(ggplot2)
 
 test_that("examples work", {
 
+  testthat::skip_if_not_installed("rnaturalearthhires")
+
   # barchart of state rankings in various categories
   p <- ggplot(state_ranks, aes(variable, rank, fill = variable)) +
     geom_col() +

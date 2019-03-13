@@ -9,3 +9,4 @@
 ^_gh-pages$
 ^cran-comments\.md$
 \.sublime\-
+geofacet.code-workspace

@@ -1,6 +1,9 @@
 context("auto")
 
 test_that("auto examples work", {
+
+  testthat::skip_if_not_installed("rnaturalearthhires")
+
   # auto grid using a name to identify the country
   grd <- grid_auto("brazil", seed = 1234)
   grid_preview(grd, label = "name")

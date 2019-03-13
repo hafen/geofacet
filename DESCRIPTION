@@ -1,6 +1,6 @@
 Package: geofacet
 Title: 'ggplot2' Faceting Utilities for Geographical Data
-Version: 0.1.9
+Version: 0.1.10
 Authors@R: c(
     person("Ryan", "Hafen", email = "rhafen@gmail.com", role = c("aut", "cre")),
     person("Barret", "Schloerke", email = "schloerke@gmail.com", role = "ctb"))
@@ -26,6 +26,6 @@ Suggests:
     knitr,
     rmarkdown,
     packagedocs
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1
 VignetteBuilder: knitr,
     packagedocs

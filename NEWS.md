@@ -1,6 +1,7 @@
 Version 0.1
 ----------------------------------------------------------------------
 
+- Fix minor CRAN issue (0.1.10)
 - Add new grids (0.1.9)
 - Integration with geogrid package with new function `grid_auto()` (0.1.9)
 - Fix issue with plotting in R Markdown and ggsave (0.1.9)
