@@ -76,17 +76,14 @@ facet_geo <- function(facets, ..., grid = "us_state_grid1", label = NULL, move_a
   e1 %+% e2
 }
 
-#' Print geofaceted ggplot2 object
-#'
-#' @param x plot object
-#' @param newpage draw new (empty) page first?
-#' @param vp viewport to draw plot in
-#' @param ... other arguments not used by this method
-#' @importFrom gtable gtable_filter
-#' @importFrom graphics plot
+#' Perform post-processing on a facet_geo ggplot object
+#' 
+#' @param x object of class 'facet_geo'
 #' @export
-print.facet_geo <- function(x, newpage = is.null(vp), vp = NULL, ...) {
-  if (newpage) grid::grid.newpage()
+get_geofacet_grob <- function(x) {
+  if (!inherits(x, "facet_geo"))
+    stop("'x' must be an object of class 'facet_geo'.",
+      call. = FALSE)
 
   attrs <- attr(x, "geofacet")
   grd <- attrs$grid
@@ -143,6 +140,23 @@ print.facet_geo <- function(x, newpage = is.null(vp), vp = NULL, ...) {
 
   g <- gf_gtable_filter(g, tmp, trim = FALSE)
   # g <- gtable::gtable_filter(g, rgx, trim = FALSE)
+  g
+}
+
+#' Print geofaceted ggplot2 object
+#'
+#' @param x plot object
+#' @param newpage draw new (empty) page first?
+#' @param vp viewport to draw plot in
+#' @param ... other arguments not used by this method
+#' @importFrom gtable gtable_filter
+#' @importFrom graphics plot
+#' @export
+print.facet_geo <- function(x, newpage = is.null(vp), vp = NULL, ...) {
+  if (newpage) grid::grid.newpage()
+
+  g <- get_geofacet_grob(x)
+
   grid::grid.draw(g)
 }
 
