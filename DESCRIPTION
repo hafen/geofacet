@@ -15,10 +15,12 @@ Imports:
     graphics,
     rnaturalearth,
     sp,
+    sf,
     ggrepel,
     imguR,
     gridExtra,
-    geogrid
+    geogrid,
+    methods
 Suggests:
     testthat,
     covr,

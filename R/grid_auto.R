@@ -8,6 +8,8 @@
 #'
 #' The columns of the \code{@data} component of resulting shapefile (either user-specified or fetched from rnaturalearth) are those that will be available to \code{names} and \code{codes}.
 #' @importFrom utils tail
+#' @importFrom methods as
+#' @importFrom sp CRS
 #' @importFrom geogrid calculate_grid assign_polygons
 #' @export
 #' @examples
@@ -20,7 +22,7 @@
 #'
 #' # using a custom file (can be GeoJSON or shapefile)
 #' ff <- system.file("extdata", "bay_counties.geojson", package = "geogrid")
-#' bay_shp <- geogrid::read_polygons(ff)
+#' bay_shp <- sf::st_read(ff)
 #' grd <- grid_auto(bay_shp, seed = 1) # names are inferred
 #' grid_preview(grd, label = "name_county")
 #' grid_design(grd, label = "code_fipsstco")
@@ -47,6 +49,11 @@ grid_auto <- function(x, names = NULL, codes = NULL, seed = NULL) {
     }
     x <- get_ne_data(x)
     is_ne_data <- TRUE
+  } else {
+    x <- methods::as(x, "Spatial")
+    if (!inherits(x, "SpatialPolygonsDataFrame"))
+      stop("Please ensure you are using polygons")
+    x@proj4string <- sp::CRS(as.character(NA))
   }
 
   # x@data$ID__gfct <- seq_len(nrow(x@data))

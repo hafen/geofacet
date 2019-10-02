@@ -14,7 +14,7 @@ test_that("auto examples work", {
 
   # using a custom file (can be GeoJSON or shapefile)
   ff <- system.file("extdata", "bay_counties.geojson", package = "geogrid")
-  bay_shp <- geogrid::read_polygons(ff)
+  bay_shp <- sf::st_read(ff)
   grd <- grid_auto(bay_shp, seed = 1) # names are inferred
   grid_preview(grd, label = "name_county")
   grid_design(grd, label = "code_fipsstco")
