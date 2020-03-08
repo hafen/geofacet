@@ -6,4 +6,5 @@ inst/doc
 _gh-pages
 geofacet.sublime*
 *.code-workspace
-
+geofacet.Rproj
+bug_reports
