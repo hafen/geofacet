@@ -4,8 +4,7 @@
 \alias{facet_geo}
 \title{Arrange a sequence of geographical panels into a grid that preserves some geographical orientation}
 \usage{
-facet_geo(facets, ..., grid = "us_state_grid1", label = NULL,
-  move_axes = TRUE)
+facet_geo(facets, ..., grid = "us_state_grid1", label = NULL, move_axes = TRUE)
 }
 \arguments{
 \item{facets}{passed to \code{\link[ggplot2]{facet_wrap}}}

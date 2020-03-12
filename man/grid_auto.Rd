@@ -2,12 +2,12 @@
 % Please edit documentation in R/grid_auto.R
 \name{grid_auto}
 \alias{grid_auto}
-\title{Generate a grid automatically from a country/continent name or a SpatialPolygonsDataFrame}
+\title{Generate a grid automatically from a country/continent name or a SpatialPolygonsDataFrame or `sf` polygons}
 \usage{
 grid_auto(x, names = NULL, codes = NULL, seed = NULL)
 }
 \arguments{
-\item{x}{A country/continent name or a SpatialPolygonsDataFrame to build a grid for.}
+\item{x}{A country/continent name, a SpatialPolygonsDataFrame or `sf` polygons to build a grid for.}
 
 \item{names}{An optional vector of variable names in \code{x@data} to use as "name_" columns in the resulting grid.}
 
@@ -16,7 +16,7 @@ grid_auto(x, names = NULL, codes = NULL, seed = NULL)
 \item{seed}{An optional random seed sent to \code{\link[geogrid]{calculate_grid}}.}
 }
 \description{
-Generate a grid automatically from a country/continent name or a SpatialPolygonsDataFrame
+Generate a grid automatically from a country/continent name or a SpatialPolygonsDataFrame or `sf` polygons
 }
 \details{
 If a country or continent name is specified for \code{x}, it can be any of the strings found in \code{\link{auto_countries}} or \code{\link{auto_states}}. In this case, the rnaturalearth package will be searched for the corresponding shapefiles. You can use \code{\link{get_ne_data}} to see what these shapefiles look like.

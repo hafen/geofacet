@@ -3,7 +3,6 @@
 \docType{package}
 \name{geofacet}
 \alias{geofacet}
-\alias{geofacet-package}
 \title{geofacet}
 \description{
 For examples, see \code{\link{facet_geo}}.

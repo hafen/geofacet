@@ -1,4 +1,4 @@
-#' Generate a grid automatically from a country/continent name or a SpatialPolygonsDataFrame or `sf`` polygons
+#' Generate a grid automatically from a country/continent name or a SpatialPolygonsDataFrame or `sf` polygons
 #'
 #' @param x A country/continent name, a SpatialPolygonsDataFrame or `sf` polygons to build a grid for.
 #' @param names An optional vector of variable names in \code{x@data} to use as "name_" columns in the resulting grid.
