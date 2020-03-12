@@ -4,8 +4,7 @@
 \alias{grid_design}
 \title{Interactively design a grid}
 \usage{
-grid_design(data = NULL, img = NULL, label = "code",
-  auto_img = TRUE)
+grid_design(data = NULL, img = NULL, label = "code", auto_img = TRUE)
 }
 \arguments{
 \item{data}{A data frame containing a grid to start from or NULL if starting from scratch.}

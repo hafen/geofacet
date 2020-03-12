@@ -1,6 +1,6 @@
-#' Generate a grid automatically from a country/continent name or a SpatialPolygonsDataFrame
+#' Generate a grid automatically from a country/continent name or a SpatialPolygonsDataFrame or `sf` polygons
 #'
-#' @param x A country/continent name or a SpatialPolygonsDataFrame to build a grid for.
+#' @param x A country/continent name, a SpatialPolygonsDataFrame or `sf` polygons to build a grid for.
 #' @param names An optional vector of variable names in \code{x@data} to use as "name_" columns in the resulting grid.
 #' @param codes An optional vector of variable names in \code{x@data} to use as "code_" columns in the resulting grid.
 #' @param seed An optional random seed sent to \code{\link[geogrid]{calculate_grid}}.
@@ -49,6 +49,8 @@ grid_auto <- function(x, names = NULL, codes = NULL, seed = NULL) {
     }
     x <- get_ne_data(x)
     is_ne_data <- TRUE
+  } else if (inherits(x, "SpatialPolygonsDataFrame")) {
+    x@proj4string <- sp::CRS(as.character(NA))
   } else {
     x <- methods::as(x, "Spatial")
     if (!inherits(x, "SpatialPolygonsDataFrame"))
