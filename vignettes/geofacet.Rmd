@@ -1,5 +1,5 @@
 ---
-title: "geofacet"
+title: "Introduction to geofacet"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Introduction to geofacet}
@@ -15,14 +15,6 @@ knitr::opts_chunk$set(
 # # R output pre blocks are styled by default to indicate output
 # knitr::opts_chunk$set(comment = NA)
 ```
-
-```{r setup, message=FALSE}
-library(geofacet)
-```
-
-<div style="height: 20px;"></div>
-
-<!-- <img src="index_files/figure-html/state_unemp-1.png" style="max-width: 600px; width: 100%; display: block; margin: 0 auto;"></img> -->
 
 The geofacet R package provides a way to flexibly visualize data for different geographical regions by providing a ggplot2 faceting function `facet_geo()` which works just like ggplot2's built-in faceting, except that the resulting arrangement of panels follows a grid that mimics the original geographic topology as closely as possible.
 

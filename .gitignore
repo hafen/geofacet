@@ -8,4 +8,4 @@ geofacet.sublime*
 *.code-workspace
 geofacet.Rproj
 bug_reports
-docs
+.DS_Store
