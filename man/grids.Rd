@@ -8,7 +8,7 @@
 \alias{eu_grid1}
 \alias{aus_grid1}
 \alias{sa_prov_grid1}
-\alias{london_boroughs_grid}
+\alias{gb_london_boroughs_grid}
 \alias{nhs_scot_grid}
 \alias{india_grid1}
 \alias{india_grid2}
@@ -67,6 +67,50 @@
 \alias{ar_buenosaires_communes_grid1}
 \alias{nz_regions_grid2}
 \alias{oecd_grid1}
+\alias{ec_prov_grid1}
+\alias{nl_prov_grid1}
+\alias{ca_prov_grid1}
+\alias{us_nc_counties_grid1}
+\alias{mx_ciudad_prov_grid1}
+\alias{bg_prov_grid1}
+\alias{us_hhs_regions_grid1}
+\alias{tw_counties_grid1}
+\alias{tw_counties_grid2}
+\alias{af_prov_grid1}
+\alias{us_mi_counties_grid1}
+\alias{pe_prov_grid1}
+\alias{sa_prov_grid2}
+\alias{mx_state_grid3}
+\alias{cn_bj_districts_grid1}
+\alias{us_va_counties_grid1}
+\alias{us_mo_counties_grid1}
+\alias{cl_santiago_prov_grid1}
+\alias{us_tx_capcog_counties_grid1}
+\alias{sg_planning_area_grid1}
+\alias{in_state_ut_grid1}
+\alias{cn_fujian_prov_grid1}
+\alias{ca_quebec_electoral_districts_grid1}
+\alias{nl_prov_grid2}
+\alias{cn_bj_districts_grid2}
+\alias{ar_santiago_del_estero_prov_grid1}
+\alias{ar_formosa_prov_grid1}
+\alias{ar_chaco_prov_grid1}
+\alias{ar_catamarca_prov_grid1}
+\alias{ar_jujuy_prov_grid1}
+\alias{ar_neuquen_prov_grid1}
+\alias{ar_san_luis_prov_grid1}
+\alias{ar_san_juan_prov_grid1}
+\alias{ar_santa_fe_prov_grid1}
+\alias{ar_la_rioja_prov_grid1}
+\alias{ar_mendoza_prov_grid1}
+\alias{ar_salta_prov_grid1}
+\alias{ar_rio_negro_prov_grid1}
+\alias{uy_departamentos_grid1}
+\alias{ar_buenos_aires_prov_electoral_dist_grid1}
+\alias{europe_countries_grid1}
+\alias{argentina_grid2}
+\alias{us_state_grid5}
+\alias{jp_prefs_grid2}
 \title{Geo Grids}
 \usage{
 us_state_grid1
@@ -79,7 +123,7 @@ aus_grid1
 
 sa_prov_grid1
 
-london_boroughs_grid
+gb_london_boroughs_grid
 
 nhs_scot_grid
 
@@ -196,9 +240,97 @@ ar_buenosaires_communes_grid1
 nz_regions_grid2
 
 oecd_grid1
+
+ec_prov_grid1
+
+nl_prov_grid1
+
+ca_prov_grid1
+
+us_nc_counties_grid1
+
+mx_ciudad_prov_grid1
+
+bg_prov_grid1
+
+us_hhs_regions_grid1
+
+tw_counties_grid1
+
+tw_counties_grid2
+
+af_prov_grid1
+
+us_mi_counties_grid1
+
+pe_prov_grid1
+
+sa_prov_grid2
+
+mx_state_grid3
+
+cn_bj_districts_grid1
+
+us_va_counties_grid1
+
+us_mo_counties_grid1
+
+cl_santiago_prov_grid1
+
+us_tx_capcog_counties_grid1
+
+sg_planning_area_grid1
+
+in_state_ut_grid1
+
+cn_fujian_prov_grid1
+
+ca_quebec_electoral_districts_grid1
+
+nl_prov_grid2
+
+cn_bj_districts_grid2
+
+ar_santiago_del_estero_prov_grid1
+
+ar_formosa_prov_grid1
+
+ar_chaco_prov_grid1
+
+ar_catamarca_prov_grid1
+
+ar_jujuy_prov_grid1
+
+ar_neuquen_prov_grid1
+
+ar_san_luis_prov_grid1
+
+ar_san_juan_prov_grid1
+
+ar_santa_fe_prov_grid1
+
+ar_la_rioja_prov_grid1
+
+ar_mendoza_prov_grid1
+
+ar_salta_prov_grid1
+
+ar_rio_negro_prov_grid1
+
+uy_departamentos_grid1
+
+ar_buenos_aires_prov_electoral_dist_grid1
+
+europe_countries_grid1
+
+argentina_grid2
+
+us_state_grid5
+
+jp_prefs_grid2
 }
 \description{
-There are now 64 grids available in this package and more online. To view a full list of available grids, see \href{https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json}{here}. To create and submit your own grid, see \href{https://hafen.github.io/grid-designer/}{here}. To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
+There are now 108 grids available in this package and more online. To view a full list of available grids, see \href{https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json}{here}. To create and submit your own grid, see \href{https://hafen.github.io/grid-designer/}{here}. To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
 
 \itemize{
 \item \strong{us_state_grid1:} Grid layout for US states (including DC) Image reference \href{https://images7.alphacoders.com/687/687665.jpg}{here}.
@@ -217,11 +349,11 @@ There are now 64 grids available in this package and more online. To view a full
 }
 
 \itemize{
-\item \strong{sa_prov_grid1:} Grid layout for the provinces of South Africa Image reference \href{https://camo.githubusercontent.com/a90b18a1ab0c36200da9b118141b997b3f22638e/687474703a2f2f7777772e6578706c6f7265736f7574686166726963612e6e65742f696d616765732f70726f766d61702e6a7067}{here}. Thanks to \href{https://github.com/jonmcalder}{jonmcalder}.
+\item \strong{sa_prov_grid1:} Grid layout for the provinces of South Africa Image reference \href{https://camo.githubusercontent.com/14e357c36b6b72c0ef60e700d832b57aac87bddd/68747470733a2f2f7777772e736f7574686166726963612e746f2f70726f76696e6365732f5253415f62795f70726f76696e6365732e6a7067}{here}. Thanks to \href{https://github.com/jonmcalder}{jonmcalder}.
 }
 
 \itemize{
-\item \strong{london_boroughs_grid:} Grid layout for the boroughs of London. Note that the column \code{code_ons} contains the \href{http://geoportal.statistics.gov.uk/datasets/464be6191a434a91a5fa2f52c7433333_0?uiTab=table}{codes} used by UK Office for National Statistics. Image reference \href{https://cloud.githubusercontent.com/assets/13021448/26399784/3133d684-4076-11e7-8eac-1e74d023bf18.jpg}{here}. Thanks to \href{https://github.com/eldenvo}{eldenvo}.
+\item \strong{gb_london_boroughs_grid:} Grid layout for the boroughs of London. Note that the column \code{code_ons} contains the \href{http://geoportal.statistics.gov.uk/datasets/464be6191a434a91a5fa2f52c7433333_0?uiTab=table}{codes} used by UK Office for National Statistics. Image reference \href{https://cloud.githubusercontent.com/assets/13021448/26399784/3133d684-4076-11e7-8eac-1e74d023bf18.jpg}{here}. Thanks to \href{https://github.com/eldenvo}{eldenvo}.
 }
 
 \itemize{
@@ -377,7 +509,7 @@ There are now 64 grids available in this package and more online. To view a full
 }
 
 \itemize{
-\item \strong{spain_ccaa_grid1:} Grid layout for Spanish 'Comunidades Autónomas'. Image reference \href{https://user-images.githubusercontent.com/1275592/54301007-558b5780-457b-11e9-8796-9f7a3859820d.jpg}{here}. Thanks to \href{https://github.com/JoseAntonioOrtega}{JoseAntonioOrtega}.
+\item \strong{spain_ccaa_grid1:} Grid layout for Spanish 'Comunidades Autónomas'. Image reference \href{https://camo.githubusercontent.com/5be0fc76e8dab5269761384ce2b77e7e79bba0db/68747470733a2f2f7777772e6d737373692e676f622e65732f6f7267616e697a6163696f6e2f636361612f696d672f737061696e2e6a7067}{here}. Thanks to \href{https://github.com/JoseAntonioOrtega}{JoseAntonioOrtega}.
 }
 
 \itemize{
@@ -454,6 +586,182 @@ There are now 64 grids available in this package and more online. To view a full
 
 \itemize{
 \item \strong{oecd_grid1:} Grid layout for OECD member countries. Image reference \href{https://camo.githubusercontent.com/9afd6ca4c97374e8d5b69c73325937e6de57ade3/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f342f34632f4f4543445f6d656d6265725f7374617465735f6d61702e7376672f3130303070782d4f4543445f6d656d6265725f7374617465735f6d61702e7376672e706e67}{here}. Thanks to \href{https://github.com/arcruz0}{arcruz0}.
+}
+
+\itemize{
+\item \strong{ec_prov_grid1:} Grid layout for provinces of Ecuador Image reference \href{https://camo.githubusercontent.com/7eabd24db749e5335f13c911df65f15516c10bef/68747470733a2f2f65637561646f726e6f7469636961732e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031372f30342f70726f76696e636961732d65637561646f722e6a7067}{here}. Thanks to \href{https://github.com/Ricardo95RM}{Ricardo95RM}.
+}
+
+\itemize{
+\item \strong{nl_prov_grid1:} Grid layout for provinces of Netherlands Image reference \href{https://camo.githubusercontent.com/a094b2603eff7e4c45b9fbdbbfd7b5637473354c/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f632f63632f4d61705f70726f76696e6365735f4e65746865726c616e64732d656e2e737667}{here}. Thanks to \href{https://github.com/ruditurksema}{ruditurksema}.
+}
+
+\itemize{
+\item \strong{ca_prov_grid1:} Grid layout for provinces of Canada Image reference \href{https://camo.githubusercontent.com/5a0ad66e98796b817e506fe3127d48d7277a74a8/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f312f31342f506f6c69746963616c5f6d61705f6f665f43616e6164612e706e672f38303070782d506f6c69746963616c5f6d61705f6f665f43616e6164612e706e67}{here}. Thanks to \href{https://github.com/michael-chong}{michael-chong}.
+}
+
+\itemize{
+\item \strong{us_nc_counties_grid1:} Grid layout for Counties of North Carolina, United States Image reference \href{https://camo.githubusercontent.com/50bf9a4f4861fa11dba4ea66f8f7712eb1b59593/68747470733a2f2f7765622e6c69622e756e632e6564752f6e632d6d6170732f696d616765732f686f74636f756e74796d61702e676966}{here}. Thanks to \href{https://github.com/mtdukes}{mtdukes}.
+}
+
+\itemize{
+\item \strong{mx_ciudad_prov_grid1:} Grid layout for Districts of Mexico City, Mexico Image reference \href{https://camo.githubusercontent.com/ef6379d66d92e1ea289fcd8522853ec4348499d7/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f362f36652f4d582d44462d4469766973692543332542336e5f706f6c254333254144746963612e7376672f38303070782d4d582d44462d4469766973692543332542336e5f706f6c254333254144746963612e7376672e706e67}{here}. Thanks to \href{https://github.com/Ivangea}{Ivangea}.
+}
+
+\itemize{
+\item \strong{bg_prov_grid1:} Grid layout for provinces of Bulgaria Image reference \href{https://camo.githubusercontent.com/46872c5c1703af4739df87eca5075ae91fe83833/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f382f38362f526567696f6e735f6f665f42756c67617269615f4d61702e706e67}{here}. Thanks to \href{https://github.com/savinastoitsova}{savinastoitsova}.
+}
+
+\itemize{
+\item \strong{us_hhs_regions_grid1:} This grid approximates the U.S. Health and Human Services Region map Image reference \href{https://camo.githubusercontent.com/dd6f1a0c7749dd111d71be74f344d573eaad52f5/68747470733a2f2f7777772e6868732e676f762f73697465732f64656661756c742f66696c65732f6965612f696d616765732f726567696f6e736d61702e6a7067}{here}. Thanks to \href{https://github.com/akitepowell}{akitepowell}.
+}
+
+\itemize{
+\item \strong{tw_counties_grid1:} Grid layout for Counties of Taiwan Image reference \href{https://camo.githubusercontent.com/b51d87c85c060ff96335274808600f7984f19e56/68747470733a2f2f692e696d6775722e636f6d2f744a5a6a4f4f422e706e67}{here}. Thanks to \href{https://github.com/csh484912274}{csh484912274}.
+}
+
+\itemize{
+\item \strong{tw_counties_grid2:} Grid layout for Counties of Taiwan including Lienchiang County Image reference \href{https://camo.githubusercontent.com/b26bf4a5ff70294daaa6db508e06a82f2afd902f/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f652f65372f54616977616e5f524f435f706f6c69746963616c5f6469766973696f6e735f6c6162656c65642e7376672f3132303070782d54616977616e5f524f435f706f6c69746963616c5f6469766973696f6e735f6c6162656c65642e7376672e706e67}{here}. Thanks to \href{https://github.com/csh484912274}{csh484912274}.
+}
+
+\itemize{
+\item \strong{af_prov_grid1:} Grid layout for Provinces of Afghanistan Image reference \href{https://camo.githubusercontent.com/86d2b1807e37f2d3009da212a870b58f9b091d67/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f342f34342f41666768616e697374616e5f70726f76696e6365735f6e756d62657265642e706e67}{here}. Thanks to \href{https://github.com/jrennyb}{jrennyb}.
+}
+
+\itemize{
+\item \strong{us_mi_counties_grid1:} Grid layout for Counties of Michigan, United States Image reference \href{https://camo.githubusercontent.com/834a8eaa5d2bc37ec003d06d0cb5eee53954320d/687474703a2f2f7777772d706572736f6e616c2e756d6963682e6564752f7e62626f776d616e2f62697264732f4352414d5f696d6167656e756d732e676966}{here}. Thanks to \href{https://github.com/jrennyb}{jrennyb}.
+}
+
+\itemize{
+\item \strong{pe_prov_grid1:} Grid layout for Provinces of Peru Image reference \href{https://camo.githubusercontent.com/6c8d13fd43bf90b6bc7dbc3bff6c5a2abcda2e52/68747470733a2f2f696d6167656e6573746f74616c65732e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031382f30342f4d6170612d706f6c697469636f2d64656c2d506572752d322d373638783933362e706e67}{here}. Thanks to \href{https://github.com/jmcastagnetto}{jmcastagnetto}.
+}
+
+\itemize{
+\item \strong{sa_prov_grid2:} Grid layout for Provinces of South Africa Image reference \href{https://camo.githubusercontent.com/14e357c36b6b72c0ef60e700d832b57aac87bddd/68747470733a2f2f7777772e736f7574686166726963612e746f2f70726f76696e6365732f5253415f62795f70726f76696e6365732e6a7067}{here}. Thanks to \href{https://github.com/kamermanpr}{kamermanpr}.
+}
+
+\itemize{
+\item \strong{mx_state_grid3:} Grid layout for States of Mexico Image reference \href{https://camo.githubusercontent.com/3b62258772065fe17c3a7a6a99b889251fa53d4a/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f632f63322f506f6c69746963616c5f6469766973696f6e735f6f665f4d657869636f2d656e2e7376672f3132303070782d506f6c69746963616c5f6469766973696f6e735f6f665f4d657869636f2d656e2e7376672e706e67}{here}. Thanks to \href{https://github.com/ikashnitsky}{ikashnitsky}.
+}
+
+\itemize{
+\item \strong{cn_bj_districts_grid1:} Grids for Administrative Districts of Beijing, China Image reference \href{https://user-images.githubusercontent.com/1275592/54295842-0ccea100-4571-11e9-8d3f-c60f4f7f2c0a.png}{here}. Thanks to \href{https://github.com/shiedelweiss}{shiedelweiss}.
+}
+
+\itemize{
+\item \strong{us_va_counties_grid1:} Grids for Counties of Virginia, United States Image reference \href{https://camo.githubusercontent.com/ad5f91421db6241dae5a292d841c13475b39452e/68747470733a2f2f67656f6c6f67792e636f6d2f73746174652d6d61702f6d6170732f76697267696e69612d636f756e74792d6d61702e676966}{here}. Thanks to \href{https://github.com/joshyazman}{joshyazman}.
+}
+
+\itemize{
+\item \strong{us_mo_counties_grid1:} Grids for Counties of Missouri, United States Image reference \href{https://camo.githubusercontent.com/d58ebdce931d0d42085d3b4d76f9e809bd147f84/68747470733a2f2f6f736564612e6d6973736f7572692e6564752f636f756e7479706167652f4d4f5f636f756e746965732e706e67}{here}. Thanks to \href{https://github.com/Yanqi-Xu}{Yanqi-Xu}.
+}
+
+\itemize{
+\item \strong{cl_santiago_prov_grid1:} Communes of Santiago Province, Chile Image reference \href{https://camo.githubusercontent.com/64e592a3c79ce5b03024cccfe43a9fca64ebffe1/68747470733a2f2f692e696d6775722e636f6d2f457361444675762e706e67}{here}. Thanks to \href{https://github.com/robsalasco}{robsalasco}.
+}
+
+\itemize{
+\item \strong{us_tx_capcog_counties_grid1:} This is a grid of a 10 county planning region around Austin, Texas, United States Image reference \href{https://camo.githubusercontent.com/029adb9992cb52f8b655935a8ea67f3b2ba2778f/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f322f32332f434150434f472e706e67}{here}. Thanks to \href{https://github.com/mth444}{mth444}.
+}
+
+\itemize{
+\item \strong{sg_planning_area_grid1:} Grids for Planning Areas of Singapore Image reference \href{https://user-images.githubusercontent.com/1275592/54297744-a9467280-4574-11e9-99f7-bdb62bbb34b4.png}{here}. Thanks to \href{https://github.com/Elenafuyi}{Elenafuyi}.
+}
+
+\itemize{
+\item \strong{in_state_ut_grid1:} Grid of Indian States and Union Territories Image reference \href{https://user-images.githubusercontent.com/1275592/54297966-1f4ad980-4575-11e9-8e8c-5006c91fccd1.png}{here}. Thanks to \href{https://github.com/seanangio}{seanangio}.
+}
+
+\itemize{
+\item \strong{cn_fujian_prov_grid1:} Grid of counties of Fujian Province, China Image reference \href{https://user-images.githubusercontent.com/1275592/54298318-c2035800-4575-11e9-8d68-868cc76315df.png}{here}. Thanks to \href{https://github.com/nannanchen333}{nannanchen333}.
+}
+
+\itemize{
+\item \strong{ca_quebec_electoral_districts_grid1:} Grid of Electoral Districts of Québec, Canada Image reference \href{https://camo.githubusercontent.com/d1f75185f1a675f1a358297ad0dbdae1b0d7b131/68747470733a2f2f7777772e656c656374696f6e737175656265632e71632e63612f3730616e732f6173736574732f696d672f323031312d342e6a7067}{here}. Thanks to \href{https://github.com/jhroy}{jhroy}.
+}
+
+\itemize{
+\item \strong{nl_prov_grid2:} Grid with the provinces of The Netherlands with codes that are used by the statistical institute of NL Image reference \href{https://camo.githubusercontent.com/2b6204b5f9856fadeb32a6042fe1fd48cbb4b06f/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f332f33302f4e656465726c616e64736550726f76696e636965734c617267652e706e67}{here}. Thanks to \href{https://github.com/edwindj}{edwindj}.
+}
+
+\itemize{
+\item \strong{cn_bj_districts_grid2:} Grid with districts of Beijing, China Image reference \href{https://camo.githubusercontent.com/c32d419c0b3d10fa007e68a66bf368752a45f8a9/68747470733a2f2f677373302e62647374617469632e636f6d2f2d346f33645361675f7849346b68476b706f574b314846366868792f6261696b652f63302533446261696b65313530253243352532433525324331353025324335302f7369676e3d34396436313237373464313062393132616263636665616361323934393736362f643034336164346264313133373366303036633533613533616530663462666266616564303430372e6a7067}{here}. Thanks to \href{https://github.com/zouhx11}{zouhx11}.
+}
+
+\itemize{
+\item \strong{ar_santiago_del_estero_prov_grid1:} Grid with districts of Santiago del Estero Province, Argentina Image reference \href{https://camo.githubusercontent.com/82e68c0a0f0b243c8a9d21133227f74e05c93c6b/68747470733a2f2f74342e6b6e332e6e65742f746172696e67612f302f382f312f362f362f312f4d6565656b69692f3631382e6a7067}{here}. Thanks to \href{https://github.com/TuQmano}{TuQmano}.
+}
+
+\itemize{
+\item \strong{ar_formosa_prov_grid1:} Grid with districts of Formosa Province, Argentina Image reference \href{https://camo.githubusercontent.com/481f581ddcd2ae7a09cd47fb4779dc904a0d6b75/687474703a2f2f7777772e74656d7075736167726f2e636f6d2e61722f696d672f666f726d6f73612f6469766973696f6e706f6c69746963612e6a7067}{here}. Thanks to \href{https://github.com/TuQmano}{TuQmano}.
+}
+
+\itemize{
+\item \strong{ar_chaco_prov_grid1:} Grid with districts of Chaco Province, Argentina Image reference \href{https://camo.githubusercontent.com/35120f89439dbdd5c147d3925d948ae6a955b0c8/68747470733a2f2f657370616e6f6c2e6d6170736f66776f726c642e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031342f30362f6d6170612d64656c2d636861636f2e6a7067}{here}. Thanks to \href{https://github.com/TuQmano}{TuQmano}.
+}
+
+\itemize{
+\item \strong{ar_catamarca_prov_grid1:} Grid with districts of Catamarca Province, Argentina Image reference \href{https://camo.githubusercontent.com/8a25c2986d42003208644618e0e3d3c1950fcd92/687474703a2f2f7777772e616c6c2d617267656e74696e612e636f6d2e61722f77702d636f6e74656e742f75706c6f6164732f6d6170612d706f6c697469636f2d636174616d617263612e6a7067}{here}. Thanks to \href{https://github.com/TuQmano}{TuQmano}.
+}
+
+\itemize{
+\item \strong{ar_jujuy_prov_grid1:} Grid with districts of Jujuy Province, Argentina Image reference \href{https://camo.githubusercontent.com/df150ce3e47d85c63efc43a5614f5f6366970669/687474703a2f2f7777772e64697065632e6a756a75792e676f762e61722f6d617061735f6a756a75795f63656e736f2f6a756a7579646570617274616d656e746f732e676966}{here}. Thanks to \href{https://github.com/TuQmano}{TuQmano}.
+}
+
+\itemize{
+\item \strong{ar_neuquen_prov_grid1:} Grid with districts of Neuquen Province, Argentina Image reference \href{https://camo.githubusercontent.com/5cda1ad7e1b4a39c6932a9c4cbfe7f2dc7cd9cd6/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f662f66322f4d6170615f64655f64656e73696461645f64655f706f626c6163696f6e5f323031305f70726f76696e6369615f64656c5f6e65757175656e2e7376672f32353070782d4d6170615f64655f64656e73696461645f64655f706f626c6163696f6e5f323031305f70726f76696e6369615f64656c5f6e65757175656e2e7376672e706e67}{here}. Thanks to \href{https://github.com/TuQmano}{TuQmano}.
+}
+
+\itemize{
+\item \strong{ar_san_luis_prov_grid1:} Grid with districts of San Luis Province, Argentina Image reference \href{https://camo.githubusercontent.com/a1c246c3e3b95e7186355a5ac473bb68ac2818b4/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f612f61342f4469766973692543332542336e5f706f6c254333254144746963615f64655f6c615f50726f76696e6369615f64655f53616e5f4c7569735f2d417267656e74696e612d2e6a7067}{here}. Thanks to \href{https://github.com/TuQmano}{TuQmano}.
+}
+
+\itemize{
+\item \strong{ar_san_juan_prov_grid1:} Grid with districts of San Juan Province, Argentina Image reference \href{https://camo.githubusercontent.com/a29a04aa5dbd26fd425abe01f07a60bb6d563013/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f302f30652f4d6170615f64655f6c615f50726f76696e6369615f64655f53616e5f4a75616e5f253238417267656e74696e612532395f636f6e5f6469766973692543332542336e5f706f6c254333254144746963612e6a70672f35303070782d4d6170615f64655f6c615f50726f76696e6369615f64655f53616e5f4a75616e5f253238417267656e74696e612532395f636f6e5f6469766973692543332542336e5f706f6c254333254144746963612e6a7067}{here}. Thanks to \href{https://github.com/TuQmano}{TuQmano}.
+}
+
+\itemize{
+\item \strong{ar_santa_fe_prov_grid1:} Grid with districts of Santa Fe Province, Argentina Image reference \href{https://camo.githubusercontent.com/e3812264494cb18796173767991749601b0256d6/68747470733a2f2f7777772e66616d696c797365617263682e6f72672f77696b692f65732f696d675f617574682e7068702f7468756d622f372f37642f53616e74615f46655f50726f76696e6369615f4d6170612e706e672f33373070782d53616e74615f46655f50726f76696e6369615f4d6170612e706e67}{here}. Thanks to \href{https://github.com/TuQmano}{TuQmano}.
+}
+
+\itemize{
+\item \strong{ar_la_rioja_prov_grid1:} Grid with districts of La Rioja Province, Argentina Image reference \href{https://camo.githubusercontent.com/03c888b6d01726c6832975a1535a046d91cd26ab/68747470733a2f2f7777772e66616d696c797365617263682e6f72672f77696b692f65732f696d675f617574682e7068702f7468756d622f642f64612f4c615f52696f6a615f50726f76696e6369615f4d6170612e706e672f36323070782d4c615f52696f6a615f50726f76696e6369615f4d6170612e706e67}{here}. Thanks to \href{https://github.com/TuQmano}{TuQmano}.
+}
+
+\itemize{
+\item \strong{ar_mendoza_prov_grid1:} Grid with districts of Mendoza Province, Argentina Image reference \href{https://camo.githubusercontent.com/83ccf5cfdde385d5aa502812b61efafdcc769ecb/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f332f33342f4d6170615f64655f6c615f6469766973692543332542336e5f706f6c254333254144746963615f64655f6c615f706369612e5f64655f4d656e6f7a615f2d417267656e74696e612d2e6a70672f38303070782d4d6170615f64655f6c615f6469766973692543332542336e5f706f6c254333254144746963615f64655f6c615f706369612e5f64655f4d656e6f7a615f2d417267656e74696e612d2e6a7067}{here}. Thanks to \href{https://github.com/TuQmano}{TuQmano}.
+}
+
+\itemize{
+\item \strong{ar_salta_prov_grid1:} Grid with districts of Salta Province, Argentina Image reference \href{https://camo.githubusercontent.com/9232d808104ddd3ab3983f9a670eb507a4d95e51/687474703a2f2f312e62702e626c6f6773706f742e636f6d2f5f564a6b71374771783743512f52303349467549766e30492f41414141414141414141632f75336655614c744e6a53672f733430302f646570617274616d656e746f732b64652b53616c74612e6a7067}{here}. Thanks to \href{https://github.com/TuQmano}{TuQmano}.
+}
+
+\itemize{
+\item \strong{ar_rio_negro_prov_grid1:} Grid with districts of Rio Negro Province, Argentina Image reference \href{https://camo.githubusercontent.com/123414ec4933d38f3b991cc8d669138594d68b17/68747470733a2f2f63646e2e7468696e676c696e6b2e6d652f6170692f696d6167652f3536353530363334383233343537313737362f313234302f31302f7363616c65746f7769647468}{here}. Thanks to \href{https://github.com/TuQmano}{TuQmano}.
+}
+
+\itemize{
+\item \strong{uy_departamentos_grid1:} Grid with Departamentos of Uruguay Image reference \href{https://camo.githubusercontent.com/a56f891616c613ba8c120434f3d0786e005f1df8/68747470733a2f2f6d6170616d756e64692e6f6e6c696e652f77702d636f6e74656e742f75706c6f6164732f323031382f31312f6d6170612d706f6c697469636f2d64652d757275677561792e6a7067}{here}. Thanks to \href{https://github.com/TuQmano}{TuQmano}.
+}
+
+\itemize{
+\item \strong{ar_buenos_aires_prov_electoral_dist_grid1:} Grid with Electoral Districts of Buenos Aires Province, Argentina Image reference \href{https://camo.githubusercontent.com/3803a78b6fc2ca41ffd7bdf3a7a503af1cb48ba7/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f622f62302f53656363696f6e65735f656c6563746f72616c65735f64655f6c615f70726f76696e6369615f64655f4275656e6f735f41697265732e7376672f38303070782d53656363696f6e65735f656c6563746f72616c65735f64655f6c615f70726f76696e6369615f64655f4275656e6f735f41697265732e7376672e706e67}{here}. Thanks to \href{https://github.com/TuQmano}{TuQmano}.
+}
+
+\itemize{
+\item \strong{europe_countries_grid1:} Grid layout for all European countries except Vatican City, Monaco, San Marino and Liechtenstein Image reference \href{https://user-images.githubusercontent.com/38204689/38485856-23e709b6-3bd3-11e8-8bc7-ae5cd892419c.png}{here}. Thanks to \href{https://github.com/THargreaves}{THargreaves}.
+}
+
+\itemize{
+\item \strong{argentina_grid2:} Grid layout for Argentina without Islas Malvinas and Antártida Argentina Image reference \href{https://camo.githubusercontent.com/f14f25ac3e42051994f5fd4c53e2718c2b2290aa/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f392f39652f4d61705f6f665f417267656e74696e615f776974685f70726f76696e6365735f6e616d65735f656e2e706e67}{here}. Thanks to \href{https://github.com/TuQmano}{TuQmano}.
+}
+
+\itemize{
+\item \strong{us_state_grid5:} Grid layout for United States with AK and HI flush with CA Image reference \href{https://camo.githubusercontent.com/b446d99f631d067562f50a57449eddb0b89c1acf/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f612f61352f4d61705f6f665f5553415f776974685f73746174655f6e616d65732e737667}{here}. Thanks to \href{https://github.com/christophercannon}{christophercannon}.
+}
+
+\itemize{
+\item \strong{jp_prefs_grid2:} Grid layout for Prefectures of Japan Image reference \href{https://user-images.githubusercontent.com/19657164/46902315-4c2f8d80-cefe-11e8-90bb-661771ce2836.JPG}{here}. Thanks to \href{https://github.com/Ryo-N7}{Ryo-N7}.
 }
 }
 \keyword{data}

@@ -9,6 +9,7 @@ nms <- setdiff(grid_list$name, gsub("\\.rda", "", list.files("data")))
 # nms <- grid_list$name # to re-read all grids
 
 lapply(nms, function(x) {
+  message(x)
   url <- sprintf("https://raw.githubusercontent.com/hafen/grid-designer/master/grids/%s.csv", x)
   # tmp <- utils::read.csv(url, stringsAsFactors = FALSE, nrows = 1)
   # # all columns other than "row" and "col" will be strings (names and codes)
@@ -17,8 +18,15 @@ lapply(nms, function(x) {
   # res <- utils::read.csv(url, colClasses = cls, stringsAsFactors = FALSE, na.strings = NULL)
   res <- data.frame(readr::read_csv(url, na = ""))
   assign(x, res)
-  eval(parse(text = sprintf("devtools::use_data(%s, overwrite = TRUE)", x)))
+  eval(parse(text = sprintf("usethis::use_data(%s, overwrite = TRUE)", x)))
 })
+
+## make sure grids are good
+##---------------------------------------------------------
+
+nms <- grid_list$name # to re-read all grids
+for (nm in nms)
+  check_grid(get(nm, "package:geofacet"))
 
 ## update documentation - generate R/grid_docs.R
 ##---------------------------------------------------------
