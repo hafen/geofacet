@@ -26,8 +26,6 @@ Suggests:
     covr,
     lintr,
     knitr,
-    rmarkdown,
-    packagedocs
-RoxygenNote: 7.0.2
-VignetteBuilder: knitr,
-    packagedocs
+    rmarkdown
+RoxygenNote: 7.1.0
+VignetteBuilder: knitr

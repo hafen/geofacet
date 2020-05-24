@@ -1,32 +1,28 @@
 ---
 title: "geofacet"
-author: "Ryan Hafen"
-copyright: "Ryan Hafen"
-output:
-  packagedocs::package_docs:
-    toc: false
-redirect: https://hafen.github.io/geofacet/
-vignette: |
-  %\VignetteIndexEntry{geofacet Documentation}
-  %\VignetteEngine{packagedocs::redirect}
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to geofacet}
+  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
-navpills: |
-  <li class="active"><a href='docs.html'>Docs</a></li>
-  <li><a href='rd.html'>Package Ref</a></li>
-  <li><a href='https://twitter.com/hafenstats' target='_blank'><i class="fa fa-twitter"></i></span></a></li>
 ---
 
-```{r global_options, include=FALSE}
-# R output pre blocks are styled by default to indicate output
-knitr::opts_chunk$set(comment = NA)
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+# # R output pre blocks are styled by default to indicate output
+# knitr::opts_chunk$set(comment = NA)
+```
 
-# shorthand for rd_link() - see ?packagedocs::rd_link for more information
-rdl <- function(x) packagedocs::rd_link(deparse(substitute(x)))
+```{r setup, message=FALSE}
+library(geofacet)
 ```
 
 <div style="height: 20px;"></div>
 
-<img src="index_files/figure-html/state_unemp-1.png" style="max-width: 600px; width: 100%; display: block; margin: 0 auto;"></img>
+<!-- <img src="index_files/figure-html/state_unemp-1.png" style="max-width: 600px; width: 100%; display: block; margin: 0 auto;"></img> -->
 
 The geofacet R package provides a way to flexibly visualize data for different geographical regions by providing a ggplot2 faceting function `facet_geo()` which works just like ggplot2's built-in faceting, except that the resulting arrangement of panels follows a grid that mimics the original geographic topology as closely as possible.
 
@@ -223,7 +219,7 @@ ggplot(sa_pop_dens, aes(factor(year), density, fill = factor(year))) +
 ```{r london_afford, fig.width=11.4, fig.height=7.7}
 ggplot(london_afford, aes(x = year, y = starts, fill = year)) +
   geom_col(position = position_dodge()) +
-  facet_geo(~ code, grid = "london_boroughs_grid", label = "name") +
+  facet_geo(~ code, grid = "gb_london_boroughs_grid", label = "name") +
   labs(title = "Affordable Housing Starts in London",
     subtitle = "Each Borough, 2015-16 to 2016-17",
     caption = "Source: London Datastore", x = "", y = "")
@@ -301,3 +297,4 @@ ggplot(election, aes(candidate, votes / 1000000, fill = candidate)) +
     y = "Votes (millions)") +
   theme(strip.text.x = element_text(size = 6))
 ```
+

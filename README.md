@@ -3,7 +3,7 @@
 [![CRAN](http://www.r-pkg.org/badges/version/geofacet)](https://CRAN.R-project.org/package=geofacet)
 [![CRAN Downloads](http://cranlogs.r-pkg.org/badges/geofacet)](https://CRAN.R-project.org/package=geofacet)
 
-# geofacet
+# geofacet <img src="man/figures/logo.png" align="right" alt="" width="120" />
 
 This R package provides geofaceting functionality for ggplot2. Geofaceting arranges a sequence of plots of data for different geographical entities into a grid that strives to preserve some of the original geographical orientation of the entities. It's easiest to describe with examples. See below.
 

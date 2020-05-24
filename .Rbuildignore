@@ -11,3 +11,6 @@
 ^cran-comments\.md$
 \.sublime\-
 geofacet.code-workspace
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
