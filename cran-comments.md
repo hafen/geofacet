@@ -1,5 +1,7 @@
 ## Release summary
 
+**Resubmission:** Fix issue with a broken URL.
+
 - Updated to be compatible with ggplot2 updates
 - Added new grids
 - Changed vignette builder to pkgdown (no longer dependent on packagedocs)
