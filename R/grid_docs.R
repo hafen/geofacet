@@ -3,7 +3,7 @@
 #' @name grids
 #' @docType data
 #' @keywords data
-#' @description There are now 108 grids available in this package and more online. To view a full list of available grids, see [here](https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json). To create and submit your own grid, see [here](https://hafen.github.io/grid-designer/). To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
+#' @description There are now 141 grids available in this package and more online. To view a full list of available grids, see [here](https://raw.githubusercontent.com/hafen/grid-designer/master/grid_list.json). To create and submit your own grid, see [here](https://hafen.github.io/grid-designer/). To see several examples of grids being used to visualize data, see \code{\link{facet_geo}}.
 #' @rdname grids
 #' @md
 NULL
@@ -208,10 +208,10 @@ NULL
 #' @md
 NULL
 
-#' @name us_state_grid3
+#' @name us_state_without_DC_grid1
 #' @description
-#' * **us_state_grid3:** Grid layout for US states (excluding DC) Image reference [here](https://images7.alphacoders.com/687/687665.jpg). Thanks to [ejr248](https://github.com/ejr248).
-#' @usage us_state_grid3
+#' * **us_state_without_DC_grid1:** Grid layout for US states (excluding DC) Image reference [here](https://images7.alphacoders.com/687/687665.jpg). Thanks to [ejr248](https://github.com/ejr248).
+#' @usage us_state_without_DC_grid1
 #' @rdname grids
 #' @md
 NULL
@@ -240,10 +240,10 @@ NULL
 #' @md
 NULL
 
-#' @name us_state_grid4
+#' @name us_state_grid3
 #' @description
-#' * **us_state_grid4:** Grid layout for US states (including DC). Image reference [here](https://images7.alphacoders.com/687/687665.jpg). Thanks to [kanishkamisra](https://github.com/kanishkamisra).
-#' @usage us_state_grid4
+#' * **us_state_grid3:** Grid layout for US states (including DC). Image reference [here](https://images7.alphacoders.com/687/687665.jpg). Thanks to [kanishkamisra](https://github.com/kanishkamisra).
+#' @usage us_state_grid3
 #' @rdname grids
 #' @md
 NULL
@@ -856,10 +856,10 @@ NULL
 #' @md
 NULL
 
-#' @name us_state_grid5
+#' @name us_state_without_DC_grid2
 #' @description
-#' * **us_state_grid5:** Grid layout for United States with AK and HI flush with CA Image reference [here](https://camo.githubusercontent.com/b446d99f631d067562f50a57449eddb0b89c1acf/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f612f61352f4d61705f6f665f5553415f776974685f73746174655f6e616d65732e737667). Thanks to [christophercannon](https://github.com/christophercannon).
-#' @usage us_state_grid5
+#' * **us_state_without_DC_grid2:** Grid layout for United States with AK and HI flush with CA Image reference [here](https://camo.githubusercontent.com/b446d99f631d067562f50a57449eddb0b89c1acf/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f612f61352f4d61705f6f665f5553415f776974685f73746174655f6e616d65732e737667). Thanks to [christophercannon](https://github.com/christophercannon).
+#' @usage us_state_without_DC_grid2
 #' @rdname grids
 #' @md
 NULL
@@ -868,6 +868,270 @@ NULL
 #' @description
 #' * **jp_prefs_grid2:** Grid layout for Prefectures of Japan Image reference [here](https://user-images.githubusercontent.com/19657164/46902315-4c2f8d80-cefe-11e8-90bb-661771ce2836.JPG). Thanks to [Ryo-N7](https://github.com/Ryo-N7).
 #' @usage jp_prefs_grid2
+#' @rdname grids
+#' @md
+NULL
+
+#' @name na_regions_grid1
+#' @description
+#' * **na_regions_grid1:** Regions of Namibia Image reference [here](https://camo.githubusercontent.com/a4519aa536614e5f5fc0839ff1a6208b9a79716a/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f632f63302f4e616d696269615f6e756d62657265645f636f6c6f7265645f726567696f6e735f456e676c697368312e706e672f38303070782d4e616d696269615f6e756d62657265645f636f6c6f7265645f726567696f6e735f456e676c697368312e706e67). Thanks to [stedy](https://github.com/stedy).
+#' @usage na_regions_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name mm_state_grid1
+#' @description
+#' * **mm_state_grid1:** States of Myanmar Image reference [here](https://camo.githubusercontent.com/603ad86c99a004316ac5b53c9dd73d9ce0f73811/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f372f37612f4275726d615f61646d696e6973747261746976655f6469766973696f6e732e7376672f33303070782d4275726d615f61646d696e6973747261746976655f6469766973696f6e732e7376672e706e67). Thanks to [htinkyawaye](https://github.com/htinkyawaye).
+#' @usage mm_state_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name us_state_with_DC_PR_grid1
+#' @description
+#' * **us_state_with_DC_PR_grid1:** United States of America including Washington, D.C. and Puerto Rico Image reference [here](https://camo.githubusercontent.com/c1ac0dd02771e221d5003984ab1ce518b864ef0c/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f612f61632f4d61705f6f665f5553415f50522e7376672f3132303070782d4d61705f6f665f5553415f50522e7376672e706e67). Thanks to [krothkin](https://github.com/krothkin).
+#' @usage us_state_with_DC_PR_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name fr_departements_grid1
+#' @description
+#' * **fr_departements_grid1:** Grid for France's departements, the second levels of administrative boundaries after the regions Image reference [here](https://camo.githubusercontent.com/6c082d52645d75469d542aefed9ef2feb48b2247/68747470733a2f2f7777772e616964656d6f692e6e65742f67656f677261706869652f6672616e63652f646570617274656d656e745f7265647569742e676966). Thanks to [tvroylandt](https://github.com/tvroylandt).
+#' @usage fr_departements_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name ar_salta_prov_grid2
+#' @description
+#' * **ar_salta_prov_grid2:** Grids for Salta Province Argentina Image reference [here](https://camo.githubusercontent.com/7ced09c1b65c46671c333cc13acbaf864eaa358b/68747470733a2f2f7777772e616d657473616c74612e636f6d2e61722f7765622f696d616765732f616e69766572736172696f732f32343430343436322e6a7067). Thanks to [francogaleano](https://github.com/francogaleano).
+#' @usage ar_salta_prov_grid2
+#' @rdname grids
+#' @md
+NULL
+
+#' @name ie_counties_grid1
+#' @description
+#' * **ie_counties_grid1:** Ireland counties. Code is the car number plate abbreviation for Republic counties, similar for the six counties of Northern Ireland. Tipperary is split North / South for historical reasons Image reference [here](https://camo.githubusercontent.com/6497a5d179e5e3e64952f0334422bc0c2f634324/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f392f39632f4972656c616e645f747261645f636f756e746965735f6e616d65642e737667). Thanks to [eugene100hickey](https://github.com/eugene100hickey).
+#' @usage ie_counties_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name sg_regions_grid1
+#' @description
+#' * **sg_regions_grid1:** Urban planning regions of Singapore Image reference [here](https://camo.githubusercontent.com/b5d68deaeb825640e7bf70a4965f6378b859bf22/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f392f39382f53696e6761706f72655f506c616e6e696e675f526567696f6e732e706e672f3130323470782d53696e6761706f72655f506c616e6e696e675f526567696f6e732e706e67). Thanks to [erhuttk](https://github.com/erhuttk).
+#' @usage sg_regions_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name us_ny_counties_grid1
+#' @description
+#' * **us_ny_counties_grid1:** Counties of New York State, United States Image reference [here](https://camo.githubusercontent.com/3792aae01199eecb778026ab8942c658896a1846/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f642f64622f4e65775f596f726b5f436f756e746965732e737667). Thanks to [jjdfsny](https://github.com/jjdfsny).
+#' @usage us_ny_counties_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name ru_federal_subjects_grid1
+#' @description
+#' * **ru_federal_subjects_grid1:** Federal Subjects of Russia Image reference [here](https://camo.githubusercontent.com/a47b5ea20c00d051979e11a5f6641dfffc4c4c94/68747470733a2f2f7777772e776f726c6461746c61732e636f6d2f722f773732382d683432352d63373238783432352f75706c6f61642f66362f33362f37632f7368757474657273746f636b2d3634313836353833352e6a7067). Thanks to [ParanoidAndroid18](https://github.com/ParanoidAndroid18).
+#' @usage ru_federal_subjects_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name us_ca_counties_grid1
+#' @description
+#' * **us_ca_counties_grid1:** Counties of the State of California, United States Image reference [here](https://camo.githubusercontent.com/796f370c0bd94a402e4ccf2d755e3664b0ec31ee/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f382f38392f43616c69666f726e69615f636f756e74795f6d61705f2532386c6162656c65642532392e7376672f38303070782d43616c69666f726e69615f636f756e74795f6d61705f2532386c6162656c65642532392e7376672e706e67). Thanks to [MartinLe5](https://github.com/MartinLe5).
+#' @usage us_ca_counties_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name lk_districts_grid1
+#' @description
+#' * **lk_districts_grid1:** Second level administrative divisions of Sri Lanka Image reference [here](https://camo.githubusercontent.com/97b57a2d650118c1a5596330824feb7c4eacbcfd/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f632f63632f4469737472696374735f6f665f5372695f4c616e6b612e706e672f3132303070782d4469737472696374735f6f665f5372695f4c616e6b612e706e67). Thanks to [thiyangt](https://github.com/thiyangt).
+#' @usage lk_districts_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name us_state_without_DC_grid3
+#' @description
+#' * **us_state_without_DC_grid3:** United States grid without Washington, D.C Image reference [here](https://camo.githubusercontent.com/5038126fbe0052e7d42602dc6856aedc7822f639/687474703a2f2f6269742e6c792f75732d67726964). Thanks to [truongduongvn2](https://github.com/truongduongvn2).
+#' @usage us_state_without_DC_grid3
+#' @rdname grids
+#' @md
+NULL
+
+#' @name co_cali_subdivisions_grid1
+#' @description
+#' * **co_cali_subdivisions_grid1:** Corregimientos of Cali, Columbia Image reference [here](https://user-images.githubusercontent.com/58274681/77264499-74312d80-6c68-11ea-8b87-b7185c53a8e8.png). Thanks to [Carolina101](https://github.com/Carolina101).
+#' @usage co_cali_subdivisions_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name us_in_northern_counties_grid1
+#' @description
+#' * **us_in_northern_counties_grid1:** Northern Counties of Indiana, United States Image reference [here](https://camo.githubusercontent.com/e083d6d2b65e0e6660b602a3261a3d382d84403e/68747470733a2f2f7777772e696e2e676f762f6476612f696d616765732f696e6469616e61636f756e74796d61702e6a7067). Thanks to [robertoge](https://github.com/robertoge).
+#' @usage us_in_northern_counties_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name italy_grid3
+#' @description
+#' * **italy_grid3:** Autonomous Provinces of Italy Image reference [here](https://camo.githubusercontent.com/c99fec4eacdf2b580301a1296e977951661b9e2e/687474703a2f2f6135312e69646174612e6f7665722d626c6f672e636f6d2f332f33322f36382f32302f43617274696e615f6974616c69612e676966). Thanks to [danilolofaro](https://github.com/danilolofaro).
+#' @usage italy_grid3
+#' @rdname grids
+#' @md
+NULL
+
+#' @name us_state_with_DC_PR_grid2
+#' @description
+#' * **us_state_with_DC_PR_grid2:** Grid of 50 states, DC, and Puerto Rico Image reference [here](https://camo.githubusercontent.com/5038126fbe0052e7d42602dc6856aedc7822f639/687474703a2f2f6269742e6c792f75732d67726964). Thanks to [krmaas](https://github.com/krmaas).
+#' @usage us_state_with_DC_PR_grid2
+#' @rdname grids
+#' @md
+NULL
+
+#' @name us_state_grid7
+#' @description
+#' * **us_state_grid7:** United States grid with Washington, D.C Image reference [here](https://camo.githubusercontent.com/5038126fbe0052e7d42602dc6856aedc7822f639/687474703a2f2f6269742e6c792f75732d67726964). Thanks to [yichenqin](https://github.com/yichenqin).
+#' @usage us_state_grid7
+#' @rdname grids
+#' @md
+NULL
+
+#' @name sg_planning_area_grid2
+#' @description
+#' * **sg_planning_area_grid2:** Singapore Planning Areas Image reference [here](https://camo.githubusercontent.com/46010d480fc21b0e42dcdbd6a56c467e2dbe094d/68747470733a2f2f6f666f6d6170732e636f6d2f77702d636f6e74656e742f75706c6f6164732f6564642f323031392f30362f53696e6761706f72655f4d61702d352d323830783238302e676966). Thanks to [ZhimaoElliott](https://github.com/ZhimaoElliott).
+#' @usage sg_planning_area_grid2
+#' @rdname grids
+#' @md
+NULL
+
+#' @name ch_cantons_fl_grid1
+#' @description
+#' * **ch_cantons_fl_grid1:** Grid layout for Cantons of Switzerland and the neighbouring Prinicipality of Liechtenstein Image reference [here](https://camo.githubusercontent.com/e9cc4af58e6fd5cce80789b66965a5f6b1261043/68747470733a2f2f65787465726e616c2d636f6e74656e742e6475636b6475636b676f2e636f6d2f69752f3f753d68747470732533412532462532467777772e6d6170736f66776f726c642e636f6d253246737769747a65726c616e642532466d617073253246737769747a65726c616e642d706f6c69746963616c2d6d61702e6a706726663d31266e6f66623d31). Thanks to [rastrau](https://github.com/rastrau).
+#' @usage ch_cantons_fl_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name europe_countries_grid2
+#' @description
+#' * **europe_countries_grid2:** Grid layout for European countries (minus micro nations) Image reference [here](https://camo.githubusercontent.com/26d57bac5a363cea2e60c86241a11f85761929eb/68747470733a2f2f692e70696e696d672e636f6d2f6f726967696e616c732f66612f31662f36372f66613166363739386264346639643439303465303864633063643163323331662e676966). Thanks to [rastrau](https://github.com/rastrau).
+#' @usage europe_countries_grid2
+#' @rdname grids
+#' @md
+NULL
+
+#' @name us_states_territories_grid1
+#' @description
+#' * **us_states_territories_grid1:** Grid layout for U.S. states and territories Image reference [here](https://camo.githubusercontent.com/09b32fc0d82f797871a8a3db8354f79ac5214734/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f70726f78792f4f796764547447354e70414e6b724547434b765965566e647054773955326d6b45734f6356784c756363762d6477415750624c745a48385669466f326133675a63663354595468447a6c7663344f474277444d54396137547a746b784a327a514d6c434758746555367a6f44627770747764756b4a356278634344697254395855336937326647355541). Thanks to [rastrau](https://github.com/rastrau).
+#' @usage us_states_territories_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name us_tn_counties_grid1
+#' @description
+#' * **us_tn_counties_grid1:** Grid layout for counties of Tennesee, United States Image reference [here](https://camo.githubusercontent.com/18a78628dc8bae098f78d7373d471bcad8c737d9/687474703a2f2f6f6e746865776f726c646d61702e636f6d2f7573612f73746174652f74656e6e65737365652f74656e6e65737365652d636f756e74792d6d61702e6a7067). Thanks to [binkleym](https://github.com/binkleym).
+#' @usage us_tn_counties_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name us_il_chicago_community_areas_grid1
+#' @description
+#' * **us_il_chicago_community_areas_grid1:** Grid layout for the Community Areas of Chicago Image reference [here](https://camo.githubusercontent.com/6a4894e55de6d844cf4641d14efb871f1fd17a60/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f322f32342f4d61705f6f665f7468655f436f6d6d756e6974795f41726561735f616e645f25323753696465732532375f6f665f7468655f436974795f6f665f4368696361676f2e7376672f33353070782d4d61705f6f665f7468655f436f6d6d756e6974795f41726561735f616e645f25323753696465732532375f6f665f7468655f436974795f6f665f4368696361676f2e7376672e706e67). Thanks to [leungkp](https://github.com/leungkp).
+#' @usage us_il_chicago_community_areas_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name us_state_with_DC_PR_grid3
+#' @description
+#' * **us_state_with_DC_PR_grid3:** United States grid with Washington, D.C. and Puerto Rico Image reference [here](https://camo.githubusercontent.com/8706f8c7513f0d31c83627d9a7fed6499a93d4ef/68747470733a2f2f7061736172656c6170722e636f6d2f696d616765732f75732d6d61702d776974682d70756572746f2d7269636f2f75732d6d61702d776974682d70756572746f2d7269636f2d392e706e67). Thanks to [klittle314](https://github.com/klittle314).
+#' @usage us_state_with_DC_PR_grid3
+#' @rdname grids
+#' @md
+NULL
+
+#' @name in_state_ut_grid2
+#' @description
+#' * **in_state_ut_grid2:** Grid of Indian States and Union Territories Image reference [here](https://user-images.githubusercontent.com/29943634/80574618-7a9e8c00-8a02-11ea-8387-1056410cb54b.png). Thanks to [dnyansagar](https://github.com/dnyansagar).
+#' @usage in_state_ut_grid2
+#' @rdname grids
+#' @md
+NULL
+
+#' @name at_states_grid1
+#' @description
+#' * **at_states_grid1:** Grid layout for States of Austria Image reference [here](https://user-images.githubusercontent.com/9595585/80590528-4e900480-8a1c-11ea-9bf0-151cce354249.png). Thanks to [werkstattcodes](https://github.com/werkstattcodes).
+#' @usage at_states_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name us_pa_counties_grid1
+#' @description
+#' * **us_pa_counties_grid1:** Grid layout of Counties of Pennsylvania, United States Image reference [here](https://camo.githubusercontent.com/9e66d19e37c885372b6782efc53f6f3200ce7497/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f382f38332f50656e6e73796c76616e69615f636f756e746965735f6d61702e706e67). Thanks to [urbanSpatial](https://github.com/urbanSpatial).
+#' @usage us_pa_counties_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name us_oh_counties_grid1
+#' @description
+#' * **us_oh_counties_grid1:** Grid layout of Counties of Ohio, United States Image reference [here](https://camo.githubusercontent.com/f52a753f240e844905bd487a35cbc3055c7fd58f/687474703a2f2f7777772e646f742e73746174652e6f682e75732f6d6170732f5075626c697368696e67496d616765732f506c61696e436f756e74792e676966). Thanks to [taylorokonek](https://github.com/taylorokonek).
+#' @usage us_oh_counties_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name fr_departements_grid2
+#' @description
+#' * **fr_departements_grid2:** Grid layout of Departements of France Image reference [here](https://camo.githubusercontent.com/e0992f21a9ff02c5bf792817cd17fd2bab550dfe/68747470733a2f2f61626f75742d6672616e63652e636f6d2f4d61702d6672616e63652d7265672e676966). Thanks to [jerbou](https://github.com/jerbou).
+#' @usage fr_departements_grid2
+#' @rdname grids
+#' @md
+NULL
+
+#' @name us_wi_counties_grid1
+#' @description
+#' * **us_wi_counties_grid1:** Grid layout for counties of Wisconsin, United States Image reference [here](https://camo.githubusercontent.com/493b3324ca2680e299745b72c46ddfb7ab6bbf08/68747470733a2f2f7777772e6468732e776973636f6e73696e2e676f762f73697465732f64656661756c742f66696c65732f77692d636f756e746965732e676966). Thanks to [aravamu2](https://github.com/aravamu2).
+#' @usage us_wi_counties_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name africa_countries_grid1
+#' @description
+#' * **africa_countries_grid1:** Grid for all countries in Africa. Namibia added as 'NAM' to avoid NA collisions Image reference [here](https://camo.githubusercontent.com/1b60515e108610e2a510e205c5cbbee28a53b85a/687474703a2f2f342e62702e626c6f6773706f742e636f6d2f2d33616d4d4e5952413255342f56654c55755779596874492f41414141414141414546672f46395a595a6f49444346342f73313630302f6166726963612d636f756e7472792d6d61702e706e67). Thanks to [ntncmch](https://github.com/ntncmch).
+#' @usage africa_countries_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name no_counties_grid1
+#' @description
+#' * **no_counties_grid1:** Grid of counties of Norway Image reference [here](https://camo.githubusercontent.com/278d9052a0d7dbb686c4ca655ba212657347835f/68747470733a2f2f7777772e7265736561726368676174652e6e65742f7075626c69636174696f6e2f3332313936373831352f6669677572652f666967312f41533a35373430303139333338313939303440313531333836343133333538352f436f756e746965732d696e2d4e6f727761792d7065722d446563656d6265722d323031372d6e756d62657265642d6163636f7264696e672d746f2d537461746973746963732d4e6f727761792d4d61702d736f757263652e706e67). Thanks to [NanAmalie1](https://github.com/NanAmalie1).
+#' @usage no_counties_grid1
+#' @rdname grids
+#' @md
+NULL
+
+#' @name tr_provinces_grid1
+#' @description
+#' * **tr_provinces_grid1:** Grid of Provinces of Turkey Image reference [here](https://camo.githubusercontent.com/1576de0be9c4381984f6082ad6e7dafdaee69f69/68747470733a2f2f62616e6e6572322e636c65616e706e672e636f6d2f32303138313230362f69746a2f6b697373706e672d697374616e62756c2d70726f76696e6365732d6f662d7475726b65792d62757273612d70726f76696e63652d6d61702d616e2d6469737472696274726c65722d726f746f666c7569642d646e65722d62616c616e742d656c652d35633039383137656139653461362e323033373431303731353434313236383436363935392e6a7067). Thanks to [sadettindemirel](https://github.com/sadettindemirel).
+#' @usage tr_provinces_grid1
 #' @rdname grids
 #' @md
 NULL

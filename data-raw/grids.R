@@ -6,6 +6,8 @@ grid_list <- jsonlite::fromJSON(url)
 
 # get list of new ones to read in
 nms <- setdiff(grid_list$name, gsub("\\.rda", "", list.files("data")))
+# setdiff(gsub("\\.rda", "", list.files("data")), grid_list$name)
+
 # nms <- grid_list$name # to re-read all grids
 
 lapply(nms, function(x) {
@@ -24,6 +26,7 @@ lapply(nms, function(x) {
 ## make sure grids are good
 ##---------------------------------------------------------
 
+# load_all()
 nms <- grid_list$name # to re-read all grids
 for (nm in nms)
   check_grid(get(nm, "package:geofacet"))
