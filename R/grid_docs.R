@@ -394,7 +394,7 @@ NULL
 
 #' @name china_city_grid1
 #' @description
-#' * **china_city_grid1:** Grid layout of cities in China. Image reference [here](). Thanks to [CharleneDeng1](https://github.com/CharleneDeng1).
+#' * **china_city_grid1:** Grid layout of cities in China. Image reference [here](https://user-images.githubusercontent.com/1275592/82846130-3f299d00-9e9c-11ea-8a38-efb4ade0e502.png). Thanks to [CharleneDeng1](https://github.com/CharleneDeng1).
 #' @usage china_city_grid1
 #' @rdname grids
 #' @md

@@ -624,7 +624,7 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{china_city_grid1:} Grid layout of cities in China. Image reference \url{here}. Thanks to \href{https://github.com/CharleneDeng1}{CharleneDeng1}.
+\item \strong{china_city_grid1:} Grid layout of cities in China. Image reference \href{https://user-images.githubusercontent.com/1275592/82846130-3f299d00-9e9c-11ea-8a38-efb4ade0e502.png}{here}. Thanks to \href{https://github.com/CharleneDeng1}{CharleneDeng1}.
 }
 
 \itemize{

@@ -10,6 +10,9 @@ nms <- setdiff(grid_list$name, gsub("\\.rda", "", list.files("data")))
 
 # nms <- grid_list$name # to re-read all grids
 
+# make sure all have a ref image
+sort(nchar(grid_list$ref_img))
+
 lapply(nms, function(x) {
   message(x)
   url <- sprintf("https://raw.githubusercontent.com/hafen/grid-designer/master/grids/%s.csv", x)
