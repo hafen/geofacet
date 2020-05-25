@@ -354,7 +354,7 @@ NULL
 
 #' @name jo_gov_grid1
 #' @description
-#' * **jo_gov_grid1:** Grid layout for Governorates of Jordan. Image reference [here](https://camo.githubusercontent.com/a229e8b82407259265378f39e4b5f09dceace668/687474703a2f2f7777772e3234706f696e74302e636f6d2f7070742d73686f702f6d656469612f636174616c6f672f70726f647563742f63616368652f312f696d6167652f61313437653035336533386461386432366462626233626232346232313238302f6a2f6f2f6a6f7264616e2d676f7665726e6f726174652d6361706974616c732d6d61702d706f776572706f696e742d70726573656e746174696f6e2e6a7067). Thanks to [ghosthedirewolf](https://github.com/ghosthedirewolf).
+#' * **jo_gov_grid1:** Grid layout for Governorates of Jordan. Image reference [here](https://user-images.githubusercontent.com/1275592/82837533-32964c00-9e7e-11ea-841f-8ab3a202b888.png). Thanks to [ghosthedirewolf](https://github.com/ghosthedirewolf).
 #' @usage jo_gov_grid1
 #' @rdname grids
 #' @md
@@ -362,7 +362,7 @@ NULL
 
 #' @name spain_ccaa_grid1
 #' @description
-#' * **spain_ccaa_grid1:** Grid layout for Spanish 'Comunidades Autónomas'. Image reference [here](https://camo.githubusercontent.com/5be0fc76e8dab5269761384ce2b77e7e79bba0db/68747470733a2f2f7777772e6d737373692e676f622e65732f6f7267616e697a6163696f6e2f636361612f696d672f737061696e2e6a7067). Thanks to [JoseAntonioOrtega](https://github.com/JoseAntonioOrtega).
+#' * **spain_ccaa_grid1:** Grid layout for Spanish 'Comunidades Autónomas'. Image reference [here](https://user-images.githubusercontent.com/1275592/54301007-558b5780-457b-11e9-8796-9f7a3859820d.jpg). Thanks to [JoseAntonioOrtega](https://github.com/JoseAntonioOrtega).
 #' @usage spain_ccaa_grid1
 #' @rdname grids
 #' @md
@@ -906,7 +906,7 @@ NULL
 
 #' @name ar_salta_prov_grid2
 #' @description
-#' * **ar_salta_prov_grid2:** Grids for Salta Province Argentina Image reference [here](https://camo.githubusercontent.com/7ced09c1b65c46671c333cc13acbaf864eaa358b/68747470733a2f2f7777772e616d657473616c74612e636f6d2e61722f7765622f696d616765732f616e69766572736172696f732f32343430343436322e6a7067). Thanks to [francogaleano](https://github.com/francogaleano).
+#' * **ar_salta_prov_grid2:** Grids for Salta Province Argentina Image reference [here](https://camo.githubusercontent.com/7ced09c1b65c46671c333cc13acbaf864eaa358b/68747470733a2f2f7777772e616d657473616c74612e636f6d2e61722f7765622f696d616765732f616e69766572736172696f732f32343430343436322e6a7067). Thanks to [tartagalensis](https://github.com/tartagalensis).
 #' @usage ar_salta_prov_grid2
 #' @rdname grids
 #' @md
@@ -1034,7 +1034,7 @@ NULL
 
 #' @name us_states_territories_grid1
 #' @description
-#' * **us_states_territories_grid1:** Grid layout for U.S. states and territories Image reference [here](https://camo.githubusercontent.com/09b32fc0d82f797871a8a3db8354f79ac5214734/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f70726f78792f4f796764547447354e70414e6b724547434b765965566e647054773955326d6b45734f6356784c756363762d6477415750624c745a48385669466f326133675a63663354595468447a6c7663344f474277444d54396137547a746b784a327a514d6c434758746555367a6f44627770747764756b4a356278634344697254395855336937326647355541). Thanks to [rastrau](https://github.com/rastrau).
+#' * **us_states_territories_grid1:** Grid layout for U.S. states and territories Image reference [here](https://camo.githubusercontent.com/83eb052673572f1a6785075d9e46759cb28ef4cc/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f392f39312f5465727269746f7269616c5f7761746572735f2d5f556e697465645f5374617465732e7376672f3238383070782d5465727269746f7269616c5f7761746572735f2d5f556e697465645f5374617465732e7376672e706e67). Thanks to [rastrau](https://github.com/rastrau).
 #' @usage us_states_territories_grid1
 #' @rdname grids
 #' @md
@@ -1058,7 +1058,7 @@ NULL
 
 #' @name us_state_with_DC_PR_grid3
 #' @description
-#' * **us_state_with_DC_PR_grid3:** United States grid with Washington, D.C. and Puerto Rico Image reference [here](https://camo.githubusercontent.com/8706f8c7513f0d31c83627d9a7fed6499a93d4ef/68747470733a2f2f7061736172656c6170722e636f6d2f696d616765732f75732d6d61702d776974682d70756572746f2d7269636f2f75732d6d61702d776974682d70756572746f2d7269636f2d392e706e67). Thanks to [klittle314](https://github.com/klittle314).
+#' * **us_state_with_DC_PR_grid3:** United States grid with Washington, D.C. and Puerto Rico Image reference [here](https://user-images.githubusercontent.com/1275592/82837790-f7484d00-9e7e-11ea-9136-7ace6c35af51.png). Thanks to [klittle314](https://github.com/klittle314).
 #' @usage us_state_with_DC_PR_grid3
 #' @rdname grids
 #' @md
