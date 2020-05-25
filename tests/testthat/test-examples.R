@@ -4,8 +4,6 @@ library(ggplot2)
 
 test_that("examples work", {
 
-  testthat::skip_if_not_installed("rnaturalearthhires")
-
   # barchart of state rankings in various categories
   p <- ggplot(state_ranks, aes(variable, rank, fill = variable)) +
     geom_col() +
@@ -75,7 +73,7 @@ test_that("examples work", {
     theme_bw()
   print(p)
 
-  # use a free x-axis to look at just change
+  # use a free y-axis to look at just change
   p <- ggplot(eu_gdp, aes(year, gdp_pc)) +
     geom_line(color = "steelblue") +
     facet_geo(~ name, grid = "eu_grid1", scales = "free_y") +

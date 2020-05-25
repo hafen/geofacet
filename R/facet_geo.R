@@ -13,67 +13,60 @@ facet_geo <- function(facets, ..., grid = "us_state_grid1", label = NULL, move_a
   ret
 }
 
-#' Add method for gg / facet_geo
-#'
-#' @param e1 a object with class gg
-#' @param e2 if object is of class 'facet_geo', then 'facet_geo' will be appended to the class of e1
+#' @importFrom ggplot2 ggplot_add
+#' @importFrom ggplot2 %+%
 #' @export
-#' @importFrom ggplot2 %+% facet_wrap
-`+.gg` <- function (e1, e2) {
-  if (inherits(e2, "facet_geo_spec")) {
-    facet_col <- setdiff(unlist(lapply(e2$facets, as.character)), c("~", "+"))
-    if (length(facet_col) > 1) {
-      message_nice("Multiple facet columns specified... only using '", facet_col[1], "'")
-      facet_col <- facet_col[1]
-    }
-
-    move_axes <- e2$move_axes
-    e2$move_axes <- NULL
-
-    grd <- get_full_geo_grid(e2$grid)
-    e2$grid <- NULL
-
-    label_col <- NULL
-    if (!is.null(e2$label)) {
-      if (e2$label %in% names(grd)) {
-        label_col <- e2$label
-      } else {
-        message_nice("Note: the specified label = '", e2$label,
-          "' does not exist in the supplied grid and it will be ignored.")
-      }
-    }
-    e2$label <- NULL
-
-    if (!is.null(e2$ncol))
-      message_nice("replacing user-specified 'ncol'")
-    if (!is.null(e2$nrow))
-      message_nice("replacing user-specified 'nrow'")
-    if (!is.null(e2$drop))
-      message_nice("replacing user-specified 'drop'")
-
-    e2$nrow <- max(grd$row)
-    e2$ncol <- max(grd$col)
-    e2$drop <- FALSE
-    e2$facets <- "facet_col" # we will create a new column "facet_col"
-    # this is done below in get_full_geo_data()
-
-    # update the data to layers if specified independent of global data
-    other_data <- lapply(e1$layers, function(x) x$data)
-
-    tmp <- get_full_geo_data(e1$data, grd, facet_col, label_col, other_data)
-    e1$data <- tmp$dat
-    for (ii in seq_along(e1$layers))
-      e1$layers[[ii]]$data <- tmp$other_data[[ii]]
-    grd <- tmp$grd
-
-    e1 <- e1 %+% do.call(ggplot2::facet_wrap, e2)
-    attr(e1, "geofacet") <- list(grid = grd, move_axes = move_axes, scales = e2$scales)
-
-    class(e1) <- c("facet_geo", class(e1))
-    return(e1)
+ggplot_add.facet_geo_spec <- function(object, plot, object_name) {
+  facet_col <- setdiff(unlist(lapply(object$facets, as.character)), c("~", "+"))
+  if (length(facet_col) > 1) {
+    message_nice("Multiple facet columns specified... only using '", facet_col[1], "'")
+    facet_col <- facet_col[1]
   }
 
-  e1 %+% e2
+  move_axes <- object$move_axes
+  object$move_axes <- NULL
+
+  grd <- get_full_geo_grid(object$grid)
+  object$grid <- NULL
+
+  label_col <- NULL
+  if (!is.null(object$label)) {
+    if (object$label %in% names(grd)) {
+      label_col <- object$label
+    } else {
+      message_nice("Note: the specified label = '", object$label,
+        "' does not exist in the supplied grid and it will be ignored.")
+    }
+  }
+  object$label <- NULL
+
+  if (!is.null(object$ncol))
+    message_nice("replacing user-specified 'ncol'")
+  if (!is.null(object$nrow))
+    message_nice("replacing user-specified 'nrow'")
+  if (!is.null(object$drop))
+    message_nice("replacing user-specified 'drop'")
+
+  object$nrow <- max(grd$row)
+  object$ncol <- max(grd$col)
+  object$drop <- FALSE
+  object$facets <- "facet_col" # we will create a new column "facet_col"
+  # this is done below in get_full_geo_data()
+
+  # update the data to layers if specified independent of global data
+  other_data <- lapply(plot$layers, function(x) x$data)
+
+  tmp <- get_full_geo_data(plot$data, grd, facet_col, label_col, other_data)
+  plot$data <- tmp$dat
+  for (ii in seq_along(plot$layers))
+    plot$layers[[ii]]$data <- tmp$other_data[[ii]]
+  grd <- tmp$grd
+
+  plot <- plot %+% do.call(ggplot2::facet_wrap, object)
+  attr(plot, "geofacet") <- list(grid = grd, move_axes = move_axes, scales = object$scales)
+
+  class(plot) <- c("facet_geo", class(plot))
+  return(plot)
 }
 
 #' Perform post-processing on a facet_geo ggplot object

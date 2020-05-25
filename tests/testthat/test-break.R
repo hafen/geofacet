@@ -4,8 +4,6 @@ library(ggplot2)
 
 test_that("things break in an expected way", {
 
-  testthat::skip_if_not_installed("rnaturalearthhires")
-
   expect_error({
     ggplot(iris, aes(Sepal.Length, Petal.Length)) +
         geom_point() +

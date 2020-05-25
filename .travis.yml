@@ -1,6 +1,6 @@
 language: R
 sudo: required
-# cache: packages
+cache: packages
 
 before_install:
   - sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable --yes
@@ -16,12 +16,9 @@ before_install:
   # sf dependencies:
   - sudo apt-get install --yes libproj-dev libgeos-dev libgdal-dev
 
+  # install.packages("rnaturalearthhires", repos = "http://packages.ropensci.org", type = "source")
+
 warnings_are_errors: true
 
 after_success:
   - Rscript -e 'covr::codecov()'
-  - Rscript -e "packagedocs::deploy_travis()"
-
-env:
-  global:
-    secure: U2DcLqwfwhnszFWPq0o2gVrhZ4iBJE7t39CH6lfGqkAiheyPZqnNX7tiTo+LttitJdE1uSrQPvjuHzZDuad2Sqolp3CVgjrnEeYUVXz6jAQzfOgn9+UYztaIm5rkqNcwITr2dmXHLBeQydqsy8JUiKX3mk7B+gAFUDgai+Ft0g2aX4xgiavTmslvYh6JKz2bTR9OsoXLaqnISgub0/5dm+XJ1FH9EnzCGS7JiH6NTxU+Kk2J8DV1W1kd2KYWdhJzLGOVgW3hKL0nn90W56EcTmpRTFQy2WTlMU1E+V0Y0PgHJ5r5bXMLOW4+H9VVTwa1NdB0BtCOC7PSwLp0ZV9p9F8vxru0dU+I+b/JO5ZJPmYcq9pKBCScv9QHOaBYPckmuzQgsY6+g8OQgeiAqmziH+vzkMSFjlmsPt+ilkLi7bnqV97iUrJHFIN7zMQCnKqCClqpAIYVfKTejbGcXZiMAbxqA4NdszRKADWRcy+OV6Dr3TXuYCb7eMPXTLxFk+A0ViLk/lToyjnvLk8mXF6butaJHGxOFERIn6RM0U0epwNK+YLp4NgE+fZcJ4GQXXTlHUAMwbbkhxxoaJcEqsmqY+q2KQTSBkDjxVQ5GzL91+6HLPAl+bSanLUKOVD3nU7e2ulgo+JK0mFoRUtun3R56thbrIZ/sq+S+MLPG2Jdw4g=
