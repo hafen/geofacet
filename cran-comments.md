@@ -1,15 +1,19 @@
 ## Release summary
 
-Fixed an issue with rnaturalearth trying to add rnaturalearthhires to the user library before checking.
+- Updated to be compatible with ggplot2 updates
+- Added new grids
+- Changed vignette builder to pkgdown (no longer dependent on packagedocs)
 
 ## Test environments
 
-* local OS X install, R 3.5.2
-* ubuntu 14.0.5 (on travis-ci), R 3.5.2
-* win-builder (devel)
+* local OS X install, R 4.0.02
+* ubuntu 16.04 (on travis-ci), R 4.0.0
+* win-builder (devel and release)
 
 ## R CMD check results
 
+0 errors | 0 warnings | 0 notes
+
 ## Reverse dependencies
 
-There are no reverse dependencies.
+R CMD check ran successfully on the only reverse dependencies arcos and polAr.
