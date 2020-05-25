@@ -31,7 +31,7 @@ The merits of this visualization approach are not discussed at length here but w
 ```{r eval=FALSE}
 install.packages("geofacet")
 # or from github:
-# devtools::install_github("hafen/geofacet")
+# remotes::install_github("hafen/geofacet")
 ```
 
 ```{r}

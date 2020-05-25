@@ -35,7 +35,7 @@
 grid_auto <- function(x, names = NULL, codes = NULL, seed = NULL) {
   # if(!requireNamespace("geogrid", quietly = TRUE)) {
   #   stop("Package 'geogrid' is needed for this function to work. Please install it.\n",
-  #     "devtools::install_github(\"sassalley/geogrid\")",
+  #     "remotes::install_github(\"sassalley/geogrid\")",
   #   call. = FALSE)
   # }
 
