@@ -1,3 +1,10 @@
+Version 0.2
+----------------------------------------------------------------------
+
+- Add many new grids
+- Update to be compatible with ggplot2 updates
+- Change vignette builder to pkgdown
+
 Version 0.1
 ----------------------------------------------------------------------
 

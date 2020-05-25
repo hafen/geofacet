@@ -6,7 +6,7 @@
 
 ## Test environments
 
-* local OS X install, R 4.0.02
+* local OS X install, R 4.0.0
 * ubuntu 16.04 (on travis-ci), R 4.0.0
 * win-builder (devel and release)
 
