@@ -9,7 +9,8 @@ facet_geo(facets, ..., grid = "us_state_grid1", label = NULL, move_axes = TRUE)
 \arguments{
 \item{facets}{passed to \code{\link[ggplot2]{facet_wrap}}}
 
-\item{grid}{character vector of the grid layout to use (currently only "us_state_grid1" and "us_state_grid2" are available)}
+\item{grid}{either a character vector of the grid layout to use (see `?grids` for the list and use `get_grid()` to inspect or `grid_preview()` to plot a specific grid),
+or a data.frame object containing a grid (e.g. an output from `grid_design()` or `grid_auto()`)}
 
 \item{label}{an optional string denoting the name of a column in \code{grid} to use for facet labels. If NULL, the variable that best matches that in the data specified with \code{facets} will be used for the facet labels.}
 

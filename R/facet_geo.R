@@ -2,7 +2,8 @@
 #'
 #' @param facets passed to \code{\link[ggplot2]{facet_wrap}}
 #' @param \ldots additional parameters passed to \code{\link[ggplot2]{facet_wrap}}
-#' @param grid character vector of the grid layout to use (currently only "us_state_grid1" and "us_state_grid2" are available)
+#' @param grid either a character vector of the grid layout to use (see `?grids` for the list and use `get_grid()` to inspect or `grid_preview()` to plot a specific grid),
+#' or a data.frame object containing a grid (e.g. an output from `grid_design()` or `grid_auto()`)
 #' @param label an optional string denoting the name of a column in \code{grid} to use for facet labels. If NULL, the variable that best matches that in the data specified with \code{facets} will be used for the facet labels.
 #' @param move_axes should axis labels and ticks be moved to the closest panel along the margins?
 #' @example man-roxygen/ex-facet_geo.R

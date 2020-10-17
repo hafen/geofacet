@@ -29,5 +29,5 @@ Suggests:
     rmarkdown
 URL: https://github.com/hafen/geofacet
 BugReports: https://github.com/hafen/geofacet/issues
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
 VignetteBuilder: knitr
