@@ -254,7 +254,7 @@ ggplot(election, aes("", pct, fill = candidate)) +
   facet_geo(~ state, grid = "us_state_grid2") +
   scale_y_continuous(expand = c(0, 0)) +
   labs(title = "2016 Election Results",
-    caption = "Data Source: https://docs.google.com/spreadsheets/d/133Eb4qQmOxNvtesw2hdVns073R68EZx4SfCnP4IGQf8",
+    caption = "Data Source: 2016 National Popular Vote Tracker",
     x = NULL,
     y = "Percentage of Voters") +
   theme(axis.title.x = element_blank(),
@@ -271,7 +271,7 @@ ggplot(election, aes(candidate, pct, fill = candidate)) +
   theme_bw() +
   coord_flip() +
   labs(title = "2016 Election Results",
-    caption = "Data Source: https://docs.google.com/spreadsheets/d/133Eb4qQmOxNvtesw2hdVns073R68EZx4SfCnP4IGQf8",
+    caption = "Data Source: 2016 National Popular Vote Tracker",
     x = NULL,
     y = "Percentage of Voters") +
   theme(strip.text.x = element_text(size = 6))
@@ -284,7 +284,7 @@ ggplot(election, aes(candidate, votes / 1000000, fill = candidate)) +
   facet_geo(~ state, grid = "us_state_grid2") +
   coord_flip() +
   labs(title = "2016 Election Results",
-    caption = "Data Source: https://docs.google.com/spreadsheets/d/133Eb4qQmOxNvtesw2hdVns073R68EZx4SfCnP4IGQf8",
+    caption = "Data Source: 2016 National Popular Vote Tracker",
     x = NULL,
     y = "Votes (millions)") +
   theme(strip.text.x = element_text(size = 6))

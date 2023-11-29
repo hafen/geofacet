@@ -4,14 +4,15 @@ New submission
    
 Package was archived on CRAN today
 
-- Updated to be compatible with ggplot2 updates
-- Added new grids
-- Changed vignette builder to pkgdown (no longer dependent on packagedocs)
+Updates since last release:
+
+- Fixed obscure issue with unicode characters in grid names on some linux systems that caused the package to be removed from CRAN
+- Updated package infrastructure to reflect latest CRAN policies, etc.
 
 ## Test environments
 
 * local OS X install, R 4.3.2
-* ubuntu 16.04 (on travis-ci), R 4.0.0
+* ubuntu 22.04.3 (on GitHub Actions), R 4.3.2
 * win-builder (devel and release)
 
 ## R CMD check results
@@ -20,4 +21,4 @@ Package was archived on CRAN today
 
 ## Reverse dependencies
 
-R CMD check ran successfully on the only reverse dependencies arcos and polAr.
+R CMD check ran successfully on the only reverse dependencies geoAr and geofi.
