@@ -26,4 +26,6 @@ jobs:
           extra-packages: any::rcmdcheck
           needs: check
 
+      - run: Rscript -e 'install.packages("rnaturalearthhires", repos = "https://ropensci.r-universe.dev", type = "source")'
+      
       - uses: r-lib/actions/check-r-package@v2

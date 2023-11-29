@@ -47,10 +47,6 @@ Found the following (possibly) invalid URLs:
           inst/doc/geofacet.html
     Status: 403
     Message: Forbidden
-  URL: https://countymapsofwashington.com/aapics/washingstate.gif
-    From: man/grids.Rd
-    Status: 403
-    Message: Forbidden
   For content that is 'Moved Permanently', please change http to https,
   add trailing slashes, or replace the old by the new URL.
 

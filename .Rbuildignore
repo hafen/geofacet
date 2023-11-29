@@ -16,3 +16,4 @@ geofacet.code-workspace
 ^pkgdown$
 ^revdep$
 ^\.github$
+^CRAN-SUBMISSION$
