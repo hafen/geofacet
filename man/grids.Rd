@@ -452,11 +452,11 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{gb_london_boroughs_grid:} Grid layout for the boroughs of London. Note that the column \code{code_ons} contains the \href{http://geoportal.statistics.gov.uk/datasets/464be6191a434a91a5fa2f52c7433333_0?uiTab=table}{codes} used by UK Office for National Statistics. Image reference \href{https://cloud.githubusercontent.com/assets/13021448/26399784/3133d684-4076-11e7-8eac-1e74d023bf18.jpg}{here}. Thanks to \href{https://github.com/eldenvo}{eldenvo}.
+\item \strong{gb_london_boroughs_grid:} Grid layout for the boroughs of London. Note that the column \code{code_ons} contains the codes used by UK Office for National Statistics. Image reference \href{https://cloud.githubusercontent.com/assets/13021448/26399784/3133d684-4076-11e7-8eac-1e74d023bf18.jpg}{here}. Thanks to \href{https://github.com/eldenvo}{eldenvo}.
 }
 
 \itemize{
-\item \strong{nhs_scot_grid:} Grid layout for a grid of NHS Scotland Health Boards. Note that the column \code{code} contains the \href{http://geoportal.statistics.gov.uk/datasets/61dca36aa33e4aee99bbfa784fa9eb25_0?uiTab=table}{codes} used by UK Office for National Statistics. Image reference \href{https://cloud.githubusercontent.com/assets/24879214/26426113/253658d0-40cf-11e7-88b5-fe5ee7fda44f.png}{here}. Thanks to \href{https://github.com/jsphdms}{jsphdms}.
+\item \strong{nhs_scot_grid:} Grid layout for a grid of NHS Scotland Health Boards. Note that the column \code{code} contains the codes used by UK Office for National Statistics. Image reference \href{https://cloud.githubusercontent.com/assets/24879214/26426113/253658d0-40cf-11e7-88b5-fe5ee7fda44f.png}{here}. Thanks to \href{https://github.com/jsphdms}{jsphdms}.
 }
 
 \itemize{
@@ -496,7 +496,7 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{us_wa_counties_grid1:} Grid for Washington counties. Image reference \href{http://www.countymapsofwashington.com/aapics/washingstate.gif}{here}.
+\item \strong{us_wa_counties_grid1:} Grid for Washington counties. Image reference \href{https://www.countymapsofwashington.com/aapics/washingstate.gif}{here}.
 }
 
 \itemize{
@@ -508,7 +508,7 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{se_counties_grid1:} Grid for counties of Sweden. Image reference \href{http://www.worldatlas.com/webimage/countrys/europe/lgcolor/secounties.gif}{here}. Thanks to \href{https://github.com/duleise}{duleise}.
+\item \strong{se_counties_grid1:} Grid for counties of Sweden. Image reference \href{https://www.worldatlas.com/webimage/countrys/europe/lgcolor/secounties.gif}{here}. Thanks to \href{https://github.com/duleise}{duleise}.
 }
 
 \itemize{
@@ -596,7 +596,7 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{sk_province_grid1:} Grid layout for South Korean sis and dos (metropolitan/special/autonomous cities and provinces). Image reference \href{http://tong.visitkorea.or.kr/enu/images/koreastay/korea_map.jpg}{here}. Thanks to \href{https://github.com/heon131}{heon131}.
+\item \strong{sk_province_grid1:} Grid layout for South Korean sis and dos (metropolitan/special/autonomous cities and provinces). Image reference \href{https://tong.visitkorea.or.kr/enu/images/koreastay/korea_map.jpg}{here}. Thanks to \href{https://github.com/heon131}{heon131}.
 }
 
 \itemize{
@@ -620,7 +620,7 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{br_states_grid2:} Grid for the 27 states of Brazil. Image reference \href{http://www.brazil-help.com/mapa_do_brasil.gif}{here}. Thanks to \href{https://github.com/hafen}{hafen}.
+\item \strong{br_states_grid2:} Grid for the 27 states of Brazil. Image reference \href{https://www.brazil-help.com/mapa_do_brasil.gif}{here}. Thanks to \href{https://github.com/hafen}{hafen}.
 }
 
 \itemize{

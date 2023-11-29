@@ -50,7 +50,7 @@ NULL
 
 #' @name gb_london_boroughs_grid
 #' @description
-#' * **gb_london_boroughs_grid:** Grid layout for the boroughs of London. Note that the column \code{code_ons} contains the \href{http://geoportal.statistics.gov.uk/datasets/464be6191a434a91a5fa2f52c7433333_0?uiTab=table}{codes} used by UK Office for National Statistics. Image reference [here](https://cloud.githubusercontent.com/assets/13021448/26399784/3133d684-4076-11e7-8eac-1e74d023bf18.jpg). Thanks to [eldenvo](https://github.com/eldenvo).
+#' * **gb_london_boroughs_grid:** Grid layout for the boroughs of London. Note that the column \code{code_ons} contains the codes used by UK Office for National Statistics. Image reference [here](https://cloud.githubusercontent.com/assets/13021448/26399784/3133d684-4076-11e7-8eac-1e74d023bf18.jpg). Thanks to [eldenvo](https://github.com/eldenvo).
 #' @usage gb_london_boroughs_grid
 #' @rdname grids
 #' @md
@@ -58,7 +58,7 @@ NULL
 
 #' @name nhs_scot_grid
 #' @description
-#' * **nhs_scot_grid:** Grid layout for a grid of NHS Scotland Health Boards. Note that the column \code{code} contains the \href{http://geoportal.statistics.gov.uk/datasets/61dca36aa33e4aee99bbfa784fa9eb25_0?uiTab=table}{codes} used by UK Office for National Statistics. Image reference [here](https://cloud.githubusercontent.com/assets/24879214/26426113/253658d0-40cf-11e7-88b5-fe5ee7fda44f.png). Thanks to [jsphdms](https://github.com/jsphdms).
+#' * **nhs_scot_grid:** Grid layout for a grid of NHS Scotland Health Boards. Note that the column \code{code} contains the codes used by UK Office for National Statistics. Image reference [here](https://cloud.githubusercontent.com/assets/24879214/26426113/253658d0-40cf-11e7-88b5-fe5ee7fda44f.png). Thanks to [jsphdms](https://github.com/jsphdms).
 #' @usage nhs_scot_grid
 #' @rdname grids
 #' @md
@@ -138,7 +138,7 @@ NULL
 
 #' @name us_wa_counties_grid1
 #' @description
-#' * **us_wa_counties_grid1:** Grid for Washington counties. Image reference [here](http://www.countymapsofwashington.com/aapics/washingstate.gif).
+#' * **us_wa_counties_grid1:** Grid for Washington counties. Image reference [here](https://www.countymapsofwashington.com/aapics/washingstate.gif).
 #' @usage us_wa_counties_grid1
 #' @rdname grids
 #' @md
@@ -162,7 +162,7 @@ NULL
 
 #' @name se_counties_grid1
 #' @description
-#' * **se_counties_grid1:** Grid for counties of Sweden. Image reference [here](http://www.worldatlas.com/webimage/countrys/europe/lgcolor/secounties.gif). Thanks to [duleise](https://github.com/duleise).
+#' * **se_counties_grid1:** Grid for counties of Sweden. Image reference [here](https://www.worldatlas.com/webimage/countrys/europe/lgcolor/secounties.gif). Thanks to [duleise](https://github.com/duleise).
 #' @usage se_counties_grid1
 #' @rdname grids
 #' @md
@@ -338,7 +338,7 @@ NULL
 
 #' @name sk_province_grid1
 #' @description
-#' * **sk_province_grid1:** Grid layout for South Korean sis and dos (metropolitan/special/autonomous cities and provinces). Image reference [here](http://tong.visitkorea.or.kr/enu/images/koreastay/korea_map.jpg). Thanks to [heon131](https://github.com/heon131).
+#' * **sk_province_grid1:** Grid layout for South Korean sis and dos (metropolitan/special/autonomous cities and provinces). Image reference [here](https://tong.visitkorea.or.kr/enu/images/koreastay/korea_map.jpg). Thanks to [heon131](https://github.com/heon131).
 #' @usage sk_province_grid1
 #' @rdname grids
 #' @md
@@ -386,7 +386,7 @@ NULL
 
 #' @name br_states_grid2
 #' @description
-#' * **br_states_grid2:** Grid for the 27 states of Brazil. Image reference [here](http://www.brazil-help.com/mapa_do_brasil.gif). Thanks to [hafen](https://github.com/hafen).
+#' * **br_states_grid2:** Grid for the 27 states of Brazil. Image reference [here](https://www.brazil-help.com/mapa_do_brasil.gif). Thanks to [hafen](https://github.com/hafen).
 #' @usage br_states_grid2
 #' @rdname grids
 #' @md

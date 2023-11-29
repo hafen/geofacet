@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/hafen/geofacet.svg?branch=master)](https://travis-ci.org/hafen/geofacet)
-[![Coverage Status](https://img.shields.io/codecov/c/github/hafen/geofacet/master.svg)](https://codecov.io/github/hafen/geofacet?branch=master)
+[![R-CMD-check](https://github.com/hafen/geofacet/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/hafen/geofacet/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/hafen/geofacet/branch/master/graph/badge.svg)](https://app.codecov.io/gh/hafen/geofacet?branch=master)
 [![CRAN](http://www.r-pkg.org/badges/version/geofacet)](https://CRAN.R-project.org/package=geofacet)
 [![CRAN Downloads](http://cranlogs.r-pkg.org/badges/geofacet)](https://CRAN.R-project.org/package=geofacet)
 

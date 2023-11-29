@@ -68,7 +68,7 @@ While this plot may not be as fun as the Chernoff faces, geofacet allows us to u
 This plot helps illustrate a couple of advantages this approach has over a traditional geographical visualization approaches such as choropleth plots:
 
 - We can plot multiple values per geographical entity
-- We can use more effective visual encoding schemes (color, which is used in choropleth-type maps, is one of the [least effective](http://flowingdata.com/2010/03/20/graphical-perception-learn-the-fundamentals-first/) ways to visually encode information)
+- We can use more effective visual encoding schemes (color, which is used in choropleth-type maps, is one of the [least effective](https://flowingdata.com/2010/03/20/graphical-perception-learn-the-fundamentals-first/) ways to visually encode information)
 
 Note that other than the arrangement of the facets, every other aspect of this plot behaves in the way you would expect a ggplot2 plot to behave (such as themes, flipping coordinates, etc.).
 

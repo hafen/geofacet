@@ -1,10 +1,12 @@
 Package: geofacet
 Title: 'ggplot2' Faceting Utilities for Geographical Data
-Version: 0.2.0
+Version: 0.2.1
 Authors@R: c(
     person("Ryan", "Hafen", email = "rhafen@gmail.com", role = c("aut", "cre")),
     person("Barret", "Schloerke", email = "schloerke@gmail.com", role = "ctb"))
-Description: Provides geofaceting functionality for 'ggplot2'. Geofaceting arranges a sequence of plots of data for different geographical entities into a grid that preserves some of the geographical orientation.
+Description: Provides geofaceting functionality for 'ggplot2'. Geofaceting
+    arranges a sequence of plots of data for different geographical entities
+    into a grid that preserves some of the geographical orientation.
 Depends: R (>= 3.2)
 License: MIT + file LICENSE
 Encoding: UTF-8
@@ -15,13 +17,14 @@ Imports:
     graphics,
     rnaturalearth,
     sp,
-    sf,
     ggrepel,
     imguR,
     gridExtra,
     geogrid,
-    methods
+    methods,
+    rlang
 Suggests:
+    sf,
     testthat,
     covr,
     lintr,
@@ -29,5 +32,5 @@ Suggests:
     rmarkdown
 URL: https://github.com/hafen/geofacet
 BugReports: https://github.com/hafen/geofacet/issues
-RoxygenNote: 7.1.0
+RoxygenNote: 7.2.3
 VignetteBuilder: knitr

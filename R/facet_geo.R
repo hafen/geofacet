@@ -63,7 +63,11 @@ ggplot_add.facet_geo_spec <- function(object, plot, object_name) {
   grd <- tmp$grd
 
   plot <- plot %+% do.call(ggplot2::facet_wrap, object)
-  attr(plot, "geofacet") <- list(grid = grd, move_axes = move_axes, scales = object$scales)
+  attr(plot, "geofacet") <- list(
+    grid = grd,
+    move_axes = move_axes,
+    scales = object$scales
+  )
 
   class(plot) <- c("facet_geo", class(plot))
   return(plot)
@@ -172,6 +176,7 @@ plot.facet_geo <- function(x, ...) {
 #' @export
 #' @importFrom ggplot2 ggplot geom_rect geom_text aes xlim ylim
 #' @importFrom gridExtra grid.arrange
+#' @importFrom rlang .data
 #' @examples
 #' grid_preview(us_state_grid2)
 #' grid_preview(eu_grid1, label = "name")
@@ -191,7 +196,7 @@ grid_preview <- function(x, label = NULL, label_raw = NULL) {
     x$txt <- x[[label]]
   }
 
-  p <- ggplot2::ggplot(x, ggplot2::aes_string("col", "row", label = "txt")) +
+  p <- ggplot2::ggplot(x, ggplot2::aes(.data$col, .data$row, label = "txt")) +
     ggplot2::geom_rect(
       xmin = as.numeric(x$col) - 0.5, xmax = as.numeric(x$col) + 0.5,
       ymin = as.numeric(x$row) - 0.5, ymax = as.numeric(x$row) + 0.5,
@@ -216,7 +221,7 @@ grid_preview <- function(x, label = NULL, label_raw = NULL) {
     p2 <- plot_geo_raw(spdf, label = label_raw)
     p <- gridExtra::grid.arrange(p2, p, nrow = 1)
   } else {
-    plot(p)
+    suppressWarnings(plot(p))
   }
   invisible(p)
 }
@@ -404,10 +409,11 @@ get_grid <- function(grid) {
     }
   } else if (inherits(grid, "data.frame")) {
     grd <- check_grid(grid)
-    message_nice("Note: You provided a user-specified grid. ",
-      "If this is a generally-useful grid, please consider submitting it ",
-      "to become a part of the geofacet package. You can do this easily by ",
-      "calling:\ngrid_submit(__grid_df_name__)")
+    if (!inherits(grid, "geofacet_grid"))
+      message_nice("Note: You provided a user-specified grid. ",
+        "If this is a generally-useful grid, please consider submitting it ",
+        "to become a part of the geofacet package. You can do this easily by ",
+        "calling:\ngrid_submit(__grid_df_name__)")
   } else {
     stop("grid not recognized...")
   }

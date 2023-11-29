@@ -8,6 +8,6 @@
 eu_imm
 }
 \description{
-Annual number of resettled persons for each EU country. "Resettled refugees means persons who have been granted an authorization to reside in a Member State within the framework of a national or Community resettlement scheme.". Source: \url{http://ec.europa.eu/eurostat/cache/metadata/en/migr_asydec_esms.htm}. Dataset ID: tps00195.
+Annual number of resettled persons for each EU country. "Resettled refugees means persons who have been granted an authorization to reside in a Member State within the framework of a national or Community resettlement scheme.". Source: \url{https://ec.europa.eu/eurostat/cache/metadata/en/migr_asydec_esms.htm}. Dataset ID: tps00195.
 }
 \keyword{data}

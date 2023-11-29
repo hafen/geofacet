@@ -15,3 +15,4 @@ geofacet.code-workspace
 ^docs$
 ^pkgdown$
 ^revdep$
+^\.github$

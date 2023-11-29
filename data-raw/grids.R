@@ -15,13 +15,14 @@ sort(nchar(grid_list$ref_img))
 
 lapply(nms, function(x) {
   message(x)
-  url <- sprintf("https://raw.githubusercontent.com/hafen/grid-designer/master/grids/%s.csv", x)
+  urlstr <- sprintf("https://raw.githubusercontent.com/hafen/grid-designer/master/grids/%s.csv", x)
   # tmp <- utils::read.csv(url, stringsAsFactors = FALSE, nrows = 1)
   # # all columns other than "row" and "col" will be strings (names and codes)
   # cls <- ifelse(names(tmp) %in% c("row", "col"), "integer", "character")
   # # use read.csv simply because it means one less dependency...
   # res <- utils::read.csv(url, colClasses = cls, stringsAsFactors = FALSE, na.strings = NULL)
-  res <- data.frame(readr::read_csv(url, na = ""))
+  res <- data.frame(readr::read_csv(url(urlstr), na = ""))
+  class(res) <- c("data.frame", "geofacet_grid")
   assign(x, res)
   eval(parse(text = sprintf("usethis::use_data(%s, overwrite = TRUE)", x)))
 })

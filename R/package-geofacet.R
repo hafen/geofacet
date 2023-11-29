@@ -50,7 +50,7 @@ NULL
 #' @name election
 #' @docType data
 #' @description
-#' 2016 US presidential election results, obtained from \url{http://bit.ly/2016votecount}.
+#' 2016 US presidential election results, obtained from \url{https://bit.ly/2016votecount}.
 #' @usage election
 #' @keywords data
 NULL
@@ -60,7 +60,7 @@ NULL
 #' @name eu_imm
 #' @docType data
 #' @description
-#' Annual number of resettled persons for each EU country. "Resettled refugees means persons who have been granted an authorization to reside in a Member State within the framework of a national or Community resettlement scheme.". Source: \url{http://ec.europa.eu/eurostat/cache/metadata/en/migr_asydec_esms.htm}. Dataset ID: tps00195.
+#' Annual number of resettled persons for each EU country. "Resettled refugees means persons who have been granted an authorization to reside in a Member State within the framework of a national or Community resettlement scheme.". Source: \url{https://ec.europa.eu/eurostat/cache/metadata/en/migr_asydec_esms.htm}. Dataset ID: tps00195.
 #' @usage eu_imm
 #' @keywords data
 NULL
@@ -70,7 +70,7 @@ NULL
 #' @name eu_gdp
 #' @docType data
 #' @description
-#' GDP per capita in PPS - Index (EU28 = 100). "Gross domestic product (GDP) is a measure for the economic activity. It is defined as the value of all goods and services produced less the value of any goods or services used in their creation. The volume index of GDP per capita in Purchasing Power Standards (PPS) is expressed in relation to the European Union (EU28) average set to equal 100. If the index of a country is higher than 100, this country's level of GDP per head is higher than the EU average and vice versa. Basic figures are expressed in PPS, i.e. a common currency that eliminates the differences in price levels between countries allowing meaningful volume comparisons of GDP between countries. Please note that the index, calculated from PPS figures and expressed with respect to EU28 = 100, is intended for cross-country comparisons rather than for temporal comparisons." Source: \url{http://ec.europa.eu/eurostat/web/national-accounts/data/main-tables}. Dataset ID: tec00114.
+#' GDP per capita in PPS - Index (EU28 = 100). "Gross domestic product (GDP) is a measure for the economic activity. It is defined as the value of all goods and services produced less the value of any goods or services used in their creation. The volume index of GDP per capita in Purchasing Power Standards (PPS) is expressed in relation to the European Union (EU28) average set to equal 100. If the index of a country is higher than 100, this country's level of GDP per head is higher than the EU average and vice versa. Basic figures are expressed in PPS, i.e. a common currency that eliminates the differences in price levels between countries allowing meaningful volume comparisons of GDP between countries. Please note that the index, calculated from PPS figures and expressed with respect to EU28 = 100, is intended for cross-country comparisons rather than for temporal comparisons." Source is no longer available (previously at http://ec.europa.eu/eurostat/web/national-accounts/data/main-tables). Dataset ID: tec00114.
 #' @usage eu_gdp
 #' @keywords data
 NULL

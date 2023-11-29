@@ -8,6 +8,6 @@
 election
 }
 \description{
-2016 US presidential election results, obtained from \url{http://bit.ly/2016votecount}.
+2016 US presidential election results, obtained from \url{https://bit.ly/2016votecount}.
 }
 \keyword{data}
