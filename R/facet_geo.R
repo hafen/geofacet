@@ -196,7 +196,7 @@ grid_preview <- function(x, label = NULL, label_raw = NULL) {
     x$txt <- x[[label]]
   }
 
-  p <- ggplot2::ggplot(x, ggplot2::aes(.data$col, .data$row, label = "txt")) +
+  p <- ggplot2::ggplot(x, ggplot2::aes(.data$col, .data$row, label = .data$txt)) +
     ggplot2::geom_rect(
       xmin = as.numeric(x$col) - 0.5, xmax = as.numeric(x$col) + 0.5,
       ymin = as.numeric(x$row) - 0.5, ymax = as.numeric(x$row) + 0.5,
