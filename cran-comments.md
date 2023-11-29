@@ -1,6 +1,8 @@
 ## Release summary
 
-**Resubmission:** Fix issue with a broken URL.
+New submission
+   
+Package was archived on CRAN today
 
 - Updated to be compatible with ggplot2 updates
 - Added new grids
@@ -8,7 +10,7 @@
 
 ## Test environments
 
-* local OS X install, R 4.0.0
+* local OS X install, R 4.3.2
 * ubuntu 16.04 (on travis-ci), R 4.0.0
 * win-builder (devel and release)
 

@@ -43,7 +43,7 @@ library(ggplot2)
 
 The main function in this package is `facet_geo()` and its use can be thought of as equivalent to ggplot2's `facet_wrap()` except for the output it creates. If you know how to use ggplot2, then you essentially know how to use this package.
 
-Let's consider an example based on [this article](https://www.axios.com/an-emoji-built-from-data-for-every-state-2408885674.html), which uses emoji / Chernoff faces to show various quality-of-life metrics for US states.
+Let's consider an example based on [this article](https://www.axios.com/2017/12/15/the-emoji-states-of-america-1513302318), which uses emoji / Chernoff faces to show various quality-of-life metrics for US states.
 
 This data is available in the geofacet package under the name `state_ranks`.
 
@@ -254,7 +254,7 @@ ggplot(election, aes("", pct, fill = candidate)) +
   facet_geo(~ state, grid = "us_state_grid2") +
   scale_y_continuous(expand = c(0, 0)) +
   labs(title = "2016 Election Results",
-    caption = "Data Source: http://bit.ly/2016votecount",
+    caption = "Data Source: https://docs.google.com/spreadsheets/d/133Eb4qQmOxNvtesw2hdVns073R68EZx4SfCnP4IGQf8",
     x = NULL,
     y = "Percentage of Voters") +
   theme(axis.title.x = element_blank(),
@@ -271,7 +271,7 @@ ggplot(election, aes(candidate, pct, fill = candidate)) +
   theme_bw() +
   coord_flip() +
   labs(title = "2016 Election Results",
-    caption = "Data Source: http://bit.ly/2016votecount",
+    caption = "Data Source: https://docs.google.com/spreadsheets/d/133Eb4qQmOxNvtesw2hdVns073R68EZx4SfCnP4IGQf8",
     x = NULL,
     y = "Percentage of Voters") +
   theme(strip.text.x = element_text(size = 6))
@@ -284,7 +284,7 @@ ggplot(election, aes(candidate, votes / 1000000, fill = candidate)) +
   facet_geo(~ state, grid = "us_state_grid2") +
   coord_flip() +
   labs(title = "2016 Election Results",
-    caption = "Data Source: http://bit.ly/2016votecount",
+    caption = "Data Source: https://docs.google.com/spreadsheets/d/133Eb4qQmOxNvtesw2hdVns073R68EZx4SfCnP4IGQf8",
     x = NULL,
     y = "Votes (millions)") +
   theme(strip.text.x = element_text(size = 6))

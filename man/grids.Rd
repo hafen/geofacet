@@ -468,7 +468,7 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{argentina_grid1:} Grid for the 23 provinces of Argentina. It includes the Malvinas/Falkland Islands and the Antarctic Territories (these are disputed, but they are included since many researchers might use data from these locations). Image reference \href{https://s-media-cache-ak0.pinimg.com/736x/bf/cb/96/bfcb9654477c127d3b0e0b72d5be65fc.jpg}{here}. Thanks to \href{https://github.com/eliocamp}{eliocamp}.
+\item \strong{argentina_grid1:} Grid for the 23 provinces of Argentina. It includes the Malvinas/Falkland Islands and the Antarctic Territories (these are disputed, but they are included since many researchers might use data from these locations). Image reference \href{https://i.pinimg.com/736x/bf/cb/96/bfcb9654477c127d3b0e0b72d5be65fc.jpg}{here}. Thanks to \href{https://github.com/eliocamp}{eliocamp}.
 }
 
 \itemize{
@@ -556,11 +556,11 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{ng_state_grid1:} Grid layout for the 37 Federal States of Nigeria. Image reference \href{https://camo.githubusercontent.com/fa12bca8fe3f3de3d7af707400adbc7fc4656cc3/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f382f38332f4e6967657269615f7374617465732e706e67}{here}. Thanks to \href{https://github.com/ghosthedirewolf}{ghosthedirewolf}.
+\item \strong{ng_state_grid1:} Grid layout for the 37 Federal States of Nigeria. Image reference \href{https://camo.githubusercontent.com/fa12bca8fe3f3de3d7af707400adbc7fc4656cc3/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f382f38332f4e6967657269615f7374617465732e706e67}{here}. Thanks to \href{https://github.com/aledemogr}{aledemogr}.
 }
 
 \itemize{
-\item \strong{bd_upazila_grid1:} Grid layout for Bangladesh 64 Upazilas. Image reference \href{https://camo.githubusercontent.com/df1e4aff5a3e0238afef97586d324d9b23acf27b/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f322f32382f42445f4d61705f61646d696e2e7376672f38303070782d42445f4d61705f61646d696e2e7376672e706e67}{here}. Thanks to \href{https://github.com/ghosthedirewolf}{ghosthedirewolf}.
+\item \strong{bd_upazila_grid1:} Grid layout for Bangladesh 64 Upazilas. Image reference \href{https://camo.githubusercontent.com/df1e4aff5a3e0238afef97586d324d9b23acf27b/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f322f32382f42445f4d61705f61646d696e2e7376672f38303070782d42445f4d61705f61646d696e2e7376672e706e67}{here}. Thanks to \href{https://github.com/aledemogr}{aledemogr}.
 }
 
 \itemize{
@@ -604,7 +604,7 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{jo_gov_grid1:} Grid layout for Governorates of Jordan. Image reference \href{https://user-images.githubusercontent.com/1275592/82837533-32964c00-9e7e-11ea-841f-8ab3a202b888.png}{here}. Thanks to \href{https://github.com/ghosthedirewolf}{ghosthedirewolf}.
+\item \strong{jo_gov_grid1:} Grid layout for Governorates of Jordan. Image reference \href{https://user-images.githubusercontent.com/1275592/82837533-32964c00-9e7e-11ea-841f-8ab3a202b888.png}{here}. Thanks to \href{https://github.com/aledemogr}{aledemogr}.
 }
 
 \itemize{
@@ -648,7 +648,7 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{us_nh_counties_grid1:} Grid layout for the 10 counties in New Hampshire. Image reference \href{https://en.wikipedia.org/wiki/List_of_counties_in_New_Hampshire#/media/File:New_Hampshire_Locator_Map.PNG}{here}. Thanks to \href{https://github.com/soungl}{soungl}.
+\item \strong{us_nh_counties_grid1:} Grid layout for the 10 counties in New Hampshire. Image reference \href{https://en.wikipedia.org/wiki/List_of_counties_in_New_Hampshire#/media/File:New_Hampshire_Locator_Map.PNG}{here}. Thanks to \href{https://github.com/ghost}{ghost}.
 }
 
 \itemize{
@@ -752,7 +752,7 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{us_mo_counties_grid1:} Grids for Counties of Missouri, United States Image reference \href{https://private-user-images.githubusercontent.com/1275592/286454845-404f638c-76fe-4ef7-8756-e536ba3b5bfe.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDEyMjQ5MzYsIm5iZiI6MTcwMTIyNDYzNiwicGF0aCI6Ii8xMjc1NTkyLzI4NjQ1NDg0NS00MDRmNjM4Yy03NmZlLTRlZjctODc1Ni1lNTM2YmEzYjViZmUucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQUlXTkpZQVg0Q1NWRUg1M0ElMkYyMDIzMTEyOSUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyMzExMjlUMDIyMzU2WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9OGFhZmNmMTljMDMzZjYyZjc4OTRjMjI2NWY3NTUyMjNlMjViZjc5NGRiMjEwZWY4YzllYjhiYzNjNGE4YzZjNCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmYWN0b3JfaWQ9MCZrZXlfaWQ9MCZyZXBvX2lkPTAifQ.dHa3geXvsIVsHuXvMhqT3I6seiiCOqTFIv3AeSF96Dw}{here}. Thanks to \href{https://github.com/Yanqi-Xu}{Yanqi-Xu}.
+\item \strong{us_mo_counties_grid1:} Grids for Counties of Missouri, United States Image reference \href{https://camo.githubusercontent.com/aecf36302e81059f92f399587faae8c88a81d6711ac468438c8c6ce71c2fd88a/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f322f32342f4d6973736f7572695f4c6f6361746f725f4d61702e504e47}{here}. Thanks to \href{https://github.com/Yanqi-Xu}{Yanqi-Xu}.
 }
 
 \itemize{
@@ -776,7 +776,7 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{ca_quebec_electoral_districts_grid1:} Grid of Electoral Districts of Québec, Canada Image reference \href{https://private-user-images.githubusercontent.com/1275592/286448312-3de49f2f-cc0b-4509-b67a-84329245e4ab.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDEyMjI1NTksIm5iZiI6MTcwMTIyMjI1OSwicGF0aCI6Ii8xMjc1NTkyLzI4NjQ0ODMxMi0zZGU0OWYyZi1jYzBiLTQ1MDktYjY3YS04NDMyOTI0NWU0YWIucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQUlXTkpZQVg0Q1NWRUg1M0ElMkYyMDIzMTEyOSUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyMzExMjlUMDE0NDE5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YjFjMjg3MTUzYTBkYmFkYWY1ODM5Nzg5YTg0MjIyOWM0MWJjMTJiZmMxZDE1MzVjMTY3MjEyY2EzMjlhNTIzNiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmYWN0b3JfaWQ9MCZrZXlfaWQ9MCZyZXBvX2lkPTAifQ.qGJHg9WguHQZ9Hixk3DS_rmaZZd6eQJNpeJykSMQpbw}{here}. Thanks to \href{https://github.com/jhroy}{jhroy}.
+\item \strong{ca_quebec_electoral_districts_grid1:} Grid of Electoral Districts of Québec, Canada Image reference \href{https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/2022_Québec_General_Election_Map.svg/1020px-2022_Québec_General_Election_Map.svg.png?20221230235759}{here}. Thanks to \href{https://github.com/jhroy}{jhroy}.
 }
 
 \itemize{
@@ -876,7 +876,7 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{fr_departements_grid1:} Grid for France's departements, the second levels of administrative boundaries after the regions Image reference \href{https://private-user-images.githubusercontent.com/1275592/286455090-673ae153-092d-4632-ab43-d6be18139a1c.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDEyMjUwMjAsIm5iZiI6MTcwMTIyNDcyMCwicGF0aCI6Ii8xMjc1NTkyLzI4NjQ1NTA5MC02NzNhZTE1My0wOTJkLTQ2MzItYWI0My1kNmJlMTgxMzlhMWMucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQUlXTkpZQVg0Q1NWRUg1M0ElMkYyMDIzMTEyOSUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyMzExMjlUMDIyNTIwWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MzU5MDY3YzhhYjQ2OWIxYjdmYTc4MDI2NjM0ZGRhYTBkNjMwOTEyYWFkZmZlNjY2MzA0MmFhMjMyNDUwZDA3MSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmYWN0b3JfaWQ9MCZrZXlfaWQ9MCZyZXBvX2lkPTAifQ.-V_AHDxiL3yAkk-oJAUYtdLM74O-_3ITjSYzU5-G8lo}{here}. Thanks to \href{https://github.com/tvroylandt}{tvroylandt}.
+\item \strong{fr_departements_grid1:} Grid for France's departements, the second levels of administrative boundaries after the regions Image reference \href{https://camo.githubusercontent.com/790b9e52bccf40a4934c37ce58ea7726831811284200fc88abebce1ea22304b6/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f622f62312f50726f76696e6365735f6f665f4672616e63655f2532386e756d657265642532392e7376672f3139323070782d50726f76696e6365735f6f665f4672616e63655f2532386e756d657265642532392e7376672e706e67}{here}. Thanks to \href{https://github.com/tvroylandt}{tvroylandt}.
 }
 
 \itemize{
@@ -908,7 +908,7 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{us_state_without_DC_grid3:} United States grid without Washington, D.C Image reference \href{https://camo.githubusercontent.com/5038126fbe0052e7d42602dc6856aedc7822f639/687474703a2f2f6269742e6c792f75732d67726964}{here}. Thanks to \href{https://github.com/truongduongvn2}{truongduongvn2}.
+\item \strong{us_state_without_DC_grid3:} United States grid without Washington, D.C Image reference \href{https://camo.githubusercontent.com/5038126fbe0052e7d42602dc6856aedc7822f639/687474703a2f2f6269742e6c792f75732d67726964}{here}. Thanks to \href{https://github.com/ghost}{ghost}.
 }
 
 \itemize{
