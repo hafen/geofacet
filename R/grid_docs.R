@@ -138,7 +138,7 @@ NULL
 
 #' @name us_wa_counties_grid1
 #' @description
-#' * **us_wa_counties_grid1:** Grid for Washington counties. Image reference [here](https://www.countymapsofwashington.com/aapics/washingstate.gif).
+#' * **us_wa_counties_grid1:** Grid for Washington counties. Image reference [here](https://countymapsofwashington.com/aapics/washingstate.gif).
 #' @usage us_wa_counties_grid1
 #' @rdname grids
 #' @md

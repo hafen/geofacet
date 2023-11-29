@@ -496,7 +496,7 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{us_wa_counties_grid1:} Grid for Washington counties. Image reference \href{https://www.countymapsofwashington.com/aapics/washingstate.gif}{here}.
+\item \strong{us_wa_counties_grid1:} Grid for Washington counties. Image reference \href{https://countymapsofwashington.com/aapics/washingstate.gif}{here}.
 }
 
 \itemize{
