@@ -153,7 +153,7 @@ This will open up a web application with an empty grid and instructions on how t
 Another way to use the designer is to populate it with an existing grid you want to modify. For example, if I want to modify `us_state_grid1`, I can call:
 
 ```r
-grid_design(data = us_state_grid2, img = "http://bit.ly/us-grid")
+grid_design(data = us_state_grid2, img = "https://bit.ly/us-grid")
 ```
 
 The app will look like this:

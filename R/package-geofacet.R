@@ -50,7 +50,7 @@ NULL
 #' @name election
 #' @docType data
 #' @description
-#' 2016 US presidential election results, obtained from \url{https://bit.ly/2016votecount}.
+#' 2016 US presidential election results, obtained from \url{https://docs.google.com/spreadsheets/d/133Eb4qQmOxNvtesw2hdVns073R68EZx4SfCnP4IGQf8/htmlview?sle=true}.
 #' @usage election
 #' @keywords data
 NULL

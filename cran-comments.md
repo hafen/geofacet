@@ -19,6 +19,10 @@ Updates since last release:
 
 0 errors | 0 warnings | 0 notes
 
+Possibly misspelled words in DESCRIPTION:
+  Geofaceting (7:64)
+  geofaceting (7:23)
+
 ## Reverse dependencies
 
 R CMD check ran successfully on the only reverse dependencies geoAr and geofi.
