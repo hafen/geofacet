@@ -26,6 +26,8 @@ jobs:
           extra-packages: any::covr
           needs: coverage
 
+      - run: Rscript -e 'install.packages("rnaturalearthhires", repos = "https://ropensci.r-universe.dev", type = "source")'
+
       - name: Test coverage
         run: covr::codecov(quiet = FALSE)
         shell: Rscript {0}
