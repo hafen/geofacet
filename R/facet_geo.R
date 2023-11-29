@@ -173,6 +173,7 @@ plot.facet_geo <- function(x, ...) {
 #' @param x a data frame containing a grid
 #' @param label the column name in \code{x} that should be used for text labels in the grid plot
 #' @param label_raw the column name in the optional SpatialPolygonsDataFrame attached to \code{x} that should be used for text labels in the raw geography plot
+#' @param do_plot should the grid preview be plotted?
 #' @export
 #' @importFrom ggplot2 ggplot geom_rect geom_text aes xlim ylim
 #' @importFrom gridExtra grid.arrange
@@ -180,7 +181,7 @@ plot.facet_geo <- function(x, ...) {
 #' @examples
 #' grid_preview(us_state_grid2)
 #' grid_preview(eu_grid1, label = "name")
-grid_preview <- function(x, label = NULL, label_raw = NULL) {
+grid_preview <- function(x, label = NULL, label_raw = NULL, do_plot = TRUE) {
 
   if (!inherits(x, "geofacet_grid"))
     x <- get_grid(x)
@@ -221,7 +222,8 @@ grid_preview <- function(x, label = NULL, label_raw = NULL) {
     p2 <- plot_geo_raw(spdf, label = label_raw)
     p <- gridExtra::grid.arrange(p2, p, nrow = 1)
   } else {
-    suppressWarnings(plot(p))
+    if (do_plot)
+      plot(p)
   }
   invisible(p)
 }
