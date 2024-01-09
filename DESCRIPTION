@@ -31,7 +31,7 @@ Suggests:
     lintr,
     knitr,
     rmarkdown
-URL: https://github.com/hafen/geofacet
+URL: https://github.com/hafen/geofacet, https://hafen.github.io/geofacet/
 BugReports: https://github.com/hafen/geofacet/issues
 RoxygenNote: 7.2.3
 VignetteBuilder: knitr
