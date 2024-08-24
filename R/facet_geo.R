@@ -99,14 +99,19 @@ get_geofacet_grob <- function(x) {
       nr <- max(grd$row)
       for (ii in seq_len(nc)) {
         idx <- which(!is.na(grd$label[grd$col == ii]))
-        l1 <- paste0("axis-b-", ii, "-", nr)
+        b1 <- paste0("axis-b-", ii, "-", nr)
+        t1 <- paste0("axis-t-", ii, "-1")
         if (length(idx) > 0) {
           last <- max(idx)
-          l2 <- paste0("axis-b-", ii, "-", last)
-          g$layout[g$layout$name == l1, c("t", "b")] <-
-            g$layout[g$layout$name == l2, c("t", "b")]
+          b2 <- paste0("axis-b-", ii, "-", last)
+          g$layout[g$layout$name == b1, c("t", "b")] <-
+            g$layout[g$layout$name == b2, c("t", "b")]
+          first <- min(idx)
+          t2 <- paste0("axis-t-", ii, "-", first)
+          g$layout[g$layout$name == t1, c("t", "b")] <-
+          g$layout[g$layout$name == t2, c("t", "b")]
         } else {
-          extra_rgx <- c(extra_rgx, l1)
+          extra_rgx <- c(extra_rgx, b1)
         }
       }
     }
@@ -115,13 +120,18 @@ get_geofacet_grob <- function(x) {
       for (ii in seq_len(max(grd$row))) {
         idx <- which(!is.na(grd$label[grd$row == ii]))
         l1 <- paste0("axis-l-", ii, "-1")
+        r1 <- paste0("axis-r-", ii, "-", max(grd$col))
         if (length(idx) > 0) {
           first <- min(idx)
           l2 <- paste0("axis-l-", ii, "-", first)
           g$layout[g$layout$name == l1, c("l", "r")] <-
             g$layout[g$layout$name == l2, c("l", "r")]
+          last <- max(idx)
+          r2 <- paste0("axis-r-", ii, "-", last)
+          g$layout[g$layout$name == r1, c("l", "r")] <-
+            g$layout[g$layout$name == r2, c("l", "r")]
         } else {
-          extra_rgx <- c(extra_rgx, l1)
+          extra_rgx <- c(extra_rgx, r1, l1)
         }
       }
     }

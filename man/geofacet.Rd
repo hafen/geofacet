@@ -2,8 +2,26 @@
 % Please edit documentation in R/package-geofacet.R
 \docType{package}
 \name{geofacet}
+\alias{geofacet-package}
 \alias{geofacet}
 \title{geofacet}
 \description{
 For examples, see \code{\link{facet_geo}}.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/hafen/geofacet}
+  \item Report bugs at \url{https://github.com/hafen/geofacet/issues}
+}
+
+}
+\author{
+\strong{Maintainer}: Ryan Hafen \email{rhafen@gmail.com}
+
+Other contributors:
+\itemize{
+  \item Barret Schloerke \email{schloerke@gmail.com} [contributor]
+}
+
 }
