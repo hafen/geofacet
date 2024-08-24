@@ -1,7 +1,7 @@
 [![R-CMD-check](https://github.com/hafen/geofacet/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/hafen/geofacet/actions/workflows/R-CMD-check.yaml)
 [![Codecov test coverage](https://codecov.io/gh/hafen/geofacet/branch/master/graph/badge.svg)](https://app.codecov.io/gh/hafen/geofacet?branch=master)
-[![CRAN](http://www.r-pkg.org/badges/version/geofacet)](https://CRAN.R-project.org/package=geofacet)
-[![CRAN Downloads](http://cranlogs.r-pkg.org/badges/geofacet)](https://CRAN.R-project.org/package=geofacet)
+[![CRAN](https://www.r-pkg.org/badges/version/geofacet)](https://CRAN.R-project.org/package=geofacet)
+[![CRAN Downloads](https://cranlogs.r-pkg.org/badges/geofacet)](https://CRAN.R-project.org/package=geofacet)
 
 # geofacet <img src="man/figures/logo.png" align="right" alt="" width="120" />
 
