@@ -74,7 +74,7 @@ ggplot_add.facet_geo_spec <- function(object, plot, object_name) {
 }
 
 #' Perform post-processing on a facet_geo ggplot object
-#' 
+#'
 #' @param x object of class 'facet_geo'
 #' @export
 get_geofacet_grob <- function(x) {
@@ -270,6 +270,8 @@ grid_design <- function(data = NULL, img = NULL, label = "code", auto_img = TRUE
     rows <- c(paste(names(data), collapse = ","),
       apply(data, 1, function(x) paste(x, collapse = ",")))
     data_csv <- paste(rows, collapse = "\n")
+    data_csv <- gsub("&", "%26", data_csv)
+
   } else {
     data_csv <- ""
   }
