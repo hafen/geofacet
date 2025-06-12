@@ -4,7 +4,7 @@
 \alias{grid_preview}
 \title{Plot a preview of a grid}
 \usage{
-grid_preview(x, label = NULL, label_raw = NULL)
+grid_preview(x, label = NULL, label_raw = NULL, do_plot = TRUE)
 }
 \arguments{
 \item{x}{a data frame containing a grid}
@@ -12,6 +12,8 @@ grid_preview(x, label = NULL, label_raw = NULL)
 \item{label}{the column name in \code{x} that should be used for text labels in the grid plot}
 
 \item{label_raw}{the column name in the optional SpatialPolygonsDataFrame attached to \code{x} that should be used for text labels in the raw geography plot}
+
+\item{do_plot}{should the grid preview be plotted?}
 }
 \description{
 Plot a preview of a grid

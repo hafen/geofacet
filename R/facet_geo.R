@@ -64,14 +64,18 @@ ggplot_add.facet_geo_spec <- function(object, plot, object_name) {
   grd <- tmp$grd
 
   plot <- plot %+% do.call(ggplot2::facet_wrap, object)
-  attr(plot, "geofacet") <- list(grid = grd, move_axes = move_axes, scales = object$scales)
+  attr(plot, "geofacet") <- list(
+    grid = grd,
+    move_axes = move_axes,
+    scales = object$scales
+  )
 
   class(plot) <- c("facet_geo", class(plot))
   return(plot)
 }
 
 #' Perform post-processing on a facet_geo ggplot object
-#' 
+#'
 #' @param x object of class 'facet_geo'
 #' @export
 get_geofacet_grob <- function(x) {
@@ -96,14 +100,19 @@ get_geofacet_grob <- function(x) {
       nr <- max(grd$row)
       for (ii in seq_len(nc)) {
         idx <- which(!is.na(grd$label[grd$col == ii]))
-        l1 <- paste0("axis-b-", ii, "-", nr)
+        b1 <- paste0("axis-b-", ii, "-", nr)
+        t1 <- paste0("axis-t-", ii, "-1")
         if (length(idx) > 0) {
           last <- max(idx)
-          l2 <- paste0("axis-b-", ii, "-", last)
-          g$layout[g$layout$name == l1, c("t", "b")] <-
-            g$layout[g$layout$name == l2, c("t", "b")]
+          b2 <- paste0("axis-b-", ii, "-", last)
+          g$layout[g$layout$name == b1, c("t", "b")] <-
+            g$layout[g$layout$name == b2, c("t", "b")]
+          first <- min(idx)
+          t2 <- paste0("axis-t-", ii, "-", first)
+          g$layout[g$layout$name == t1, c("t", "b")] <-
+          g$layout[g$layout$name == t2, c("t", "b")]
         } else {
-          extra_rgx <- c(extra_rgx, l1)
+          extra_rgx <- c(extra_rgx, b1)
         }
       }
     }
@@ -112,13 +121,18 @@ get_geofacet_grob <- function(x) {
       for (ii in seq_len(max(grd$row))) {
         idx <- which(!is.na(grd$label[grd$row == ii]))
         l1 <- paste0("axis-l-", ii, "-1")
+        r1 <- paste0("axis-r-", ii, "-", max(grd$col))
         if (length(idx) > 0) {
           first <- min(idx)
           l2 <- paste0("axis-l-", ii, "-", first)
           g$layout[g$layout$name == l1, c("l", "r")] <-
             g$layout[g$layout$name == l2, c("l", "r")]
+          last <- max(idx)
+          r2 <- paste0("axis-r-", ii, "-", last)
+          g$layout[g$layout$name == r1, c("l", "r")] <-
+            g$layout[g$layout$name == r2, c("l", "r")]
         } else {
-          extra_rgx <- c(extra_rgx, l1)
+          extra_rgx <- c(extra_rgx, r1, l1)
         }
       }
     }
@@ -170,13 +184,15 @@ plot.facet_geo <- function(x, ...) {
 #' @param x a data frame containing a grid
 #' @param label the column name in \code{x} that should be used for text labels in the grid plot
 #' @param label_raw the column name in the optional SpatialPolygonsDataFrame attached to \code{x} that should be used for text labels in the raw geography plot
+#' @param do_plot should the grid preview be plotted?
 #' @export
 #' @importFrom ggplot2 ggplot geom_rect geom_text aes xlim ylim
 #' @importFrom gridExtra grid.arrange
+#' @importFrom rlang .data
 #' @examples
 #' grid_preview(us_state_grid2)
 #' grid_preview(eu_grid1, label = "name")
-grid_preview <- function(x, label = NULL, label_raw = NULL) {
+grid_preview <- function(x, label = NULL, label_raw = NULL, do_plot = TRUE) {
 
   if (!inherits(x, "geofacet_grid"))
     x <- get_grid(x)
@@ -192,7 +208,7 @@ grid_preview <- function(x, label = NULL, label_raw = NULL) {
     x$txt <- x[[label]]
   }
 
-  p <- ggplot2::ggplot(x, ggplot2::aes_string("col", "row", label = "txt")) +
+  p <- ggplot2::ggplot(x, ggplot2::aes(.data$col, .data$row, label = .data$txt)) +
     ggplot2::geom_rect(
       xmin = as.numeric(x$col) - 0.5, xmax = as.numeric(x$col) + 0.5,
       ymin = as.numeric(x$row) - 0.5, ymax = as.numeric(x$row) + 0.5,
@@ -217,7 +233,8 @@ grid_preview <- function(x, label = NULL, label_raw = NULL) {
     p2 <- plot_geo_raw(spdf, label = label_raw)
     p <- gridExtra::grid.arrange(p2, p, nrow = 1)
   } else {
-    plot(p)
+    if (do_plot)
+      plot(p)
   }
   invisible(p)
 }
@@ -254,6 +271,8 @@ grid_design <- function(data = NULL, img = NULL, label = "code", auto_img = TRUE
     rows <- c(paste(names(data), collapse = ","),
       apply(data, 1, function(x) paste(x, collapse = ",")))
     data_csv <- paste(rows, collapse = "\n")
+    data_csv <- gsub("&", "%26", data_csv)
+
   } else {
     data_csv <- ""
   }
@@ -405,10 +424,11 @@ get_grid <- function(grid) {
     }
   } else if (inherits(grid, "data.frame")) {
     grd <- check_grid(grid)
-    message_nice("Note: You provided a user-specified grid. ",
-      "If this is a generally-useful grid, please consider submitting it ",
-      "to become a part of the geofacet package. You can do this easily by ",
-      "calling:\ngrid_submit(__grid_df_name__)")
+    if (!inherits(grid, "geofacet_grid"))
+      message_nice("Note: You provided a user-specified grid. ",
+        "If this is a generally-useful grid, please consider submitting it ",
+        "to become a part of the geofacet package. You can do this easily by ",
+        "calling:\ngrid_submit(__grid_df_name__)")
   } else {
     stop("grid not recognized...")
   }

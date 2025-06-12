@@ -30,7 +30,7 @@ NULL
 #' @name state_ranks
 #' @docType data
 #' @description
-#' State rankings in the following categories with the variable upon which ranking is based in parentheses: education (adults over 25 with a bachelor's degree in 2015), employment (March 2017 unemployment rate - Bureau of Labor Statistics), health (obesity rate from 2015 - Centers for Disease Control), insured (uninsured rate in 2015 - US Census), sleep (share of adults that report at least 7 hours of sleep each night from 2016 - Disease Control), wealth (poverty rate 2014/15 - US Census). In each category, the lower the ranking, the more favorable. This data is based on data presented here: \url{https://www.axios.com/an-emoji-built-from-data-for-every-state-2408885674.html}
+#' State rankings in the following categories with the variable upon which ranking is based in parentheses: education (adults over 25 with a bachelor's degree in 2015), employment (March 2017 unemployment rate - Bureau of Labor Statistics), health (obesity rate from 2015 - Centers for Disease Control), insured (uninsured rate in 2015 - US Census), sleep (share of adults that report at least 7 hours of sleep each night from 2016 - Disease Control), wealth (poverty rate 2014/15 - US Census). In each category, the lower the ranking, the more favorable. This data is based on data presented here: \url{https://www.axios.com/2017/12/15/the-emoji-states-of-america-1513302318}
 #' @usage state_ranks
 #' @keywords data
 NULL
@@ -50,7 +50,7 @@ NULL
 #' @name election
 #' @docType data
 #' @description
-#' 2016 US presidential election results, obtained from \url{http://bit.ly/2016votecount}.
+#' 2016 US presidential election results, obtained from \url{https://docs.google.com/spreadsheets/d/133Eb4qQmOxNvtesw2hdVns073R68EZx4SfCnP4IGQf8/htmlview?sle=true}.
 #' @usage election
 #' @keywords data
 NULL
@@ -60,7 +60,7 @@ NULL
 #' @name eu_imm
 #' @docType data
 #' @description
-#' Annual number of resettled persons for each EU country. "Resettled refugees means persons who have been granted an authorization to reside in a Member State within the framework of a national or Community resettlement scheme.". Source: \url{http://ec.europa.eu/eurostat/cache/metadata/en/migr_asydec_esms.htm}. Dataset ID: tps00195.
+#' Annual number of resettled persons for each EU country. "Resettled refugees means persons who have been granted an authorization to reside in a Member State within the framework of a national or Community resettlement scheme.". Source: \url{https://ec.europa.eu/eurostat/cache/metadata/en/migr_asydec_esms.htm}. Dataset ID: tps00195.
 #' @usage eu_imm
 #' @keywords data
 NULL
@@ -70,7 +70,7 @@ NULL
 #' @name eu_gdp
 #' @docType data
 #' @description
-#' GDP per capita in PPS - Index (EU28 = 100). "Gross domestic product (GDP) is a measure for the economic activity. It is defined as the value of all goods and services produced less the value of any goods or services used in their creation. The volume index of GDP per capita in Purchasing Power Standards (PPS) is expressed in relation to the European Union (EU28) average set to equal 100. If the index of a country is higher than 100, this country's level of GDP per head is higher than the EU average and vice versa. Basic figures are expressed in PPS, i.e. a common currency that eliminates the differences in price levels between countries allowing meaningful volume comparisons of GDP between countries. Please note that the index, calculated from PPS figures and expressed with respect to EU28 = 100, is intended for cross-country comparisons rather than for temporal comparisons." Source: \url{http://ec.europa.eu/eurostat/web/national-accounts/data/main-tables}. Dataset ID: tec00114.
+#' GDP per capita in PPS - Index (EU28 = 100). "Gross domestic product (GDP) is a measure for the economic activity. It is defined as the value of all goods and services produced less the value of any goods or services used in their creation. The volume index of GDP per capita in Purchasing Power Standards (PPS) is expressed in relation to the European Union (EU28) average set to equal 100. If the index of a country is higher than 100, this country's level of GDP per head is higher than the EU average and vice versa. Basic figures are expressed in PPS, i.e. a common currency that eliminates the differences in price levels between countries allowing meaningful volume comparisons of GDP between countries. Please note that the index, calculated from PPS figures and expressed with respect to EU28 = 100, is intended for cross-country comparisons rather than for temporal comparisons." Source is no longer available (previously at http://ec.europa.eu/eurostat/web/national-accounts/data/main-tables). Dataset ID: tec00114.
 #' @usage eu_gdp
 #' @keywords data
 NULL

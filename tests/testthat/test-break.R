@@ -59,7 +59,7 @@ test_that("things break in an expected way", {
         y = "Population density per square km") +
       theme_bw()
   },
-  "will be ignored")
+  "does not exist")
 
   my_grid <- us_state_grid1
 

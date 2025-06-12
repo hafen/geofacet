@@ -1,7 +1,0 @@
-pandoc: 2.2.3.2
-pkgdown: 1.5.1
-pkgdown_sha: ~
-articles:
-  geofacet: geofacet.html
-last_built: 2020-05-25T18:08Z
-

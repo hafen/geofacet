@@ -452,11 +452,11 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{gb_london_boroughs_grid:} Grid layout for the boroughs of London. Note that the column \code{code_ons} contains the \href{http://geoportal.statistics.gov.uk/datasets/464be6191a434a91a5fa2f52c7433333_0?uiTab=table}{codes} used by UK Office for National Statistics. Image reference \href{https://cloud.githubusercontent.com/assets/13021448/26399784/3133d684-4076-11e7-8eac-1e74d023bf18.jpg}{here}. Thanks to \href{https://github.com/eldenvo}{eldenvo}.
+\item \strong{gb_london_boroughs_grid:} Grid layout for the boroughs of London. Note that the column \code{code_ons} contains the codes used by UK Office for National Statistics. Image reference \href{https://cloud.githubusercontent.com/assets/13021448/26399784/3133d684-4076-11e7-8eac-1e74d023bf18.jpg}{here}. Thanks to \href{https://github.com/eldenvo}{eldenvo}.
 }
 
 \itemize{
-\item \strong{nhs_scot_grid:} Grid layout for a grid of NHS Scotland Health Boards. Note that the column \code{code} contains the \href{http://geoportal.statistics.gov.uk/datasets/61dca36aa33e4aee99bbfa784fa9eb25_0?uiTab=table}{codes} used by UK Office for National Statistics. Image reference \href{https://cloud.githubusercontent.com/assets/24879214/26426113/253658d0-40cf-11e7-88b5-fe5ee7fda44f.png}{here}. Thanks to \href{https://github.com/jsphdms}{jsphdms}.
+\item \strong{nhs_scot_grid:} Grid layout for a grid of NHS Scotland Health Boards. Note that the column \code{code} contains the codes used by UK Office for National Statistics. Image reference \href{https://cloud.githubusercontent.com/assets/24879214/26426113/253658d0-40cf-11e7-88b5-fe5ee7fda44f.png}{here}. Thanks to \href{https://github.com/jsphdms}{jsphdms}.
 }
 
 \itemize{
@@ -468,7 +468,7 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{argentina_grid1:} Grid for the 23 provinces of Argentina. It includes the Malvinas/Falkland Islands and the Antarctic Territories (these are disputed, but they are included since many researchers might use data from these locations). Image reference \href{https://s-media-cache-ak0.pinimg.com/736x/bf/cb/96/bfcb9654477c127d3b0e0b72d5be65fc.jpg}{here}. Thanks to \href{https://github.com/eliocamp}{eliocamp}.
+\item \strong{argentina_grid1:} Grid for the 23 provinces of Argentina. It includes the Malvinas/Falkland Islands and the Antarctic Territories (these are disputed, but they are included since many researchers might use data from these locations). Image reference \href{https://i.pinimg.com/736x/bf/cb/96/bfcb9654477c127d3b0e0b72d5be65fc.jpg}{here}. Thanks to \href{https://github.com/eliocamp}{eliocamp}.
 }
 
 \itemize{
@@ -496,7 +496,7 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{us_wa_counties_grid1:} Grid for Washington counties. Image reference \href{http://www.countymapsofwashington.com/aapics/washingstate.gif}{here}.
+\item \strong{us_wa_counties_grid1:} Grid for Washington counties. Image reference \href{https://countymapsofwashington.com/aapics/washingstate.gif}{here}.
 }
 
 \itemize{
@@ -508,7 +508,7 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{se_counties_grid1:} Grid for counties of Sweden. Image reference \href{http://www.worldatlas.com/webimage/countrys/europe/lgcolor/secounties.gif}{here}. Thanks to \href{https://github.com/duleise}{duleise}.
+\item \strong{se_counties_grid1:} Grid for counties of Sweden. Image reference \href{https://www.worldatlas.com/webimage/countrys/europe/lgcolor/secounties.gif}{here}. Thanks to \href{https://github.com/duleise}{duleise}.
 }
 
 \itemize{
@@ -556,11 +556,11 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{ng_state_grid1:} Grid layout for the 37 Federal States of Nigeria. Image reference \href{https://camo.githubusercontent.com/fa12bca8fe3f3de3d7af707400adbc7fc4656cc3/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f382f38332f4e6967657269615f7374617465732e706e67}{here}. Thanks to \href{https://github.com/ghosthedirewolf}{ghosthedirewolf}.
+\item \strong{ng_state_grid1:} Grid layout for the 37 Federal States of Nigeria. Image reference \href{https://camo.githubusercontent.com/fa12bca8fe3f3de3d7af707400adbc7fc4656cc3/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f382f38332f4e6967657269615f7374617465732e706e67}{here}. Thanks to \href{https://github.com/aledemogr}{aledemogr}.
 }
 
 \itemize{
-\item \strong{bd_upazila_grid1:} Grid layout for Bangladesh 64 Upazilas. Image reference \href{https://camo.githubusercontent.com/df1e4aff5a3e0238afef97586d324d9b23acf27b/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f322f32382f42445f4d61705f61646d696e2e7376672f38303070782d42445f4d61705f61646d696e2e7376672e706e67}{here}. Thanks to \href{https://github.com/ghosthedirewolf}{ghosthedirewolf}.
+\item \strong{bd_upazila_grid1:} Grid layout for Bangladesh 64 Upazilas. Image reference \href{https://camo.githubusercontent.com/df1e4aff5a3e0238afef97586d324d9b23acf27b/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f322f32382f42445f4d61705f61646d696e2e7376672f38303070782d42445f4d61705f61646d696e2e7376672e706e67}{here}. Thanks to \href{https://github.com/aledemogr}{aledemogr}.
 }
 
 \itemize{
@@ -596,7 +596,7 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{sk_province_grid1:} Grid layout for South Korean sis and dos (metropolitan/special/autonomous cities and provinces). Image reference \href{http://tong.visitkorea.or.kr/enu/images/koreastay/korea_map.jpg}{here}. Thanks to \href{https://github.com/heon131}{heon131}.
+\item \strong{sk_province_grid1:} Grid layout for South Korean sis and dos (metropolitan/special/autonomous cities and provinces). Image reference \href{https://tong.visitkorea.or.kr/enu/images/koreastay/korea_map.jpg}{here}. Thanks to \href{https://github.com/heon131}{heon131}.
 }
 
 \itemize{
@@ -604,7 +604,7 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{jo_gov_grid1:} Grid layout for Governorates of Jordan. Image reference \href{https://user-images.githubusercontent.com/1275592/82837533-32964c00-9e7e-11ea-841f-8ab3a202b888.png}{here}. Thanks to \href{https://github.com/ghosthedirewolf}{ghosthedirewolf}.
+\item \strong{jo_gov_grid1:} Grid layout for Governorates of Jordan. Image reference \href{https://user-images.githubusercontent.com/1275592/82837533-32964c00-9e7e-11ea-841f-8ab3a202b888.png}{here}. Thanks to \href{https://github.com/aledemogr}{aledemogr}.
 }
 
 \itemize{
@@ -620,7 +620,7 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{br_states_grid2:} Grid for the 27 states of Brazil. Image reference \href{http://www.brazil-help.com/mapa_do_brasil.gif}{here}. Thanks to \href{https://github.com/hafen}{hafen}.
+\item \strong{br_states_grid2:} Grid for the 27 states of Brazil. Image reference \href{https://brazil-help.com/mapa_do_brasil.gif}{here}. Thanks to \href{https://github.com/hafen}{hafen}.
 }
 
 \itemize{
@@ -648,7 +648,7 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{us_nh_counties_grid1:} Grid layout for the 10 counties in New Hampshire. Image reference \href{https://en.wikipedia.org/wiki/List_of_counties_in_New_Hampshire#/media/File:New_Hampshire_Locator_Map.PNG}{here}. Thanks to \href{https://github.com/soungl}{soungl}.
+\item \strong{us_nh_counties_grid1:} Grid layout for the 10 counties in New Hampshire. Image reference \href{https://en.wikipedia.org/wiki/List_of_counties_in_New_Hampshire#/media/File:New_Hampshire_Locator_Map.PNG}{here}. Thanks to \href{https://github.com/ghost}{ghost}.
 }
 
 \itemize{
@@ -752,7 +752,7 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{us_mo_counties_grid1:} Grids for Counties of Missouri, United States Image reference \href{https://camo.githubusercontent.com/d58ebdce931d0d42085d3b4d76f9e809bd147f84/68747470733a2f2f6f736564612e6d6973736f7572692e6564752f636f756e7479706167652f4d4f5f636f756e746965732e706e67}{here}. Thanks to \href{https://github.com/Yanqi-Xu}{Yanqi-Xu}.
+\item \strong{us_mo_counties_grid1:} Grids for Counties of Missouri, United States Image reference \href{https://camo.githubusercontent.com/aecf36302e81059f92f399587faae8c88a81d6711ac468438c8c6ce71c2fd88a/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f322f32342f4d6973736f7572695f4c6f6361746f725f4d61702e504e47}{here}. Thanks to \href{https://github.com/Yanqi-Xu}{Yanqi-Xu}.
 }
 
 \itemize{
@@ -776,7 +776,7 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{ca_quebec_electoral_districts_grid1:} Grid of Electoral Districts of Québec, Canada Image reference \href{https://camo.githubusercontent.com/d1f75185f1a675f1a358297ad0dbdae1b0d7b131/68747470733a2f2f7777772e656c656374696f6e737175656265632e71632e63612f3730616e732f6173736574732f696d672f323031312d342e6a7067}{here}. Thanks to \href{https://github.com/jhroy}{jhroy}.
+\item \strong{ca_quebec_electoral_districts_grid1:} Grid of Electoral Districts of Québec, Canada Image reference \href{https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/2022_Québec_General_Election_Map.svg/1020px-2022_Québec_General_Election_Map.svg.png?20221230235759}{here}. Thanks to \href{https://github.com/jhroy}{jhroy}.
 }
 
 \itemize{
@@ -784,11 +784,11 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{cn_bj_districts_grid2:} Grid with districts of Beijing, China Image reference \href{https://camo.githubusercontent.com/c32d419c0b3d10fa007e68a66bf368752a45f8a9/68747470733a2f2f677373302e62647374617469632e636f6d2f2d346f33645361675f7849346b68476b706f574b314846366868792f6261696b652f63302533446261696b65313530253243352532433525324331353025324335302f7369676e3d34396436313237373464313062393132616263636665616361323934393736362f643034336164346264313133373366303036633533613533616530663462666266616564303430372e6a7067}{here}. Thanks to \href{https://github.com/zouhx11}{zouhx11}.
+\item \strong{cn_bj_districts_grid2:} Grid with districts of Beijing, China Image reference \href{https://user-images.githubusercontent.com/1275592/54295842-0ccea100-4571-11e9-8d3f-c60f4f7f2c0a.png}{here}. Thanks to \href{https://github.com/zouhx11}{zouhx11}.
 }
 
 \itemize{
-\item \strong{ar_santiago_del_estero_prov_grid1:} Grid with districts of Santiago del Estero Province, Argentina Image reference \href{https://camo.githubusercontent.com/82e68c0a0f0b243c8a9d21133227f74e05c93c6b/68747470733a2f2f74342e6b6e332e6e65742f746172696e67612f302f382f312f362f362f312f4d6565656b69692f3631382e6a7067}{here}. Thanks to \href{https://github.com/TuQmano}{TuQmano}.
+\item \strong{ar_santiago_del_estero_prov_grid1:} Grid with districts of Santiago del Estero Province, Argentina Image reference \href{https://camo.githubusercontent.com/5b7e451b3ccc8550c31644cf897c096256cc01ffc9c7f7f0a1284b29389fa34a/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f622f62382f446570617274616d656e746f5f416775697272655f25323853616e746961676f5f64656c5f45737465726f5f2d5f417267656e74696e612532392e706e67}{here}. Thanks to \href{https://github.com/TuQmano}{TuQmano}.
 }
 
 \itemize{
@@ -800,11 +800,11 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{ar_catamarca_prov_grid1:} Grid with districts of Catamarca Province, Argentina Image reference \href{https://camo.githubusercontent.com/8a25c2986d42003208644618e0e3d3c1950fcd92/687474703a2f2f7777772e616c6c2d617267656e74696e612e636f6d2e61722f77702d636f6e74656e742f75706c6f6164732f6d6170612d706f6c697469636f2d636174616d617263612e6a7067}{here}. Thanks to \href{https://github.com/TuQmano}{TuQmano}.
+\item \strong{ar_catamarca_prov_grid1:} Grid with districts of Catamarca Province, Argentina Image reference \href{https://camo.githubusercontent.com/a5997d24eda54a3ebce19a8bad590348e3926142db79d665c9a8c17b72c08d3c/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f322f32372f416d6261746f5f25323850726f76696e6369615f64655f436174616d617263615f2d5f417267656e74696e612532392e7376672f3139323070782d416d6261746f5f25323850726f76696e6369615f64655f436174616d617263615f2d5f417267656e74696e612532392e7376672e706e67}{here}. Thanks to \href{https://github.com/TuQmano}{TuQmano}.
 }
 
 \itemize{
-\item \strong{ar_jujuy_prov_grid1:} Grid with districts of Jujuy Province, Argentina Image reference \href{https://camo.githubusercontent.com/df150ce3e47d85c63efc43a5614f5f6366970669/687474703a2f2f7777772e64697065632e6a756a75792e676f762e61722f6d617061735f6a756a75795f63656e736f2f6a756a7579646570617274616d656e746f732e676966}{here}. Thanks to \href{https://github.com/TuQmano}{TuQmano}.
+\item \strong{ar_jujuy_prov_grid1:} Grid with districts of Jujuy Province, Argentina Image reference \href{https://camo.githubusercontent.com/9ccfff93636f3067deca6ead3cd7320ef0ff76b0f6628541baf2f17f9a612e14/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f372f37662f436f6368696e6f63615f25323850726f76696e6369615f64655f4a756a75795f2d5f417267656e74696e612532392e7376672f3235363070782d436f6368696e6f63615f25323850726f76696e6369615f64655f4a756a75795f2d5f417267656e74696e612532392e7376672e706e67}{here}. Thanks to \href{https://github.com/TuQmano}{TuQmano}.
 }
 
 \itemize{
@@ -876,11 +876,11 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{fr_departements_grid1:} Grid for France's departements, the second levels of administrative boundaries after the regions Image reference \href{https://camo.githubusercontent.com/6c082d52645d75469d542aefed9ef2feb48b2247/68747470733a2f2f7777772e616964656d6f692e6e65742f67656f677261706869652f6672616e63652f646570617274656d656e745f7265647569742e676966}{here}. Thanks to \href{https://github.com/tvroylandt}{tvroylandt}.
+\item \strong{fr_departements_grid1:} Grid for France's departements, the second levels of administrative boundaries after the regions Image reference \href{https://camo.githubusercontent.com/790b9e52bccf40a4934c37ce58ea7726831811284200fc88abebce1ea22304b6/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f622f62312f50726f76696e6365735f6f665f4672616e63655f2532386e756d657265642532392e7376672f3139323070782d50726f76696e6365735f6f665f4672616e63655f2532386e756d657265642532392e7376672e706e67}{here}. Thanks to \href{https://github.com/tvroylandt}{tvroylandt}.
 }
 
 \itemize{
-\item \strong{ar_salta_prov_grid2:} Grids for Salta Province Argentina Image reference \href{https://camo.githubusercontent.com/7ced09c1b65c46671c333cc13acbaf864eaa358b/68747470733a2f2f7777772e616d657473616c74612e636f6d2e61722f7765622f696d616765732f616e69766572736172696f732f32343430343436322e6a7067}{here}. Thanks to \href{https://github.com/tartagalensis}{tartagalensis}.
+\item \strong{ar_salta_prov_grid2:} Grids for Salta Province Argentina Image reference \href{https://camo.githubusercontent.com/bd75334802b6ef199dca758018335f162671c1d1e95147d9dabd4b0dc0d18f2c/687474703a2f2f312e62702e626c6f6773706f742e636f6d2f5f564a6b71374771783743512f52303349467549766e30492f41414141414141414141632f75336655614c744e6a53672f733430302f646570617274616d656e746f732b64652b53616c74612e6a7067}{here}. Thanks to \href{https://github.com/tartagalensis}{tartagalensis}.
 }
 
 \itemize{
@@ -908,7 +908,7 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{us_state_without_DC_grid3:} United States grid without Washington, D.C Image reference \href{https://camo.githubusercontent.com/5038126fbe0052e7d42602dc6856aedc7822f639/687474703a2f2f6269742e6c792f75732d67726964}{here}. Thanks to \href{https://github.com/truongduongvn2}{truongduongvn2}.
+\item \strong{us_state_without_DC_grid3:} United States grid without Washington, D.C Image reference \href{https://camo.githubusercontent.com/5038126fbe0052e7d42602dc6856aedc7822f639/687474703a2f2f6269742e6c792f75732d67726964}{here}. Thanks to \href{https://github.com/ghost}{ghost}.
 }
 
 \itemize{
@@ -932,7 +932,7 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{sg_planning_area_grid2:} Singapore Planning Areas Image reference \href{https://camo.githubusercontent.com/46010d480fc21b0e42dcdbd6a56c467e2dbe094d/68747470733a2f2f6f666f6d6170732e636f6d2f77702d636f6e74656e742f75706c6f6164732f6564642f323031392f30362f53696e6761706f72655f4d61702d352d323830783238302e676966}{here}. Thanks to \href{https://github.com/ZhimaoElliott}{ZhimaoElliott}.
+\item \strong{sg_planning_area_grid2:} Singapore Planning Areas Image reference \href{https://user-images.githubusercontent.com/1275592/54297744-a9467280-4574-11e9-99f7-bdb62bbb34b4.png}{here}. Thanks to \href{https://github.com/ZhimaoElliott}{ZhimaoElliott}.
 }
 
 \itemize{
@@ -980,7 +980,7 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{us_wi_counties_grid1:} Grid layout for counties of Wisconsin, United States Image reference \href{https://camo.githubusercontent.com/493b3324ca2680e299745b72c46ddfb7ab6bbf08/68747470733a2f2f7777772e6468732e776973636f6e73696e2e676f762f73697465732f64656661756c742f66696c65732f77692d636f756e746965732e676966}{here}. Thanks to \href{https://github.com/aravamu2}{aravamu2}.
+\item \strong{us_wi_counties_grid1:} Grid layout for counties of Wisconsin, United States Image reference \href{https://camo.githubusercontent.com/0e8c590b5984c2b061abdb1cf3d81c25a1dfd74828995f4aedc4bf8021c9e942/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f322f32352f576973636f6e73696e2d636f756e746965732d6d61702e676966}{here}. Thanks to \href{https://github.com/aravamu2}{aravamu2}.
 }
 
 \itemize{
@@ -988,7 +988,7 @@ There are now 141 grids available in this package and more online. To view a ful
 }
 
 \itemize{
-\item \strong{no_counties_grid1:} Grid of counties of Norway Image reference \href{https://camo.githubusercontent.com/278d9052a0d7dbb686c4ca655ba212657347835f/68747470733a2f2f7777772e7265736561726368676174652e6e65742f7075626c69636174696f6e2f3332313936373831352f6669677572652f666967312f41533a35373430303139333338313939303440313531333836343133333538352f436f756e746965732d696e2d4e6f727761792d7065722d446563656d6265722d323031372d6e756d62657265642d6163636f7264696e672d746f2d537461746973746963732d4e6f727761792d4d61702d736f757263652e706e67}{here}. Thanks to \href{https://github.com/NanAmalie1}{NanAmalie1}.
+\item \strong{no_counties_grid1:} Grid of counties of Norway Image reference \href{https://camo.githubusercontent.com/1e8684781a30cdc9ce1b87068c861ebdfd51548f41de95d073217037cf9defb4/68747470733a2f2f7777772e66616d696c797365617263682e6f72672f656e2f77696b692f696d675f617574682e7068702f362f36632f4e6f727761795f3278322e6a7067}{here}. Thanks to \href{https://github.com/NanAmalie1}{NanAmalie1}.
 }
 
 \itemize{

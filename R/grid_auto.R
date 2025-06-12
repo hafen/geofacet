@@ -215,11 +215,11 @@ plot_geo_raw <- function(x, label = "name") {
 
   ggplot2::ggplot(tmp) +
     ggplot2::geom_polygon(aes(x = long, y = lat, group = group),
-      fill = "lightgray", color = "white", size = 0.3) +
+      fill = "lightgray", color = "white", linewidth = 0.3) +
     ggrepel::geom_text_repel(aes(xcentroid, ycentroid, label = label_col),
       data = tmpl, min.segment.length = 0) +
     ggplot2::coord_equal() +
-    ggplot2::guides(fill = FALSE) +
+    ggplot2::guides(fill = "none") +
     ggplot2::theme_void()
 }
 
