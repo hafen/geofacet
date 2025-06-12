@@ -247,7 +247,6 @@ grid_preview <- function(x, label = NULL, label_raw = NULL, do_plot = TRUE) {
 #' @param auto_img If the original geography is attached to \code{data}, should a plot of that be created and uploaded to the viewer?
 #' @export
 #' @importFrom grDevices png dev.off
-#' @importFrom imguR upload_image
 #' @examples
 #' # edit aus_grid1
 #' grid_design(data = aus_grid1, img = "http://www.john.chapman.name/Austral4.gif")
@@ -256,7 +255,6 @@ grid_preview <- function(x, label = NULL, label_raw = NULL, do_plot = TRUE) {
 #' # arrange the alphabet
 #' grid_design(data.frame(code = letters))
 grid_design <- function(data = NULL, img = NULL, label = "code", auto_img = TRUE) {
-
   if (!is.null(data)) {
     # clean out data
     for (vr in names(data)) {
@@ -272,7 +270,6 @@ grid_design <- function(data = NULL, img = NULL, label = "code", auto_img = TRUE
       apply(data, 1, function(x) paste(x, collapse = ",")))
     data_csv <- paste(rows, collapse = "\n")
     data_csv <- gsub("&", "%26", data_csv)
-
   } else {
     data_csv <- ""
   }
@@ -288,7 +285,7 @@ grid_design <- function(data = NULL, img = NULL, label = "code", auto_img = TRUE
     print(p)
     grDevices::dev.off()
     # system2("open", tmpfile)
-    res <- imguR::upload_image(tmpfile)
+    res <- upload_image(tmpfile)
     img <- res$link
   }
 
@@ -298,6 +295,22 @@ grid_design <- function(data = NULL, img = NULL, label = "code", auto_img = TRUE
   url <- sprintf("https://hafen.github.io/grid-designer/#img=%s&data=%s", img, data_csv)
 
   if (Sys.getenv("GEOFACET_PKG_TESTING") == "") browseURL(URLencode(url))
+}
+
+#' @importFrom httr2 request req_headers req_body_file req_perform resp_status
+#'   resp_body_json
+upload_image <- function(path) {
+  req <- httr2::request("https://api.imgur.com/3/image") |>
+    httr2::req_headers(Authorization = "Client-ID 1bb8a830d134946") |>
+    httr2::req_body_file(path, type = "image/png")
+
+  tryres <- try(resp <- httr2::req_perform(req))
+  if (inherits(tryres, "try-error") || httr2::resp_status(resp) != 200) {
+    warning("Failed to upload image to imgur. ", call. = FALSE)
+    return("")
+  }
+
+  httr2::resp_body_json(resp)$data$link
 }
 
 #' Submit a grid to be included in the package

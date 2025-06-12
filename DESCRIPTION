@@ -20,11 +20,11 @@ Imports:
     rnaturalearth,
     sp,
     ggrepel,
-    imguR,
     gridExtra,
     geogrid,
     methods,
-    rlang
+    rlang,
+    httr2
 Suggests:
     sf,
     testthat,
