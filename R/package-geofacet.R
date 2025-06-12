@@ -18,13 +18,6 @@ NULL
 #' @rdname auto_names
 NULL
 
-#' geofacet
-#'
-#' @name geofacet
-#' @docType package
-#' @description For examples, see \code{\link{facet_geo}}.
-NULL
-
 #' state_ranks
 #'
 #' @name state_ranks

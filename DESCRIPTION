@@ -8,7 +8,8 @@ Description: Provides geographical faceting functionality for 'ggplot2'.
     Geographical faceting arranges a sequence of plots of data for different
     geographical entities into a grid that preserves some of the geographical
     orientation.
-Depends: R (>= 3.2)
+Depends: 
+    R (>= 3.5)
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -19,11 +20,11 @@ Imports:
     rnaturalearth,
     sp,
     ggrepel,
-    imguR,
     gridExtra,
     geogrid,
     methods,
-    rlang
+    rlang,
+    httr2
 Suggests:
     sf,
     testthat,
@@ -33,5 +34,5 @@ Suggests:
     rmarkdown
 URL: https://github.com/hafen/geofacet, https://hafen.github.io/geofacet/
 BugReports: https://github.com/hafen/geofacet/issues
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
 VignetteBuilder: knitr
