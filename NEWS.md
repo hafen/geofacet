@@ -1,3 +1,10 @@
+Version 0.2.2
+----------------------------------------------------------------------
+
+- Remove dependency on imguR
+- Fix issue to be compatible with new ggplot2 release
+- Add many new grids
+urlchecker::url_check()
 Version 0.2.1
 ----------------------------------------------------------------------
 

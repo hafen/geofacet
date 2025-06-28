@@ -23,7 +23,7 @@ NULL
 #' @name state_ranks
 #' @docType data
 #' @description
-#' State rankings in the following categories with the variable upon which ranking is based in parentheses: education (adults over 25 with a bachelor's degree in 2015), employment (March 2017 unemployment rate - Bureau of Labor Statistics), health (obesity rate from 2015 - Centers for Disease Control), insured (uninsured rate in 2015 - US Census), sleep (share of adults that report at least 7 hours of sleep each night from 2016 - Disease Control), wealth (poverty rate 2014/15 - US Census). In each category, the lower the ranking, the more favorable. This data is based on data presented here: \url{https://www.axios.com/2017/12/15/the-emoji-states-of-america-1513302318}
+#' State rankings in the following categories with the variable upon which ranking is based in parentheses: education (adults over 25 with a bachelor's degree in 2015), employment (March 2017 unemployment rate - Bureau of Labor Statistics), health (obesity rate from 2015 - Centers for Disease Control), insured (uninsured rate in 2015 - US Census), sleep (share of adults that report at least 7 hours of sleep each night from 2016 - Disease Control), wealth (poverty rate 2014/15 - US Census). In each category, the lower the ranking, the more favorable. This data is based on data presented in a May 17, 2017 Axios article, "The Emoji States of America".
 #' @usage state_ranks
 #' @keywords data
 NULL
@@ -73,7 +73,7 @@ NULL
 #' @name aus_pop
 #' @docType data
 #' @description
-#' March 2017 population data for Australian states and territories by age group. Source: \url{http://lmip.gov.au/default.aspx?LMIP/Downloads/ABSLabourForceRegion}.
+#' March 2017 population data for Australian states and territories by age group. Online source no longer available.
 #' @usage aus_pop
 #' @keywords data
 NULL
@@ -93,7 +93,7 @@ NULL
 #' @name london_afford
 #' @docType data
 #' @description
-#' Total affordable housing completions by financial year in each London borough since 2015/16. Source: \url{https://data.london.gov.uk/dataset/dclg-affordable-housing-supply-borough}
+#' Total affordable housing completions by financial year in each London borough since 2015/16. Source: \url{https://www.gov.uk/government/statistical-data-sets/live-tables-on-affordable-housing-supply}
 #' @usage london_afford
 #' @keywords data
 NULL

@@ -60,9 +60,9 @@ for (ii in seq_len(nrow(grid_list))) {
   doc_string <- paste0(doc_string, "
 #' @name ", x$name, "
 #' @description
-#' * **", x$name, ":** ", x$desc, " Image reference [here](", x$ref_img, ").",
+#' * **", x$name, ":** ", x$desc, ".",
   ifelse(is.na(x$contrib), "",
-    paste0(" Thanks to [", basename(x$contrib), "](", x$contrib, ").")), "
+    paste0(" Thanks to ", basename(x$contrib), ".")), "
 #' @usage ", x$name, "
 #' @rdname grids
 #' @md

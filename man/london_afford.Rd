@@ -8,6 +8,6 @@
 london_afford
 }
 \description{
-Total affordable housing completions by financial year in each London borough since 2015/16. Source: \url{https://data.london.gov.uk/dataset/dclg-affordable-housing-supply-borough}
+Total affordable housing completions by financial year in each London borough since 2015/16. Source: \url{https://www.gov.uk/government/statistical-data-sets/live-tables-on-affordable-housing-supply}
 }
 \keyword{data}

@@ -1,6 +1,6 @@
 Package: geofacet
 Title: 'ggplot2' Faceting Utilities for Geographical Data
-Version: 0.2.2
+Version: 0.2.3
 Authors@R: c(
     person("Ryan", "Hafen", email = "rhafen@gmail.com", role = c("aut", "cre")),
     person("Barret", "Schloerke", email = "schloerke@gmail.com", role = "ctb"))
@@ -9,7 +9,7 @@ Description: Provides geographical faceting functionality for 'ggplot2'.
     geographical entities into a grid that preserves some of the geographical
     orientation.
 Depends: 
-    R (>= 3.5)
+    R (>= 4.1.0)
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

@@ -43,7 +43,7 @@ library(ggplot2)
 
 The main function in this package is `facet_geo()` and its use can be thought of as equivalent to ggplot2's `facet_wrap()` except for the output it creates. If you know how to use ggplot2, then you essentially know how to use this package.
 
-Let's consider an example based on [this article](https://www.axios.com/2017/12/15/the-emoji-states-of-america-1513302318), which uses emoji / Chernoff faces to show various quality-of-life metrics for US states.
+Let's consider an example based on a May 17, 2017 Axios article, "The Emoji States of America", which uses emoji / Chernoff faces to show various quality-of-life metrics for US states.
 
 This data is available in the geofacet package under the name `state_ranks`.
 

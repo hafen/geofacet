@@ -17,7 +17,7 @@ facet_geo <- function(facets, ..., grid = "us_state_grid1", label = NULL, move_a
 #' @importFrom ggplot2 ggplot_add
 #' @importFrom ggplot2 %+%
 #' @export
-ggplot_add.facet_geo_spec <- function(object, plot, object_name) {
+ggplot_add.facet_geo_spec <- function(object, plot, object_name, ...) {
   facet_col <- setdiff(unlist(lapply(object$facets, as.character)), c("~", "+"))
   if (length(facet_col) > 1) {
     message_nice("Multiple facet columns specified... only using '", facet_col[1], "'")

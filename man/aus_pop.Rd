@@ -8,6 +8,6 @@
 aus_pop
 }
 \description{
-March 2017 population data for Australian states and territories by age group. Source: \url{http://lmip.gov.au/default.aspx?LMIP/Downloads/ABSLabourForceRegion}.
+March 2017 population data for Australian states and territories by age group. Online source no longer available.
 }
 \keyword{data}
