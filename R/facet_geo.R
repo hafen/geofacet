@@ -193,7 +193,6 @@ plot.facet_geo <- function(x, ...) {
 #' grid_preview(us_state_grid2)
 #' grid_preview(eu_grid1, label = "name")
 grid_preview <- function(x, label = NULL, label_raw = NULL, do_plot = TRUE) {
-
   if (!inherits(x, "geofacet_grid"))
     x <- get_grid(x)
 
@@ -218,13 +217,13 @@ grid_preview <- function(x, label = NULL, label_raw = NULL, do_plot = TRUE) {
     ggplot2::geom_text()
 
   spdf <- attr(x, "spdf")
-  if (!is.null(spdf) && inherits(spdf, "SpatialPolygonsDataFrame")) {
+  if (!is.null(spdf) && inherits(spdf, "sf")) {
     if (is.null(label_raw)) {
-      if (label %in% names(spdf@data)) {
+      if (label %in% names(spdf)) {
         label_raw <- label
       } else {
         stop("Couldn't find a variable with name '", label, "' ",
-          "in the SpatialPolygonsDataFrame attached to the grid object. ",
+          "in the sf object attached to the grid object. ",
           "Please explicity provide a variable name to use for plotting ",
           "This data using the argument label_raw.")
       }
@@ -276,7 +275,7 @@ grid_design <- function(data = NULL, img = NULL, label = "code", auto_img = TRUE
 
   spdf <- attr(data, "spdf")
   if (auto_img && is.null(img) && !is.null(spdf) &&
-    inherits(spdf, "SpatialPolygonsDataFrame")) {
+    inherits(spdf, "sf")) {
 
     message("Attempting to create and upload image of original geography...")
 

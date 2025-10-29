@@ -9,9 +9,9 @@ grid_auto(x, names = NULL, codes = NULL, seed = NULL)
 \arguments{
 \item{x}{A country/continent name, a SpatialPolygonsDataFrame or `sf` polygons to build a grid for.}
 
-\item{names}{An optional vector of variable names in \code{x@data} to use as "name_" columns in the resulting grid.}
+\item{names}{An optional vector of variable names in \code{x} to use as "name_" columns in the resulting grid.}
 
-\item{codes}{An optional vector of variable names in \code{x@data} to use as "code_" columns in the resulting grid.}
+\item{codes}{An optional vector of variable names in \code{x} to use as "code_" columns in the resulting grid.}
 
 \item{seed}{An optional random seed sent to \code{\link[geogrid]{calculate_grid}}.}
 }
@@ -21,7 +21,7 @@ Generate a grid automatically from a country/continent name or a SpatialPolygons
 \details{
 If a country or continent name is specified for \code{x}, it can be any of the strings found in \code{\link{auto_countries}} or \code{\link{auto_states}}. In this case, the rnaturalearth package will be searched for the corresponding shapefiles. You can use \code{\link{get_ne_data}} to see what these shapefiles look like.
 
-The columns of the \code{@data} component of resulting shapefile (either user-specified or fetched from rnaturalearth) are those that will be available to \code{names} and \code{codes}.
+The columns of the \code{} component of resulting shapefile (either user-specified or fetched from rnaturalearth) are those that will be available to \code{names} and \code{codes}.
 }
 \examples{
 \dontrun{

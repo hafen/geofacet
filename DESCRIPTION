@@ -18,7 +18,7 @@ Imports:
     gtable,
     graphics,
     rnaturalearth,
-    sp,
+    sf,
     ggrepel,
     gridExtra,
     geogrid,
@@ -26,7 +26,6 @@ Imports:
     rlang,
     httr2
 Suggests:
-    sf,
     testthat,
     covr,
     lintr,
@@ -34,5 +33,5 @@ Suggests:
     rmarkdown
 URL: https://github.com/hafen/geofacet, https://hafen.github.io/geofacet/
 BugReports: https://github.com/hafen/geofacet/issues
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
 VignetteBuilder: knitr

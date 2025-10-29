@@ -1,4 +1,4 @@
-utils::globalVariables(c("long", "lat", "group", "xcentroid", "ycentroid", "label_col"))
+utils::globalVariables(c("group", "geometry", "xcentroid", "ycentroid", "label_col"))
 
 #' auto_states
 #'

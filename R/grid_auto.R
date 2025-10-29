@@ -1,16 +1,16 @@
 #' Generate a grid automatically from a country/continent name or a SpatialPolygonsDataFrame or `sf` polygons
 #'
 #' @param x A country/continent name, a SpatialPolygonsDataFrame or `sf` polygons to build a grid for.
-#' @param names An optional vector of variable names in \code{x@data} to use as "name_" columns in the resulting grid.
-#' @param codes An optional vector of variable names in \code{x@data} to use as "code_" columns in the resulting grid.
+#' @param names An optional vector of variable names in \code{x} to use as "name_" columns in the resulting grid.
+#' @param codes An optional vector of variable names in \code{x} to use as "code_" columns in the resulting grid.
 #' @param seed An optional random seed sent to \code{\link[geogrid]{calculate_grid}}.
 #' @details If a country or continent name is specified for \code{x}, it can be any of the strings found in \code{\link{auto_countries}} or \code{\link{auto_states}}. In this case, the rnaturalearth package will be searched for the corresponding shapefiles. You can use \code{\link{get_ne_data}} to see what these shapefiles look like.
 #'
-#' The columns of the \code{@data} component of resulting shapefile (either user-specified or fetched from rnaturalearth) are those that will be available to \code{names} and \code{codes}.
+#' The columns of the \code{} component of resulting shapefile (either user-specified or fetched from rnaturalearth) are those that will be available to \code{names} and \code{codes}.
 #' @importFrom utils tail
 #' @importFrom methods as
-#' @importFrom sp CRS
 #' @importFrom geogrid calculate_grid assign_polygons
+#' @importFrom sf st_as_sf st_coordinates
 #' @export
 #' @examples
 #' \dontrun{
@@ -41,7 +41,7 @@ grid_auto <- function(x, names = NULL, codes = NULL, seed = NULL) {
 
   is_ne_data <- FALSE
 
-  # if x is SpatialPolygonsDataFrame, just use it
+  # if x is "sf" object, just use it
   if (is.character(x)) {
     if (length(x) > 1) {
       message("Just using first value: ", x[1])
@@ -49,15 +49,13 @@ grid_auto <- function(x, names = NULL, codes = NULL, seed = NULL) {
     }
     x <- get_ne_data(x)
     is_ne_data <- TRUE
-  } else if (inherits(x, "SpatialPolygonsDataFrame")) {
-    x@proj4string <- sp::CRS(as.character(NA))
-  } else {
-    x <- methods::as(x, "Spatial")
-    if (!inherits(x, "SpatialPolygonsDataFrame"))
-      stop("Please ensure you are using polygons")
-    x@proj4string <- sp::CRS(as.character(NA))
   }
-
+  if (inherits(x, "SpatialPolygonsDataFrame")) {
+    x <- sf::st_as_sf(x)
+  }
+  if (!inherits(x, "sf")) {
+    stop("x must be a country/continent name, an sf object, or a SpatialPolygonsDataFrame.")
+  }
   # x@data$ID__gfct <- seq_len(nrow(x@data))
 
   new_cells <- geogrid::calculate_grid(shape = x, grid_type = "regular", seed = seed)
@@ -65,12 +63,13 @@ grid_auto <- function(x, names = NULL, codes = NULL, seed = NULL) {
   # plot(new_cells[[2]])
 
   res <- suppressWarnings(geogrid::assign_polygons(x, new_cells))
-  # res@polygons[[1]]@Polygons[[1]]@coords
+  if (inherits(res, "SpatialPolygonsDataFrame")) {
+    res <- sf::st_as_sf(res)
+  }
 
-  # lapply(res@polygons, function(x) x@Polygons[[1]]@coords)
-  grd <- do.call(rbind, lapply(res@polygons, function(x) {
-    tmp <- x@Polygons[[1]]@coords
-    data.frame(x = min(tmp[, 1]), y = min(tmp[, 2]))
+  grd <- do.call(rbind, lapply(res$geometry, function(x) {
+    tmp <- sf::st_coordinates(x)
+    data.frame(x = min(tmp[, "X"]), y = min(tmp[, "Y"]))
   }))
 
   dx <- min(diff(sort(unique(grd$x))))
@@ -90,17 +89,17 @@ grid_auto <- function(x, names = NULL, codes = NULL, seed = NULL) {
       "Please try re-running grid_auto() with a different seed value.", call. = FALSE)
 
   if (is_ne_data) {
-    grd2$name <- res@data$name
-    grd2$code <- res@data$gns_adm1
+    grd2$name <- res$name
+    grd2$code <- res$gns_adm1
   } else {
-    idx <- which(sapply(res@data, function(a) length(unique(a)) == length(a)))
+    idx <- which(sapply(res, function(a) length(unique(a)) == length(a)))
     if (length(idx) > 0) {
       prop_char <- sapply(idx, function(a) {
-        tmp <- as.character(res@data[[a]])
+        tmp <- as.character(res[[a]])
         mean(1 - nchar(gsub("[A-Za-z]", "", tmp)) / nchar(tmp))
       })
       char_len <- sapply(idx, function(a) {
-        mean(nchar(as.character(res@data[[a]])))
+        mean(nchar(as.character(res[[a]])))
       })
       # for names, look at top 3 prop_char having at least 50% char
       # and of those, choose the one with longest char_len
@@ -115,8 +114,8 @@ grid_auto <- function(x, names = NULL, codes = NULL, seed = NULL) {
       # unless it's numeric or has too many characters
       if (is.null(codes)) {
         codes <- setdiff(names(char_len[char_len <= 15]), c(names, "row", "col"))
-        is_numeric <- which(sapply(idx, function(a) is.numeric(res@data[[a]])))
-        has_decimal <- which(sapply(idx[is_numeric], function(a) any(res@data[[a]] %% 1 != 0)))
+        is_numeric <- which(sapply(idx, function(a) is.numeric(res[[a]])))
+        has_decimal <- which(sapply(idx[is_numeric], function(a) any(res[[a]] %% 1 != 0)))
         codes <- setdiff(codes, names(has_decimal))
       }
     }
@@ -124,21 +123,23 @@ grid_auto <- function(x, names = NULL, codes = NULL, seed = NULL) {
       stop("Could not infer the columns to use as 'name' entities.\n",
         "  Please re-run grid_auto supplying 'names = ...', with '...'\n",
         "  being a string or vector of strings of name variables found in\n",
-        "  the @data portion of your input SpatialPolygonsDataFrame.")
+        "  your input 'sf' object or the @data portion of your input\n",
+        "  SpatialPolygonsDataFrame.")
     }
     if (is.null(codes)) {
       stop("Could not infer the columns to use as 'code' entities.\n",
         "  Please re-run grid_auto supplying 'names = ...', with '...'\n",
         "  being a string or vector of strings of code variables found in\n",
-        "  the @data portion of your input SpatialPolygonsDataFrame.")
+        "  your input 'sf' object or the @data portion of your input\n",
+        "  SpatialPolygonsDataFrame.")
     }
     for (nm in names) {
-      grd2[[paste0("name_", nm)]] <- res@data[[nm]]
-      x@data[[paste0("name_", nm)]] <- x@data[[nm]]
+      grd2[[paste0("name_", nm)]] <- res[[nm]]
+      x[[paste0("name_", nm)]] <- x[[nm]]
     }
     for (cd in codes) {
-      grd2[[paste0("code_", cd)]] <- res@data[[cd]]
-      x@data[[paste0("code_", cd)]] <- x@data[[cd]]
+      grd2[[paste0("code_", cd)]] <- res[[cd]]
+      x[[paste0("code_", cd)]] <- x[[cd]]
     }
   }
 
@@ -179,22 +180,24 @@ get_ne_data <- function(code) {
   res
 }
 
-#' Attach a SpatialPolygonsDataFrame object to a grid
+#' Attach an "sf" object to a grid
 #'
-#' @param x object to attach SpatialPolygonsDataFrame object to
-#' @param spdf a SpatialPolygonsDataFrame object to attach
+#' @param x object to attach "sf" object to
+#' @param spdf an "sf" object to attach
 #' @export
 attach_spdf <- function(x, spdf) {
-  if (!inherits(spdf, "SpatialPolygonsDataFrame"))
-    stop("spdf must be a SpatialPolygonsDataFrame.")
+  if (inherits(x, "SpatialPolygonsDataFrame")) {
+    x <- sf::st_as_sf(x)
+  }
+  if (!inherits(spdf, "sf"))
+    stop("spdf must be an sf object.")
   # TODO: try to link the data of x and spdf
   attr(x, "spdf") <- spdf
   x
 }
 
-#' @importFrom sp coordinates
 #' @importFrom ggrepel geom_text_repel
-#' @importFrom ggplot2 geom_polygon coord_equal guides theme_void fortify
+#' @importFrom ggplot2 geom_sf coord_sf guides theme_void
 plot_geo_raw <- function(x, label = "name") {
   if (is.character(x)) {
     if (length(x) > 1) {
@@ -204,21 +207,18 @@ plot_geo_raw <- function(x, label = "name") {
     x <- get_ne_data(x)
   }
 
-  x@data$xcentroid <- sp::coordinates(x)[, 1]
-  x@data$ycentroid <- sp::coordinates(x)[, 2]
+  tmp <- sf::st_centroid(x$geometry)
+  x$xcentroid <- sapply(tmp, "[[", 1)
+  x$ycentroid <- sapply(tmp, "[[", 2)
 
-  x@data$id <- rownames(x@data)
-  tmp <- suppressMessages(ggplot2::fortify(x))
-  tmp <- merge(tmp, x@data, by = "id")
-  tmpl <- tmp[!duplicated(tmp$id), ]
-  tmpl$label_col <- tmpl[[label]]
+  x$label_col <- x[[label]]
 
-  ggplot2::ggplot(tmp) +
-    ggplot2::geom_polygon(aes(x = long, y = lat, group = group),
+  ggplot2::ggplot(x) +
+    ggplot2::geom_sf(aes(geometry = geometry),
       fill = "lightgray", color = "white", linewidth = 0.3) +
     ggrepel::geom_text_repel(aes(xcentroid, ycentroid, label = label_col),
-      data = tmpl, min.segment.length = 0) +
-    ggplot2::coord_equal() +
+      data = x, min.segment.length = 0) +
+    ggplot2::coord_sf() +
     ggplot2::guides(fill = "none") +
     ggplot2::theme_void()
 }

@@ -2,15 +2,15 @@
 % Please edit documentation in R/grid_auto.R
 \name{attach_spdf}
 \alias{attach_spdf}
-\title{Attach a SpatialPolygonsDataFrame object to a grid}
+\title{Attach an "sf" object to a grid}
 \usage{
 attach_spdf(x, spdf)
 }
 \arguments{
-\item{x}{object to attach SpatialPolygonsDataFrame object to}
+\item{x}{object to attach "sf" object to}
 
-\item{spdf}{a SpatialPolygonsDataFrame object to attach}
+\item{spdf}{an "sf" object to attach}
 }
 \description{
-Attach a SpatialPolygonsDataFrame object to a grid
+Attach an "sf" object to a grid
 }
