@@ -15,7 +15,6 @@ facet_geo <- function(facets, ..., grid = "us_state_grid1", label = NULL, move_a
 }
 
 #' @importFrom ggplot2 ggplot_add
-#' @importFrom ggplot2 %+%
 #' @export
 ggplot_add.facet_geo_spec <- function(object, plot, object_name, ...) {
   facet_col <- setdiff(unlist(lapply(object$facets, as.character)), c("~", "+"))
@@ -58,12 +57,13 @@ ggplot_add.facet_geo_spec <- function(object, plot, object_name, ...) {
   other_data <- lapply(plot$layers, function(x) x$data)
 
   tmp <- get_full_geo_data(plot$data, grd, facet_col, label_col, other_data)
+
   plot$data <- tmp$dat
   for (ii in seq_along(plot$layers))
     plot$layers[[ii]]$data <- tmp$other_data[[ii]]
   grd <- tmp$grd
 
-  plot <- plot %+% do.call(ggplot2::facet_wrap, object)
+  plot <- plot + do.call(ggplot2::facet_wrap, object)
   attr(plot, "geofacet") <- list(
     grid = grd,
     move_axes = move_axes,
@@ -86,7 +86,7 @@ get_geofacet_grob <- function(x) {
   attrs <- attr(x, "geofacet")
   grd <- attrs$grid
 
-  g <- ggplot2::ggplotGrob(x)
+  g <- suppressWarnings(ggplot2::ggplotGrob(x))
 
   extra_rgx <- NULL
 
@@ -460,9 +460,10 @@ get_full_geo_grid <- function(grid) {
   grd <- merge(grd, gd, all.y = TRUE)
   grd <- grd[order(grd$row, grd$col), ]
 
-  grd$col2 <- as.vector(t(matrix(grd$col, nrow = nr)))
-  grd$row2 <- as.vector(t(matrix(grd$row, nrow = nr)))
-  grd$panel <- paste0("panel-", grd$col2, "-", grd$row2)
+  # grd$col2 <- as.vector(t(matrix(grd$col, nrow = nr)))
+  # grd$row2 <- as.vector(t(matrix(grd$row, nrow = nr)))
+  # grd$panel <- paste0("panel-", grd$col2, "-", grd$row2)
+  grd$panel <- paste0("panel-", grd$col, "-", grd$row)
   grd$strip <- paste0("strip-t-", grd$col, "-", grd$row)
 
   grd
@@ -471,7 +472,7 @@ get_full_geo_grid <- function(grid) {
 get_full_geo_data <- function(d, grd, facet_col, label_col = NULL, other_data) {
   # check to make sure facet_col data matches that of grd
   ul <- unique(d[[facet_col]])
-  set_nms <- c("row", "col", "row2", "col2", "panel", "strip")
+  set_nms <- c("row", "col", "panel", "strip")
   nms <- setdiff(names(grd), set_nms)
   uldifs <- lapply(nms, function(x) setdiff(ul, grd[[x]]))
   nn <- unlist(lapply(uldifs, length))
@@ -495,10 +496,10 @@ get_full_geo_data <- function(d, grd, facet_col, label_col = NULL, other_data) {
   conv_idx <- match(d[[facet_col]], grd$label)
   d$facet_col <- grd[[label_col]][conv_idx]
 
-  # create unique dummy levels (incrementing whitespace) for empty panels
+  # create unique dummy levels for empty panels
   tmp <- grd[[label_col]]
   na_idx <- which(is.na(tmp))
-  tmp[na_idx] <- sapply(seq_along(na_idx), function(a) paste0(rep(" ", a), collapse = ""))
+  tmp[na_idx] <- sapply(seq_along(na_idx), function(a) paste0("__blank", a))
 
   for (ii in seq_along(other_data)) {
     if (!inherits(other_data[[ii]], "waiver") && facet_col %in% names(other_data[[ii]])) {

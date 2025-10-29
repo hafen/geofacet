@@ -1,3 +1,9 @@
+## Resubmission
+
+This is a resubmission. In this version I have:
+
+- Fixed a reverse depedency issue with the `geoheatmap` package, which was caused by the removal of a package documentation entry that was referenced in that package.
+
 ## Release summary
 
 Updates since last release:

@@ -1,6 +1,6 @@
 Package: geofacet
 Title: 'ggplot2' Faceting Utilities for Geographical Data
-Version: 0.2.4
+Version: 0.2.5
 Authors@R: c(
     person("Ryan", "Hafen", email = "rhafen@gmail.com", role = c("aut", "cre")),
     person("Barret", "Schloerke", email = "schloerke@gmail.com", role = "ctb"))
@@ -14,7 +14,7 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports:
-    ggplot2 (>= 3.2.1),
+    ggplot2 (>= 4.0.0),
     gtable,
     graphics,
     rnaturalearth,
