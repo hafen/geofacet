@@ -2,8 +2,10 @@ Package: geofacet
 Title: 'ggplot2' Faceting Utilities for Geographical Data
 Version: 0.2.5
 Authors@R: c(
-    person("Ryan", "Hafen", email = "rhafen@gmail.com", role = c("aut", "cre")),
-    person("Barret", "Schloerke", email = "schloerke@gmail.com", role = "ctb"))
+    person("Ryan", "Hafen", email = "rhafen@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-5516-8367")),
+    person("Barret", "Schloerke", email = "schloerke@gmail.com", role = "ctb",
+           comment = c(ORCID = "0000-0001-9986-114X")))
 Description: Provides geographical faceting functionality for 'ggplot2'.
     Geographical faceting arranges a sequence of plots of data for different
     geographical entities into a grid that preserves some of the geographical
